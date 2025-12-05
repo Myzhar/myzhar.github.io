@@ -10,7 +10,7 @@ Welcome to my personal space — I’m Walter Alex Lucetti, an Italian computer 
 
 Known online as *Myzhar*, I work at the intersection of software engineering and robotics, designing systems that can see, understand, and move through the world. My expertise spans stereo vision, 3D perception, embedded systems, and AI-driven autonomy, with a strong focus on NVIDIA Jetson platforms, CUDA, and ROS/ROS 2.
 
-I currently serve as a **Senior Software Engineer at [Stereolabs](https://www.stereolabs.com)**, where I contribute to stereo vision and 3D perception products such as the ZED SDK, support developers integrating depth cameras into robots, and help define best practices for spatial AI applications.
+I currently serve as a **Senior Software Engineer at [Stereolabs](http://www.stereolabs.com)**, where I contribute to stereo vision and 3D perception products such as the ZED SDK, support developers integrating depth cameras into robots, and help define best practices for spatial AI applications.
 
 ## My Robotics Projects
 
@@ -52,4 +52,5 @@ By publishing my work openly, I aim to:
 - Show how advanced perception and autonomy can be implemented on real hardware.
 
 If you’re interested in robots that truly *see* and interact with the world, this is where you can follow my journey — and, hopefully, build along with me.
-[22](https://www.myzhar.com/blog/video-gallery/videos-myzharbot-v3-x/)
+
+— *Myzhar*
