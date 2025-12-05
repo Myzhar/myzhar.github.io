@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Personal website of Walter “Myzhar” Lucetti, featuring news about the MyzharBot project along 
   with tutorials on robotics, computer vision, artificial intelligence, and 3D printing.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://myzhar.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://myzhar.tech" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  myzhar
 
