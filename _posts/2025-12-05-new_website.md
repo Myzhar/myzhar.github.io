@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "New Website"
 date:   2025-12-05 20:00:00 +0200
 categories: website update
