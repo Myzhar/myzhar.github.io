@@ -32,6 +32,7 @@ github_username:  myzhar
 remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 plugins:
   - jekyll-include-cache
+  - jekyll-archives 
 
 #Pages
 include: ["_pages"]
@@ -48,6 +49,7 @@ defaults:
       comments: false
       share: true
       related: true
+      breadcrumbs: true  # disabled by default
   # _pages
   - scope:
       path: ""
@@ -56,5 +58,6 @@ defaults:
       layout: single
       author_profile: true
       share: true
+      breadcrumbs: true  # disabled by default
 
 
