@@ -1,9 +1,9 @@
 ---
-title: Projects
+title: Tutorials
 layout: collection
 author: "Walter Lucetti"
-permalink: /projects/
-collection: projects
+permalink: /tutorials/
+collection: tutorials
 entries_layout: grid
 classes: wide
 sort_by: number

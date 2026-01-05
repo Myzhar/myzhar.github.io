@@ -1,6 +1,6 @@
 ---
 title: "Posts by Year"
-excerpt: "All posts, events, and courses by Year"
+excerpt: "All posts, events, and tutorials by Year"
 permalink: /posts/
 layout: posts
 author_profile: true

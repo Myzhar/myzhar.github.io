@@ -34,22 +34,31 @@ footer:
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://pizzarobotics.org"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/pizzarobotics"
-    - label: "Github"
-      icon: "fab fa-fw fa-github-square"
-      url: "https://github.com/pizzarobotics"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/channel/UCVh659_qQa_bjDOg3Jhyf_w"
+      url: "https://myzhar.tech"
+    - label: "LinkTree"
+      icon: "fab fa-fw fa-linktree"
+      url: "https://linktr.ee/myzhar"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/pizzarobotics"
+      url: "https://instagram.com/myzharbot"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/walterlucetti/"
+    - label: "Github"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/myzhar"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@myzhar"
+    - label: "TikTok"
+      icon: "fab fa-fw fa-tiktok"
+      url: "https://tiktok.com/@myzhar"
+    - label: "Threads"
+      icon: "fab fa-fw fa-threads"
+      url: "https://www.threads.com/@myzharbot"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:info@pizzarobotics.org"
+      url: "mailto:info@myzhar.com"
 
 # Reading Files
 include:
@@ -69,13 +78,13 @@ excerpt_separator: "\n\n"
 incremental: false
 
 collections:
-  team:
-    output: true
-    permalink: /:collection/:path/
-  event:
-    output: true
-    permalink: /:collection/:path/
   projects:
+    output: true
+    permalink: /:collection/:path/
+  events:
+    output: true
+    permalink: /:collection/:path/
+  tutorials:
     output: true
     permalink: /:collection/:path/
 
@@ -91,10 +100,10 @@ defaults:
       share: true
       related: true
       show_date: true
-  # _team
+  # _info
   - scope:
       path: ""
-      type: team
+      type: info
     values:
       layout: single
       author_profile: true
@@ -104,6 +113,15 @@ defaults:
   - scope:
       path: ""
       type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      read_time: true
+  # _tutorials
+  - scope:
+      path: ""
+      type: tutorials
     values:
       layout: single
       author_profile: true

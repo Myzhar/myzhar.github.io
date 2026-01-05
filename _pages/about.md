@@ -3,7 +3,7 @@ title:  Walter Lucetti
 author: "Walter Lucetti"
 layout: collection
 permalink: /about/
-collection: team
+collection: info
 entries_layout: grid
 classes: wide
 ---
