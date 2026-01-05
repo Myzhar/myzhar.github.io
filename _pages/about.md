@@ -1,7 +1,11 @@
 ---
-layout: single
-title: About
+title:  Walter Lucetti
+author: "Walter Lucetti"
+layout: collection
 permalink: /about/
+collection: team
+entries_layout: grid
+classes: wide
 ---
 
 Welcome to my personal space — I’m Walter Alex Lucetti, an Italian computer engineer and technical leader specializing in **robotics**, **computer vision**, and **artificial intelligence**. This site brings together years of my work on autonomous systems, stereo vision, and real-world robotics projects, along with practical tutorials and experiments for developers and enthusiasts.

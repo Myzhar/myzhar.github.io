@@ -1,41 +1,83 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# minimal mistakes Jekyll reference
+# https://github.com/mmistakes/minimal-mistakes/blob/master/docs/_config.yml
 
-title: Myzhar & MyzharBot
-email: info@myzhar.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Personal website of Walter “Myzhar” Lucetti, featuring news about the MyzharBot project along 
-  with tutorials on robotics, computer vision, artificial intelligence, and 3D printing.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://myzhar.tech" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
-github_username:  myzhar
+remote_theme: mmistakes/minimal-mistakes
+
+minimal_mistakes_skin: "contrast"
+
+title: "Myzhar & MyzharBot"
+subtitle: ":pizza: We are ItalianMakers. We make Robots. In Pizza we crust"
+name: &name "PizzaRobotics"
+description: &description "We are ItalianMakers. We make Robots. In Pizza we crust"
+url: "https://myzhar.tech"
+repository: "Myzhar/myzhar.github.io/"
+teaser: assets/images/MyzharbotLogo.png
+
+search: true
+search_full_content: true
+
+github: [metadata]
+
+social:
+  links: # An array of links to social media profiles
+    - "https://twitter.com/pizzarobotics"
+    - "https://instagram.com/pizzarobotics"
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-6M2HNXPRHF"
+    anonymize_ip: true # default
+
+# Site Footer
+footer:
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://pizzarobotics.org"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/pizzarobotics"
+    - label: "Github"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/pizzarobotics"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/channel/UCVh659_qQa_bjDOg3Jhyf_w"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/pizzarobotics"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:info@pizzarobotics.org"
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - vendor
 
 # Build settings
-remote_theme: "mmistakes/minimal-mistakes@4.27.3"
-plugins:
-  - jekyll-include-cache
-  - jekyll-archives 
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-#Pages
-include: ["_pages"]
+collections:
+  team:
+    output: true
+    permalink: /:collection/:path/
+  event:
+    output: true
+    permalink: /:collection/:path/
+  projects:
+    output: true
+    permalink: /:collection/:path/
 
 defaults:
   # _posts
@@ -46,18 +88,69 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false
       share: true
       related: true
-      breadcrumbs: true  # disabled by default
-  # _pages
+      show_date: true
+  # _team
   - scope:
       path: ""
-      type: pages
+      type: team
     values:
       layout: single
       author_profile: true
       share: true
-      breadcrumbs: true  # disabled by default
+      read_time: false
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      read_time: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+# timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-redirect-from
 
 
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-redirect-from
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+after_footer_scripts :
+  - /assets/js/cookie-consent.js
+  - /assets/js/copyCode.js

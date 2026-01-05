@@ -1,0 +1,11 @@
+main:
+  - title: ":pizza: About"
+    url: /about/
+  - title: ":robot: Projects"
+    url: /projects/
+  - title: ":date: Events"
+    url: /events/
+  - title: "📰 Posts"
+    url: /posts/
+  - title: "📰 Tutorials"
+    url: /tutorials/
