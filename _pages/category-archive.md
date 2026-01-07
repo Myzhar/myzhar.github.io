@@ -7,8 +7,8 @@ classes: wide
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/team_mfr2021.jpg
-  teaser: /assets/images/team_mfr2021.jpg
+  overlay_image: /assets/images/post_default.jpg
+  teaser: /assets/images/post_default.jpg
   actions:
     - label: "📑 by Tags"
       url: "/tags"

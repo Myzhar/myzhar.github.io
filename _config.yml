@@ -6,9 +6,9 @@ remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "contrast"
 
 title: "Myzhar & MyzharBot"
-subtitle: ":pizza: We are ItalianMakers. We make Robots. In Pizza we crust"
+subtitle: ":brain: Beyond Perception - Beyond Robotics :robot:"
 name: &name "PizzaRobotics"
-description: &description "We are ItalianMakers. We make Robots. In Pizza we crust"
+description: &description "Insights, projects, and stories about seeing, thinking, and moving machines."
 url: "https://myzhar.tech"
 repository: "Myzhar/myzhar.github.io/"
 teaser: assets/images/MyzharbotLogo.png
