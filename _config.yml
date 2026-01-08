@@ -7,7 +7,7 @@ minimal_mistakes_skin: "contrast"
 
 title: "Myzhar & MyzharBot"
 subtitle: ":brain: Beyond Perception - Beyond Robotics :robot:"
-name: &name "PizzaRobotics"
+name: &name "Myzhar & MyzharBot"
 description: &description "Insights, projects, and stories about seeing, thinking, and moving machines."
 url: "https://myzhar.tech"
 repository: "Myzhar/myzhar.github.io/"
@@ -20,8 +20,10 @@ github: [metadata]
 
 social:
   links: # An array of links to social media profiles
-    - "https://twitter.com/pizzarobotics"
-    - "https://instagram.com/pizzarobotics"
+    - "https://linktr.ee/myzhar"
+    - "https://instagram.com/myzharbot"
+    - "https://www.linkedin.com/in/walterlucetti/"
+
 
 analytics:
   provider: "google-gtag"
