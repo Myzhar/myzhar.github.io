@@ -7,14 +7,18 @@ minimal_mistakes_skin: "air"
 
 title: "Myzhar & MyzharBot"
 subtitle: ":brain: Beyond Perception - Beyond Robotics :robot:"
-name: &name "Myzhar & MyzharBot"
+name: &name "Walter Lucetti"
 description: &description "Insights, projects, and stories about seeing, thinking, and moving machines."
 url: "https://myzhar.tech"
 repository: "Myzhar/myzhar.github.io/"
-teaser: assets/images/MyzharbotLogo.png
+teaser: "assets/images/MyzharbotLogo.png"
+logo: "assets/images/MyzharbotLogo_transparent.png"
 
 search: true
 search_full_content: true
+breadcrumbs: true  # disabled by default
+enable_copy_code_button: true
+
 
 github: [metadata]
 
@@ -32,9 +36,10 @@ analytics:
 
 # Site Footer
 footer:
+  since: "2025"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
+    - label: "Home"
+      icon: "fas fa-fw fa-home"
       url: "https://myzhar.tech"
     - label: "LinkTree"
       icon: "fab fa-fw fa-linktree"
@@ -60,9 +65,10 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:info@myzhar.com"
-    - label: "Privacy Policy"
-      icon: "fas fa-fw fa-file-alt"
+    - label: "Terms of Service"
+      icon: "fas fa-fw fa-file-contract"
       url: "/terms/"
+
 
 # Reading Files
 include:
@@ -174,5 +180,5 @@ tag_archive:
   path: /tags/
 
 after_footer_scripts :
-  - /assets/js/cookie-consent.js
+  #- /assets/js/cookie-consent.js
   - /assets/js/copyCode.js
