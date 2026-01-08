@@ -29,3 +29,7 @@ If you wish to disable cookies, you may do so through your web browser options. 
 ## Google Analytics
 
 Google Analytics is a web analytics tool I use to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors. For more information you can read the [Google Analytics Privacy Policy](http://www.google.com/analytics/learn/privacy.html).
+
+## Google AdSense
+
+Google, as a third party vendor, uses cookies to serve ads on this site. Google’s use of the DART cookie enables it to serve ads to my site visitors based on their visit to my site and other sites on the internet. Visitors may opt out of the use of the DART cookie by visiting the [Google Ad and Content Network privacy policy](http://www.google.com/privacy_ads.html).
