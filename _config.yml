@@ -24,7 +24,6 @@ social:
     - "https://instagram.com/myzharbot"
     - "https://www.linkedin.com/in/walterlucetti/"
 
-
 analytics:
   provider: "google-gtag"
   google:
@@ -61,6 +60,9 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:info@myzhar.com"
+    - label: "Privacy Policy"
+      icon: "fas fa-fw fa-file-alt"
+      url: "/terms/"
 
 # Reading Files
 include:
