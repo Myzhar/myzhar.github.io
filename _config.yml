@@ -28,7 +28,7 @@ social:
 analytics:
   provider: "google-gtag"
   google:
-    tracking_id: "G-6M2HNXPRHF"
+    tracking_id: "G-PYMBS7K65Z"
     anonymize_ip: true # default
 
 # Site Footer
