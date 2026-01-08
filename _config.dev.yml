@@ -1,0 +1,9 @@
+# Develop override settings
+
+url: http://localhost:8000
+
+analytics:
+  provider: false
+
+sass:
+  style: expanded

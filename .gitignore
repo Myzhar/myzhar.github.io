@@ -1,6 +1,9 @@
-Gemfile.lock
-_site
-.sass-cache
-.jekyll-cache
+.vscode
+.DS_store
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-vendor
+# config
+Gemfile.lock
