@@ -42,10 +42,10 @@ I was a young and naive engineer...
 
 A few videos of my first tests in 2012:
 
-<iframe src="http://www.youtube.com/embed/o4W0ir7bfkw" frameborder="0"> </iframe>
+<iframe src="https://www.youtube.com/embed/o4W0ir7bfkw?si=dL6rcC-2h7-_vvDv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
-<iframe src="http://www.youtube.com/embed/x7R6s1xjjNg" frameborder="0"> </iframe>
+<iframe src="https://www.youtube.com/embed/x7R6s1xjjNg?si=dL6rcC-2h7-_vvDv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
-<iframe src="http://www.youtube.com/embed/czmqUQI7SEg" frameborder="0"> </iframe>
+<iframe src="https://www.youtube.com/embed/czmqUQI7SEg?si=dL6rcC-2h7-_vvDv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
-<iframe src="http://www.youtube.com/embed/XWvtm3Ovpjg" frameborder="0"> </iframe>
+<iframe src="https://www.youtube.com/embed/XWvtm3Ovpjg?si=dL6rcC-2h7-_vvDv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
