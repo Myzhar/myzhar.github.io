@@ -6,7 +6,7 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/background.jpg
   actions:
-  - label: ":tree: LinkTree"
+  - label: ":link: Follow Me"
     url: "https://linktr.ee/myzhar"
 intro: 
   - excerpt: 'Insights, projects, and stories about seeing, thinking, and moving machines.'
