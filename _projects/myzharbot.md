@@ -20,11 +20,11 @@ It is my main project since 2012, and it has gone through several iterations and
 
 ## MyzharBot v1
 
-### MyzharBot v1.1
+### MyzharBot v1.0
 
 [Details here](/projects/myzharbot/myzharbot-v1/)
 
-![MyzharBot-v1.0](/assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg/MyzharBot-v1.jpg)
+![MyzharBot-v1.0](/assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg)
 
 ### MyzharBot v1.1
 
