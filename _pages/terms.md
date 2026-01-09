@@ -35,7 +35,3 @@ Google Analytics is a web analytics tool I use to help understand how visitors e
 Google, as a third party vendor, uses cookies to serve ads on this site. Google’s use of the DART cookie enables it to serve ads to my site visitors based on their visit to my site and other sites on the internet. Visitors may opt out of the use of the DART cookie by visiting the [Google Ad and Content Network privacy policy](http://www.google.com/privacy_ads.html).
 
 The little earns obtained through Google AdSense help me to keep this site running and to continue to provide free content. Thank you for your support!
-
-## Cookies Preferences
-
-You can <a href="#" id="open_preferences_center">update the cookies preferences</a> at any time.
