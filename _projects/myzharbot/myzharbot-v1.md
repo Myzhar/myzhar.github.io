@@ -1,5 +1,5 @@
 ---
-title: "MyzharBot v1"
+title: "MyzharBot-v1.0"
 excerpt: "The first version of MyzharBot"
 author: "Walter Lucetti"
 classes: wide
@@ -14,9 +14,6 @@ header:
   #    url: "https://www.myzhar.com"
 layout: single
 classes: wide
-categories: 
-  - projects
-  - myzharbot 
 ---
 
 The first version of MyzharBot was built in 2012 using a simple chassis made of laser-cut plastic sheets joint together with nuts and bolts.

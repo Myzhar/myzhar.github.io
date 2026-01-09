@@ -18,9 +18,9 @@ MyzharBot is an open source and open hardware robotic platform born to study sen
 
 It is my main project since 2012, and it has gone through several iterations and improvements over the years.
 
-* MyzharBot v1: [Details here](/projects/myzharbot/v1/myzharbot-v1/)
+* [2012] MyzharBot v1: [Details here](/projects/myzharbot/myzharbot-v1/)
 
-![MyzharBot-v0](/assets/images/projects/myzharbot/MyzharBot-v0.jpg "MyzharBot-v0")
+  ![MyzharBot-v1.0](/assets/images/projects/myzharbot/v1/MyzharBot-v1.jpg)
 
 ![MyzharBot-v1.0](/assets/images/projects/myzharbot/MyzharBot-v1.0.jpg "MyzharBot-v1.0")
 
