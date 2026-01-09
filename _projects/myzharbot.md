@@ -2,18 +2,23 @@
 title: "MyzharBot"
 excerpt: "MyzharBot is an open source and open hardware robotic platform born to study sensor fusion algorithms for autonomous navigation"
 author: "Walter Lucetti"
-link: https://www.myzhar.com
 classes: wide
-number: 2021
+number: 0
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/projects/myzharbot/MyzharBot-v4.0.jpg
   teaser: /assets/images/projects/myzharbot/MyzharBot-v3.0.jpg
-  actions:
-    - label: "More Info"
-      url: "https://www.myzhar.com"
+  #actions:
+  #  - label: "More Info"
+  #    url: "https://www.myzhar.com"
 ---
+
+MyzharBot is an open source and open hardware robotic platform born to study sensor fusion algorithms for autonomous navigation.
+
+It is my main project since 2012, and it has gone through several iterations and improvements over the years.
+
+* MyzharBot v1: [Details here](/projects/myzharbot/v1/myzharbot-v1/)
 
 ![MyzharBot-v0](/assets/images/projects/myzharbot/MyzharBot-v0.jpg "MyzharBot-v0")
 
