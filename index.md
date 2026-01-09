@@ -6,8 +6,8 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/background.jpg
   actions:
-  - label: ":camera_flash: Instagram"
-    url: "https://instagram.com/myzharbot"
+  - label: ":tree: LinkTree"
+    url: "https://linktr.ee/myzhar"
 intro: 
   - excerpt: 'Insights, projects, and stories about seeing, thinking, and moving machines.'
 feature_row:

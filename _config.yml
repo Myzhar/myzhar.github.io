@@ -16,9 +16,8 @@ logo: "assets/images/MyzharbotLogo_transparent.png"
 
 search: true
 search_full_content: true
-breadcrumbs: true  # disabled by default
+breadcrumbs: false  # disabled by default
 enable_copy_code_button: true
-
 
 github: [metadata]
 
@@ -118,8 +117,10 @@ defaults:
     values:
       layout: single
       author_profile: true
+      read_time: true
       share: true
-      read_time: false
+      related: false
+      show_date: false
   # _projects
   - scope:
       path: ""
@@ -127,8 +128,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
       read_time: true
+      share: true
+      related: true
+      show_date: true
   # _tutorials
   - scope:
       path: ""
@@ -136,8 +139,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
       read_time: true
+      share: true
+      related: true
+      show_date: true
   # _pages
   - scope:
       path: "_pages"
@@ -145,6 +150,10 @@ defaults:
     values:
       layout: single
       author_profile: true
+      read_time: true
+      share: true
+      related: true
+      show_date: true
 
 # Outputting
 permalink: /:categories/:title/

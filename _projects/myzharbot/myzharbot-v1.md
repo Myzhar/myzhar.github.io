@@ -7,8 +7,8 @@ number: 100
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/projects/myzharbot/v1/MyzharBot-v1.jpg
-  teaser: /assets/images/projects/myzharbot/v1/MyzharBot-v1.jpg
+  overlay_image: /assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg
+  teaser: /assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg
   #actions:
   #  - label: "More Info"
   #    url: "https://www.myzhar.com"
@@ -18,7 +18,7 @@ classes: wide
 
 The first version of MyzharBot was built in 2012 using a simple chassis made of laser-cut plastic sheets joint together with nuts and bolts.
 
-![MyzharBot-v1](/assets/images/projects/myzharbot/v1/MyzharBot-v1.jpg "MyzharBot-v1")
+![MyzharBot-v1.0](/assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg "MyzharBot-v1.0")
 
 ## Electronics
 

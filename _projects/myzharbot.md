@@ -18,20 +18,42 @@ MyzharBot is an open source and open hardware robotic platform born to study sen
 
 It is my main project since 2012, and it has gone through several iterations and improvements over the years.
 
-* [2012] MyzharBot v1: [Details here](/projects/myzharbot/myzharbot-v1/)
+## MyzharBot v1
 
-  ![MyzharBot-v1.0](/assets/images/projects/myzharbot/v1/MyzharBot-v1.jpg)
+### MyzharBot v1.1
 
-![MyzharBot-v1.0](/assets/images/projects/myzharbot/MyzharBot-v1.0.jpg "MyzharBot-v1.0")
+[Details here](/projects/myzharbot/myzharbot-v1/)
 
-![MyzharBot-v1.1](/assets/images/projects/myzharbot/MyzharBot-v1.1.jpg "MyzharBot-v1.1")
+![MyzharBot-v1.0](/assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg/MyzharBot-v1.jpg)
 
-![MyzharBot-v2.0](/assets/images/projects/myzharbot/MyzharBot-v2.0.jpg "MyzharBot-v2.0")
+### MyzharBot v1.1
 
-![MyzharBot-v2.1](/assets/images/projects/myzharbot/MyzharBot-v2.1.jpg "MyzharBot-v2.1")
+  ![MyzharBot-v1.1](/assets/images/projects/myzharbot/v1/MyzharBot-v1.1.jpg)
 
-![MyzharBot-v2.1 & Myzhar](/assets/images/projects/myzharbot/MyzharBot-v2.1-Myzhar.jpg "MyzharBot-v2.1 & Myzhar")
+* MyzharBot v1.2:
 
-![MyzharBot-v3.0](/assets/images/projects/myzharbot/MyzharBot-v3.0.jpg "MyzharBot-v3.0")
+  ![MyzharBot-v1.2](/assets/images/projects/myzharbot/v1/MyzharBot-v1.2.jpg)
 
-![MyzharBot-v4.0](/assets/images/projects/myzharbot/MyzharBot-v4.0.jpg "MyzharBot-v4.0")
+## MyzharBot v2
+
+### MyzharBot v2.0
+
+![MyzharBot-v2.0](/assets/images/projects/myzharbot/v2/MyzharBot-v2.0.jpg)
+
+### MyzharBot v2.1
+
+![MyzharBot-v2.1](/assets/images/projects/myzharbot/v2/MyzharBot-v2.1.jpg)
+
+![MyzharBot-v2.1 & Myzhar](/assets/images/projects/myzharbot/v2/MyzharBot-v2.1-Myzhar.jpg)
+
+## MyzharBot v3
+
+### MyzharBot v3.0
+
+![MyzharBot-v3.0](/assets/images/projects/myzharbot/v3/MyzharBot-v3.0.jpg)
+
+## MyzharBot v4
+
+### MyzharBot v4.0
+
+![MyzharBot-v4.0](/assets/images/projects/myzharbot/v4/MyzharBot-v4.0.jpg)
