@@ -7,8 +7,8 @@ number: 0
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/projects/myzharbot/MyzharBot-v4.0.jpg
-  teaser: /assets/images/projects/myzharbot/MyzharBot-v3.0.jpg
+  overlay_image: /assets/images/robots_default.jpg
+  teaser: /assets/images/robots_default.jpg
   #actions:
   #  - label: "More Info"
   #    url: "https://www.myzhar.com"
@@ -30,7 +30,7 @@ It is my main project since 2012, and it has gone through several iterations and
 
   ![MyzharBot-v1.1](/assets/images/projects/myzharbot/v1/MyzharBot-v1.1.jpg)
 
-* MyzharBot v1.2:
+### MyzharBot v1.2
 
   ![MyzharBot-v1.2](/assets/images/projects/myzharbot/v1/MyzharBot-v1.2.jpg)
 
