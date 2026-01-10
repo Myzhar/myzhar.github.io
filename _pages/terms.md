@@ -1,7 +1,17 @@
 ---
 title: "Terms and Privacy Policy"
 permalink: /terms/
-classes: wide
+author: "Walter Lucetti"
+author_profile: true
+classes: single
+layout: single
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "fas fa-fw fa-list"
+toc_sticky: true
+show_date: false
+read_time: false
+share: false
 ---
 
 ## Privacy Policy

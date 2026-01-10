@@ -1,9 +1,13 @@
 ---
-title: "Posts by Tag"
+title: "News by Tag"
+excerpt: "All posts by Tag"
 permalink: /tags/
 layout: tags
+author: "Walter Lucetti"
 author_profile: true
 classes: wide
+show_date: false
+read_time: false
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
