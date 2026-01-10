@@ -37,7 +37,7 @@ ROS was not yet used at that time; I heard about it but I wrongly thought that m
 
 I was a young and naive engineer...
 
-## Media
+## Videos
 
 A few videos of my first tests in 2012:
 

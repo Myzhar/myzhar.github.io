@@ -11,6 +11,43 @@ header:
   #actions:
   #  - label: "More Info"
   #    url: "https://www.myzhar.com"
+
+gallery_v1:
+    - url: /assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg
+      image_path: /assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg
+      alt: "MyzharBot v1.0"
+      title: "MyzharBot v1.0"
+
+gallery_v2:
+    - url: /assets/images/projects/myzharbot/v2/MyzharBot-v2.0.jpg
+      image_path: /assets/images/projects/myzharbot/v2/MyzharBot-v2.0.jpg
+      alt: "MyzharBot v2.0"
+      title: "MyzharBot v2.0"
+    - url: /assets/images/projects/myzharbot/v2/MyzharBot-v2.1.jpg
+      image_path: /assets/images/projects/myzharbot/v2/MyzharBot-v2.1.jpg
+      alt: "MyzharBot v2.1"
+      title: "MyzharBot v2.1"
+
+gallery_v3:
+    - url: /assets/images/projects/myzharbot/v3/MyzharBot-v3.1.jpg
+      image_path: /assets/images/projects/myzharbot/v3/MyzharBot-v3.1.jpg
+      alt: "MyzharBot v3.1"
+      title: "MyzharBot v3.1"
+    - url: /assets/images/projects/myzharbot/v3/MyzharBot-v3.1.1.jpg
+      image_path: /assets/images/projects/myzharbot/v3/MyzharBot-v3.1.1.jpg
+      alt: "MyzharBot v3.1.1"
+      title: "MyzharBot v3.1.1"
+
+gallery_v4:
+    - url: /assets/images/projects/myzharbot/v4/MyzharBot-v4.0.jpg
+      image_path: /assets/images/projects/myzharbot/v4/MyzharBot-v4.0.jpg
+      alt: "MyzharBot v4.0"
+      title: "MyzharBot v4.0"
+    - url: /assets/images/projects/myzharbot/v4/MyzharBot-v4.1.jpg
+      image_path: /assets/images/projects/myzharbot/v4/MyzharBot-v4.1.jpg
+      alt: "MyzharBot v4.1"
+      title: "MyzharBot v4.1"
+  
 ---
 
 MyzharBot is an open source and open hardware robotic platform born to study sensor fusion algorithms for autonomous navigation.
@@ -19,40 +56,24 @@ It is my main project since 2012, and it has gone through several iterations and
 
 ## MyzharBot v1
 
-### MyzharBot v1.0
+[Details about this version](/projects/myzharbot/myzharbot-v1/)
 
-[Details here](/projects/myzharbot/myzharbot-v1/)
-
-![MyzharBot-v1.0](/assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg)
-
-### MyzharBot v1.1
-
-  ![MyzharBot-v1.1](/assets/images/projects/myzharbot/v1/MyzharBot-v1.1.jpg)
-
-### MyzharBot v1.2
-
-  ![MyzharBot-v1.2](/assets/images/projects/myzharbot/v1/MyzharBot-v1.2.jpg)
+{% include gallery id="gallery_v1" %}
 
 ## MyzharBot v2
 
-### MyzharBot v2.0
-
-![MyzharBot-v2.0](/assets/images/projects/myzharbot/v2/MyzharBot-v2.0.jpg)
-
-### MyzharBot v2.1
-
-![MyzharBot-v2.1](/assets/images/projects/myzharbot/v2/MyzharBot-v2.1.jpg)
-
-![MyzharBot-v2.1 & Myzhar](/assets/images/projects/myzharbot/v2/MyzharBot-v2.1-Myzhar.jpg)
+{% include gallery id="gallery_v2" %}
 
 ## MyzharBot v3
 
-### MyzharBot v3.0
+[Details about this version](/projects/myzharbot/myzharbot-v3/)
 
-![MyzharBot-v3.0](/assets/images/projects/myzharbot/v3/MyzharBot-v3.0.jpg)
+{% include gallery id="gallery_v3" %}
 
 ## MyzharBot v4
 
-### MyzharBot v4.0
+{% include gallery id="gallery_v4" %}
 
-![MyzharBot-v4.0](/assets/images/projects/myzharbot/v4/MyzharBot-v4.0.jpg)
+## MyzharBot v5
+
+*Coming soon...*
