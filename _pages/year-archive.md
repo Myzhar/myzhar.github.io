@@ -1,6 +1,6 @@
 ---
-title: "Posts by Year"
-excerpt: "All posts, events, and tutorials by Year"
+title: "News by Year"
+excerpt: "All posts by Year"
 permalink: /posts/
 layout: posts
 author: "Walter Lucetti"

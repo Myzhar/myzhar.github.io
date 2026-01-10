@@ -1,6 +1,6 @@
 ---
-title: "Posts by Tag"
-excerpt: "All posts, events, and tutorials by Tag"
+title: "News by Tag"
+excerpt: "All posts by Tag"
 permalink: /tags/
 layout: tags
 author: "Walter Lucetti"

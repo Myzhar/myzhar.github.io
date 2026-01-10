@@ -1,6 +1,6 @@
 ---
-title: "Posts by Category"
-excerpt: "All posts, events, and tutorials by Category"
+title: "News by Category"
+excerpt: "All posts by Category"
 layout: categories
 permalink: /categories/
 author: "Walter Lucetti"

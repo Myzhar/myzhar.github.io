@@ -176,6 +176,22 @@ defaults:
       toc_label: "Table of Contents"
       toc_icon: "fas fa-fw fa-list"
       toc_sticky: true
+  # _events
+  - scope:
+      path: "_events"
+      type: events
+    values:
+      layout: single
+      classes: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+      show_date: true
+      toc: true
+      toc_label: "Table of Contents"
+      toc_icon: "fas fa-fw fa-list"
+      toc_sticky: true
 
 # Outputting
 permalink: /:categories/:title/

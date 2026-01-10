@@ -1,5 +1,5 @@
 main:  
-  - title: ":newspaper: Posts"
+  - title: ":newspaper: News"
     url: /posts/
   - title: ":triangular_ruler: Projects"
     url: /projects/  
