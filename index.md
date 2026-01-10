@@ -1,6 +1,6 @@
 ---
 layout: splash
-excerpt: ":brain: Beyond Perception - Beyond Robotics :robot:"
+excerpt: "Beyond Perception / Beyond Robotics"
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
