@@ -239,7 +239,7 @@ Cecile and [Edwin Azzam](https://www.linkedin.com/in/edwinazzam/), another Stere
 
 Fascinated by the ZED's potential for robotics, we exchanged contacts. I promised to connect them with the NVIDIA® team, and a few hours later A few hours later, I led one of the NVIDIA managers to their booth. This encounter sparked a long-lasting friendship and collaboration that led me to join Stereolabs in 2018 as a Senior Software Engineer, where I became a key ambassador and contributor to their products and SDKs.
 
-**Spoiler alert**: the ZED camera was later integrated into MyzharBot-v3 :smile:
+**Spoiler alert**: the ZED camera was later integrated into MyzharBot-v4 :smile:
 
 Below are two of the first ZED cameras released that Stereolabs donated to me after GTC to use with the next version of MyzharBot. They still work like jewels and I treasure them. Behind a Jetson Champion cup, I love using it for breakfast as a daily reminder of how far I've come since those early days.
 
@@ -247,7 +247,7 @@ Below are two of the first ZED cameras released that Stereolabs donated to me af
 
 ## Photos
 
-A few memorable moments from the MyzharBot-v3 era: building the robot and GTC 2015.
+A few memorable moments from the MyzharBot-v3 era: building the robot, developing,MakerFaire 2014, and GTC 2015.
 
 {% include gallery id="gallery_myzharbot_v3" %}
 
