@@ -13,25 +13,25 @@ intro:
 feature_row:
   - image_path: /assets/images/post_default.jpg
     alt: "about"
-    title: ":question: About"
+    title: ":identification_card: About"
     excerpt: "About Myzhar, the MyzharBot and this website. Who I am and what I do."
     url: "/about/"
     btn_label: "read more"
-    btn_class: "btn--primary"
+    btn_class: "btn--info"
   - image_path: /assets/images/events_default.jpg
     alt: "Events"
     title: ":date: Events"
     excerpt: "News about events, workshops and conferences where you can meet me and the MyzharBot."
     url: "/events/"
     btn_label: "events"
-    btn_class: "btn--info"
+    btn_class: "btn--success"
   - image_path: /assets/images/robots_default.jpg
     alt: "Projects"
     title: ":triangular_ruler: Projects"
     excerpt: "The MyzharBot and other robotics, computer vision and AI projects developed by me."
     url: "/projects/"
     btn_label: "explore"
-    btn_class: "btn--success"
+    btn_class: "btn--warning"
 ---
 
 {% include feature_row id="intro" type="center" %}

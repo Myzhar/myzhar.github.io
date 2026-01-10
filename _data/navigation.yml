@@ -1,11 +1,11 @@
-main:
-  - title: ":question: About"
-    url: /about/
-  - title: ":triangular_ruler: Projects"
-    url: /projects/
-  - title: ":date: Events"
-    url: /events/
+main:  
   - title: ":newspaper: Posts"
     url: /posts/
+  - title: ":triangular_ruler: Projects"
+    url: /projects/  
   - title: ":books: Tutorials"
     url: /tutorials/
+  - title: ":date: Events"
+    url: /events/
+  - title: ":identification_card: About"
+    url: /about/

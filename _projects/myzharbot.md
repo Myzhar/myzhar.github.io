@@ -2,7 +2,6 @@
 title: "MyzharBot"
 excerpt: "MyzharBot is an open source and open hardware robotic platform born to study sensor fusion algorithms for autonomous navigation"
 author: "Walter Lucetti"
-classes: wide
 number: 0
 header:
   overlay_color: "#000"

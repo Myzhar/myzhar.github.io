@@ -5,9 +5,6 @@ Walter Lucetti:
   bio         : "Computer Engineer - Passionate about Computer Vision, Robotics, and Artificial Intelligence. Not sleeping to create robots."
   avatar      : "/assets/images/team/lucetti/walter_lucetti.jpg"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://myzhar.tech"
     - label: "LinkTree"
       icon: "fab fa-fw fa-linktree"
       url: "https://linktr.ee/myzhar"
