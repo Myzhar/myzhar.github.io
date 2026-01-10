@@ -197,7 +197,7 @@ gallery_myzharbot_v3:
 
 In 2014, I embarked on developing MyzharBot's third version, upgrading from the [BeagleBoard](https://www.beagleboard.org/boards/beagleboard) to the [NVIDIA® Jetson TK1](https://developer.nvidia.com/blog/jetson-tk1-mobile-embedded-supercomputer-cuda-everywhere/) as the main computer. My dream had finally materialized: NVIDIA® released a powerful CUDA-enabled embedded platform capable of running real-time computer vision on a small robot!
 
-![MyzharBot-v3.1.1](/assets/images/projects/myzharbot/v3/MyzharBot-v3.1-Myzhar.jpg "MyzharBot-v3.1.1 and me")
+![MyzharBot-v3.1.1](/assets/images/projects/myzharbot/v3/MyzharBot-v3.1.1-Myzhar.jpg "MyzharBot-v3.1.1 and me")
 
 {% include gallery id="gallery_embedded" caption="BeagleBoard and NVIDIA® Jetson TK1" %}
 
