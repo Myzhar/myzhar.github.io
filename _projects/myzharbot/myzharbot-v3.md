@@ -205,7 +205,7 @@ In 2014, I embarked on developing MyzharBot's third version, upgrading from the 
 
 In September 2014, MyzharBot-v3.0 was operational, and I exposed it at Maker Faire Rome 2014. It was my first public appearance with the robot, and I was thrilled to showcase its new capabilities.
 
-In December 2014, I received an unexpected Facebook message from an NVIDIA® representative. They were recruiting Jetson TK1 enthusiasts for a new program called [Jetson Champions](https://developer.nvidia.com/embedded/community/jetson-champions). Initially skeptical—it seemed too good to be true—I soon realized the opportunity was genuine. They had discovered my blog and wanted me to continue **sharing my knowledge and experience with the community** while developing projects using NVIDIA® Jetson platforms. **Nothing easier than that!**
+In December 2014, I received an unexpected Facebook message from an NVIDIA® representative. They were recruiting Jetson TK1 enthusiasts for a new program called [Jetson Champions](https://developer.nvidia.com/embedded/community/jetson-champions). Initially skeptical, it seemed too good to be true, I soon realized the opportunity was genuine. They had discovered my blog and wanted me to continue **sharing my knowledge and experience with the community** while developing projects using NVIDIA® Jetson platforms. **Nothing easier than that!**
 
 ## MyzharBot (and Me) on the Spotlight
 
@@ -213,11 +213,11 @@ Weeks later, NVIDIA® invited me to showcase MyzharBot at their GTC 2015 booth i
 
 A new chapter was unfolding—a new robot, a powerful brain, and an exciting adventure ahead.
 
-I was not alone in this journey; my old friend [Raffaello Bonghi](https://www.linkedin.com/in/raffaello-bonghi/) worked with me on the firmware of the motor driver board, ensuring seamless integration with the new system. For this reason I asked NVIDIA® to invite him to GTC 2015 as well, and they gladly accepted. This was a good opportunity for Raffaello too, as he is now a Technical Marketing Engineer at NVIDIA®.
+I was not alone on this journey; my old friend [Raffaello Bonghi](https://www.linkedin.com/in/raffaello-bonghi/) collaborated with me on the firmware for the motor driver board, ensuring seamless integration with the new system. For this reason, I asked NVIDIA® to invite him to GTC 2015 as well, and they gladly accepted. This was a great opportunity for Raffaello too, as he is now a Technical Marketing Engineer at NVIDIA®.
 
 ![Raffaello, doing Raffaello things](/assets/images/projects/myzharbot/v3/20150315_175912.jpg "Raffaello, doing Raffaello things")
 
-It was an unforgettable experience, because we also had the change to visit San Francisco for two full days after GTC, exploring the city and its iconic landmarks.
+It was an unforgettable experience because we also had the chance to visit San Francisco for two full days after GTC, exploring the city and its iconic landmarks.
 
 ## Software Overhaul: Embracing ROS
 
