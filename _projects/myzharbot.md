@@ -62,6 +62,8 @@ It is my main project since 2012, and it has gone through several iterations and
 
 ## MyzharBot v2
 
+[Details about this version](/projects/myzharbot/myzharbot-v2/)
+
 {% include gallery id="gallery_v2" %}
 
 ## MyzharBot v3

@@ -2,7 +2,7 @@
 title: "MyzharBot-v3"
 excerpt: "The robot that made me a Jetson Champion"
 author: "Walter Lucetti"
-number: 110
+number: 300
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -15,10 +15,10 @@ layout: single
 classes: single
 
 gallery_embedded:
-    - url: /assets/images/projects/myzharbot/v3/beagleboard-1-500x384.jpg
-      image_path: /assets/images/projects/myzharbot/v3/beagleboard-1-500x384.jpg
-      alt: "BeagleBoard"
-      title: "BeagleBoard"
+    - url: /assets/images/projects/myzharbot/v2/Pandaboard.jpg
+      image_path: /assets/images/projects/myzharbot/v2/Pandaboard.jpg
+      alt: "Pandaboard ES"
+      title: "Pandaboard ES"
     - url: /assets/images/projects/myzharbot/v3/TK1_Dev_Kit-6350-GREEN-V4_280.jpg
       image_path: /assets/images/projects/myzharbot/v3/TK1_Dev_Kit-6350-GREEN-V4_280.jpg
       alt: "NVIDIA® Jetson TK1"
@@ -193,13 +193,13 @@ gallery_myzharbot_v3:
       image_path: /assets/images/projects/myzharbot/v3/wp-1412263298162.jpg
 ---
 
-## The Beginning of a New Era
+## MyzharBot v3 - The Beginning of a New Era
 
-In 2014, I embarked on developing MyzharBot's third version, upgrading from the [BeagleBoard](https://www.beagleboard.org/boards/beagleboard) to the [NVIDIA® Jetson TK1](https://developer.nvidia.com/blog/jetson-tk1-mobile-embedded-supercomputer-cuda-everywhere/) as the main computer. My dream had finally materialized: NVIDIA® released a powerful CUDA-enabled embedded platform capable of running real-time computer vision on a small robot!
+In mid 2014, I embarked on developing MyzharBot's third version, upgrading from the [Pandaboard ES](https://en.wikipedia.org/wiki/PandaBoard) to the [NVIDIA® Jetson TK1](https://developer.nvidia.com/blog/jetson-tk1-mobile-embedded-supercomputer-cuda-everywhere/) as the main computer. My dream had finally materialized: NVIDIA® released a powerful CUDA-enabled embedded platform capable of running real-time computer vision on a small robot!
 
 ![MyzharBot-v3.1.1](/assets/images/projects/myzharbot/v3/MyzharBot-v3.1.1-Myzhar.jpg "MyzharBot-v3.1.1 and me")
 
-{% include gallery id="gallery_embedded" caption="BeagleBoard and NVIDIA® Jetson TK1" %}
+{% include gallery id="gallery_embedded" caption="Pandaboard ES vs NVIDIA® Jetson TK1" %}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8iJ-h96syKE?si=mC4Goc2Q3OUkSvUv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
 
