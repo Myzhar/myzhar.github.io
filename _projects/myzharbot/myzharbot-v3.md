@@ -201,7 +201,7 @@ In mid 2014, I embarked on developing MyzharBot's third version, upgrading from 
 
 {% include gallery id="gallery_embedded" caption="Pandaboard ES vs NVIDIA® Jetson TK1" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8iJ-h96syKE?si=mC4Goc2Q3OUkSvUv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+{% include video id="8iJ-h96syKE" provider="youtube" %}
 
 In September 2014, MyzharBot-v3.0 was operational, even if not yet fully autonomous. I exposed it at Maker Faire Rome. It was my first public appearance with the robot, and I was thrilled to showcase its new capabilities.
 
@@ -233,7 +233,7 @@ The source code is still available on [GitHub](https://github.com/Myzhar/ros_rob
 
 The hardware received significant upgrades. I redesigned the laser-cut plastic chassis to accommodate the Jetson TK1 board and replaced the dual-webcam setup with an Asus Xtion Pro Live RGB-D camera. This addition provided depth information for obstacle detection and mapping at zero cost, thanks to the open-source [OpenNI](https://structure.io/openni) drivers.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ks3mqgFWzCo?si=I28PhBwcE30PXM3O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+{% include video id="Ks3mqgFWzCo" provider="youtube" %}
 
 ## An Encounter That Changed My Life
 
@@ -249,41 +249,28 @@ Below are two of the first ZED cameras released that Stereolabs donated to me af
 
 ![ZED and Jetson Champion cup](/assets/images/projects/myzharbot/v3/zed-jetson-champ.jpg "ZED and Jetson Champion cup")
 
+## Videos
+
+A couple of videos from MyzharBot-v3 era:
+
+{% include video id="hLHFP6P9CIY" provider="youtube" %}
+{% include video id="md1oSbEHiuI" provider="youtube" %}
+{% include video id="FdPvukR03H4" provider="youtube" %}
+{% include video id="PN_AxCug5lg" provider="youtube" %}
+{% include video id="BG9dP-FogZo" provider="youtube" %}
+{% include video id="dppFxiD2ZMg" provider="youtube" %}
+{% include video id="sLIgMgVom2g" provider="youtube" %}
+{% include video id="ZbMIjfNKJjQ" provider="youtube" %}
+{% include video id="-JlfJpLDp2o" provider="youtube" %}
+{% include video id="hzX94RmvLFs" provider="youtube" %}
+{% include video id="XLRNmWZ2ENU" provider="youtube" %}
+{% include video id="6lahzvQxtJg" provider="youtube" %}
+{% include video id="XPZa0kEcaCI" provider="youtube" %}
+{% include video id="g4OY0clOLWE" provider="youtube" %}
+
 ## Photos
 
 A few memorable moments from the MyzharBot-v3 era: building the robot, developing,MakerFaire 2014, and GTC 2015.
 
 {% include gallery id="gallery_myzharbot_v3" %}
 
-## Videos
-
-A couple of videos from MyzharBot-v3 era:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hLHFP6P9CIY?si=G-okickCEpniiw0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/md1oSbEHiuI?si=lnva3rFZDOMPXjbx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FdPvukR03H4?si=-AYl8F8NKgMO1Utl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PN_AxCug5lg?si=j9y3YxADvH16k_35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BG9dP-FogZo?si=bBa6g8yXN4T42nnb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dppFxiD2ZMg?si=UVl8NPiUBnWRMP9T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sLIgMgVom2g?si=mipDDtEk0fXSs9UV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZbMIjfNKJjQ?si=xoVOsBMqwGMmmhCL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-JlfJpLDp2o?si=TND0pFF2RAHxA7Tj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hzX94RmvLFs?si=ENW-Gzrq8oeKL5h_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XLRNmWZ2ENU?si=OH37n852KlOCVWr9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6lahzvQxtJg?si=IPXxClIxLoOzWS-t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XPZa0kEcaCI?si=-FquK_rAmtjLNm3l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g4OY0clOLWE?si=ovUpYvXiwUOuNM3Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----

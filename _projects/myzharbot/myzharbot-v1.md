@@ -43,10 +43,7 @@ I was a young and naive engineer...
 
 A few videos of my first tests in 2012:
 
-<iframe src="https://www.youtube.com/embed/o4W0ir7bfkw?si=dL6rcC-2h7-_vvDv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe src="https://www.youtube.com/embed/x7R6s1xjjNg?si=dL6rcC-2h7-_vvDv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe src="https://www.youtube.com/embed/czmqUQI7SEg?si=dL6rcC-2h7-_vvDv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
----
-<iframe src="https://www.youtube.com/embed/XWvtm3Ovpjg?si=dL6rcC-2h7-_vvDv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{% include video id="o4W0ir7bfkw" provider="youtube" %}
+{% include video id="x7R6s1xjjNg" provider="youtube" %}
+{% include video id="czmqUQI7SEg" provider="youtube" %}
+{% include video id="XWvtm3Ovpjg" provider="youtube" %}
