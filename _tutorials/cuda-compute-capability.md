@@ -72,7 +72,7 @@ ARCH="-gencode arch=compute_60,code=sm_60 \
 -gencode arch=compute_70,code=sm_70 \
 -gencode arch=compute_75,code=sm_75 \
 -gencode arch=compute_80,code=sm_80 \
--gencode arch=compute_89,code=sm_89"
+-gencode arch=compute_89,code=sm_89" \
 nvcc ${ARCH} [other nvcc options] <input_file> -o <output_file>
 ```
 
