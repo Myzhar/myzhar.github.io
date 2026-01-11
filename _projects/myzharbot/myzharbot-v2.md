@@ -386,18 +386,17 @@ I redesigned the chassis to accommodate the Pandaboard ES and two USB webcams. T
 
 The initial prototype utilized laser-cut wood, which I later replaced with a refined 3D-printed plastic version.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bWky0T8JxCY?si=KWojJz2AH0MWM0Ir" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+{% include video id="bWky0T8JxCY" provider="youtube" %}
 
 ## Software Development
 
 I embarked on creating a custom robotics framework from scratch, implementing core functionalities including motor control, webcam image acquisition, and network-based image data publishing. This approach consumed considerable time, as I initially avoided leveraging existing libraries or frameworks. This experience taught me a valuable lesson about the importance of utilizing established tools to accelerate development and enhance efficiency.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Rzh8ulo-hr4?si=xoaFCht-ypJ6UEhd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+{% include video id="Rzh8ulo-hr4" provider="youtube" %}
 
 Development continued for nearly two years until mid-2014, when I transitioned to the third version of MyzharBot, upgrading to the NVIDIA® Jetson TK1 as the primary computing platform.
 
 ## Photos
 
 {% include gallery id="gallery_v2" %}
-
 
