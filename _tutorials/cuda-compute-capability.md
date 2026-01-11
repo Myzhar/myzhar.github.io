@@ -85,7 +85,7 @@ Here's a summary of NVIDIA® GPU architectures and their compute capabilities
 ### Recent Architectures
 
 | Compute Capability | Data Center | Workstation/Consumer | Jetson |
-|-------------------|-------------|---------------------|---------|
+| ------------------ | ----------- | -------------------- | ------ |
 | 12.1 | | NVIDIA GB10 (DGX Spark) | |
 | 12.0 | NVIDIA RTX PRO 6000 Blackwell Server Edition | NVIDIA RTX PRO 6000 Blackwell Workstation Edition<br>NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition<br>NVIDIA RTX PRO 5000 Blackwell<br>NVIDIA RTX PRO 4500 Blackwell<br>NVIDIA RTX PRO 4000 Blackwell<br>NVIDIA RTX PRO 4000 Blackwell SFF Edition<br>NVIDIA RTX PRO 2000 Blackwell<br>GeForce RTX 5090<br>GeForce RTX 5080<br>GeForce RTX 5070 Ti<br>GeForce RTX 5070<br>GeForce RTX 5060 Ti<br>GeForce RTX 5060<br>GeForce RTX 5050 | |
 | 11.0 | | | Jetson T5000<br>Jetson T4000 |
@@ -101,7 +101,7 @@ Here's a summary of NVIDIA® GPU architectures and their compute capabilities
 ### Older Architectures
 
 | Compute Capability | Data Center | Workstation/Consumer | Jetson |
-|-------------------|-------------|---------------------|---------|
+| ------------------ | ----------- | -------------------- | ------ |
 | 7.2 | | | Jetson AGX Xavier<br>Jetson Xavier NX |
 | 7.0 | NVIDIA V100 | Quadro GV100<br>NVIDIA TITAN V | |
 | 6.2 | | | Jetson TX2 |
