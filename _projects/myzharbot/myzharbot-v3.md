@@ -203,7 +203,7 @@ In 2014, I embarked on developing MyzharBot's third version, upgrading from the 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8iJ-h96syKE?si=mC4Goc2Q3OUkSvUv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
 
-In September 2014, MyzharBot-v3.0 was operational, and I exposed it at Maker Faire Rome 2014. It was my first public appearance with the robot, and I was thrilled to showcase its new capabilities.
+In September 2014, MyzharBot-v3.0 was operational, even if not yet fully autonomous. I exposed it at Maker Faire Rome. It was my first public appearance with the robot, and I was thrilled to showcase its new capabilities.
 
 In December 2014, I received an unexpected Facebook message from an NVIDIA® representative. They were recruiting Jetson TK1 enthusiasts for a new program called [Jetson Champions](https://developer.nvidia.com/embedded/community/jetson-champions). Initially skeptical, it seemed too good to be true, I soon realized the opportunity was genuine. They had discovered my blog and wanted me to continue **sharing my knowledge and experience with the community** while developing projects using NVIDIA® Jetson platforms. **Nothing easier than that!**
 
@@ -224,6 +224,10 @@ It was an unforgettable experience because we also had the chance to visit San F
 Coincidentally, I decided to abandon my custom robotics framework and adopt [ROS (Robot Operating System)](https://www.ros.org/) as MyzharBot's primary software platform. Whether it was [ROS Hydro or Indigo](https://wiki.ros.org/Distributions#List_of_Distributions), within weeks I replicated my previous functionality while leveraging ROS's extensive ecosystem. Most importantly, I could finally focus on **high-level robotics software** without worrying about low-level details like data communication, hardware abstraction, or control interfaces—ROS handled it all.
 
 {% include gallery id="gallery_ros" %}
+
+This was the first step toward full autonomous navigation. I implemented a node that allowed MyzharBot to safely navigate avoiding any kind of obstacle using data from the Asus Xtion Pro Live RGB-D camera (see below).
+
+The source code is still available on [GitHub](https://github.com/Myzhar/ros_robot_wandering_demo) in a fork of the original [ros_robot_wandering_demo](https://github.com/officinerobotiche/ros_robot_wandering_demo) repository that I published in Officine Robotiche's GitHub account, where I contributed as a founder and member in those years.
 
 ## Hardware Upgrades
 
