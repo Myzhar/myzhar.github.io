@@ -11,12 +11,19 @@ header:
 intro: 
   - excerpt: 'Insights, projects, and stories about seeing, thinking, and moving machines.'
 feature_row:
+  - image_path: /assets/images/robots_default.jpg
+    alt: "Projects"
+    title: ":triangular_ruler: Projects"
+    excerpt: "The MyzharBot and other robotics, computer vision and AI projects developed by me."
+    url: "/projects/"
+    btn_label: "explore"
+    btn_class: "btn--warning"
   - image_path: /assets/images/post_default.jpg
-    alt: "about"
-    title: ":identification_card: About"
-    excerpt: "About Myzhar, the MyzharBot and this website. Who I am and what I do."
-    url: "/about/"
-    btn_label: "read more"
+    alt: "tutorials"
+    title: ":books: Tutorials"
+    excerpt: "Tutorials and articles on computer vision, robotics, AI developmentm, 3D printing, and more."
+    url: "/tutorials/"
+    btn_label: "learn"
     btn_class: "btn--info"
   - image_path: /assets/images/events_default.jpg
     alt: "Events"
@@ -25,15 +32,12 @@ feature_row:
     url: "/events/"
     btn_label: "events"
     btn_class: "btn--success"
-  - image_path: /assets/images/robots_default.jpg
-    alt: "Projects"
-    title: ":triangular_ruler: Projects"
-    excerpt: "The MyzharBot and other robotics, computer vision and AI projects developed by me."
-    url: "/projects/"
-    btn_label: "explore"
-    btn_class: "btn--warning"
+latest_posts:
+  title: ":newspaper: Latest News"
 ---
 
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
+
+{% include latest_posts id="latest_posts" %}

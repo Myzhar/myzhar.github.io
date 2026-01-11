@@ -1,0 +1,14 @@
+<section class="feature__wrapper" aria-labelledby="latest-news-heading">
+    <div class="grid__wrapper">
+        <div class="grid__item">
+            <div class="archive__item">
+                <div class="container">
+                    <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=a&t=tt&d=70BIj0py45IAXi8BY5Ok9vHDPmP-NzwOhq9GSsXcgOk&co=2d78ad&ct=ffffff&cmo=3acc3a&cmn=ff5353'></script>
+                </div>
+            </div>
+        </div>
+        {% for post in site.posts limit:3 %}
+            {% include archive-single.html type="grid" %}
+        {% endfor %}
+    </div>
+</section>

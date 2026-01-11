@@ -197,7 +197,7 @@ gallery_myzharbot_v3:
 
 In mid 2014, I embarked on developing MyzharBot's third version, upgrading from the [Pandaboard ES](https://en.wikipedia.org/wiki/PandaBoard) to the [NVIDIA® Jetson TK1](https://developer.nvidia.com/blog/jetson-tk1-mobile-embedded-supercomputer-cuda-everywhere/) as the main computer. My dream had finally materialized: NVIDIA® released a powerful CUDA-enabled embedded platform capable of running real-time computer vision on a small robot!
 
-![MyzharBot-v3.1.1](/assets/images/projects/myzharbot/v3/MyzharBot-v3.1.1-Myzhar.jpg "MyzharBot-v3.1.1 and me")
+{% include figure popup=true image_path="/assets/images/projects/myzharbot/v3/MyzharBot-v3.1.1-Myzhar.jpg" alt="MyzharBot-v3.1.1" caption="MyzharBot-v3.1.1 and me" %}
 
 {% include gallery id="gallery_embedded" caption="Pandaboard ES vs NVIDIA® Jetson TK1" %}
 
@@ -215,7 +215,7 @@ A new chapter was unfolding—a new robot, a powerful brain, and an exciting adv
 
 I was not alone on this journey; my old friend [Raffaello Bonghi](https://www.linkedin.com/in/raffaello-bonghi/) collaborated with me on the firmware for the motor driver board, ensuring seamless integration with the new system. For this reason, I asked NVIDIA® to invite him to GTC 2015 as well, and they gladly accepted. This was a great opportunity for Raffaello too, as he is now a Technical Marketing Engineer at NVIDIA®.
 
-![Raffaello, doing Raffaello things](/assets/images/projects/myzharbot/v3/20150315_175912.jpg "Raffaello, doing Raffaello things")
+{% include figure popup=true image_path="/assets/images/projects/myzharbot/v3/20150315_175912.jpg " alt="Raffaello, doing Raffaello things" caption="Raffaello, doing Raffaello things" %}
 
 It was an unforgettable experience because we also had the chance to visit San Francisco for two full days after GTC, exploring the city and its iconic landmarks.
 
@@ -247,7 +247,7 @@ Fascinated by the ZED's potential for robotics, we exchanged contacts. I promise
 
 Below are two of the first ZED cameras released that Stereolabs donated to me after GTC to use with the next version of MyzharBot. They still work like jewels and I treasure them. Behind a Jetson Champion cup, I love using it for breakfast as a daily reminder of how far I've come since those early days.
 
-![ZED and Jetson Champion cup](/assets/images/projects/myzharbot/v3/zed-jetson-champ.jpg "ZED and Jetson Champion cup")
+{% include figure popup=true image_path="/assets/images/projects/myzharbot/v3/zed-jetson-champ.jpg" alt="My two ZED cameras and my Jetson Champion mug" caption="My two ZED cameras and my Jetson Champion mug" %}
 
 ## Videos
 

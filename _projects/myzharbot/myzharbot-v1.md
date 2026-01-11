@@ -19,7 +19,7 @@ classes: single
 
 The first version of MyzharBot was built in 2012 using a simple chassis made of laser-cut plastic sheets joint together with nuts and bolts.
 
-![MyzharBot-v1](/assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg "MyzharBot-v1")
+{% include figure popup=true image_path="/assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg" alt="MyzharBot-v1" caption="MyzharBot-v1" %}
 
 ## Electronics
 
