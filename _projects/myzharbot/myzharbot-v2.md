@@ -374,7 +374,7 @@ In late 2012, I began developing the second version of MyzharBot with the ambiti
 
 The first version had a critical limitation: insufficient space to accommodate a computer for autonomous navigation.
 
-I chose the [Pandaboard ES](https://www.beagleboard.org/boards/beagleboard), a compact ARM-based embedded Linux computer that showed promise for robotics applications. It offered a robust set of I/O pins and competitive performance for its time.
+I chose the [Pandaboard ES](https://en.wikipedia.org/wiki/PandaBoard), a compact ARM-based embedded Linux computer that showed promise for robotics applications. It offered a robust set of I/O pins and competitive performance for its time.
 
 {% include gallery id="gallery_panda" %}
 
@@ -382,7 +382,7 @@ My initial plan involved implementing stereo vision using two standard webcams. 
 
 ## New Layout
 
-I redesigned the chassis to accommodate the BeagleBone board and dual USB webcams. The new design featured an additional top plate for mounting the board and cameras, with reorganized components to optimize space utilization and weight distribution.
+I redesigned the chassis to accommodate the Pandaboard ES and two USB webcams. The new design featured an additional top plate for mounting the board and cameras, with reorganized components to optimize space utilization and weight distribution.
 
 The initial prototype utilized laser-cut wood, which I later replaced with a refined 3D-printed plastic version.
 
