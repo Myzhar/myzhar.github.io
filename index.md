@@ -21,7 +21,7 @@ feature_row:
   - image_path: /assets/images/post_default.jpg
     alt: "tutorials"
     title: ":books: Tutorials"
-    excerpt: "Tutorials and articles on computer vision, robotics, AI developmentm, 3D printing, and more."
+    excerpt: "Tutorials and articles on computer vision, robotics, AI development, 3D printing, and more."
     url: "/tutorials/"
     btn_label: "learn"
     btn_class: "btn--info"
