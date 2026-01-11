@@ -32,12 +32,9 @@ feature_row:
     url: "/events/"
     btn_label: "events"
     btn_class: "btn--success"
-latest_posts:
-  title: ":newspaper: Latest News"
 ---
 
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
 
-{% include latest_posts id="latest_posts" %}
