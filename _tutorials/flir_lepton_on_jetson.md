@@ -1,6 +1,6 @@
 ---
 title: "Using a FLIR Lepton3 Thermal Camera with NVIDIA® Jetson"
-excerpt: "A comprehensive step-by-step guide to interfacing a FLIR¶ Lepton3 thermal camera with NVIDIA® Jetson platforms."
+excerpt: "A comprehensive step-by-step guide to interfacing a FLIR® Lepton3 thermal camera with NVIDIA® Jetson platforms."
 author: "Walter Lucetti"
 number: 200
 header:
