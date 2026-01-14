@@ -6,6 +6,8 @@ author: "Walter Lucetti"
 layout: single
 classes: wide
 toc: false
+header:
+  teaser: /assets/images/tutorials/compute_capability/geforce-rtx-50series-nv-sfg-thumbnail-1920x1080.jpeg
 
 categories: 
   - updates
