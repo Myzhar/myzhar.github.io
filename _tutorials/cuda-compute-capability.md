@@ -6,8 +6,8 @@ number: 100
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/totorials/compute_capability/geforce-rtx-50series-nv-sfg-thumbnail-1920x1080.jpeg
-  teaser: /assets/images/totorials/compute_capability/geforce-rtx-50series-nv-sfg-thumbnail-1920x1080.jpeg
+  overlay_image: /assets/images/tutorials/compute_capability/geforce-rtx-50series-nv-sfg-thumbnail-1920x1080.jpeg
+  teaser: /assets/images/tutorials/compute_capability/geforce-rtx-50series-nv-sfg-thumbnail-1920x1080.jpeg
   actions:
     - label: "Official Source"
       url: "https://developer.nvidia.com/cuda/gpus"

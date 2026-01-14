@@ -7,5 +7,5 @@ collection: tutorials
 entries_layout: grid
 classes: wide
 sort_by: number
-sort_order: reverse
+sort_order: forward
 ---
