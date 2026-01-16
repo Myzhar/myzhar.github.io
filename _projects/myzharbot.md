@@ -1,5 +1,5 @@
 ---
-title: "MyzharBot"
+title: "The MyzharBot project"
 excerpt: "MyzharBot is an open source and open hardware robotic platform born to study sensor fusion algorithms for autonomous navigation"
 author: "Walter Lucetti"
 number: 0
@@ -73,6 +73,8 @@ It is my main project since 2012, and it has gone through several iterations and
 {% include gallery id="gallery_v3" %}
 
 ## MyzharBot v4
+
+*Coming soon...*
 
 {% include gallery id="gallery_v4" %}
 
