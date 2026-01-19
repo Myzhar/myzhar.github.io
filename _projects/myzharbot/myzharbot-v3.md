@@ -225,7 +225,7 @@ Coincidentally, I decided to abandon my custom robotics framework and adopt [ROS
 
 {% include gallery id="gallery_ros" %}
 
-This was the first step toward full autonomous navigation. I implemented a node that allowed MyzharBot to safely navigate avoiding any kind of obstacle using data from the Asus Xtion Pro Live RGB-D camera (see below).
+This was the first step toward full autonomous navigation. I implemented a node that allowed MyzharBot to safely navigate while avoiding any kind of obstacle using 3D data from the Asus Xtion Pro Live RGB-D camera (see below).
 
 The source code is still available on [GitHub](https://github.com/Myzhar/ros_robot_wandering_demo) in a fork of the original [ros_robot_wandering_demo](https://github.com/officinerobotiche/ros_robot_wandering_demo) repository that I published in Officine Robotiche's GitHub account, where I contributed as a founder and member in those years.
 
@@ -237,11 +237,11 @@ The hardware received significant upgrades. I redesigned the laser-cut plastic c
 
 ## An Encounter That Changed My Life
 
-At GTC 2015, during a lunch break while manning the NVIDIA® booth alone, a girl approached holding a silver stereo camera. [Cecile Schmollgruber](https://www.linkedin.com/in/cecile-schmollgruber-63563126/), co-founder and CEO of Stereolabs, introduced herself and her revolutionary product: the first [ZED Stereo Camera](https://www.stereolabs.com/). This high-resolution passive stereo camera featured perfect sensor synchronization and a powerful CUDA-accelerated SDK—a computer vision enthusiast's dream.
+At GTC 2015, during a lunch break while manning the NVIDIA® booth alone, a girl approached holding a silver device with two camera eyes. [Cecile Schmollgruber](https://www.linkedin.com/in/cecile-schmollgruber-63563126/), co-founder and CEO of Stereolabs, introduced herself and her revolutionary product: the first [ZED Stereo Camera](https://www.stereolabs.com/). This high-resolution passive stereo camera featured perfect CMOS sensor synchronization and a powerful CUDA-accelerated SDK: a computer vision enthusiast's dream.
 
-Cecile and [Edwin Azzam](https://www.linkedin.com/in/edwinazzam/), another Stereolabs co-founder and CTO, were announcing the ZED's launch. Their SDK leveraged CUDA for real-time processing, generating high-resolution depth maps and point clouds with natively synchronized color information.
+Cecile and [Edwin Azzam](https://www.linkedin.com/in/edwinazzam/), another Stereolabs co-founder and CTO, were announcing the ZED's launch at GTC with a booth at the conference. Their SDK leveraged CUDA for real-time processing, generating high-resolution depth maps and point clouds with natively synchronized color information.
 
-Fascinated by the ZED's potential for robotics, we exchanged contacts. I promised to connect them with the NVIDIA® team, and a few hours later A few hours later, I led one of the NVIDIA managers to their booth. This encounter sparked a long-lasting friendship and collaboration that led me to join Stereolabs in 2018 as a Senior Software Engineer, where I became a key ambassador and contributor to their products and SDKs.
+Fascinated by the ZED's potential for robotics, we exchanged contacts. I promised to connect them with the NVIDIA® team, and a few hours later, I led one of the NVIDIA managers to their booth. This encounter sparked a long-lasting friendship and collaboration that led me to join Stereolabs in 2018 as a Senior Software Engineer, where I became a key ambassador and contributor to their products and SDKs.
 
 **Spoiler alert**: the ZED camera was later integrated into MyzharBot-v4 :smile:
 
@@ -270,7 +270,7 @@ A couple of videos from MyzharBot-v3 era:
 
 ## Photos
 
-A few memorable moments from the MyzharBot-v3 era: building the robot, developing,MakerFaire 2014, and GTC 2015.
+A few memorable moments from the MyzharBot-v3 era: building the robot, developing, showcase at MakerFaire 2014, and GTC 2015.
 
 {% include gallery id="gallery_myzharbot_v3" %}
 
