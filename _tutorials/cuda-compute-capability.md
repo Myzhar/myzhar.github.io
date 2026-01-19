@@ -37,7 +37,25 @@ Replace `XX` with your GPU's compute capability value (without the decimal point
 
 ### Finding Your GPU's Compute Capability
 
-NVIDIA® provides a comprehensive list of GPU compute capabilities on their [CUDA GPUs webpage](https://developer.nvidia.com/cuda/gpus).
+#### Using CUDA Device Query
+
+If CUDA is already installed on your system, use the built-in device query tool:
+
+```bash
+/usr/local/cuda/bin/__nvcc_device_query
+```
+
+The output will display your GPU's compute capability as a two-digit number. For example, with a **GeForce RTX 4070**:
+
+```bash
+89
+```
+
+This corresponds to compute capability **8.9** (as shown in the [architecture table below](#recent-architectures)).
+
+#### Online Reference
+
+NVIDIA® maintains an official list of all GPU compute capabilities on their [CUDA GPUs webpage](https://developer.nvidia.com/cuda/gpus).
 
 ### Example: Desktop GPU
 
