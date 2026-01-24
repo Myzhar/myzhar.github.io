@@ -77,8 +77,8 @@ At the time of writing, the ROS 2 distros are:
 
 | Distribution Name      | Release Date  | Notes             | Logo                                                                   |
 |------------------------|---------------|-------------------|------------------------------------------------------------------------|
-| Ardent Apalone         | December 2017 | EOL 12/2016       | ![Ardent Logo](/assets/images/ros2/distributions/ardent-small.png)     |
-| Bouncy Bolson          | July 2018     | EOL 07/2017       | ![Bouncy Logo](/assets/images/ros2/distributions/bouncy-small.png)     |
+| Ardent Apalone         | December 2017 | EOL 12/2018       | ![Ardent Logo](/assets/images/ros2/distributions/ardent-small.png)     |
+| Bouncy Bolson          | July 2018     | EOL 07/2019       | ![Bouncy Logo](/assets/images/ros2/distributions/bouncy-small.png)     |
 | Crystal Clemmys        | December 2018 | EOL 12/2019       | ![Crystal Logo](/assets/images/ros2/distributions/crystal-small.png)   |
 | Dashing Diademata      | May 2019      | LTS - EOL 05/2021 | ![Dashing Logo](/assets/images/ros2/distributions/dashing-small.png)   |
 | Eloquent Elusor        | November 2019 | EOL 11/2020       | ![Eloquent Logo](/assets/images/ros2/distributions/eloquent-small.png) |

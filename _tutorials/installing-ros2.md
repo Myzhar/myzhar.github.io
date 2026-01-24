@@ -76,7 +76,9 @@ sudo apt install ros-<distro>-desktop
 
 Replace `<distro>` with the name of the ROS 2 distribution you want to install.
 
-I recommend installing LTS distributions for better stability:
+I recommend installing LTS distributions for better stability, and long-term support. While non-LTS distributions may have the latest features, they might not be as stable for production use, and they have a shorter support cycle (18 months). LTS distributions receive updates and support for five years, making them more suitable for long-term projects.
+
+Here are the available LTS distributions:
 
 - For Ubuntu 22.04, replace `<distro>` with `humble`.
 - For Ubuntu 24.04, replace `<distro>` with `jazzy`.
