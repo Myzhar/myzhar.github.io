@@ -78,8 +78,8 @@ Replace `<distro>` with the name of the ROS 2 distribution you want to install.
 
 I recommend installing LTS distributions for better stability:
 
-- For Ubuntu 22.04 replace `<distro>` with `humble`.
-- For Ubuntu 24.04 replace `<distro>` with `jazzy`.
+- For Ubuntu 22.04, replace `<distro>` with `humble`.
+- For Ubuntu 24.04, replace `<distro>` with `jazzy`.
 - For Ubuntu 26.04 (from May 2026), replace `<distro>` with `lyrical`.
 
 If you prefer a minimal installation, recommended for headless systems or robot deployments, you can install the ROS 2 base package:
@@ -88,9 +88,9 @@ If you prefer a minimal installation, recommended for headless systems or robot 
 sudo apt install ros-<distro>-base
 ```
 
-## Step 5: Install the development tools
+## Step 5: Install Development Tools
 
-To develop ROS 2 packages, or compile packages from source, you will need to install additional development tools and ROS 2 build tools. Run the following command:
+To develop ROS 2 packages or compile packages from source, you will need to install additional development tools and ROS 2 build tools. Run the following command:
 
 ```bash
 sudo apt update && sudo apt install ros-dev-tools
@@ -136,9 +136,9 @@ Then, apply the changes by running:
 source ~/.bashrc
 ```
 
-## A useful ROS 2 terminal configuration
+## A Useful ROS 2 Terminal Configuration
 
-When I open a new terminal console, I like to view all the environment variables related to ROS 2. To do this, I create a custom configuration file to the sourced by `~/.bashrc` file.
+When I open a new terminal console, I like to view all the environment variables related to ROS 2. To do this, I create a custom configuration file to be sourced by the `~/.bashrc` file.
 
 Open a new file called `.ros2_config.bash` in your home directory:
 
@@ -146,7 +146,7 @@ Open a new file called `.ros2_config.bash` in your home directory:
 gedit ~/.ros2_config.bash
 ```
 
-you can use `nano` instead of `gedit` if you prefer a terminal-based text editor.
+You can use `nano` instead of `gedit` if you prefer a terminal-based text editor.
 
 Then, copy and paste the following code into the file:
 
@@ -188,10 +188,10 @@ echo 'Local IPs:' $(hostname -I)
 echo "-----------"  
 ```
 
-Then I add this line to the end of my `~/.bashrc` file:
+Then, add this line to the end of your `~/.bashrc` file:
 
 ```bash
-source ~/ros2_config.sh
+source ~/ros2_config.bash
 ```
 
 Now, every time you open a new terminal, your ROS 2 environment will be set up according to your preferences, and you'll see a summary of your ROS 2 configuration:
