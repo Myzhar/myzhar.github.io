@@ -96,6 +96,8 @@ For details on upcoming features, see the [roadmap](https://docs.ros.org/en/roll
 
 In addition to the regular distros, ROS 2 also offers a Rolling Ridley distro. The Rolling Ridley distro is a continuously updated version of ROS 2 that includes the latest features and improvements. It is intended for developers who want to stay on the cutting edge of ROS 2 development and are willing to accept the potential instability that comes with using a rolling release.
 
+![Rolling Logo](/assets/images/ros2/distributions/rolling-small.png)
+
 Packages released into the Rolling distro will be automatically released into future stable distros of ROS 2.
 
 ## How Does ROS 2 Work?
@@ -137,4 +139,4 @@ With this tutorial, I intended to give you a brief overview of what ROS 2 is and
 
 ## Next Steps
 
-In the next tutorial, we will guide you through the process of setting up your first ROS 2 workspace, installing the necessary tools, and creating a simple ROS 2 node. By the end of that tutorial, you will have a functional ROS 2 environment ready for your robotics projects.
+In the [next tutorial](/tutorials/installing-ros2/), I will guide you through the process of setting up your first ROS 2 workspace, and installing the necessary tools. By the end of that tutorial, you will have a functional ROS 2 environment ready for your robotics projects.
