@@ -23,7 +23,7 @@ In my previous tutorial, [Understanding ROS 2](/tutorials/understanding-ros2/), 
 
 While ROS 2 can be installed on various operating systems, this tutorial focuses on installing ROS 2 on Ubuntu, which is the most commonly used platform for ROS development. Ensure you have the following prerequisites:
 
-1. A 64-bit version of Ubuntu 20.04 (Focal Fossa), 22.04 (Jammy Jellyfish), or 24.04 (Lunar Lobster) installed on your machine.
+1. A 64-bit version of Ubuntu 20.04 (Focal Fossa), 22.04 (Jammy Jellyfish), or 24.04 (Noble Numbat) installed on your machine.
 2. A user account with sudo privileges.
 3. Basic knowledge of using the terminal and command-line interface.
 4. An active internet connection to download the necessary packages.
