@@ -85,7 +85,7 @@ exclude:
 # Build settings
 markdown: kramdown
 highlighter: rouge
-lsi: false
+lsi: false # not supported in GitHub Pages
 excerpt_separator: "\n\n"
 incremental: false
 
@@ -205,6 +205,7 @@ plugins:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
+  - jekyll-seo-tag
   - jemoji
   - jekyll-include-cache
   - jekyll-redirect-from
@@ -216,6 +217,7 @@ whitelist:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
+  - jekyll-seo-tag
   - jemoji
   - jekyll-include-cache
   - jekyll-redirect-from
@@ -231,3 +233,4 @@ tag_archive:
 after_footer_scripts :
   #- /assets/js/cookie-consent.js
   - /assets/js/copyCode.js
+
