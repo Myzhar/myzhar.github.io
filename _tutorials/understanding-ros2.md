@@ -1,6 +1,6 @@
 ---
-title: "Getting Started with ROS 2"
-excerpt: "An overview of ROS 2, its features, and how to set up your first ROS 2 workspace."
+title: "Understanding ROS 2"
+excerpt: "An overview of ROS 2, its features, and why it is so popular in the robotics community."
 author: "Walter Lucetti"
 number: 300
 header:
@@ -18,6 +18,32 @@ classes: single
 ## ROS 2
 
 When diving into robotics development, one of the most powerful tools at your disposal is the Robot Operating System 2 (ROS 2). But what exactly is ROS 2, and why has it become a cornerstone in the robotics community?
+
+ROS 2 is not an operating system in the traditional sense; rather, it is a flexible framework for writing robot software.
+
+### A little history
+
+ROS 2 is the successor to ROS 1, which was first released in 2010. While ROS 1 laid the groundwork for robotic software development, it had limitations that became apparent as robotics applications grew more complex. ROS 2 was developed to address these limitations and introduce new features that enhance performance, scalability, and security.
+
+Around 2007, at Stanford University, the first concepts of what would become ROS were born. The goal was to create a framework that would simplify the development of robotic applications by providing a set of tools and libraries that could be reused across different projects.
+
+The most important project using the early ROS was the PR1, a hardware robot prototype. This robot was designed to perform household tasks, and it served as a testbed for many of the concepts that would later be incorporated into ROS.
+
+{% include figure popup=true image_path="/assets/images/ros2/robot-pr1.jpg" alt="PR1" caption="The PR1 robot prototype" %}
+
+A little later, the creators of ROS, Eric Berger and Keenan Wyrobek, met Scott Hassan, the founder of Willow Garage, a technology incubator which was working on an autonomous SUV and a solar autonomous boat. Impressed by the potential of ROS, Willow Garage decided to support its development, leading to the first official release of ROS in 2010 driving the famous PR2 robot.
+
+{% include figure popup=true image_path="/assets/images/ros2/robot-pr2.jpg" alt="PR2" caption="The PR2 robot" %}
+
+The development of ROS continued to evolve. In 2013 the Open Source Robotics Foundation (OSRF) was founded to oversee the development of ROS and other open-source robotics projects, while Willow Garage was "dissolved". OSRF played a crucial role in the growth of the ROS community, providing resources and support for developers worldwide. 
+
+In 2015, OSRF launched the development of ROS 2, with the goal of addressing the limitations of ROS 1 and introducing new features to meet the evolving needs of the robotics community. The first official release of ROS 2, named Ardent Apalone, was made available in December 2017.
+
+In 2017, OSRF became Open Robotics, a subsidiary of OSRF, which continues to lead the development of ROS 2 today.
+
+Finally in 2020, the first "almost ready for production" version of ROS 2, named Foxy Fitzroy, was released, providing a stable foundation for developers to build upon.
+
+*Read more about the [History of ROS on Wikipedia](https://en.wikipedia.org/wiki/Robot_Operating_System){:target="_blank"}.*
 
 ### Understanding ROS 2
 
@@ -45,7 +71,9 @@ ROS 2 provides a modular architecture that allows developers to leverage existin
 
 ROS 2 follows a distribution model similar to that of Linux distributions, with regular releases and long-term support (LTS) versions, following the release schedule of Ubuntu. Each ROS 2 distribution is a stable release that includes a specific set of features, bug fixes, and improvements.
 
-At the time of writing, the ROS 2 distributions are:
+No one uses the word "distribution" in the ROS 2 community, but it is the correct term. Instead, people usually refer to them as "ROS 2 distros".
+
+At the time of writing, the ROS 2 distros are:
 
 | Distribution Name      | Release Date  | Notes             | Logo                                                                   |
 |------------------------|---------------|-------------------|------------------------------------------------------------------------|
@@ -64,11 +92,11 @@ At the time of writing, the ROS 2 distributions are:
 
 For details on upcoming features see the [roadmap](https://docs.ros.org/en/rolling/The-ROS2-Project/Roadmap.html).
 
-### The particular Rolling Ridley Distribution
+### The particular Rolling Ridley distro
 
-In addition to the regular distributions, ROS 2 also offers a Rolling Ridley distribution. The Rolling Ridley distribution is a continuously updated version of ROS 2 that includes the latest features and improvements. It is intended for developers who want to stay on the cutting edge of ROS 2 development and are willing to accept the potential instability that comes with using a rolling release.
+In addition to the regular distros, ROS 2 also offers a Rolling Ridley distro. The Rolling Ridley distro is a continuously updated version of ROS 2 that includes the latest features and improvements. It is intended for developers who want to stay on the cutting edge of ROS 2 development and are willing to accept the potential instability that comes with using a rolling release.
 
-Packages released into the Rolling distribution will be automatically released into future stable distributions of ROS 2.
+Packages released into the Rolling distro will be automatically released into future stable distros of ROS 2.
 
 ## How does ROS 2 work?
 
@@ -103,12 +131,10 @@ To improve communication performance Nodes can be loaded into the same process u
   - [**DDS (Data Distribution Service)**](https://docs.ros.org/en/rolling/Concepts/Intermediate/About-Different-Middleware-Vendors.html){:target="_blank"}: A middleware standard used in ROS 2 for efficient and reliable data exchange between nodes.
   - [**Zero-Copy Transport**](https://design.ros2.org/articles/zero_copy.html){:target="_blank"}: A communication mechanism that minimizes data copying between nodes, enhancing efficiency and reducing latency.
 
-## Installing ROS 2
-
-## A Simple Test
-
 ## Conclusion
 
 With this tutorial I intended to give you a brief overview of what ROS 2 is and how it works to understand why I decided to use it for my MyzharBot robot and why it is so popular in the robotics community.
 
-More tutorials will follow to let you understand how I configured the software of my [MyzharBot robot](/projects/myzharbot/). Stay tuned!
+## Next Steps
+
+In the next tutorial, we will guide you through the process of setting up your first ROS 2 workspace, installing the necessary tools, and creating a simple ROS 2 node. By the end of that tutorial, you will have a functional ROS 2 environment ready for your robotics projects.
