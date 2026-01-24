@@ -120,7 +120,7 @@ While not strictly necessary for using ROS 2, creating a ROS 2 workspace is reco
 
 ```bash
 mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
+cd ~/ros2_ws
 colcon build
 ```
 
