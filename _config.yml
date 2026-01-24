@@ -75,6 +75,7 @@ include:
   - _pages
   - Ads.txt
   - ads.txt
+  - robots.txt
 exclude:
   - README.md
   - LICENSE
