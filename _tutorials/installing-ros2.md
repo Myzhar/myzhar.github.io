@@ -193,7 +193,7 @@ echo "-----------"
 Then, add this line to the end of your `~/.bashrc` file:
 
 ```bash
-source ~/ros2_config.bash
+source ~/.ros2_config.bash
 ```
 
 Now, every time you open a new terminal, your ROS 2 environment will be set up according to your preferences, and you'll see a summary of your ROS 2 configuration:
