@@ -5,7 +5,7 @@ remote_theme: mmistakes/minimal-mistakes
 
 minimal_mistakes_skin: "air"
 
-title: "Myzhar and MyzharBot"
+title: "Myzhar & MyzharBot"
 subtitle: "Beyond Perception / Beyond Robotics"
 name: &name "Walter Lucetti"
 description: &description "Insights, projects, and stories about seeing, thinking, and moving machines."

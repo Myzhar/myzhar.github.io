@@ -8,6 +8,8 @@ header:
   actions:
   - label: ":link: Follow Me"
     url: "https://linktr.ee/myzhar"
+  - label: ":robot: MyzharBot"
+    url: "/projects/myzharbot/"
 intro: 
   - excerpt: 'Insights, projects, and stories about seeing, thinking, and moving machines.'
 feature_row:
