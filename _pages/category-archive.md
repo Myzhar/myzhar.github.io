@@ -2,6 +2,7 @@
 title: "News by Category"
 excerpt: "All posts by Category"
 layout: categories
+entries_layout: grid
 permalink: /categories/
 author: "Walter Lucetti"
 author_profile: true
@@ -13,9 +14,9 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/post_default.jpg
   teaser: /assets/images/post_default.jpg
-  actions:
-    - label: "📑 by Tags"
-      url: "/tags"
+  actions:    
     - label: "📜 by Year"
       url: "/posts"
+    - label: "📑 by Tags"
+      url: "/tags"
 ---

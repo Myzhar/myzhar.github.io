@@ -3,6 +3,7 @@ title: "News by Year"
 excerpt: "All posts by Year"
 permalink: /posts/
 layout: posts
+entries_layout: grid
 author: "Walter Lucetti"
 author_profile: true
 classes: wide
