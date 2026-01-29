@@ -1,6 +1,6 @@
 ---
 title: "MyzharBot-v3"
-excerpt: "The robot that made me a Jetson Champion"
+excerpt: "The robot that made me a Jetson™ Champion"
 author: "Walter Lucetti"
 number: 300
 header:
@@ -9,7 +9,7 @@ header:
   overlay_image: /assets/images/projects/myzharbot/v3/MyzharBot-v3.1.jpg
   teaser: /assets/images/projects/myzharbot/v3/MyzharBot-v3.1.jpg
   actions:
-    - label: "NVIDIA® Jetson Champions"
+    - label: "NVIDIA® Jetson™ Champions"
       url: "https://developer.nvidia.com/embedded/community/jetson-champions"
 layout: single
 classes: single
@@ -21,8 +21,8 @@ gallery_embedded:
       title: "Pandaboard ES"
     - url: /assets/images/projects/myzharbot/v3/TK1_Dev_Kit-6350-GREEN-V4_280.jpg
       image_path: /assets/images/projects/myzharbot/v3/TK1_Dev_Kit-6350-GREEN-V4_280.jpg
-      alt: "NVIDIA® Jetson TK1"
-      title: "NVIDIA® Jetson TK1"
+      alt: "NVIDIA® Jetson™ TK1"
+      title: "NVIDIA® Jetson™ TK1"
 
 gallery_ros:
     - url: /assets/images/projects/myzharbot/v3/ros-hydro.png
@@ -195,17 +195,17 @@ gallery_myzharbot_v3:
 
 ## MyzharBot v3 - The Beginning of a New Era
 
-In mid 2014, I embarked on developing MyzharBot's third version, upgrading from the [Pandaboard ES](https://en.wikipedia.org/wiki/PandaBoard) to the [NVIDIA® Jetson TK1](https://developer.nvidia.com/blog/jetson-tk1-mobile-embedded-supercomputer-cuda-everywhere/) as the main computer. My dream had finally materialized: NVIDIA® released a powerful CUDA-enabled embedded platform capable of running real-time computer vision on a small robot!
+In mid 2014, I embarked on developing MyzharBot's third version, upgrading from the [Pandaboard ES](https://en.wikipedia.org/wiki/PandaBoard) to the [NVIDIA® Jetson™ TK1](https://developer.nvidia.com/blog/jetson-tk1-mobile-embedded-supercomputer-cuda-everywhere/) as the main computer. My dream had finally materialized: NVIDIA® released a powerful CUDA™-enabled embedded platform capable of running real-time computer vision on a small robot!
 
 {% include figure popup=true image_path="/assets/images/projects/myzharbot/v3/MyzharBot-v3.1.1-Myzhar.jpg" alt="MyzharBot-v3.1.1" caption="MyzharBot-v3.1.1 and me" %}
 
-{% include gallery id="gallery_embedded" caption="Pandaboard ES vs NVIDIA® Jetson TK1" %}
+{% include gallery id="gallery_embedded" caption="Pandaboard ES vs NVIDIA® Jetson™ TK1" %}
 
 {% include video id="8iJ-h96syKE" provider="youtube" %}
 
 In September 2014, MyzharBot-v3.0 was operational, even if not yet fully autonomous. I exposed it at Maker Faire Rome. It was my first public appearance with the robot, and I was thrilled to showcase its new capabilities.
 
-In December 2014, I received an unexpected Facebook message from an NVIDIA® representative. They were recruiting Jetson TK1 enthusiasts for a new program called [Jetson Champions](https://developer.nvidia.com/embedded/community/jetson-champions). Initially skeptical, it seemed too good to be true, I soon realized the opportunity was genuine. They had discovered my blog and wanted me to continue **sharing my knowledge and experience with the community** while developing projects using NVIDIA® Jetson platforms. **Nothing easier than that!**
+In December 2014, I received an unexpected Facebook message from an NVIDIA® representative. They were recruiting Jetson™ TK1 enthusiasts for a new program called [Jetson™ Champions](https://developer.nvidia.com/embedded/community/jetson-champions). Initially skeptical, it seemed too good to be true, I soon realized the opportunity was genuine. They had discovered my blog and wanted me to continue **sharing my knowledge and experience with the community** while developing projects using NVIDIA® Jetson™ platforms. **Nothing easier than that!**
 
 ## MyzharBot (and Me) on the Spotlight
 
@@ -231,23 +231,23 @@ The source code is still available on [GitHub](https://github.com/Myzhar/ros_rob
 
 ## Hardware Upgrades
 
-The hardware received significant upgrades. I redesigned the laser-cut plastic chassis to accommodate the Jetson TK1 board and replaced the dual-webcam setup with an Asus Xtion Pro Live RGB-D camera. This addition provided depth information for obstacle detection and mapping at zero cost, thanks to the open-source [OpenNI](https://structure.io/openni) drivers.
+The hardware received significant upgrades. I redesigned the laser-cut plastic chassis to accommodate the Jetson™ TK1 board and replaced the dual-webcam setup with an Asus Xtion Pro Live RGB-D camera. This addition provided depth information for obstacle detection and mapping at zero cost, thanks to the open-source [OpenNI](https://structure.io/openni) drivers.
 
 {% include video id="Ks3mqgFWzCo" provider="youtube" %}
 
 ## An Encounter That Changed My Life
 
-At GTC 2015, during a lunch break while manning the NVIDIA® booth alone, a girl approached holding a silver stereo camera. [Cecile Schmollgruber](https://www.linkedin.com/in/cecile-schmollgruber-63563126/), co-founder and CEO of Stereolabs, introduced herself and her revolutionary product: the first [ZED Stereo Camera](https://www.stereolabs.com/). This high-resolution passive stereo camera featured perfect sensor synchronization and a powerful CUDA-accelerated SDK—a computer vision enthusiast's dream.
+At GTC 2015, during a lunch break while manning the NVIDIA® booth alone, a girl approached holding a silver stereo camera. [Cecile Schmollgruber](https://www.linkedin.com/in/cecile-schmollgruber-63563126/), co-founder and CEO of Stereolabs, introduced herself and her revolutionary product: the first [ZED Stereo Camera](https://www.stereolabs.com/). This high-resolution passive stereo camera featured perfect sensor synchronization and a powerful CUDA™-accelerated SDK—a computer vision enthusiast's dream.
 
-Cecile and [Edwin Azzam](https://www.linkedin.com/in/edwinazzam/), another Stereolabs co-founder and CTO, were announcing the ZED's launch. Their SDK leveraged CUDA for real-time processing, generating high-resolution depth maps and point clouds with natively synchronized color information.
+Cecile and [Edwin Azzam](https://www.linkedin.com/in/edwinazzam/), another Stereolabs co-founder and CTO, were announcing the ZED's launch. Their SDK leveraged CUDA™ for real-time processing, generating high-resolution depth maps and point clouds with natively synchronized color information.
 
-Fascinated by the ZED's potential for robotics, we exchanged contacts. I promised to connect them with the NVIDIA® team, and a few hours later A few hours later, I led one of the NVIDIA managers to their booth. This encounter sparked a long-lasting friendship and collaboration that led me to join Stereolabs in 2018 as a Senior Software Engineer, where I became a key ambassador and contributor to their products and SDKs.
+Fascinated by the ZED's potential for robotics, we exchanged contacts. I promised to connect them with the NVIDIA® team, and a few hours later A few hours later, I led one of the NVIDIA® managers to their booth. This encounter sparked a long-lasting friendship and collaboration that led me to join Stereolabs in 2018 as a Senior Software Engineer, where I became a key ambassador and contributor to their products and SDKs.
 
 **Spoiler alert**: the ZED camera was later integrated into MyzharBot-v4 :smile:
 
-Below are two of the first ZED cameras released that Stereolabs donated to me after GTC to use with the next version of MyzharBot. They still work like jewels and I treasure them. Behind a Jetson Champion cup, I love using it for breakfast as a daily reminder of how far I've come since those early days.
+Below are two of the first ZED cameras released that Stereolabs donated to me after GTC to use with the next version of MyzharBot. They still work like jewels and I treasure them. Behind a Jetson™ Champion cup, I love using it for breakfast as a daily reminder of how far I've come since those early days.
 
-{% include figure popup=true image_path="/assets/images/projects/myzharbot/v3/zed-jetson-champ.jpg" alt="My two ZED cameras and my Jetson Champion mug" caption="My two ZED cameras and my Jetson Champion mug" %}
+{% include figure popup=true image_path="/assets/images/projects/myzharbot/v3/zed-jetson-champ.jpg" alt="My two ZED cameras and my Jetson™ Champion mug" caption="My two ZED cameras and my Jetson™ Champion mug" %}
 
 ## Videos
 

@@ -1,6 +1,6 @@
 ---
 title: "Using a FLIR Lepton3 Thermal Camera with NVIDIA® Jetson"
-excerpt: "A comprehensive step-by-step guide to interfacing a FLIR® Lepton3 thermal camera with NVIDIA® Jetson platforms."
+excerpt: "A comprehensive step-by-step guide to interfacing a FLIR® Lepton3 thermal camera with NVIDIA® Jetson™ platforms."
 author: "Walter Lucetti"
 number: 200
 header:
@@ -103,9 +103,9 @@ The following diagram shows the connections between the FLIR® Lepton3 breakout 
 
 ### Connection Table
 
-The following table shows connections for the NVIDIA® Jetson Nano development kit. Other Jetson models with a 40-pin GPIO header (e.g., Jetson Orin Nano, Jetson AGX Orin) use similar connections but may have different pin assignments. Consult your specific model's pinout documentation.
+The following table shows connections for the NVIDIA® Jetson™ Nano development kit. Other Jetson™ models with a 40-pin GPIO header (e.g., Jetson™ Orin Nano, Jetson™ AGX Orin) use similar connections but may have different pin assignments. Consult your specific model's pinout documentation.
 
-| FLIR Lepton3 Pin | Signal | Jetson Pin | Jetson GPIO | Wire Color |
+| FLIR Lepton3 Pin | Signal | Jetson™ Pin | Jetson™ GPIO | Wire Color |
 |------------------|--------|------------|-------------|------------|
 | 1                | CS     | 24         | SPI1-CS0    | Green      |
 | 2                | MOSI   | N.C.       | N.C.        | -          |
@@ -182,7 +182,7 @@ Check that the FLIR® Lepton3 is detected on the I²C bus:
 i2cdetect -y -r 0
 ```
 
-Where `0` is the I²C bus number (`I2C1` corresponds to bus 0 on Jetson Nano).
+Where `0` is the I²C bus number (`I2C1` corresponds to bus 0 on Jetson™ Nano).
 
 The FLIR® Lepton3 module should appear at address `0x2a`:
 
