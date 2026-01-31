@@ -38,7 +38,7 @@ There are two common ways to start a node:
    ros2 run <package_name> <node_executable>
    ```
 
-2. **Using a Launch File**: Launch files allow you to start multiple nodes and set their parameters in a single command. You can create a launch file using Python, XML format, or YAML format.
+2. **Using a Launch File**: Launch files allow you to start multiple nodes and set their parameters with a single command. You can create a launch file using Python, XML, or YAML.
 
    ```bash
    ros2 launch <package_name> <launch_file>
@@ -50,7 +50,7 @@ For more complex scenarios, such as starting multiple nodes or configuring param
 
 ### Starting a Simple Node with `ros2 run`
 
-To exemplify, we will start a simple talker node from the `demo_nodes_cpp` package using the `ros2 run` command:
+As an example, we will start a simple talker node from the `demo_nodes_cpp` package using the `ros2 run` command:
 
 1. Open a terminal.
 2. Run the following command:
@@ -88,7 +88,7 @@ This is a typical output for a node:
 
 `[INFO]` indicates the log level, followed by a timestamp, the node name in square brackets, and the message being published.
 
-Each node can have different log levels, such as `DEBUG`, `INFO`, `WARN`, `ERROR`, and `FATAL`. You can configure the log level when starting the node by using the `--ros-args --log-level` option.
+Each node can use different log levels, such as `DEBUG`, `INFO`, `WARN`, `ERROR`, and `FATAL`. You can configure the log level when starting the node by using the `--ros-args --log-level` option.
 
 For example, to start the talker node with the `DEBUG` log level, you can use the following command:
 
@@ -96,7 +96,7 @@ For example, to start the talker node with the `DEBUG` log level, you can use th
 ros2 run demo_nodes_cpp talker --ros-args --log-level DEBUG
 ```
 
-I recommend you test it yourself to see more detailed output from the node, which is useful for debugging more complex nodes.
+I recommend testing this yourself to see more detailed output from the node, which is useful for debugging more complex nodes.
 
 What can you do with this running node? You can start a listener node in another terminal to subscribe to the messages being published by the talker node:
 
@@ -116,7 +116,7 @@ $ ros2 run demo_nodes_cpp listener
 [...]
 ```
 
-:pushpin: **NOTE**: You can notice that the listener node is receiving messages published by the talker node in real-time, so the message indexes do not start from 1 but continue from where the talker node is currently publishing.
+:pushpin: **NOTE**: You can see that the listener node is receiving messages published by the talker node in real time, so the message indexes do not start from 1 but continue from where the talker node is currently publishing.
 If you want the listener to start receiving messages from the beginning, you need to start it before starting the talker node.
 
 ### Stopping a ROS 2 Node
@@ -127,15 +127,15 @@ To stop a running ROS 2 node, you can simply use the keyboard shortcut `Ctrl + C
 ^C[INFO] [1769885228.950347430] [rclcpp]: signal_handler(signum=2)
 ```
 
-If you are focused, you can see that the node name changed to `rclcpp`, which is the ROS 2 client library for C++. This indicates that the ROS 2 signal handler has been invoked, and the node is in the process of shutting down.
+If you pay close attention, you can see that the node name changed to `rclcpp`, which is the ROS 2 client library for C++. This indicates that the ROS 2 signal handler has been invoked and the node is in the process of shutting down.
 
 ### Using Launch Files to Start Multiple Nodes
 
 For more complex applications, you may want to start multiple nodes simultaneously.
 
-For example, we could create a launch file to start both the talker and listener nodes together.
+For example, we can create a launch file to start both the talker and listener nodes together.
 
-:pushpin: **NOTE**: In this tutorial, I will not cover how to create launch files in detail. If you are interested in learning more about launch files, please refer to the official ROS 2 documentation on [Launch System](https://docs.ros.org/en/rolling/Tutorials/Intermediate/Launch/Creating-Launch-Files.html).
+:pushpin: **NOTE**: In this tutorial, I will not cover how to create launch files in detail. If you are interested in learning more about launch files, please refer to the official ROS 2 documentation on the [Launch System](https://docs.ros.org/en/rolling/Tutorials/Intermediate/Launch/Creating-Launch-Files.html).
 
 #### Creating a Simple Launch File
 
@@ -165,6 +165,16 @@ def generate_launch_description():
     ])
 ```
 
+Each node is created using the `Node` action from the `launch_ros.actions` module. We specify the package name, executable name, output method (in this case, `screen` to print output to the terminal), and a custom name for each node.
+
+The `LaunchDescription` object contains a list of all the nodes we want to start.
+
+Finally, the `generate_launch_description` function returns the `LaunchDescription` object, which is used by the ROS 2 launch system to start the nodes.
+
+This launch file is extremely simple, but it demonstrates the basic structure of a ROS 2 launch file using Python.
+
+If you are curious, I suggest exploring more advanced launch files in one of my GitHub repositories, for example the one I created to start a ROS 2 node to use a LiDAR sensor: [ldlidar_bringup.launch.py](https://github.com/Myzhar/ldrobot-lidar-ros2/blob/devel/ldlidar_node/launch/ldlidar_bringup.launch.py).
+
 #### Running the Launch File
 
 To use this launch file, you must first create a new ROS 2 package (if you don't have one already) and save the launch file in the `launch` directory of your package:
@@ -184,7 +194,7 @@ nano launch/talker_listener.launch.py
 
 Paste the launch file content into the `nano` editor, save it, and exit.
 
-To enable ROS 2 to locate and utilize our launch files, we need to inform Python’s setup tools of their presence. To achieve this, open the `setup.py` file that was automatically created, add the necessary import statements at the top, and include the launch files into the data_files parameter of setup:
+To enable ROS 2 to locate and use our launch files, we need to inform Python’s setup tools of their presence. To achieve this, open the `setup.py` file that was automatically created, add the necessary import statements at the top, and include the launch files in the `data_files` parameter of `setup`:
 
 ```python
 import os
@@ -203,7 +213,7 @@ setup(
 )
 ```
 
-Next, build your package, and update the environment to let ROS 2 recognize the new package:
+Next, build your package and update the environment to let ROS 2 recognize the new package:
 
 ```bash
 cd ~/ros2_ws
@@ -248,7 +258,7 @@ $ ros2 launch test_launch_pkg talker_listener.launch.py
 
 This output shows that both nodes are running simultaneously, with the talker publishing messages and the listener receiving them in sequence.
 
-It's clear that the Python launch system also provides more logging information, such as process IDs and log file locations, which can be very useful for debugging and monitoring your nodes.
+It is clear that the Python launch system also provides more logging information, such as process IDs and log file locations, which can be very useful for debugging and monitoring your nodes.
 
 :pushpin: **NOTE**: I will cover more advanced topics about packages, the details of their structure, and how to create them in future tutorials. If you are interested in learning more about ROS 2 packages, please refer to the official ROS 2 documentation on [Creating a ROS 2 Package](https://docs.ros.org/en/rolling/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html).
 
