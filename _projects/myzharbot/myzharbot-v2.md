@@ -394,7 +394,7 @@ I embarked on creating a custom robotics framework from scratch, implementing co
 
 {% include video id="Rzh8ulo-hr4" provider="youtube" %}
 
-Development continued for nearly two years until mid-2014, when I transitioned to the third version of MyzharBot, upgrading to the NVIDIA® Jetson TK1 as the primary computing platform.
+Development continued for nearly two years until mid-2014, when I transitioned to the third version of MyzharBot, upgrading to the NVIDIA® Jetson™ TK1 as the primary computing platform.
 
 ## Photos
 

@@ -12,7 +12,7 @@ Welcome to my personal space — I’m Walter Alex Lucetti, an Italian computer 
 
 ## Who I Am
 
-Known online as *Myzhar*, I work at the intersection of software engineering and robotics, designing systems that can see, understand, and move through the world. My expertise spans stereo vision, 3D perception, embedded systems, and AI-driven autonomy, with a strong focus on NVIDIA Jetson platforms, CUDA, and ROS/ROS 2.
+Known online as *Myzhar*, I work at the intersection of software engineering and robotics, designing systems that can see, understand, and move through the world. My expertise spans stereo vision, 3D perception, embedded systems, and AI-driven autonomy, with a strong focus on NVIDIA® Jetson™ platforms, CUDA™, and ROS/ROS 2.
 
 I currently serve as a **Senior Software Engineer at [Stereolabs](http://www.stereolabs.com)**, where I contribute to stereo vision and 3D perception products such as the ZED SDK, support developers integrating depth cameras into robots, and help define best practices for spatial AI applications.
 
@@ -39,8 +39,8 @@ My daily toolbox includes:
 
 - **Languages:** C++, Python
 - **Frameworks:** ROS, ROS 2, OpenCV
-- **Platforms:** NVIDIA Jetson and embedded Linux systems
-- **Acceleration:** CUDA and GPU-optimized perception pipelines
+- **Platforms:** NVIDIA® Jetson™ and embedded Linux systems
+- **Acceleration:** CUDA™and GPU-optimized perception pipelines
 - **Fabrication:** 3D printing for robot parts and practical everyday objects
 
 These technologies come together in projects that mix research ideas with practical engineering, aiming for systems that are not only clever in theory but reliable in real-world scenarios.
