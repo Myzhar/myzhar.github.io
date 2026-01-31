@@ -48,9 +48,9 @@ Usually, the `ros2 run` command is used for simple cases when you want to start 
 
 For more complex scenarios, such as starting multiple nodes or configuring parameters, launch files are preferred.
 
-### Example: Starting a Simple Node with `ros2 run`
+### Starting a Simple Node with `ros2 run`
 
-In this example, we will start a simple talker node using the `ros2 run` command.
+To exemplify, we will start a simple talker node from the `demo_nodes_cpp` package using the `ros2 run` command:
 
 1. Open a terminal.
 2. Run the following command:
@@ -129,13 +129,15 @@ To stop a running ROS 2 node, you can simply use the keyboard shortcut `Ctrl + C
 
 If you are focused, you can see that the node name changed to `rclcpp`, which is the ROS 2 client library for C++. This indicates that the ROS 2 signal handler has been invoked, and the node is in the process of shutting down.
 
-## Using Launch Files to Start Multiple Nodes
+### Using Launch Files to Start Multiple Nodes
 
 For more complex applications, you may want to start multiple nodes simultaneously.
 
 For example, we could create a launch file to start both the talker and listener nodes together.
 
 :pushpin: **NOTE**: In this tutorial, I will not cover how to create launch files in detail. If you are interested in learning more about launch files, please refer to the official ROS 2 documentation on [Launch System](https://docs.ros.org/en/rolling/Tutorials/Intermediate/Launch/Creating-Launch-Files.html).
+
+#### Creating a Simple Launch File
 
 My preferred way to create launch files is using Python, as it provides more flexibility and allows for complex logic.
 
@@ -162,6 +164,8 @@ def generate_launch_description():
         )
     ])
 ```
+
+#### Running the Launch File
 
 To use this launch file, you must first create a new ROS 2 package (if you don't have one already) and save the launch file in the `launch` directory of your package:
 
