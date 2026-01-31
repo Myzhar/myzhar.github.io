@@ -67,7 +67,7 @@ This command will start the talker node, which will begin publishing messages to
 sudo apt install ros-<ros2-distro>-demo-nodes-cpp
 ```
 
-:exclamation: **TIP**: After entering `ros2 run` in the terminal, you can press the `TAB` key twice to see a list of available packages. Type the first few letters of the package name and press `TAB` again to complete it. You can do the same for the node executable after typing the package name.
+:bulb: **TIP**: After entering `ros2 run` in the terminal, you can press the `TAB` key twice to see a list of available packages. Type the first few letters of the package name and press `TAB` again to complete it. You can do the same for the node executable after typing the package name.
 
 The `talker` node will start publishing messages to the `/topic` topic:
 
