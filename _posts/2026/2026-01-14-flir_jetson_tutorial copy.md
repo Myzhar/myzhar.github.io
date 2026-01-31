@@ -39,7 +39,7 @@ gallery:
     image_path: /assets/images/tutorials/flir_jetson/FeverAlert.png
 ---
 
-I'm pleased to announce that I have restored the tutorial titled ["Thermal Images on Jetson™ Nano with FLIR Lepton3"](/tutorials/flir_lepton_on_jetson/).
+I'm pleased to announce that I have restored the tutorial titled ["Thermal Images on Jetson™ Nano with FLIR Lepton3"](/tutorials/electronics/flir-lepton-on-jetson/).
 
 This tutorial provides a comprehensive guide on how to interface the FLIR® Lepton3 thermal camera with the NVIDIA® Jetson™ embedded devices, covering everything from hardware connections to software setup and image processing.
 
@@ -49,5 +49,5 @@ The tutorial was originally published on my old WordPress blog, and I have ensur
 
 I took the opportunity to update some sections of the tutorial to reflect the latest software versions and best practices.
 
-Do not hesitate to [follow it](/tutorials/flir_lepton_on_jetson/) and share your feedback. Happy coding and thermal imaging!
+Do not hesitate to [follow it](/tutorials/electronics/flir-lepton-on-jetson/) and share your feedback. Happy coding and thermal imaging!
 

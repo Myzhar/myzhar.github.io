@@ -29,7 +29,7 @@ ROS 2 is also gaining popularity in industrial applications, thanks to its impro
 
 You can find the new tutorials here:
 
-- [Understanding ROS 2](/tutorials/understanding-ros2/): An overview of ROS 2, its features, and why it is so popular in the robotics community.
-- [Install ROS 2](/tutorials/installing-ros2/): Learn how to install ROS 2 and set up a functional ROS 2 environment ready for your robotics projects.
+- [Understanding ROS 2](/tutorials/ros2/understanding-ros2/): An overview of ROS 2, its features, and why it is so popular in the robotics community.
+- [Install ROS 2](/tutorials/ros2/installing-ros2/): Learn how to install ROS 2 and set up a functional ROS 2 environment ready for your robotics projects.
 
 Enjoy the tutorials, and feel free to share your feedback! More ROS 2 tutorials will follow soon.
