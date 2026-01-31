@@ -139,4 +139,4 @@ With this tutorial, I intended to give you a brief overview of what ROS 2 is and
 
 ## Next Steps
 
-In the [next tutorial](/tutorials/installing-ros2/), I will guide you through the process of setting up your first ROS 2 workspace, and installing the necessary tools. By the end of that tutorial, you will have a functional ROS 2 environment ready for your robotics projects.
+In the [next tutorial](/tutorials/ros2/installing-ros2/), I will guide you through the process of setting up your first ROS 2 workspace, and installing the necessary tools. By the end of that tutorial, you will have a functional ROS 2 environment ready for your robotics projects.

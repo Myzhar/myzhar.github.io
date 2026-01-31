@@ -17,7 +17,7 @@ classes: single
 
 ## Introduction
 
-In my previous tutorial, [Understanding ROS 2](/tutorials/understanding-ros2/), I provided an overview of ROS 2, its features, and its significance in the robotics community. Now, it's time to get hands-on and set up your ROS 2 environment. In this tutorial, I will guide you through the installation process of ROS 2 on your system, ensuring you have a functional ROS 2 setup ready for your robotics projects.
+In my previous tutorial, [Understanding ROS 2](/tutorials/ros2/understanding-ros2/), I provided an overview of ROS 2, its features, and its significance in the robotics community. Now, it's time to get hands-on and set up your ROS 2 environment. In this tutorial, I will guide you through the installation process of ROS 2 on your system, ensuring you have a functional ROS 2 setup ready for your robotics projects.
 
 ## Prerequisites
 
