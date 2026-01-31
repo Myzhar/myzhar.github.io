@@ -1,5 +1,5 @@
 ---
-title: "Starting ROS 2 nodes"
+title: "Starting ROS 2 Nodes"
 excerpt: "Learn how to start and manage ROS 2 nodes in your robotics applications."
 author: "Walter Lucetti"
 number: 500
@@ -28,7 +28,7 @@ Before you begin, ensure you have the following:
 
 ## Starting a ROS 2 Node
 
-To start a ROS 2 node, you typically use the command line interface (CLI) provided by ROS 2.
+To start a ROS 2 node, you typically use the command-line interface (CLI) provided by ROS 2.
 
 There are two common ways to start a node:
 
@@ -44,7 +44,7 @@ There are two common ways to start a node:
    ros2 launch <package_name> <launch_file>
    ```
 
-Usually, the `ros2 run` command is used for simple cases, when you want to start a single node quickly using the default parameters. 
+Usually, the `ros2 run` command is used for simple cases when you want to start a single node quickly using the default parameters.
 
 For more complex scenarios, such as starting multiple nodes or configuring parameters, launch files are preferred.
 
@@ -67,7 +67,7 @@ This command will start the talker node, which will begin publishing messages to
 sudo apt install ros-<ros2-distro>-demo-nodes-cpp
 ```
 
-:exclamation: **TIP**: after entering `ros2 run` in the terminal, you can press the `TAB` key twice to see a list of available packages. Hit the first few letters of the package name and press `TAB` again to complete it. You can do the same for the node executable after typing the package name.
+:exclamation: **TIP**: After entering `ros2 run` in the terminal, you can press the `TAB` key twice to see a list of available packages. Type the first few letters of the package name and press `TAB` again to complete it. You can do the same for the node executable after typing the package name.
 
 The `talker` node will start publishing messages to the `/topic` topic:
 
@@ -96,7 +96,7 @@ For example, to start the talker node with the `DEBUG` log level, you can use th
 ros2 run demo_nodes_cpp talker --ros-args --log-level DEBUG
 ```
 
-I recommend you test it yourself to see more detailed output from the node, useful information for debugging more complex nodes.
+I recommend you test it yourself to see more detailed output from the node, which is useful for debugging more complex nodes.
 
 What can you do with this running node? You can start a listener node in another terminal to subscribe to the messages being published by the talker node:
 
@@ -127,7 +127,7 @@ To stop a running ROS 2 node, you can simply use the keyboard shortcut `Ctrl + C
 ^C[INFO] [1769885228.950347430] [rclcpp]: signal_handler(signum=2)
 ```
 
-If you are carefull, you can see that the node name changed to `rclcpp`, which is the ROS 2 client library for C++. This indicates that the ROS 2 signal handler has been invoked, and the node is in the process of shutting down.
+If you are focused, you can see that the node name changed to `rclcpp`, which is the ROS 2 client library for C++. This indicates that the ROS 2 signal handler has been invoked, and the node is in the process of shutting down.
 
 ## Using Launch Files to Start Multiple Nodes
 
@@ -244,7 +244,7 @@ $ ros2 launch test_launch_pkg talker_listener.launch.py
 
 This output shows that both nodes are running simultaneously, with the talker publishing messages and the listener receiving them in sequence.
 
-It's clear that the Python launch system provides also more logging information, such as process IDs and log file locations, which can be very useful for debugging and monitoring your nodes.
+It's clear that the Python launch system also provides more logging information, such as process IDs and log file locations, which can be very useful for debugging and monitoring your nodes.
 
 :pushpin: **NOTE**: I will cover more advanced topics about packages, the details of their structure, and how to create them in future tutorials. If you are interested in learning more about ROS 2 packages, please refer to the official ROS 2 documentation on [Creating a ROS 2 Package](https://docs.ros.org/en/rolling/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html).
 
