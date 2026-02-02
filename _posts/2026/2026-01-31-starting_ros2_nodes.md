@@ -29,6 +29,6 @@ In this guide, you’ll learn two common ways to start ROS 2 nodes:
 - Using the command-line interface with `ros2 run` for quick, simple execution  
 - Using Python launch files for more flexible and scalable setups
 
-You’ll also see practical examples and a brief introduction to creating a package to organize your launch files.
+You’ll also find practical examples and a brief introduction to creating a package to organize your launch files.
 
 Enjoy the tutorial, and happy robotics programming!
