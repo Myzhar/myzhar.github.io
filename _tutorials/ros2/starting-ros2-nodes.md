@@ -6,8 +6,8 @@ number: 500
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/ros2/ROS2_TM_Color.svg
-  teaser: /assets/images/ros2/ROS2_TM_Color.svg
+  overlay_image: /assets/images/ros2/starting-ros2-nodes.jpg
+  teaser: /assets/images/ros2/starting-ros2-nodes.jpg
   actions:
     - label: "Official ROS 2 Website"
       url: "https://www.ros.org/"

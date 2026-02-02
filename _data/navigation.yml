@@ -1,11 +1,11 @@
 main:  
-  - title: ":newspaper: News"
+  - title: ": News :"
     url: /posts/
-  - title: ":triangular_ruler: Projects"
+  - title: ": Projects :"
     url: /projects/  
-  - title: ":books: Tutorials"
+  - title: ": Tutorials :"
     url: /tutorials/
-  - title: ":date: Events"
+  - title: ": Events :"
     url: /events/
-  - title: ":identification_card: About"
+  - title: ": About :"
     url: /about/
