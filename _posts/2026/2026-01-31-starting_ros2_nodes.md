@@ -7,7 +7,7 @@ layout: single
 classes: wide
 toc: false
 header:
-  teaser: /assets/images/ros2/ROS2_TM_Color.svg
+  teaser: /assets/images/ros2/starting-ros2-nodes.jpg
 
 categories: 
   - updates

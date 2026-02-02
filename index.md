@@ -15,21 +15,21 @@ intro:
 feature_row:
   - image_path: /assets/images/robots_default.jpg
     alt: "Projects"
-    title: ":triangular_ruler: Projects"
+    title: "Projects"
     excerpt: "The MyzharBot and other robotics, computer vision and AI projects developed by me."
     url: "/projects/"
     btn_label: "explore"
     btn_class: "btn--warning"
   - image_path: /assets/images/post_default.jpg
     alt: "tutorials"
-    title: ":books: Tutorials"
+    title: "Tutorials"
     excerpt: "Tutorials and articles on computer vision, robotics, AI development, 3D printing, and more."
     url: "/tutorials/"
     btn_label: "learn"
     btn_class: "btn--info"
   - image_path: /assets/images/events_default.jpg
     alt: "Events"
-    title: ":date: Events"
+    title: "Events"
     excerpt: "News about events, workshops and conferences where you can meet me and the MyzharBot."
     url: "/events/"
     btn_label: "events"
