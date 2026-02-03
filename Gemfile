@@ -5,12 +5,13 @@ source "https://rubygems.org"
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
+gem "faraday-retry"
 gem "github-pages", group: :jekyll_plugins
 # gem "minimal-mistakes-jekyll"
 
 gem "tzinfo-data"
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
-gem "faraday-retry"
+
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
