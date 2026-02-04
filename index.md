@@ -8,15 +8,15 @@ header:
   actions:
   - label: ":link: Follow Me"
     url: "https://linktr.ee/myzhar"
-  - label: ":robot: MyzharBot"
+  - label: "The MyzharBot project"
     url: "/projects/myzharbot/"
 intro: 
   - excerpt: 'Insights, projects, and stories about seeing, thinking, and moving machines.'
 feature_row:
   - image_path: /assets/images/robots_default.jpg
-    alt: "Projects"
+    alt: "projects"
     title: "Projects"
-    excerpt: "The MyzharBot and other robotics, computer vision and AI projects developed by me."
+    excerpt: "The MyzharBot and other robotics, computer vision, and AI projects developed by me."
     url: "/projects/"
     btn_label: "explore"
     btn_class: "btn--warning"
@@ -28,9 +28,9 @@ feature_row:
     btn_label: "learn"
     btn_class: "btn--info"
   - image_path: /assets/images/events_default.jpg
-    alt: "Events"
+    alt: "events"
     title: "Events"
-    excerpt: "News about events, workshops and conferences where you can meet me and the MyzharBot."
+    excerpt: "News about events, workshops, and conferences where you can meet Myzhar and the MyzharBot."
     url: "/events/"
     btn_label: "events"
     btn_class: "btn--success"
