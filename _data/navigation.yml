@@ -1,11 +1,11 @@
 main:  
-  - title: ": News :"
+  - title: "• News •"
     url: /posts/
-  - title: ": Projects :"
+  - title: "• Projects •"
     url: /projects/  
-  - title: ": Tutorials :"
+  - title: "• Tutorials •"
     url: /tutorials/
-  - title: ": Events :"
+  - title: "• Events •"
     url: /events/
-  - title: ": About :"
+  - title: "• About •"
     url: /about/
