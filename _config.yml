@@ -1,7 +1,8 @@
 # minimal mistakes Jekyll reference
 # https://github.com/mmistakes/minimal-mistakes/blob/master/docs/_config.yml
 
-remote_theme: mmistakes/minimal-mistakes
+#remote_theme: mmistakes/minimal-mistakes
+theme: "minimal-mistakes-jekyll"
 
 minimal_mistakes_skin: "air"
 
