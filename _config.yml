@@ -209,8 +209,8 @@ plugins:
   - jekyll-seo-tag
   - jemoji
   - jekyll-include-cache
-  - jekyll-redirect-from
   - jekyll-sitemap
+  #- jekyll-redirect-from
 
 
 # mimic GitHub Pages with --safe
@@ -220,9 +220,9 @@ whitelist:
   - jekyll-feed
   - jekyll-seo-tag
   - jemoji
-  - jekyll-include-cache
-  - jekyll-redirect-from
+  - jekyll-include-cache  
   - jekyll-sitemap
+  #- jekyll-redirect-from
 
 category_archive:
   type: liquid
