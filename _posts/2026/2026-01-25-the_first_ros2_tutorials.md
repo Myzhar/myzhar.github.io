@@ -21,6 +21,7 @@ tags:
   - ROS_2
   - robotics
 ---
+
 I'm pleased to announce that I have released the first tutorials on ROS 2 (Robot Operating System), a popular open-source framework for building robotic applications.
 
 ROS 2 is the most popular open-source framework for robotics software development, widely used by researchers, developers, and hobbyists worldwide. It provides a collection of tools, libraries, and conventions that simplify the process of creating complex and robust robotic applications.
