@@ -1,7 +1,7 @@
 ---
-title:  "The first ROS 2 tutorials are online!"
+title: "The first ROS 2 tutorials are online!"
 excerpt: "I released the first tutorials on ROS 2, covering installation and basic concepts."
-date:   2026-01-25 00:15:00 +0200
+date: 2026-01-25 00:15:00
 author: "Walter Lucetti"
 layout: single
 classes: wide

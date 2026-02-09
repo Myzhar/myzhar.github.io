@@ -1,7 +1,7 @@
 ---
-title:  "A New Chapter of My Life"
+title: "A New Chapter of My Life"
 excerpt: "My life has taken an exciting turn as the Company I work for, Stereolabs, has been acquired by Ouster."
-date:   2026-02-09 20:00:00 +0200
+date: 2026-02-09 20:00:00
 author: "Walter Lucetti"
 layout: single
 classes: wide

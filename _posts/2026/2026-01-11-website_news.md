@@ -1,7 +1,7 @@
 ---
-title:  "New project pages and a CUDA™ tutorial"
+title: "New project pages and a CUDA™ tutorial"
 excerpt: "The website has been updated with new project pages and a CUDA™ Compute Capability tutorial."
-date:   2026-01-11 20:45:00 +0200
+date: 2026-01-11 20:45:00
 author: "Walter Lucetti"
 layout: single
 classes: wide

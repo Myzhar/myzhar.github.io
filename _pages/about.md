@@ -1,5 +1,5 @@
 ---
-title:  Walter Lucetti
+title: Walter Lucetti
 author: "Walter Lucetti"
 layout: collection
 permalink: /about/

@@ -1,7 +1,7 @@
 ---
-title:  "Restored the tutorial 'Thermal Images on Jetson™ Nano with FLIR Lepton3'"
+title: "Restored the tutorial 'Thermal Images on Jetson™ Nano with FLIR Lepton3'"
 excerpt: "I restored the tutorial on using the FLIR Lepton3 thermal camera with NVIDIA® Jetson™ devices."
-date:   2026-01-14 20:45:00 +0200
+date: 2026-01-14 20:45:00
 author: "Walter Lucetti"
 layout: single
 classes: wide

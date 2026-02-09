@@ -1,7 +1,7 @@
 ---
-title:  "New ROS 2 Tutorial: Starting ROS 2 Nodes"
+title: "New ROS 2 Tutorial: Starting ROS 2 Nodes"
 excerpt: "I released a new tutorial on starting ROS 2 nodes using both the command line and Python launch files."
-date:   2026-01-31 21:30:00 +0200
+date: 2026-01-31 21:30:00
 author: "Walter Lucetti"
 layout: single
 classes: wide
