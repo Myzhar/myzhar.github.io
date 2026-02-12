@@ -61,7 +61,7 @@ ROS 2 currently supports multiple DDS/RTPS vendors through different RMW impleme
 
 ## Fast DDS - rmw_fastrtps_cpp
 
-Fast DDS (formerly Fast RTPS) is a popular default ROS 2 middleware, especially in Ubuntu-based desktop/server deployments. It's the default DDS middleware in Foxy, Humble, Iron, Jazzy, and Kilted.
+[Fast DDS](https://fast-dds.docs.eprosima.com/en/stable/) (formerly Fast RTPS) is a popular default ROS 2 middleware, especially in Ubuntu-based desktop/server deployments. It's the default DDS middleware in Foxy, Humble, Iron, Jazzy, and Kilted.
 
 ### Strengths
 
@@ -78,7 +78,7 @@ Use Fast DDS when you want a solid default, good tooling and community knowledge
 
 ## Cyclone DDS - rmw_cyclonedds_cpp
 
-Cyclone DDS is a modern, open-source DDS implementation with a strong focus on determinism and resource efficiency. It's the default DDS middleware in Galactic.
+[Cyclone DDS](https://cyclonedds.io/) is a modern, open-source DDS implementation with a strong focus on determinism and resource efficiency. It's the default DDS middleware in Galactic.
 
 ### Strengths
 
@@ -95,7 +95,7 @@ Cyclone DDS is a strong choice when you care about real-time performance and det
 
 ## Connext DDS - rmw_connextdds
 
-Connext DDS by RTI targets industrial and safety-critical domains, and ROS 2 supports it through a dedicated RMW.
+[Connext DDS](https://www.rti.com/products) by RTI targets industrial and safety-critical domains, and ROS 2 supports it through a dedicated RMW.
 
 ### Strengths
 
@@ -112,7 +112,7 @@ Connext DDS fits best in projects that already use RTI tooling or require safety
 
 ## GurumDDS - rmw_gurumdds
 
-GurumDDS is another DDS implementation supported in ROS 2, especially in some embedded and commercial contexts.
+[GurumDDS](https://www.omg.org/dds-directory/vendor/GurumNetworks_Inc.html) is another DDS implementation supported in ROS 2, especially in some embedded and commercial contexts.
 
 ### Strengths
 
@@ -144,7 +144,7 @@ In a production system, try to standardize on a single DDS vendor whenever possi
 
 ## Zenoh and rmw_zenoh: A Different Approach
 
-Zenoh is not a DDS implementation; it is a data-centric communication protocol and architecture that unifies pub/sub, queries, and storage, targeting constrained, fog, and cloud environments. ROS 2 integrates Zenoh through `rmw_zenoh`, an RMW that uses Zenoh as its underlying transport instead of DDS.
+[Zenoh](https://zenoh.io/) **is not a DDS implementation**; it is a data-centric communication protocol and architecture that unifies pub/sub, queries, and storage, targeting constrained, fog, and cloud environments. ROS 2 integrates Zenoh through `rmw_zenoh`, an RMW that uses Zenoh as its underlying transport instead of DDS.
 
 ### Why Zenoh?
 
@@ -158,7 +158,7 @@ Zenoh is not a DDS implementation; it is a data-centric communication protocol a
 
 - Publishers and subscribers become Zenoh publishers/subscribers, with "liveliness tokens" to track presence and availability.
 - Services and actions are implemented using Zenoh queryables and queries, mapping request–response semantics to Zenoh's API.
-- The implementation was introduced alongside newer ROS 2 distributions (e.g., Jazzy) and is evolving as a first-class alternative to DDS-based RMWs.
+- The implementation was introduced alongside newer ROS 2 distributions (e.g., Humble) and is evolving as a first-class alternative to DDS-based RMWs.
 
 The main design goal is to preserve ROS 2 semantics while leveraging Zenoh's capabilities to improve performance and operability across challenging networks.
 
@@ -183,13 +183,13 @@ In high-level terms, DDS focuses on standardized peer-to-peer pub/sub, while Zen
 
 Given this landscape, the "best" middleware depends on your use case.
 
-### When to prefer DDS (Fast DDS / Cyclone / Connext / GurumDDS)
+### When to prefer DDS
 
 - You need strict DDS standard compliance or must integrate with existing DDS-based systems.
 - Your deployment is mostly within a LAN or a controlled industrial network where DDS discovery works well.
 - You rely on vendor-specific tooling (RTI Monitor, Fast DDS Monitor, etc.) or certification roadmaps.
 
-### When to consider Zenoh (rmw_zenoh)
+### When to consider Zenoh
 
 - You are building multi-robot systems where robots span different networks, 4G/5G links, or cloud endpoints.
 - You want a single technology to handle pub/sub, queries, and data persistence across edge–fog–cloud.
@@ -326,21 +326,21 @@ ros2 daemon start
 
 This forces CLI tools (`ros2 node`, `ros2 topic`, etc.) to use the new RMW implementation.
 
-### What's the ROS 2 daemon?
+## ROS 2 daemon? What's that?
 
 This is the first time I've introduced the concept of the ROS 2 daemon. Let's try to understand what it is and why it's useful.
 
 The ROS 2 daemon is a background process that caches information about the ROS graph to make command-line introspection fast and responsive. It is an optimization for tooling, not a core part of the runtime like the ROS 1 master.
 
-## What the ROS 2 daemon is
+### What the ROS 2 daemon is
 
 - It is a long-running helper node started automatically the first time you use certain `ros2` CLI commands (e.g., `ros2 node list`, `ros2 topic list`).
 - It listens to discovery traffic and maintains an internal cache of nodes, topics, services, and other graph entities currently present in the system.
 - It communicates with the CLI tools over localhost (e.g., using XML-RPC) to answer "what exists in the graph?" queries quickly.
 
-## What it is needed for
+### What the ROS 2 daemon is needed for
 
-### 1. Speeding up CLI introspection
+#### 1. Speeding up CLI introspection
 
 Without the daemon, every CLI call must directly perform discovery via the underlying middleware, which can take noticeable time as the system grows. The daemon amortizes this cost by continuously tracking the graph so that commands like:
 
@@ -350,11 +350,11 @@ Without the daemon, every CLI call must directly perform discovery via the under
 
 can return almost immediately from the cached state.
 
-### 2. Avoiding repeated discovery work
+#### 2. Avoiding repeated discovery work
 
 Each new CLI call would otherwise have to "re-discover" the network to answer the same questions (which nodes/topics exist), duplicating work that the running daemon has already done. By centralizing this discovery for the workstation, it reduces overhead and improves responsiveness, especially in larger systems.
 
-### 3. Optional helper, not mandatory infrastructure
+#### 3. Optional helper, not mandatory infrastructure
 
 - ROS 2 nodes communicate purely via distributed discovery in the middleware; they do not depend on the daemon to run, unlike ROS 1 nodes that depended on the master.
 - If the daemon is not running, CLI tools still work; they just perform discovery themselves and are slower.
@@ -365,3 +365,5 @@ In short, the daemon is there to **accelerate** and stabilize ROS 2 introspectio
 ## Conclusions
 
 Choosing the right RMW implementation is crucial for the performance and compatibility of your ROS 2 applications. By understanding the strengths and weaknesses of each middleware option, you can make informed decisions that align with your project's requirements. Remember to test your setup thoroughly and consult the documentation for any specific configuration details.
+
+A final note: I cited QoS (Quality of Service) settings throughout this guide, but I consciously avoided deep diving into them. QoS settings are essential for fine-tuning the behavior of your ROS 2 nodes and ensuring reliable communication, especially in complex systems. I will dedicate a special section to QoS settings in a future tutorial.
