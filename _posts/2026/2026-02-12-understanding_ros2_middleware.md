@@ -1,7 +1,7 @@
 ---
 title: "New ROS 2 Tutorial: Understanding the ROS 2 Communication Middleware"
 excerpt: "I released a new tutorial on understanding the ROS 2 communication middleware."
-date: 2026-02-12 23:20:00
+date: 2026-02-12 23:20:00 +01:00
 author: "Walter Lucetti"
 layout: single
 classes: wide

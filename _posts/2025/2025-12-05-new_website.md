@@ -1,7 +1,7 @@
 ---
 title: "New Website"
 excerpt: "After many years with WordPress, I’m moving to a simpler solution: GitHub Pages with Jekyll."
-date: 2025-12-05 20:00:00
+date: 2025-12-05 20:00:00 +01:00
 author: "Walter Lucetti"
 layout: single
 classes: wide
