@@ -64,7 +64,7 @@ gallery:
       title: "Yes, I was there!"
 ---
 
-On October 22-24, 2025, I had the opportunity to attend [ROSCon 2025 in Singapore](https://roscon.ros.org/2025/), representing [Stereolabs](https://www.stereolabs.com) as a sponsor and exhibitor. It was an incredible experience to connect with the [ROS](https://www.ros.org/) community and showcase our latest advancements in robotics technology.
+On October 27-29, 2025, I had the opportunity to attend [ROSCon 2025 in Singapore](https://roscon.ros.org/2025/), representing [Stereolabs](https://www.stereolabs.com) as a sponsor and exhibitor. It was an incredible experience to connect with the [ROS](https://www.ros.org/) community and showcase our latest advancements in robotics technology.
 
 It was my first time attending ROSCon, and I was thrilled to be part of such a prestigious event. The conference featured a variety of talks, workshops, and networking opportunities that highlighted the latest developments in the [Robot Operating System (ROS)](https://www.ros.org/) ecosystem.
 
