@@ -15,6 +15,10 @@ layout: single
 classes: single
 ---
 
+## Introduction
+
+The ROS 2 communication middleware is a critical component that enables seamless interaction between different nodes in a robotic system.
+
 ROS 2 radically improves on ROS 1 by embracing [a pluggable **middleware** layer](https://design.ros2.org/articles/ros_middleware_interface.html), enabling real-time communication, better reliability, and deployment at scale.
 
 Understanding the [ROS 2 middleware](https://docs.ros.org/en/rolling/Concepts/Intermediate/About-Different-Middleware-Vendors.html) is crucial for building efficient and scalable robotic applications, and sometimes it's the most difficult part to grasp.

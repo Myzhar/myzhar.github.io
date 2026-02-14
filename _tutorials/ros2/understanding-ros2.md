@@ -15,6 +15,10 @@ layout: single
 classes: single
 ---
 
+## Introduction
+
+Robot Operating System 2 (ROS 2) is an open-source framework designed to facilitate the development of robotic applications. It provides a collection of tools, libraries, and conventions that simplify the process of building complex and robust robot software systems. ROS 2 is the successor to ROS 1, addressing many of its limitations and introducing new features to enhance performance, scalability, and security.
+
 ## ROS 2
 
 When diving into robotics development, one of the most powerful tools at your disposal is the Robot Operating System 2 (ROS 2). But what exactly is ROS 2, and why has it become a cornerstone in the robotics community?
