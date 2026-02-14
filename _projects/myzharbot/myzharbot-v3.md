@@ -2,7 +2,7 @@
 title: "MyzharBot-v3"
 excerpt: "The robot that made me a Jetson™ Champion"
 author: "Walter Lucetti"
-number: 300
+index: 300
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

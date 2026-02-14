@@ -2,7 +2,7 @@
 title: "Installing ROS 2"
 excerpt: "Learn how to install ROS 2 and set up a functional ROS 2 environment ready for your robotics projects."
 author: "Walter Lucetti"
-number: 400
+index: 400
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

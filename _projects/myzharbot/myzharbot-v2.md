@@ -2,7 +2,7 @@
 title: "MyzharBot-v2"
 excerpt: "First steps toward autonomous navigation"
 author: "Walter Lucetti"
-number: 200
+index: 200
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

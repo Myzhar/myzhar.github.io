@@ -2,7 +2,7 @@
 title: "Understanding the ROS 2 Communication Middleware"
 excerpt: "Learn how ROS 2 handles communication between nodes and the underlying middleware."
 author: "Walter Lucetti"
-number: 600
+index: 600
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

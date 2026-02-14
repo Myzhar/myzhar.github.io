@@ -2,7 +2,7 @@
 title: "Understanding ROS 2"
 excerpt: "An overview of ROS 2, its features, and why it is so popular in the robotics community."
 author: "Walter Lucetti"
-number: 300
+index: 300
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -63,7 +63,7 @@ ROS 2 provides a modular architecture that allows developers to leverage existin
 
 4. **Cross-platform Support**: ROS 2 is designed to work on various platforms, including Linux, Windows, and macOS, providing flexibility in development and deployment.
 
-5. **Enhanced Communication**: ROS 2 uses the Data Distribution Service (DDS) for communication, allowing for more efficient and reliable data exchange between components. Many ROS 2 users may find DDS complex and difficult to configure. However, DDS brings significant advantages in terms of scalability and performance, especially in distributed systems. In any case, ROS 2 allows you to choose different alternative communication middleware options to suit your needs.
+5. **Enhanced Communication**: ROS 2 uses the Data Distribution Service (DDS) for communication, allowing for more efficient and reliable data exchange between components. Many ROS 2 users may find DDS complex and difficult to configure. However, DDS brings significant advantages in terms of scalability and performance, especially in distributed systems. In any case, ROS 2 allows you to choose different alternative communication middleware options to suit your needs. Read the [Understanding the ROS 2 Communication Middleware](/tutorials/ros2/understanding-ros2-middleware/) tutorial for more information.
 
 6. **Rich Ecosystem**: The ROS 2 ecosystem includes a wide range of tools, libraries, and community-contributed packages, making it easier to find solutions to common robotics challenges.
 
@@ -129,9 +129,12 @@ To improve communication performance, nodes can be loaded into the same process 
 - [**Package**](https://docs.ros.org/en/rolling/Concepts/Basic/About-Packages.html){:target="_blank"}: A collection of related nodes, libraries, and resources that can be easily shared and reused.
 - [**Launch File**](https://docs.ros.org/en/rolling/Concepts/Basic/About-Launch.html){:target="_blank"}: A configuration file used to start multiple nodes and set parameters for a ROS 2 application.
 - [**Middleware**](https://docs.ros.org/en/rolling/Concepts/Intermediate/About-Different-Middleware-Vendors.html){:target="_blank"}: The underlying communication layer that facilitates data exchange between nodes in ROS 2.
+
   - [**RMW (ROS Middleware Wrapper)**](https://docs.ros.org/en/rolling/Concepts/Intermediate/About-Different-Middleware-Vendors.html){:target="_blank"}: An abstraction layer that allows ROS 2 to support different middleware implementations, providing flexibility in communication options.
   - [**DDS (Data Distribution Service)**](https://docs.ros.org/en/rolling/Concepts/Intermediate/About-Different-Middleware-Vendors.html){:target="_blank"}: A middleware standard used in ROS 2 for efficient and reliable data exchange between nodes.
   - [**Zero-Copy Transport**](https://design.ros2.org/articles/zero_copy.html){:target="_blank"}: A communication mechanism that minimizes data copying between nodes, enhancing efficiency and reducing latency.
+
+  *These concepts are described in more detail in the [Understanding the ROS 2 Communication Middleware](/tutorials/ros2/understanding-ros2-middleware/) tutorial.*
 
 ## Conclusion
 

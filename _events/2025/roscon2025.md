@@ -2,7 +2,7 @@
 title: "ROSCon 2025"
 excerpt: "My presence at ROSCon 2025 with Stereolabs as a sponsor and exhibitor"
 author: "Walter Lucetti"
-number: 100
+date: 2025-10-27 00:00:00 +01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

@@ -2,7 +2,7 @@
 title: "NVIDIA® CUDA™ Compute Capability"
 excerpt: "An overview of CUDA™ Compute Capability and its importance in GPU programming"
 author: "Walter Lucetti"
-number: 100
+index: 100
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

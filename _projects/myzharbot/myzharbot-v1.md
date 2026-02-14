@@ -2,7 +2,7 @@
 title: "MyzharBot-v1"
 excerpt: "The first version of MyzharBot"
 author: "Walter Lucetti"
-number: 100
+index: 100
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

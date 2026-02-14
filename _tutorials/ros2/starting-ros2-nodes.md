@@ -2,7 +2,7 @@
 title: "Starting ROS 2 Nodes"
 excerpt: "Learn how to start and manage ROS 2 nodes in your robotics applications."
 author: "Walter Lucetti"
-number: 500
+index: 500
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
