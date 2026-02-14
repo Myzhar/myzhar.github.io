@@ -21,48 +21,66 @@ In ROS 2, parameters are a powerful way to configure nodes at launch or at runti
 
 ## What ROS 2 parameters are
 
-A parameter is a **named configuration value** associated with a single node; each node maintains its own parameter store and there is no global parameter server as in ROS 1. Parameters are typed, and their values are accessed via the node’s parameter services, which are generated from the `rcl_interfaces` package.
+A parameter is a **named configuration value** associated with a single node; each node maintains its own parameter store, and there is no global parameter server as in ROS 1. Parameters are typed, and their values are accessed via the node's parameter services, which are generated from the `rcl_interfaces` package.
 
-Typical use cases include topics QoS selection, controller gains, robot names, frame IDs, and enabling or disabling features at launch time instead of recompiling. Parameters can be declared with default values in code, overridden from the command line, or loaded from YAML files.
+Typical use cases include topic QoS selection, controller gains, robot names, frame IDs, and enabling or disabling features at launch time instead of recompiling. Parameters can be declared with default values in code, overridden from the command line, or loaded from YAML files.
 
 ## Listing and inspecting node parameters
 
-The main CLI entry point is `ros2 param`, which talks to the node’s parameter services via the RMW communication middleware.
+The main CLI entry point is `ros2 param`, which talks to the node's parameter services via the RMW communication middleware.
 
 ### Discovering parameters
 
-- List parameters of a specific node:  
-  `ros2 param list /my_node`
-- List parameters on all discoverable nodes (can be slow on large systems):  
-  `ros2 param list`
+- List parameters of a specific node:
+
+  ```bash
+  ros2 param list /my_node
+  ```
+
+- List parameters on all discoverable nodes (can be slow on large systems):
+
+  ```bash
+  ros2 param list
+  ```
 
 The output is a flat list of parameter names (including nested ones expressed with dots) grouped by node. For example, a node might expose parameters like `use_sim_time`, `camera.fps`, and `camera.resolution.width`.
 
-For example, you can retrieve the parameters of the "talker" node of the "talker/listner" demo with:
+For example, you can retrieve the parameters of the "talker" node of the "talker/listener" demo with:
 
 ```bash
 $ ros2 param list
 /talker:
-  qos_overrides./parameter_events.publisher.depth
-  qos_overrides./parameter_events.publisher.durability
-  qos_overrides./parameter_events.publisher.history
-  qos_overrides./parameter_events.publisher.reliability
-  start_type_description_service
-  use_sim_time
+    qos_overrides./parameter_events.publisher.depth
+    qos_overrides./parameter_events.publisher.durability
+    qos_overrides./parameter_events.publisher.history
+    qos_overrides./parameter_events.publisher.reliability
+    start_type_description_service
+    use_sim_time
 ```
 
-:pushpin: **Note**: here comes again the name "QoS" as `qos_overrides`. A concept that we will analyse in a later important tutorial.
+:pushpin: **Note**: here comes again the name "QoS" as `qos_overrides`. This is a concept that we will analyze in a later important tutorial.
 
 ### Reading parameter values and types
 
-- Get a single parameter value:  
-  `ros2 pFaram get /my_node use_sim_time`
-- Get multiple parameters via the underlying services:  
-  `ros2 interface show rcl_interfaces/srv/GetParameters` gives the exact service structure used to retrieve them.
-  
-The `get` command prints both type and value (for example, `Boolean value is: True`), which is useful when you are debugging or preparing a YAML file. For more advanced inspection, you can work directly with the parameter services (`GetParameters`, `DescribeParameters`, `ListParameters`, etc.) from scripts or tools.
+- Get a single parameter value:
 
-For example:
+  ```bash
+  ros2 param get /my_node param_name
+  ```
+
+- Get multiple parameters via the underlying services:  
+
+  ```bash
+  ros2 interface show rcl_interfaces/srv/GetParameters
+  ```
+
+  gives the exact service structure used to retrieve them.
+
+The `get` command prints both the type and the value (for example, `Boolean value is: True`), which is useful when you are debugging or preparing a YAML file. 
+
+For more advanced inspection, you can work directly with the parameter services (`GetParameters`, `DescribeParameters`, `ListParameters`, etc.) from scripts or tools.
+
+An example using the "Talker" node of the "talker/listener" demo:
 
 ```bash
 $ ros2 param get /talker use_sim_time
@@ -77,28 +95,53 @@ You can set parameters in two main contexts: at **startup** and at **runtime**.
 
 When launching a node manually, parameters can be passed on the command line with `--ros-args` and `-p`:
 
-- Single parameter:  
-  `ros2 run my_pkg my_node --ros-args -p param_name:=new_param_value`
-- Multiple parameters:  
-  `ros2 run my_pkg my_node --ros-args -p param_name:=new_param_value_1 -p param_name_2:=new_param_value_2 -p param_name_3:=new_param_value_3`
+- Single parameter:
+
+  ```bash
+  ros2 run my_pkg my_node --ros-args -p param_name:=new_param_value
+  ```
+
+- Multiple parameters:
+
+  ```bash
+  ros2 run my_pkg my_node --ros-args -p param_name:=new_param_value_1 -p param_name_2:=new_param_value_2 -p param_name_3:=new_param_value_3
+  ```
 
 The CLI infers the type from the literal value: numeric tokens become **integers** or **doubles**, `true`/`false` become **booleans**, and quoted strings remain **strings**. Arrays are supported using YAML-like list syntax, such as `-p array_param:="[val_1, val_2, val_3]"`.
 
 ### Changing parameters at runtime
 
-- Set a parameter while the node is running:  
-  `ros2 param set /my_node param_name param_value`
-- The new value must be compatible with the existing type; otherwise the service returns an error and the parameter does not change.
+- Set a parameter while the node is running:
+
+  ```bash
+  ros2 param set /my_node param_name param_value
+  ```
+
+- The new value must be compatible with the existing type; otherwise, the service returns an error and the parameter does not change.
 
 Under the hood, `ros2 param set` calls the `SetParameters` service, which takes a list of `Parameter` messages and returns a list of `SetParametersResult` flags indicating success or failure for each entry. For batch operations and tooling, you can call `SetParameters` or `SetParametersAtomically` directly from Python or C++.
 
 #### Using the `rqt` GUI
 
-The `rqt` framework provides a graphical interface for managing ROS 2 parameters. You can use the `rqt_param` plugin to visualize and modify parameters in real-time.
+The `rqt` framework provides a graphical interface for managing ROS 2 parameters. You can use the `Dynamic Reconfigure` plugin to visualize and modify parameters in real time. You can open the plugin interface from the `Plugins` -> `Configure` -> `Dynamic Reconfigure` menu.
+
+If the plugin is not available you can install it as:
+
+```bash
+sudo apt install ros-<distro>-rqt-reconfigure
+```
+
+and use the command
+
+```bash
+rqt --force-discover
+```
+
+to launch the rqt GUI forcing a new discovery of the available plugins.
 
 {% include figure popup=true image_path="/assets/images/tutorials/configure_ros2_nodes/rqt_dynamic_reconfigure.jpg" alt="rqt Dynamic Reconfigure" caption="The rqt Dynamic Reconfigure plugin" %}
 
-:pushpin: **Note**: The parameters that are not declared as "dynamic" in the node's code are grayed and not editable.
+:pushpin: **Note**: The parameters that are not declared as "dynamic" in the node's code are grayed out and not editable.
 
 The GUI allows you to export the parameters to a YAML file and use it to set your default values for the node at startup, as described below.
 
@@ -112,46 +155,46 @@ A minimal YAML file for a node looks like this:
 
 ```yaml
 node_name:
-  ros__parameters:
-    param_name_1: param_value_1
-    param_name_2: param_value_2
-    param_name_3: param_value_3
+    ros__parameters:
+        param_name_1: param_value_1
+        param_name_2: param_value_2
+        param_name_3: param_value_3
 
-    param_group_1:
-      param_name_4: param_value_4
-      param_name_5: param_value_5
-      param_name_6: param_value_6
+        param_group_1:
+            param_name_4: param_value_4
+            param_name_5: param_value_5
+            param_name_6: param_value_6
 
-    param_group_2:
-      param_name_7: param_value_7
+        param_group_2:
+            param_name_7: param_value_7
 
-      param_subgroup_1:
-        param_name_8: param_value_8
-        param_name_9: param_value_9
+            param_subgroup_1:
+                param_name_8: param_value_8
+                param_name_9: param_value_9
 ```
 
 You first specify the node name (`node_name`), then the `ros__parameters` key, and finally all parameters belonging to that node. Nested dictionaries map to dot-separated parameter names like `param_group_n` on the wire.
 
-For Example, to set all the parameters of the Talker node from the Talker/Listener demo:
+For example, to set all the parameters of the Talker node from the Talker/Listener demo:
 
 ```yaml
 talker:
-  ros__parameters:
-    qos_overrides:
-        /clock:
-            subscription:
-                depth: 1
-            durability: volatile
-            history: keep_last
-            reliability: best_effort
-        /parameter_events:
-            publisher:
-                depth: 1000
-                durability: volatile
-                history: keep_last
-                reliability: reliable
-    start_type_description_service: true
-    use_sim_time: false
+    ros__parameters:
+        qos_overrides:
+                /clock:
+                        subscription:
+                                depth: 1
+                        durability: volatile
+                        history: keep_last
+                        reliability: best_effort
+                /parameter_events:
+                        publisher:
+                                depth: 1000
+                                durability: volatile
+                                history: keep_last
+                                reliability: reliable
+        start_type_description_service: true
+        use_sim_time: false
 ```
 
 ### Loading YAML parameters from the command line
@@ -160,7 +203,7 @@ You can start a node with all parameters from a YAML file using `--params-file`:
 
 ```bash
 ros2 run my_pkg my_node \
-  --ros-args --params-file /path/to/params.yaml
+    --ros-args --params-file /path/to/params.yaml
 ```
 
 This single command loads all parameters defined for the node in that YAML file, whether there is one parameter or hundreds. It is the recommended approach when you need to deploy the same node with different configurations across multiple robots or environments.
@@ -173,7 +216,7 @@ This approach will be analyzed in more detail in a future tutorial dedicated to 
 
 ## Dynamic parameters and callbacks
 
-In ROS 2, parameters are inherently dynamic in the sense that they can be changed at runtime via services, without a separate “dynamic reconfigure” framework, as ROS 1 users did. However, your node must explicitly react to these changes if you want updated values to affect its internal behavior.
+In ROS 2, parameters are inherently dynamic in the sense that they can be changed at runtime via services, without a separate "dynamic reconfigure" framework, as ROS 1 users had. However, your node must explicitly react to these changes if you want updated values to affect its internal behavior.
 
 ### Dynamic updates via parameter services
 
@@ -193,9 +236,9 @@ A typical pattern is:
 
 - Register a callback with `add_on_set_parameters_callback` on the node.
 - For each proposed parameter, check its name, type, and value range; if invalid, set `result.successful = false` and provide a reason.
-- If valid, update your internal state (for example, PID gains or max speed) so the node’s behavior changes immediately.
+- If valid, update your internal state (for example, PID gains or max speed) so the node's behavior changes immediately.
 
-This mechanism is the ROS 2 equivalent of ROS 1’s dynamic reconfigure, but integrated directly with the parameter system and services. As a best practice, you should thoroughly validate parameter updates in the callback to avoid inconsistent state when a bad value is proposed.
+This mechanism is the ROS 2 equivalent of ROS 1's dynamic reconfigure, but it is integrated directly with the parameter system and services. As a best practice, you should thoroughly validate parameter updates in the callback to avoid inconsistent state when a bad value is proposed.
 
 You can find an example of this pattern in the [ZED-ROS2-Wrapper package](https://github.com/stereolabs/zed-ros2-wrapper/blob/master/zed_components/src/zed_camera/src/zed_camera_component_main.cpp#L1919-L2085) that I contributed to.
 
