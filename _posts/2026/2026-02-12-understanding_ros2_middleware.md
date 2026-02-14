@@ -1,13 +1,13 @@
 ---
 title: "New ROS 2 Tutorial: Understanding the ROS 2 Communication Middleware"
 excerpt: "I released a new tutorial on understanding the ROS 2 communication middleware."
-date: 2026-02-14 18:00:00 +01:00
+date: 2026-02-12 00:00:00 +01:00
 author: "Walter Lucetti"
 layout: single
 classes: wide
 toc: false
 header:
-  teaser: /assets/images/ros2/configure-ros2-nodes.jpg
+  teaser: /assets/images/ros2/understanding-ros2-middleware.jpg
 
 categories: 
   - updates
@@ -25,12 +25,18 @@ tags:
   - rqt
 ---
 
-I'm particularly active in this period, and I'm glad to announce the release of a [new ROS 2 tutorial on **Configuring Nodes**](/tutorials/ros2/configure-node-with-parameters/)!
+I’m excited to announce a brand-new addition to my ROS 2 tutorial series: [**Understanding the ROS 2 Communication Middleware**](/tutorials/ros2/understanding-ros2-middleware/)!  
 
-This tutorial covers the essentials of using parameters to configure your ROS 2 nodes effectively. You'll learn how to list, set, and manage parameters both from the command line and using the `rqt` GUI.
+If you’ve ever felt confused by how ROS 2 handles communication under the hood, you’re definitely not alone. The middleware layer can be tricky—especially for developers moving from ROS 1 to ROS 2, or even for those jumping straight into ROS 2 for the first time.  
 
-A section is dedicated to using YAML files for parameter management, which is especially useful for complex configurations.
+In this guide, we’ll explore the different middleware implementations available in ROS 2, including:  
 
-Dive into the [tutorial](/tutorials/ros2/configure-node-with-parameters/), experiment a bit, and as always...
+- **Fast DDS**
+- **Cyclone DDS**
+- **Connext DDS**
+- **GurumDDS**
+- **Zenoh**
 
-happy robotics programming! 🤖
+You’ll also find hands-on examples, clear explanations, and tips for choosing and configuring the best middleware for your project.  
+
+Dive in, experiment a bit, and as always—happy robotics programming! 🤖
