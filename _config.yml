@@ -65,9 +65,9 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:info@myzhar.com"
-    - label: "Terms of Service"
+    - label: "Privacy Policy"
       icon: "fas fa-fw fa-file-contract"
-      url: "/terms/"
+      url: "/privacy-policy/"
 
 
 # Reading Files

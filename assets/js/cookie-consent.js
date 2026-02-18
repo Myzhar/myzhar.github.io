@@ -10,6 +10,6 @@ window.cookieconsent.initialise({
     "theme": "classic",
     "content": {
         "message": "This website uses cookies to ensure you get the best experience here.",
-        "href": "https://myzhar.tech/terms/"
+        "href": "https://myzhar.tech/privacy-policy/"
     },
 });
