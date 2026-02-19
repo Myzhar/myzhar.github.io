@@ -30,6 +30,8 @@ While ROS 2 can be installed on various operating systems, this tutorial focuses
 
 ROS 2 can be installed from binary packages or built from source. In this tutorial, we will focus on installing ROS 2 using binary packages, which is the recommended method for most users.
 
+This guide applies to Debian-based Linux distributions and supports both x86_64 and ARM64 architectures.
+
 ## Step 1: Set Up Your Sources
 
 Before installing ROS 2, you need to set up your system to accept software from the ROS 2 repositories. Open a terminal and run the following commands:
@@ -89,6 +91,8 @@ sudo dpkg -i /tmp/ros2-apt-source.deb
 sudo apt update
 sudo apt upgrade -y
 ```
+
+These commands automatically detect and install the latest ROS APT source package for your Ubuntu codename. They also ensure you can receive future ROS 2 package updates using the standard `sudo apt upgrade -y` command.
 
 ## Step 4: Install ROS 2
 
@@ -157,7 +161,9 @@ colcon build
 
 `ros2_ws` is the name of your workspace, and you can replace it with any name you prefer.
 
-After building your workspace, source the workspace setup script by adding the following line to your `~/.bashrc` file:
+Running `colcon build` on an empty `src` directory simply creates the workspace structure; it will finish quickly without building anything.
+
+After creating your workspace, source the workspace setup script by adding the following line to your `~/.bashrc` file:
 
 ```bash
 source ~/ros2_ws/install/setup.bash
@@ -167,6 +173,35 @@ Then, apply the changes by running:
 
 ```bash
 source ~/.bashrc
+```
+
+After this, you can verigy that your ROS 2 environment is set up correctly by running:
+
+```bash
+echo $COLCON_PREFIX_PATH
+```
+
+to verify that the workspace paths are included in your ROS 2 environment. You should see the path to your workspace's `install` directory in the output.
+
+Then, you can also use this command:
+
+```bash
+ros2 pkg list
+```
+
+to verify that ROS 2 packages are available in your environment. You should see a list of ROS 2 packages, confirming that your installation is successful:
+
+```bash
+action_msgs
+action_tutorials_cpp
+action_tutorials_interfaces
+action_tutorials_py
+actionlib_msgs
+actuator_msgs
+ament_black
+ament_clang_format
+ament_cmake
+[...]
 ```
 
 ## A Useful ROS 2 Terminal Configuration
@@ -189,6 +224,7 @@ Then, copy and paste the following code into the file:
 
 machine_ip=(`hostname -I`)
 
+# You MUST set dist to the ROS 2 distribution you installed (humble, jazzy, lyrical, or rolling).
 dist=jazzy # Options: humble, jazzy, lyrical, rolling
 
 domain_id=0
