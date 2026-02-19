@@ -84,10 +84,10 @@ Here are the available LTS distributions:
 - For Ubuntu 24.04, replace `<distro>` with `jazzy`.
 - For Ubuntu 26.04 (from May 2026), replace `<distro>` with `lyrical`.
 
-If you prefer a minimal installation, recommended for headless systems or robot deployments, you can install the ROS 2 base package:
+If you prefer a minimal installation, recommended for headless systems or robot deployments, you can install the ROS 2 core packages:
 
 ```bash
-sudo apt install ros-<distro>-base
+sudo apt install ros-<distro>-ros-core
 ```
 
 ## Step 5: Install Development Tools
