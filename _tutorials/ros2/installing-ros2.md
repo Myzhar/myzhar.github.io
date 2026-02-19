@@ -49,8 +49,32 @@ sudo apt update && sudo apt install locales
 sudo locale-gen en_US en_US.UTF-8
 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
+```
 
+Verify that the `locale` settings are correct:
+
+```bash
 locale  # verify settings
+```
+
+The correct output should look like:
+
+```bash
+LANG=en_US.UTF-8
+LANGUAGE=
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=en_US.UTF-8
 ```
 
 ## Step 3: Add the ROS 2 Repository
@@ -96,6 +120,13 @@ To develop ROS 2 packages or compile packages from source, you will need to inst
 
 ```bash
 sudo apt update && sudo apt install ros-dev-tools
+```
+
+Initialize rosdep:
+
+```bash
+sudo rosdep init
+rosdep update
 ```
 
 ## Step 6: Set Up Your Environment
