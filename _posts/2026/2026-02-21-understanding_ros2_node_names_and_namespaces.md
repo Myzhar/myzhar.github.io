@@ -28,7 +28,7 @@ tags:
 
 I took the decision to release at least a new tutorial each week, and this time it's all about understanding ROS 2 node names and namespaces.
 
-The new tutorial is easy and explain simple concepts, but it's crucial for organizing and managing your robotic applications effectively.
+The new tutorial is easy and explains simple concepts, but it's crucial for organizing and managing your robotic applications effectively.
 
 A clear view of how node names and namespaces work can greatly enhance your ability to design and implement complex robotic systems. By understanding these concepts, you'll be better equipped to avoid naming conflicts, improve modularity, and create more maintainable code.
 
