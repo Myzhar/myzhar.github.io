@@ -32,7 +32,7 @@ The new tutorial is easy and explain simple concepts, but it's crucial for organ
 
 A clear view of how node names and namespaces work can greatly enhance your ability to design and implement complex robotic systems. By understanding these concepts, you'll be better equipped to avoid naming conflicts, improve modularity, and create more maintainable code.
 
-Check out the tutorial [here](/tutorials/ros2/understanding-ros2-namespace-node-name/)!
+Go to the tutorial section to [Understand ROS 2 Node Names and Namespaces](/tutorials/ros2/understanding-ros2-namespace-node-name/)!
 
 Do not hesitate to reach out if you have any questions or feedback and...
 
