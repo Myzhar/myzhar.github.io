@@ -10,8 +10,10 @@ header:
     url: "https://linktr.ee/myzhar"
   - label: "The MyzharBot project"
     url: "/projects/myzharbot/"
+  - label: ":turtle: ROS 2 Tutorials"
+    url: "/tutorials/ros2/ros2-tutorials/"
 intro: 
-  - excerpt: 'Insights, projects, and stories about seeing, thinking, and moving machines.'
+  - excerpt: 'This is the personal website and lab space of Walter “Myzhar” Lucetti, an Italian computer engineer specializing in robotics, 3D perception, and artificial intelligence. Here you’ll find hands‑on tutorials, notes, and real project stories on ROS 2, stereo vision, NVIDIA Jetson, CUDA, sensors, and 3D printing, all focused on building robots that truly see and interact with the world.'
 feature_row:
   - image_path: /assets/images/robots_default.jpg
     alt: "projects"
