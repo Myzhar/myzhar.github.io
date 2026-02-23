@@ -8,9 +8,9 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/robots_default.jpg
   teaser: /assets/images/robots_default.jpg
-  #actions:
-  #  - label: "More Info"
-  #    url: "https://www.myzhar.com"
+  actions:
+    - label: "Support my work (sponsored link) :moneybag: "
+      url: "https://www.effectivegatecpm.com/d68eqmbt?key=85fcc6edf832633c3ed45032a3820ef5"
 
 gallery_v1:
     - url: /assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg

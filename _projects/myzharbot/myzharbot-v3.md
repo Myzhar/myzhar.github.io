@@ -9,8 +9,8 @@ header:
   overlay_image: /assets/images/projects/myzharbot/v3/MyzharBot-v3.1.jpg
   teaser: /assets/images/projects/myzharbot/v3/MyzharBot-v3.1.jpg
   actions:
-    - label: "NVIDIA® Jetson™ Champions"
-      url: "https://developer.nvidia.com/embedded/community/jetson-champions"
+    - label: "Support my work (sponsored link) :moneybag: "
+      url: "https://www.effectivegatecpm.com/d68eqmbt?key=85fcc6edf832633c3ed45032a3820ef5"
 layout: single
 classes: single
 
