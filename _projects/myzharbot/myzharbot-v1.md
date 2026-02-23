@@ -11,6 +11,7 @@ header:
   actions:
     - label: "Support my work (sponsored link) :moneybag: "
       url: "https://www.effectivegatecpm.com/d68eqmbt?key=85fcc6edf832633c3ed45032a3820ef5"
+      target: _blank
 layout: single
 classes: single
 ---

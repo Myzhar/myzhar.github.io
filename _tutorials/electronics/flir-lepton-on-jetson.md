@@ -13,6 +13,7 @@ header:
       url: "https://github.com/Myzhar/Lepton3_Jetson"
     - label: "Support my work (sponsored link) :moneybag: "
       url: "https://www.effectivegatecpm.com/hppbw1jy?key=0d12a40355f9dd7fe79805cf56f1c3c7"
+      target: _blank
 layout: single
 classes: single
 

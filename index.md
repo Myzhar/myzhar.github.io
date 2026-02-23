@@ -14,6 +14,7 @@ header:
     url: "/tutorials/ros2/ros2-tutorials/"
   - label: "Support my work (sponsored link) :moneybag: "
     url: "https://www.effectivegatecpm.com/iw1cpadz?key=a8f1bdb661a1ca4353fd20276a9ceb9a"
+    target: _blank
 intro: 
   - excerpt: 'This is the personal website and lab space of Walter “Myzhar” Lucetti, an Italian computer engineer specializing in robotics, 3D perception, and artificial intelligence. Here you’ll find hands‑on tutorials, notes, and real project stories on ROS 2, stereo vision, NVIDIA Jetson, CUDA, sensors, and 3D printing, all focused on building robots that truly see and interact with the world.'
 feature_row:
