@@ -10,7 +10,7 @@ header:
   teaser: /assets/images/robots_default.jpg
   actions:
     - label: "Support my work (sponsored link) :moneybag: "
-      url: "https://www.effectivegatecpm.com/d68eqmbt?key=85fcc6edf832633c3ed45032a3820ef5"
+      url: "https://www.effectivegatecpm.com/dp2wdk1h?key=30034c44490a811f41ecd32c62d751fd"
       target: _blank
 
 gallery_v1:
