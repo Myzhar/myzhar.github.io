@@ -56,13 +56,15 @@ This information is mainly collected through cookies and similar tracking techno
 
 ## Cookies and tracking technologies
 
-We use cookies and similar technologies to operate and improve the Website, analyze traffic, and display advertising.
+<!-- We use cookies and similar technologies to operate and improve the Website, analyze traffic, and display advertising.
 
 - **Necessary cookies:** Required for the Website to function (security, basic functionality, preferences).  
 - **Analytics cookies:** Help us understand how visitors use the Website (Google Analytics).  
 - **Advertising cookies:** Used to show relevant ads and measure ad performance (Google AdSense, Adsterra).
 
-You can control cookies through your browser settings and, where available, through our cookie/consent banner.
+You can control cookies through your browser settings and, where available, through our cookie/consent banner. -->
+
+<script id="CookieDeclaration" src="https://consent.cookiebot.com/e399cfb4-af9c-47ca-b926-16983c6fdbfe/cd.js" type="text/javascript" async></script>
 
 ## Google Analytics
 
