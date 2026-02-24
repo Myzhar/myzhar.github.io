@@ -36,5 +36,4 @@ Whether you're taking your first steps with ROS 2 or looking to deepen your expe
   table th:nth-child(3), table td:nth-child(3) { width: 55%; }
 </style>
 
-
 **Happy robotics programming!** :robot:
