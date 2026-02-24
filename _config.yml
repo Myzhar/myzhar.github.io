@@ -140,7 +140,7 @@ defaults:
       author_profile: true
       read_time: true
       share: true
-      related: true
+      related: false
       show_date: true
       toc: true
       toc_label: "Table of Contents"
@@ -156,7 +156,7 @@ defaults:
       author_profile: true
       read_time: true
       share: true
-      related: true
+      related: false
       show_date: true
       toc: true
       toc_label: "Table of Contents"
@@ -172,7 +172,7 @@ defaults:
       author_profile: true
       read_time: true
       share: true
-      related: true
+      related: false
       show_date: true
       toc: true
       toc_label: "Table of Contents"
