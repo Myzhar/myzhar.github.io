@@ -10,7 +10,7 @@ header:
   teaser: /assets/images/robots_default.jpg
   actions:
     - label: "Support my work (sponsored link) :moneybag: "
-      url: "https://selfreceiver.com/dp2wdk1h?key=30034c44490a811f41ecd32c62d751fd"
+      url: "https://likelihoodhangingbell.com/dp2wdk1h?key=30034c44490a811f41ecd32c62d751fd"
       target: _blank
 
 gallery_v1:

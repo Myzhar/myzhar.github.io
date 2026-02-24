@@ -3,7 +3,7 @@ title: "Terms and Privacy Policy"
 permalink: /privacy-policy/
 author: "Walter Lucetti"
 author_profile: true
-date: 2026-02-18 00:00:00 +01:00
+date: 2026-02-24 00:00:00 +01:00
 classes: single
 layout: single
 toc: true
@@ -15,7 +15,7 @@ read_time: false
 share: false
 ---
 
-_Last updated: 18 February 2026_
+_Last updated: 24 February 2026_
 
 This Privacy Policy describes how **myzhar.tech** (“we”, “us”, “our”) collects, uses and protects information when you visit **https://myzhar.tech** (the “Website”).
 
@@ -60,7 +60,7 @@ We use cookies and similar technologies to operate and improve the Website, anal
 
 - **Necessary cookies:** Required for the Website to function (security, basic functionality, preferences).  
 - **Analytics cookies:** Help us understand how visitors use the Website (Google Analytics).  
-- **Advertising cookies:** Used to show relevant ads and measure ad performance (Google AdSense).
+- **Advertising cookies:** Used to show relevant ads and measure ad performance (Google AdSense, Adsterra).
 
 You can control cookies through your browser settings and, where available, through our cookie/consent banner.
 
@@ -83,7 +83,7 @@ You can opt out of Google Analytics by:
   https://tools.google.com/dlpage/gaoptout  
 - Adjusting your browser’s privacy and cookie settings.
 
-## Google AdSense and advertising
+<!-- ## Google AdSense and advertising
 
 We use **Google AdSense** to display ads on the Website.
 
@@ -96,7 +96,20 @@ You may opt out of personalized advertising by visiting:
 - For more information about how Google uses data in ads:  
   https://policies.google.com/technologies/ads  
 
-You may also manage third‑party advertising cookies through your browser and, where available, through our consent/cookie banner.
+You may also manage third‑party advertising cookies through your browser and, where available, through our consent/cookie banner. -->
+
+## Adsterra and advertising
+
+Adsterra is fully compliant with GDPR regulation. In Adsterra [Privacy Policy](https://adsterra.com/privacy-policy-managed/) and [Cookies Policy](https://adsterra.com/cookies/) you'll find all information regarding how they collect and use data.
+
+Bear in mind that Adsterra does not collect or store any consumer (end-user) personally identifiable information (PII), or any data that allows to identify any individuals (i.e. name, email address, or billing information). Instead, we use pseudonymous information linked to browsing events and cookies to help serve the ads:
+
+- Pseudonymous universally unique identifier (UID)
+-Pseudonymous' device and browser (User agent)
+- Time stamp (Date, Time)
+- Number of Impressions, Clicks
+
+When users visit a publishers’ website, a cookie may be dropped on that end user's browser.
 
 ## Legal bases for processing (GDPR)
 
