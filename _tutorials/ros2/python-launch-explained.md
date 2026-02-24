@@ -196,9 +196,9 @@ def generate_launch_description():
 
 Let's analyze the structure of this launch file:
 
-1. **Imports**: The necessary modules are imported at the beginning. This includes the `launch` module, the `LaunchDescription` class, and the `Node` action from `launch_ros.actions`.
+1. **Imports**: The necessary modules are imported at the beginning. This includes the main `launch` module, the `LaunchDescription` class from the `launch` module, and the `Node` action from `actions` submodule of the main `launch_ros` module.
 
-2. **Launch Description**: The `generate_launch_description` function creates and returns a `LaunchDescription` object. This object contains a list of actions to be executed when the launch file is run.
+2. **Launch Description**: The `generate_launch_description` function creates and returns a `LaunchDescription` object. This object contains the list of actions to be executed when the launch file is run.
 
 3. **Node Actions**: Inside the `LaunchDescription`, we define two `Node` actions:
    - The first `Node` action launches the `talker` node from the `demo_nodes_cpp` package.
@@ -245,7 +245,7 @@ def generate_launch_description():
     return launch_description
 ```
 
-This example still misses something: the ability to customize the namespace from the command line. To achieve this, we can use the `DeclareLaunchArgument` function to declare a launch argument for the namespace. This allows users to specify the namespace when launching the file.
+This example makes the launch file more flexible, but it still misses something: the ability to customize the namespace from the command line. To achieve this, we can use the `DeclareLaunchArgument` function to declare a launch argument for the namespace. This allows users to specify the namespace when launching the file.
 
 Here's the modified example:
 
@@ -336,7 +336,7 @@ For example we would like to create a common prefix for the node names, in this 
 
 Let's add the new Launch Configuration with the new Launch Parameter to set a node name common prefix:
 
-```bash
+```python
 import launch
 from launch import LaunchDescription
 from launch_ros.actions import Node
