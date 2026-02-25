@@ -10,7 +10,7 @@ header:
   teaser: /assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg
   actions:
     - label: "Support my work (sponsored link) :moneybag: "
-      url: "https://likelihoodhangingbell.com/dp2wdk1h?key=30034c44490a811f41ecd32c62d751fd"
+      url: "https://anniversaryvacuumambassador.com/dp2wdk1h?key=30034c44490a811f41ecd32c62d751fd"
       target: _blank
 layout: single
 classes: single
