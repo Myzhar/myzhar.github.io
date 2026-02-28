@@ -245,9 +245,13 @@ def generate_launch_description():
     return launch_description
 ```
 
-This example makes the launch file more flexible, but it still misses something: the ability to customize the namespace from the command line. To achieve this, we can use the `DeclareLaunchArgument` function to declare a launch argument for the namespace. This allows users to specify the namespace when launching the file.
+This example makes the launch file more flexible, but it still misses something: the ability to customize the namespace from the command line.
 
-Here's the modified example:
+### Declaring Launch Arguments
+
+To customize launch configuration values we must use the `DeclareLaunchArgument` function to declare launch arguments.
+
+Here's the modified example to be able to modify the namespace configuration from the launch command line:
 
 ```bash
 import launch
@@ -284,9 +288,8 @@ def generate_launch_description():
     return launch_description
 ```
 
+Let's suppose to have created a package named `test_launch_pkg` and to have saved the launch file as `test_launch_pkg/launch/talker_listener_adv.launch.py`.
 Now we can launch the file with a custom namespace using the command line:
-
-Let's suppose to have created a package named `test_launch_pkg` and to have saved the launch file as `test_launch_pkg/launch/talker_listener_adv.launch.py`, then we can launch it with:
 
 ```bash
 ros2 launch test_launch_pkg talker_listener_adv.launch.py namespace:=custom_namespace
@@ -332,9 +335,11 @@ Arguments (pass arguments as '<name>:=<value>'):
 
 In ROS 2 launch files, managing launch arguments and configurations is crucial for creating flexible and reusable launch setups.
 
-For example we would like to create a common prefix for the node names, in this case it's not very useful, because we already have the namespace, but it makes it easy to understand the next concepts.
+For example, we would like to create a common prefix for the node names.
 
-Let's add the new Launch Configuration with the new Launch Parameter to set a node name common prefix:
+> :pushpin: **Note**: the example is useless, because we already have the namespace and we do not need a node name prefix, but it makes it easy to understand the important concepts of this section.
+
+Let's create the new Launch Configuration with the new Launch Parameter and use it to change the name of the nodes:
 
 ```python
 import launch
@@ -363,14 +368,14 @@ def generate_launch_description():
             package='demo_nodes_cpp',
             executable='talker',
             output='screen',
-            name=name_prefix + 'talker',
+            name=name_prefix + 'talker', # Operation on the node name
             namespace=namespace
         ),
         Node(
             package='demo_nodes_cpp',
             executable='listener',
             output='screen',
-            name=name_prefix + 'listener',
+            name=name_prefix + 'listener', # Operation on the node name
             namespace=namespace
         )
     ])
@@ -389,7 +394,7 @@ and
 name=name_prefix + 'listener',
 ```
 
-What does it happen if we try to start this new launch file?
+What does it happen if we try to run this new launch file?
 
 ```bash
 $ ros2 launch test_launch_pkg talker_listener_advanced.launch.py namespace:=custom_namespace name_prefix:=demo_
@@ -400,17 +405,189 @@ $ ros2 launch test_launch_pkg talker_listener_advanced.launch.py namespace:=cust
  - InvalidFrontendLaunchFileError: The launch file may have a syntax error, or its format is unknown
 ```
 
-`namespace` and `name_prefix` are both `LaunchConfiguration` objects, and you cannot directly concatenate them with strings.
+`namespace` and `name_prefix` are both `LaunchConfiguration` objects, not `string`, and you cannot directly concatenate them with string variables.
 
-We need a way to substitute their values into the strings we want to create.
+Generally speaking, you cannot use the value of a `LaunchConfiguration` directly in any kind of operation involving other variable types.
+
+In this case, we need a way to substitute their values into the strings we want to create.
 
 To achieve this, we can use `launch.actions.OpaqueFunction` to create a function that will be called at runtime with the actual values of the launch configurations.
 
 Inside this function we can use `perform()` passing the execution context as parameter to obtain the resolved values to be elaborated.
 
-The example above must be modified as follows:
+The example above must be modified. In my opinion, this is the most effective way of creating Python launch files, and this is how I normally do:
 
 ```python
+# Import necessary modules
+import launch
+from launch import LaunchDescription
+from launch_ros.actions import Node
+from launch.substitutions import (
+    LaunchConfiguration,
+    TextSubstitution
+)
+from launch.actions import (
+    DeclareLaunchArgument,
+    OpaqueFunction
+)
 
+# This is the function that fills the array of actions used to generate the launch description.
+def launch_setup(context, *args, **kwargs):
+    # Empty actions array
+    actions = []
+
+    # Declare the launch configurations
+    namespace_conf = LaunchConfiguration('namespace')
+    name_prefix_conf = LaunchConfiguration('name_prefix')
+
+    # Create variables storing the launch configuration values
+    namespace_str = namespace_conf.perform(context)
+    name_prefix_str = name_prefix_conf.perform(context)
+
+    # Declare the launch arguments from the launch configurations
+
+    # Create the nodes
+    talker_node = Node(
+        package='demo_nodes_cpp',
+        executable='talker',
+        output='screen',
+        name=name_prefix_str + 'talker',
+        namespace=namespace_str
+    )
+    listener_node = Node(
+        package='demo_nodes_cpp',
+        executable='listener',
+        output='screen',
+        name=name_prefix_str + 'listener',
+        namespace=namespace_str
+    )
+
+    # Add the nodes to the action list
+    actions.append(talker_node)
+    actions.append(listener_node)
+
+    # Return the list of actions
+    return actions
+
+# Create the launch description
+def generate_launch_description():
+    return LaunchDescription(
+        [
+            # Declare the Launch Arguments
+            DeclareLaunchArgument(
+                'namespace',
+                default_value='demo_namespace',
+                description='Namespace for the nodes'
+            ),
+            DeclareLaunchArgument(
+                'name_prefix',
+                default_value='',
+                description='Common prefix for the node names'
+            ),
+            # This function will be called and processed at runtime
+            OpaqueFunction(function=launch_setup)
+        ]
+    )
+```
+
+The **`launch_setup()`** function is a helper callback responsible for dynamically creating and configuring the actions (nodes, parameters, etc.) that make up the launch process. It is executed at runtime through an `OpaqueFunction`, allowing access to the launch context and substitution values (like launch arguments).
+
+Within this function:
+
+- It first initializes an empty list named `actions`, which will store all the actions to be executed in the launch description.
+- Two `LaunchConfiguration` objects are created:  
+  - **`namespace_conf`** retrieves the value of the `namespace` argument.  
+  - **`name_prefix_conf`** retrieves the value of the `name_prefix` argument.  
+- Using these configurations, the corresponding string values are extracted via the `.perform(context)` method. This ensures that any substitution or runtime evaluation (from command-line arguments or parent launches) is resolved before being used.
+- Two ROS 2 nodes are then defined using the `Node` action:  
+  - A **`talker`** node, which publishes messages.  
+  - A **`listener`** node, which subscribes to those messages.  
+  Both nodes are assigned names composed of `name_prefix_str` + their base name and are placed under the specified `namespace_str`.
+- These node actions are appended to the `actions` list, which the function returns at the end.
+
+When `generate_launch_description()` is executed, it:
+
+1. Declares the `namespace` and `name_prefix` arguments with default values and descriptions.  
+2. Calls the `launch_setup()` function via an `OpaqueFunction`, ensuring that the launch configuration values are resolved in the correct order.  
+3. Returns a `LaunchDescription` object containing the declared arguments and the dynamically generated actions.
+
+### Example execution
+
+Let's support to have saved the new launch file as `talker_listener_with_args.launch.py` in the package `test_launch_pkg`.
+
+When you launch this file with:
+
+```bash
+ros2 launch test_launch_pkg talker_listener_with_args.launch.py namespace:=example name_prefix:=my_
+```
+
+it will create two nodes:
+
+- `/example/my_talker`
+- `/example/my_listener`
+
+With the following output:
+
+```bash
+$ ros2 launch test_launch_pkg talker_listener_with_args.launch.py namespace:=example name_prefix:=my_
+[INFO] [launch]: All log files can be found below /home/walter/.ros/log/2026-02-28-13-47-30-997312-walter-Legion-5-u24-11379
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [talker-1]: process started with pid [11382]
+[INFO] [listener-2]: process started with pid [11383]
+[talker-1] [INFO] [1772282852.190707789] [example.my_talker]: Publishing: 'Hello World: 1'
+[listener-2] [INFO] [1772282852.191514754] [example.my_listener]: I heard: [Hello World: 1]
+[talker-1] [INFO] [1772282853.190900040] [example.my_talker]: Publishing: 'Hello World: 2'
+[listener-2] [INFO] [1772282853.191426447] [example.my_listener]: I heard: [Hello World: 2]
+[talker-1] [INFO] [1772282854.190641277] [example.my_talker]: Publishing: 'Hello World: 3'
+[listener-2] [INFO] [1772282854.191206167] [example.my_listener]: I heard: [Hello World: 3]
+[talker-1] [INFO] [1772282855.190680702] [example.my_talker]: Publishing: 'Hello World: 4'
+[listener-2] [INFO] [1772282855.191432422] [example.my_listener]: I heard: [Hello World: 4]
+[talker-1] [INFO] [1772282856.190642144] [example.my_talker]: Publishing: 'Hello World: 5'
+[listener-2] [INFO] [1772282856.191208221] [example.my_listener]: I heard: [Hello World: 5]
+[talker-1] [INFO] [1772282857.190921400] [example.my_talker]: Publishing: 'Hello World: 6'
+[listener-2] [INFO] [1772282857.191540698] [example.my_listener]: I heard: [Hello World: 6]
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[listener-2] [INFO] [1772282857.569766319] [rclcpp]: signal_handler(signum=2)
+[talker-1] [INFO] [1772282857.569774420] [rclcpp]: signal_handler(signum=2)
+[INFO] [talker-1]: process has finished cleanly [pid 11382]
+[INFO] [listener-2]: process has finished cleanly [pid 11383]
+```
+
+## A real example
+
+Let's use Python, launch configuration, launch arguments, and see how they work together in a practical scenario.
+
+We have a robot that can be used with a variable number of webcams to analyze the environment. We want to create a launch file that allows us to specify the number of webcams to use and their individual configurations.
+
+Let's install the [`camera-ros` package](https://docs.ros.org/en/ros2_packages/rolling/api/camera_ros/) to use the webcams:
+
+```bash
+sudo apt install ros-jazzy-camera-ros
+```
+
+the package provides the `` launch file to start a configured camera:
+
+```bash
+$ ros2 launch camera_ros camera.launch.py -s
+Arguments (pass arguments as '<name>:=<value>'):
+
+    'camera':
+        camera ID or name
+        (default: '0')
+
+    'format':
+        pixel format
+        (default: '')
+```
+
+The idea is to create a launch file to be launched with this command:
+
+```bash
+ros2 launch my_package multi_webcam.launch.py cam_names:=[front,rear,left,right] cam_ids:=[0,1,2,3]
+```
+
+The launch files will create "N" launch nodes according to the size of the `cam_names` and `cam_ids` arrays.
+
+```python
 
 ```
