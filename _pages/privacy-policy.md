@@ -100,19 +100,6 @@ You may opt out of personalized advertising by visiting:
 
 You may also manage third‑party advertising cookies through your browser and, where available, through our consent/cookie banner. -->
 
-## Adsterra and advertising
-
-Adsterra is fully compliant with GDPR regulation. In Adsterra [Privacy Policy](https://adsterra.com/privacy-policy-managed/) and [Cookies Policy](https://adsterra.com/cookies/) you'll find all information regarding how they collect and use data.
-
-Bear in mind that Adsterra does not collect or store any consumer (end-user) personally identifiable information (PII), or any data that allows to identify any individuals (i.e. name, email address, or billing information). Instead, we use pseudonymous information linked to browsing events and cookies to help serve the ads:
-
-- Pseudonymous universally unique identifier (UID)
--Pseudonymous' device and browser (User agent)
-- Time stamp (Date, Time)
-- Number of Impressions, Clicks
-
-When users visit a publishers’ website, a cookie may be dropped on that end user's browser.
-
 ## Legal bases for processing (GDPR)
 
 If you are in the European Economic Area (EEA) or other regions with similar laws, we process your personal data on the following legal bases:

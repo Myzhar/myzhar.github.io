@@ -11,8 +11,6 @@ header:
   actions:
     - label: "Official ROS 2 Website"
       url: "https://www.ros.org/"
-    - label: "Support my work (sponsored link) :moneybag: "
-      url: "https://anniversaryvacuumambassador.com/dp2wdk1h?key=30034c44490a811f41ecd32c62d751fd"
       target: _blank
 layout: single
 classes: single
