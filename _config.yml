@@ -62,12 +62,12 @@ footer:
     - label: "Threads"
       icon: "fab fa-fw fa-threads"
       url: "https://www.threads.com/@myzharbot"
-    - label: "Email"
+    - label: "Contact"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:info@myzhar.com"
-    - label: "Privacy Policy"
+      url: "/contact/"
+    - label: "Terms"
       icon: "fas fa-fw fa-file-contract"
-      url: "/privacy-policy/"
+      url: "/terms/"
 
 
 # Reading Files
