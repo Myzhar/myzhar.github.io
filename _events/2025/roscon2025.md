@@ -11,6 +11,7 @@ header:
   actions:
     - label: "ROSCon 2025"
       url: "https://roscon.ros.org/2025/"
+      target: _blank
 layout: single
 classes: single
 gallery:
