@@ -8,10 +8,6 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/robots_default.jpg
   teaser: /assets/images/robots_default.jpg
-  actions:
-    - label: "Support my work (sponsored link) :moneybag: "
-      url: "https://likelihoodhangingbell.com/dp2wdk1h?key=30034c44490a811f41ecd32c62d751fd"
-      target: _blank
 
 gallery_v1:
     - url: /assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg

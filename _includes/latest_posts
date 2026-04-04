@@ -1,13 +1,8 @@
 <section class="feature__wrapper" aria-labelledby="latest-news-heading">
     <h2 id="latest-news-heading" class="feature__title">Latest News</h2>
     <div class="grid__wrapper">
-        {% for post in site.posts limit:3 %}
+        {% for post in site.posts limit:4 %}
             {% include archive-single.html type="grid" %}
         {% endfor %}
-        <div class="grid__item">
-            <script async="async" data-cfasync="false" src="https://likelihoodhangingbell.com/f61c79f01256e2bc221857f1bb920ac4/invoke.js"></script>
-            <strong>Support my work</strong>
-            <div id="container-f61c79f01256e2bc221857f1bb920ac4"></div>
-        </div>
     </div>
 </section>
