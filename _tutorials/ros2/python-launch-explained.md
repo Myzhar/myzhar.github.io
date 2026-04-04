@@ -586,8 +586,11 @@ The idea is to create a launch file to be launched with this command:
 ros2 launch my_package multi_webcam.launch.py cam_names:=[front,rear,left,right] cam_ids:=[0,1,2,3]
 ```
 
-The launch files will create "N" launch nodes according to the size of the `cam_names` and `cam_ids` arrays.
+The launch files will create _N_ nodes according to the size of the `cam_names` and `cam_ids` arrays.
 
 ```python
 
+# Test the launch file before adding it here
+
 ```
+
