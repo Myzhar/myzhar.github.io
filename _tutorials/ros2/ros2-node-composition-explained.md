@@ -212,13 +212,55 @@ source install/setup.bash
 
 ## Component Containers
 
-A **component container** is a process whose sole purpose is to host composable nodes. ROS 2 ships with two built-in containers:
+A **component container** is a process whose sole purpose is to host composable nodes. It owns an executor and exposes a service interface that the component manager uses to load and unload plugins at runtime. ROS 2 ships with three built-in containers, each differing in how callbacks from the loaded nodes are scheduled:
 
-| Container executable | Package | Description |
+| Container executable | Executor | Best for |
 | --- | --- | --- |
-| `component_container` | `rclcpp_components` | Single-threaded executor |
-| `component_container_mt` | `rclcpp_components` | Multi-threaded executor |
-| `component_container_isolated` | `rclcpp_components` | Each component gets its own executor thread |
+| `component_container` | Single-threaded | Sequential pipelines, simplest to reason about |
+| `component_container_mt` | Multi-threaded | Concurrent callbacks, I/O-bound nodes |
+| `component_container_isolated` | One thread per component | Mixed real-time / non-real-time nodes |
+
+### `component_container` — single-threaded executor
+
+This is the default container. All callbacks from every loaded node are dispatched by a single thread, one at a time. Because only one callback is ever running at a given moment, you get **implicit mutual exclusion**: you do not need mutexes to protect shared state inside a node.
+
+Use this container when:
+
+- Nodes process data in a well-defined sequential order (e.g., sensor → filter → publisher).
+- Your nodes are CPU-bound and do not block (blocking one callback delays all others).
+- You want the simplest mental model and the easiest debugging experience.
+
+> :pushpin: **Note**: with a single-threaded executor, a slow or blocking callback in one node will stall every other node loaded in the same container. If any node performs I/O, sleeps, or calls a blocking service, prefer `component_container_mt` or `component_container_isolated` instead.
+
+### `component_container_mt` — multi-threaded executor
+
+The multi-threaded executor maintains a thread pool and dispatches callbacks from all loaded nodes concurrently. This gives higher throughput when nodes are independent and I/O-bound, but it means **callbacks from different nodes — or even the same node — can run simultaneously**. Any shared state must be protected with mutexes or accessed only from a single callback group.
+
+Use this container when:
+
+- Nodes are mostly independent and do not share data.
+- Some nodes perform blocking calls (network I/O, sensor reads) that would stall a single-threaded container.
+- You want to exploit multi-core hardware without splitting nodes into separate processes.
+
+> :bulb: **Tip**: use `rclcpp::CallbackGroup` with `MutuallyExclusive` or `Reentrant` policies to control which callbacks are allowed to run concurrently within a node.
+
+### `component_container_isolated` — per-component thread
+
+Each loaded component gets its own dedicated executor thread. Components are fully isolated from each other in terms of scheduling: a blocking callback in Node A cannot delay Node B, because they run on independent threads.
+
+Use this container when:
+
+- Nodes have very different timing requirements (e.g., a high-frequency IMU driver alongside a low-frequency planner).
+- Some nodes are safety-critical or near-real-time and must not be affected by jitter from other nodes.
+- You need the isolation benefits of separate processes but still want intra-process communication between the nodes.
+
+### Choosing the right container
+
+As a rule of thumb:
+
+1. Start with `component_container` — it is the easiest to reason about.
+2. Switch to `component_container_mt` if throughput is the bottleneck or if nodes perform I/O.
+3. Switch to `component_container_isolated` when nodes have conflicting timing requirements or when a slow node must not jitter a fast one.
 
 ## Running with the CLI
 
@@ -469,6 +511,127 @@ def launch_setup(context, *args, **kwargs):
     return actions
 ```
 
+## Static Composition with C++
+
+The CLI and launch file approaches use **dynamic composition**: the component container process is started first, and nodes are loaded into it at runtime through a service call. This is flexible — you can add or remove nodes while the system is running — but it carries a small overhead from the component manager service and the dynamic library loader.
+
+**Static composition** is an alternative where you instantiate the components directly in a `main()` function, wire them into an executor, and compile the whole thing into a single executable. There is no container service, no runtime loading, and no `ros2 component load` needed. Startup is faster and the binary is self-contained.
+
+### When to use static composition
+
+| | Dynamic (container / launch file) | Static (C++ `main`) |
+| --- | --- | --- |
+| Add/remove nodes at runtime | Yes | No — fixed at build time |
+| Startup overhead | Component manager + service call | None |
+| Binary size | Shared libraries loaded on demand | All code linked in |
+| Flexibility | High | Low |
+| Use case | Robots with reconfigurable pipelines | Embedded systems, fixed production deploys |
+
+Use static composition when the set of nodes is fixed, binary size is not a concern, and you want the simplest possible deployment (a single executable, no launch file required).
+
+### Exposing the component header
+
+By default the component source files only expose the registration macro, not the class itself. For static composition you need to `#include` the class, so add a header for each component.
+
+Create `include/composition_demo/talker_component.hpp`:
+
+```cpp
+#pragma once
+#include "rclcpp/rclcpp.hpp"
+
+namespace composition_demo
+{
+class TalkerComponent : public rclcpp::Node
+{
+public:
+  explicit TalkerComponent(const rclcpp::NodeOptions & options);
+private:
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub_;
+  rclcpp::TimerBase::SharedPtr timer_;
+  size_t count_;
+};
+}  // namespace composition_demo
+```
+
+And `include/composition_demo/listener_component.hpp`:
+
+```cpp
+#pragma once
+#include "rclcpp/rclcpp.hpp"
+
+namespace composition_demo
+{
+class ListenerComponent : public rclcpp::Node
+{
+public:
+  explicit ListenerComponent(const rclcpp::NodeOptions & options);
+private:
+  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr sub_;
+};
+}  // namespace composition_demo
+```
+
+### Writing the main file
+
+Create `src/static_composition_main.cpp`:
+
+```cpp
+#include <memory>
+
+#include "rclcpp/rclcpp.hpp"
+#include "composition_demo/talker_component.hpp"
+#include "composition_demo/listener_component.hpp"
+
+int main(int argc, char * argv[])
+{
+  rclcpp::init(argc, argv);
+
+  // Enable intra-process communication for all nodes in this executable
+  rclcpp::NodeOptions options;
+  options.use_intra_process_comms(true);
+
+  // Instantiate components directly — no container service needed
+  auto talker   = std::make_shared<composition_demo::TalkerComponent>(options);
+  auto listener = std::make_shared<composition_demo::ListenerComponent>(options);
+
+  // Spin both nodes on a single-threaded executor
+  rclcpp::executors::SingleThreadedExecutor exec;
+  exec.add_node(talker);
+  exec.add_node(listener);
+  exec.spin();
+
+  rclcpp::shutdown();
+  return 0;
+}
+```
+
+For a multi-threaded executor swap `SingleThreadedExecutor` for `MultiThreadedExecutor`. The `rclcpp::executors` namespace also provides `StaticSingleThreadedExecutor`, which pre-builds the callback graph at startup for even lower per-spin overhead.
+
+### CMakeLists.txt additions
+
+Add the executable and link it against the component libraries (already built as shared libraries earlier in this tutorial):
+
+```cmake
+add_executable(static_composition src/static_composition_main.cpp)
+target_include_directories(static_composition PUBLIC include)
+ament_target_dependencies(static_composition rclcpp rclcpp_components std_msgs)
+target_link_libraries(static_composition talker_component listener_component)
+
+install(TARGETS static_composition
+  DESTINATION lib/${PROJECT_NAME}
+)
+```
+
+After rebuilding the package you can run the composed system with a single command — no launch file, no container:
+
+```bash
+colcon build --packages-select composition_demo
+source install/setup.bash
+ros2 run composition_demo static_composition
+```
+
+> :pushpin: **Note**: with static composition the `RCLCPP_COMPONENTS_REGISTER_NODE` macros in the `.cpp` files are still present and harmless — they register the plugin metadata for the dynamic loading path. The static executable simply ignores them and uses the class constructors directly.
+
 ## Intra-Process Communication
 
 The main performance benefit of composition is **intra-process communication (IPC)**. When two nodes in the same process exchange messages, ROS 2 can pass ownership of the message directly via a shared pointer, bypassing the DDS middleware entirely. This eliminates serialization, deserialization, and memory copies.
@@ -516,7 +679,8 @@ Node composition is a powerful ROS 2 feature that lets you reduce system overhea
 - **Component containers** host one or more composable nodes. ROS 2 provides `component_container` (single-threaded), `component_container_mt` (multi-threaded), and `component_container_isolated` (per-node thread).
 - **CLI management**: `ros2 component load / unload / list` lets you dynamically add or remove nodes at runtime.
 - **Launch file integration**: `ComposableNodeContainer` and `LoadComposableNodes` are the standard launch actions for defining and populating containers declaratively.
-- **Intra-process communication**: enable it with `use_intra_process_comms: true` and use `std::unique_ptr` ownership in publishers and subscribers to achieve zero-copy message passing.
+- **Static composition**: instantiate components directly in a `main()` function and spin them on a single executor — no container service, no launch file, ideal for embedded or fixed production deployments.
+- **Intra-process communication**: enable it with `use_intra_process_comms(true)` and use `std::unique_ptr` ownership in publishers and subscribers to achieve zero-copy message passing.
 
 ### What's next
 
