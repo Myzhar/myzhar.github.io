@@ -53,6 +53,8 @@ The key difference is:
 | Isolation | Full process isolation | Shared process space |
 | Startup | `ros2 run` | `ros2 component load` or launch file |
 
+{% include figure popup=true image_path="/assets/images/tutorials/ros2_node_composition/node-composition-vs-regular.png" alt="Regular nodes vs Node Composition" caption="Regular nodes each occupy their own OS process and communicate via DDS serialization. Composable nodes share a single container process and can exchange messages with zero-copy intra-process communication." %}
+
 > :pushpin: **Note**: composable nodes are a C++ feature provided by the `rclcpp_components` package. Python nodes cannot currently be loaded as composable components.
 
 ## Creating a Composable Node
