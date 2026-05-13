@@ -3,7 +3,7 @@ title: "ROS 2 Python launch file explained"
 excerpt: "This tutorial explains how to create and use launch files in ROS 2 using Python, with best practices."
 author: "Walter Lucetti"
 index: 900
-date: 2026-02-24 21:30:00 +01:00
+date: 2026-05-12 21:30:00 +01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -12,9 +12,6 @@ header:
   actions:
     - label: "Official ROS 2 Website"
       url: "https://www.ros.org/"
-    - label: "Support my work (sponsored link) :moneybag: "
-      url: "https://likelihoodhangingbell.com/dp2wdk1h?key=30034c44490a811f41ecd32c62d751fd"
-      target: _blank
 layout: single
 classes: single
 ---
@@ -57,7 +54,6 @@ The `launch` module includes several submodules that provide specific functional
 - `launch.launch_context`: Defines the context in which a launch process runs.
 - `launch.launch_description`: Represents the description of a launch process.
 - `launch.launch_service`: Manages the execution of a launch process.
-- `launch.some_actions_type`: Placeholder for additional action types.
 - `launch.substitutions`: Provides mechanisms for substituting values at runtime.
 - `launch.utilities`: Includes utility functions and classes for the launch system.
 
@@ -172,8 +168,7 @@ This tutorial will focus on basic usage patterns for launching ROS 2 nodes. Futu
 
 In the [Starting ROS 2 Nodes tutorial](/tutorials/ros2/starting-ros2-nodes/#creating-a-simple-launch-file) we have already seen a basic example of launch file:
 
-```bash
-import launch
+```python
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
@@ -216,14 +211,13 @@ For example we can create a launch configuration to specify a common namespace f
 
 We can modify the previous example to add this advanced feature:
 
-```bash
-import launch
+```python
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
-    
+
     namespace = LaunchConfiguration('namespace', default='demo_namespace')
 
     return LaunchDescription([
@@ -242,7 +236,6 @@ def generate_launch_description():
             namespace=namespace
         )
     ])
-    return launch_description
 ```
 
 This example makes the launch file more flexible, but it still misses something: the ability to customize the namespace from the command line.
@@ -253,8 +246,7 @@ To customize launch configuration values we must use the `DeclareLaunchArgument`
 
 Here's the modified example to be able to modify the namespace configuration from the launch command line:
 
-```bash
-import launch
+```python
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.substitutions import LaunchConfiguration
@@ -266,7 +258,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument(
-          'namespace', 
+          'namespace',
           default_value='demo_namespace',
           description='Namespace for the nodes'
         ),
@@ -285,7 +277,6 @@ def generate_launch_description():
             namespace=namespace
         )
     ])
-    return launch_description
 ```
 
 Let's suppose to have created a package named `test_launch_pkg` and to have saved the launch file as `test_launch_pkg/launch/talker_listener_adv.launch.py`.
@@ -295,7 +286,7 @@ Now we can launch the file with a custom namespace using the command line:
 ros2 launch test_launch_pkg talker_listener_adv.launch.py namespace:=custom_namespace
 ```
 
-This will start the `talker` and `listener` nodes under the `custom_namespace` namespace. If no namespace is provided, the default `demo_namespace` will be used:
+The command above will start the `talker` and `listener` nodes under the `custom_namespace` namespace:
 
 ```bash
 $ ros2 launch test_launch_pkg talker_listener_adv.launch.py namespace:=custom_namespace
@@ -342,7 +333,6 @@ For example, we would like to create a common prefix for the node names.
 Let's create the new Launch Configuration with the new Launch Parameter and use it to change the name of the nodes:
 
 ```python
-import launch
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.substitutions import LaunchConfiguration
@@ -355,7 +345,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument(
-          'namespace', 
+          'namespace',
           default_value='demo_namespace',
           description='Namespace for the nodes'
         ),
@@ -379,7 +369,6 @@ def generate_launch_description():
             namespace=namespace
         )
     ])
-    return launch_description
 ```
 
 What's changed here is that we want to perform an operation on the node name string by adding a prefix to it:
@@ -418,14 +407,9 @@ Inside this function we can use `perform()` passing the execution context as par
 The example above must be modified. In my opinion, this is the most effective way of creating Python launch files, and this is how I normally do:
 
 ```python
-# Import necessary modules
-import launch
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from launch.substitutions import (
-    LaunchConfiguration,
-    TextSubstitution
-)
+from launch.substitutions import LaunchConfiguration
 from launch.actions import (
     DeclareLaunchArgument,
     OpaqueFunction
@@ -443,8 +427,6 @@ def launch_setup(context, *args, **kwargs):
     # Create variables storing the launch configuration values
     namespace_str = namespace_conf.perform(context)
     name_prefix_str = name_prefix_conf.perform(context)
-
-    # Declare the launch arguments from the launch configurations
 
     # Create the nodes
     talker_node = Node(
@@ -513,7 +495,7 @@ When `generate_launch_description()` is executed, it:
 
 ### Example execution
 
-Let's support to have saved the new launch file as `talker_listener_with_args.launch.py` in the package `test_launch_pkg`.
+Let's suppose to have saved the new launch file as `talker_listener_with_args.launch.py` in the package `test_launch_pkg`.
 
 When you launch this file with:
 
@@ -565,7 +547,7 @@ Let's install the [`camera-ros` package](https://docs.ros.org/en/ros2_packages/r
 sudo apt install ros-jazzy-camera-ros
 ```
 
-the package provides the `` launch file to start a configured camera:
+the package provides the `camera_ros camera.launch.py` launch file to start a configured camera:
 
 ```bash
 $ ros2 launch camera_ros camera.launch.py -s
@@ -589,8 +571,147 @@ ros2 launch my_package multi_webcam.launch.py cam_names:=[front,rear,left,right]
 The launch files will create _N_ nodes according to the size of the `cam_names` and `cam_ids` arrays.
 
 ```python
+import os
+from launch import LaunchDescription
+from launch.actions import (
+    DeclareLaunchArgument,
+    IncludeLaunchDescription,
+    OpaqueFunction,
+)
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
+from launch_ros.actions import GroupAction, PushRosNamespace
+from launch_ros.substitutions import FindPackageShare
 
-# Test the launch file before adding it here
 
+def launch_setup(context, *args, **kwargs):
+    actions = []
+
+    # Resolve launch argument values to plain strings
+    cam_names_str = LaunchConfiguration('cam_names').perform(context)
+    cam_ids_str = LaunchConfiguration('cam_ids').perform(context)
+
+    # Parse "[front,rear,left,right]" -> ['front', 'rear', 'left', 'right']
+    cam_names = [n.strip() for n in cam_names_str.strip('[]').split(',')]
+    cam_ids = [i.strip() for i in cam_ids_str.strip('[]').split(',')]
+
+    if len(cam_names) != len(cam_ids):
+        raise RuntimeError(
+            f"'cam_names' and 'cam_ids' must have the same length "
+            f"({len(cam_names)} vs {len(cam_ids)})"
+        )
+
+    # Locate the camera_ros launch file once
+    camera_launch_file = os.path.join(
+        FindPackageShare('camera_ros').perform(context),
+        'launch',
+        'camera.launch.py'
+    )
+
+    # For each camera, include camera.launch.py inside its own namespace
+    for name, cam_id in zip(cam_names, cam_ids):
+        actions.append(
+            GroupAction(
+                actions=[
+                    PushRosNamespace(name),
+                    IncludeLaunchDescription(
+                        PythonLaunchDescriptionSource(camera_launch_file),
+                        launch_arguments={'camera': cam_id}.items(),
+                    ),
+                ]
+            )
+        )
+
+    return actions
+
+
+def generate_launch_description():
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'cam_names',
+            default_value='[front]',
+            description='Comma-separated list of camera names, e.g. [front,rear,left,right]'
+        ),
+        DeclareLaunchArgument(
+            'cam_ids',
+            default_value='[0]',
+            description='Comma-separated list of camera device IDs, e.g. [0,1,2,3]'
+        ),
+        OpaqueFunction(function=launch_setup),
+    ])
 ```
+
+Let's break down the key parts of this launch file:
+
+- **Argument parsing**: `cam_names` and `cam_ids` are received as strings (e.g. `"[front,rear,left,right]"`). Inside `launch_setup()` the brackets are stripped and the values split on commas to produce plain Python lists. This must happen inside `launch_setup()` because `.perform(context)` — which resolves the actual runtime string — is only available there.
+
+- **Validation**: before creating any node, the lengths of the two lists are checked. A mismatch raises a `RuntimeError` early so the user gets a clear error message rather than a silent misconfiguration.
+
+- **Dynamic node instantiation**: a `for` loop iterates over the paired `(name, cam_id)` tuples. For each pair it creates a `GroupAction` that:
+  - pushes a ROS namespace equal to the camera name using `PushRosNamespace`, so every topic and service published by that camera node is automatically scoped under `/front/`, `/rear/`, etc.
+  - includes `camera.launch.py` from the `camera_ros` package, forwarding only the `camera` argument (the device ID).
+
+### Running the multi-webcam launch file
+
+Running the launch file with four webcams:
+
+```bash
+ros2 launch my_package multi_webcam.launch.py cam_names:=[front,rear,left,right] cam_ids:=[0,1,2,3]
+```
+
+produces four independent camera nodes:
+
+| Node path | Device |
+| --- | --- |
+| `/front/camera` | `/dev/video0` |
+| `/rear/camera` | `/dev/video1` |
+| `/left/camera` | `/dev/video2` |
+| `/right/camera` | `/dev/video3` |
+
+Each node publishes its image stream under its own namespace, e.g. `/front/camera/image_raw`, `/rear/camera/image_raw`, and so on, keeping all topics neatly separated without any manual remapping.
+
+## Conclusions
+
+In this tutorial we have covered the essential building blocks for writing Python launch files in ROS 2:
+
+- **Basic structure**: every launch file exposes a `generate_launch_description()` function that returns a `LaunchDescription` containing the actions to execute.
+- **`LaunchConfiguration` and `DeclareLaunchArgument`**: these two classes work together to expose configurable parameters that callers can override from the command line. Always declare the argument inside `LaunchDescription` before referencing its configuration.
+- **`OpaqueFunction`**: the recommended pattern whenever you need to operate on launch configuration values as plain Python strings. Move all logic that depends on resolved values into a `launch_setup(context, *args, **kwargs)` helper and register it via `OpaqueFunction(function=launch_setup)`. This sidesteps the `LaunchConfiguration` + `str` type mismatch that breaks naive concatenation.
+- **`IncludeLaunchDescription` + `GroupAction` + `PushRosNamespace`**: the standard trio for reusing an existing launch file multiple times while keeping each instance isolated under its own namespace.
+
+The pattern below is a solid template to start any new Python launch file from:
+
+```python
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, OpaqueFunction
+from launch.substitutions import LaunchConfiguration
+
+
+def launch_setup(context, *args, **kwargs):
+    actions = []
+
+    my_param = LaunchConfiguration('my_param').perform(context)
+
+    # ... build and append actions using plain Python strings ...
+
+    return actions
+
+
+def generate_launch_description():
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'my_param',
+            default_value='default',
+            description='Description of my_param'
+        ),
+        OpaqueFunction(function=launch_setup),
+    ])
+```
+
+### What's next
+
+Future tutorials will cover more advanced launch patterns:
+
+- **Node Composition** — loading multiple nodes into a single process using `ComposableNodeContainer` and `LoadComposableNodes` to reduce inter-process communication overhead.
+- **Lifecycle Node Management** — orchestrating nodes that follow the ROS 2 managed-node lifecycle with `LifecycleNode` and `OnStateTransition` event handlers.
 
