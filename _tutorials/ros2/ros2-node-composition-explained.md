@@ -13,15 +13,18 @@ header:
     - label: "Official ROS 2 Website"
       url: "https://www.ros.org/"
       target: _blank
+    - label: "Official ROS 2 Composition doc"
+      url: "https://docs.ros.org/en/jazzy/Concepts/Intermediate/About-Composition.html"
+      target: _blank
 layout: single
 classes: single
 ---
 
 ## Introduction
 
-In the previous tutorials we have seen how to start ROS 2 nodes as standalone processes using `ros2 run` and how to manage them with launch files. By default, each node lives in its own operating system process. This is simple and safe — a crash in one node does not affect the others — but it comes with a cost: every message exchanged between nodes must be serialized, copied through the DDS middleware, and deserialized on the other side, even when both nodes run on the same machine.
+In the previous tutorials we have seen how to start ROS 2 nodes as standalone processes using `ros2 run` and how to manage them with launch files. By default, each node lives in its own operating system process. This is simple and safe, a crash in one node does not affect the others, but it comes with a cost: every message exchanged between nodes must be serialized, copied through the DDS middleware, and deserialized on the other side, even when both nodes run on the same machine.
 
-**Node Composition** is a ROS 2 mechanism that lets you load multiple nodes into a single process — called a *component container* — while keeping each node's code fully independent. When two composed nodes exchange messages within the same container, ROS 2 can use **intra-process communication**, which skips serialization entirely and passes a raw pointer. The result is lower latency, less CPU usage, and reduced memory bandwidth, which is especially valuable in perception pipelines where large sensor data (images, point clouds) flows between nodes at high frequency.
+**Node Composition** is a ROS 2 mechanism that lets you load multiple nodes into a single process, called a *component container*, while keeping each node's code fully independent. When two composed nodes exchange messages within the same container, ROS 2 can use **intra-process communication**, which skips serialization entirely and passes a raw pointer. The result is lower latency, less CPU usage, and reduced memory bandwidth, which is especially valuable in perception pipelines where large sensor data (images, point clouds) flows between nodes at high frequency.
 
 By the end of this tutorial you will be able to:
 
@@ -29,13 +32,14 @@ By the end of this tutorial you will be able to:
 - Create a composable node plugin in C++ using `rclcpp_components`.
 - Load nodes into a component container from the command line.
 - Configure composition in a Python launch file.
+- Create a Static Composition executable in C++.
 - Enable zero-copy intra-process communication between composed nodes.
 
 ## Prerequisites
 
-1. **ROS 2 installed** — follow my [Installing ROS 2](/tutorials/ros2/installing-ros2/) tutorial if needed.
-2. **Familiarity with ROS 2 nodes** — review [Starting ROS 2 Nodes](/tutorials/ros2/starting-ros2-nodes/) and [ROS 2 Python launch file explained](/tutorials/ros2/python-launch-explained/).
-3. **Basic C++ knowledge** — composable nodes are written in C++.
+1. **ROS 2 installed**, follow my [Installing ROS 2](/tutorials/ros2/installing-ros2/) tutorial if needed.
+2. **Familiarity with ROS 2 nodes**, review [Starting ROS 2 Nodes](/tutorials/ros2/starting-ros2-nodes/) and [ROS 2 Python launch file explained](/tutorials/ros2/python-launch-explained/).
+3. **Basic C++ knowledge**, composable nodes are written in C++.
 
 ## What is a Composable Node?
 
@@ -45,13 +49,13 @@ A **composable node** (also called a *component*) is a node packaged as a **shar
 
 The key difference is:
 
-| | Regular node | Composable node |
-| --- | --- | --- |
-| Packaging | Executable (binary) | Shared library (`.so`) |
-| Loading | One process per node | Many nodes per process |
-| Communication | DDS middleware (IPC or network) | Can use intra-process (zero-copy) |
-| Isolation | Full process isolation | Shared process space |
-| Startup | `ros2 run` | `ros2 component load` or launch file |
+|               | Regular node                    | Composable node                      |
+| ------------- | ------------------------------- | ------------------------------------ |
+| Packaging     | Executable (binary)             | Shared library (`.so`)               |
+| Loading       | One process per node            | Many nodes per process               |
+| Communication | DDS middleware (IPC or network) | Can use intra-process (zero-copy)    |
+| Isolation     | Full process isolation          | Shared process space                 |
+| Startup       | `ros2 run`                      | `ros2 component load` or launch file |
 
 {% include figure popup=true image_path="/assets/images/tutorials/ros2_node_composition/node-composition-vs-regular.png" alt="Regular nodes vs Node Composition" caption="Regular nodes each occupy their own OS process and communicate via DDS serialization. Composable nodes share a single container process and can exchange messages with zero-copy intra-process communication." %}
 
@@ -77,6 +81,8 @@ ros2 pkg create --build-type ament_cmake composition_demo \
 
 ### Writing the composable node
 
+The examples below implement a `TalkerComponent` that publishes a string message on a timer and a `ListenerComponent` that subscribes to it, the same pair used throughout this tutorial, so you can focus on the composition mechanics rather than the node logic.
+
 Create `src/talker_component.cpp`:
 
 ```cpp
@@ -98,9 +104,14 @@ public:
   explicit TalkerComponent(const rclcpp::NodeOptions & options)
   : Node("talker", options), count_(0)
   {
+    // Declare parameter with default value of 2.0 Hz
+    this->declare_parameter<double>("publish_rate", 2.0);
+    const double rate_hz = this->get_parameter("publish_rate").as_double();
+    const auto period = std::chrono::duration<double>(1.0 / rate_hz);
+
     pub_ = create_publisher<std_msgs::msg::String>("chatter", 10);
     timer_ = create_wall_timer(
-      500ms, [this]() {
+      period, [this]() {
         auto msg = std_msgs::msg::String();
         msg.data = "Hello World: " + std::to_string(count_++);
         RCLCPP_INFO(get_logger(), "Publishing: '%s'", msg.data.c_str());
@@ -155,7 +166,7 @@ RCLCPP_COMPONENTS_REGISTER_NODE(composition_demo::ListenerComponent)
 
 A few things to note:
 
-- The constructor takes a `const rclcpp::NodeOptions &` argument — this is **mandatory** for composable nodes.
+- The constructor takes a `const rclcpp::NodeOptions &` argument, this is **mandatory** for composable nodes.
 - There is **no** `main()` function.
 - `RCLCPP_COMPONENTS_REGISTER_NODE` registers the class with the ROS 2 plugin system using the fully qualified class name as the component type name.
 
@@ -179,7 +190,7 @@ add_library(listener_component SHARED src/listener_component.cpp)
 ament_target_dependencies(talker_component rclcpp rclcpp_components std_msgs)
 ament_target_dependencies(listener_component rclcpp rclcpp_components std_msgs)
 
-# Register components — generates the plugin XML and installs it
+# Register components, generates the plugin XML and installs it
 rclcpp_components_register_node(
   talker_component
   PLUGIN "composition_demo::TalkerComponent"
@@ -214,13 +225,13 @@ source install/setup.bash
 
 A **component container** is a process whose sole purpose is to host composable nodes. It owns an executor and exposes a service interface that the component manager uses to load and unload plugins at runtime. ROS 2 ships with three built-in containers, each differing in how callbacks from the loaded nodes are scheduled:
 
-| Container executable | Executor | Best for |
-| --- | --- | --- |
-| `component_container` | Single-threaded | Sequential pipelines, simplest to reason about |
-| `component_container_mt` | Multi-threaded | Concurrent callbacks, I/O-bound nodes |
-| `component_container_isolated` | One thread per component | Mixed real-time / non-real-time nodes |
+| Container executable           | Executor                 | Best for                                       |
+| ------------------------------ | ------------------------ | ---------------------------------------------- |
+| `component_container`          | Single-threaded          | Sequential pipelines, simplest to reason about |
+| `component_container_mt`       | Multi-threaded           | Concurrent callbacks, I/O-bound nodes          |
+| `component_container_isolated` | One thread per component | Mixed real-time / non-real-time nodes          |
 
-### `component_container` — single-threaded executor
+### `component_container`, single-threaded executor
 
 This is the default container. All callbacks from every loaded node are dispatched by a single thread, one at a time. Because only one callback is ever running at a given moment, you get **implicit mutual exclusion**: you do not need mutexes to protect shared state inside a node.
 
@@ -232,9 +243,9 @@ Use this container when:
 
 > :pushpin: **Note**: with a single-threaded executor, a slow or blocking callback in one node will stall every other node loaded in the same container. If any node performs I/O, sleeps, or calls a blocking service, prefer `component_container_mt` or `component_container_isolated` instead.
 
-### `component_container_mt` — multi-threaded executor
+### `component_container_mt`, multi-threaded executor
 
-The multi-threaded executor maintains a thread pool and dispatches callbacks from all loaded nodes concurrently. This gives higher throughput when nodes are independent and I/O-bound, but it means **callbacks from different nodes — or even the same node — can run simultaneously**. Any shared state must be protected with mutexes or accessed only from a single callback group.
+The multi-threaded executor maintains a thread pool and dispatches callbacks from all loaded nodes concurrently. This gives higher throughput when nodes are independent and I/O-bound, but it means **callbacks from different nodes, or even the same node, can run simultaneously**. Any shared state must be protected with mutexes or accessed only from a single callback group.
 
 Use this container when:
 
@@ -242,9 +253,9 @@ Use this container when:
 - Some nodes perform blocking calls (network I/O, sensor reads) that would stall a single-threaded container.
 - You want to exploit multi-core hardware without splitting nodes into separate processes.
 
-> :bulb: **Tip**: use `rclcpp::CallbackGroup` with `MutuallyExclusive` or `Reentrant` policies to control which callbacks are allowed to run concurrently within a node.
+> :bulb: **Tip**: use `rclcpp::CallbackGroup` with `MutuallyExclusive` or `Reentrant` policies to control which callbacks are allowed to run concurrently within a node. Learn more [here](https://docs.ros.org/en/jazzy/How-To-Guides/Using-callback-groups.html){:target="_blank"}.
 
-### `component_container_isolated` — per-component thread
+### `component_container_isolated`, per-component thread
 
 Each loaded component gets its own dedicated executor thread. Components are fully isolated from each other in terms of scheduling: a blocking callback in Node A cannot delay Node B, because they run on independent threads.
 
@@ -258,7 +269,7 @@ Use this container when:
 
 As a rule of thumb:
 
-1. Start with `component_container` — it is the easiest to reason about.
+1. Start with `component_container`; it is the easiest to reason about.
 2. Switch to `component_container_mt` if throughput is the bottleneck or if nodes perform I/O.
 3. Switch to `component_container_isolated` when nodes have conflicting timing requirements or when a slow node must not jitter a fast one.
 
@@ -272,11 +283,7 @@ Open a terminal and start a container:
 ros2 run rclcpp_components component_container --ros-args -r __node:=my_container
 ```
 
-The container starts and waits for components to be loaded. You should see:
-
-```text
-[INFO] [component_manager]: Load Library: ...
-```
+The container starts and waits for components to be loaded... with no log output.
 
 ### Loading components
 
@@ -336,14 +343,14 @@ ros2 component load /my_container composition_demo composition_demo::TalkerCompo
 
 Using `ros2 component` commands is convenient for interactive debugging, but in production you will want a launch file. The `launch_ros` module provides two actions for this:
 
-| Action | Description |
-| --- | --- |
+| Action                    | Description                                                    |
+| ------------------------- | -------------------------------------------------------------- |
 | `ComposableNodeContainer` | Starts a new container and optionally loads components into it |
-| `LoadComposableNodes` | Loads components into an existing container |
+| `LoadComposableNodes`     | Loads components into an existing container                    |
 
 ### All-in-one: container + nodes
 
-The simplest pattern is to declare the container and its initial set of components together. Using the `OpaqueFunction` template from the [Python launch file tutorial](/tutorials/ros2/python-launch-explained/) we can expose configurable arguments — here `namespace` and `use_ipc` — while keeping all construction logic in plain Python:
+The simplest pattern is to declare the container and its initial set of components together. Using the `OpaqueFunction` template from the [Python launch file tutorial](/tutorials/ros2/python-launch-explained/) we can expose configurable arguments, here `namespace` and `use_ipc`, while keeping all construction logic in plain Python:
 
 ```python
 from launch import LaunchDescription
@@ -402,7 +409,7 @@ def generate_launch_description():
 
 ### Splitting container and nodes
 
-When you want to load components into an already-running container — for example, a container started by another launch file — use `LoadComposableNodes`. The same `launch_setup` pattern applies: resolve the arguments first, then build both actions as plain Python objects:
+When you want to load components into an already-running container, for example, a container started by another launch file, use `LoadComposableNodes`. The same `launch_setup` pattern applies: resolve the arguments first, then build both actions as plain Python objects:
 
 ```python
 from launch import LaunchDescription
@@ -513,19 +520,19 @@ def launch_setup(context, *args, **kwargs):
 
 ## Static Composition with C++
 
-The CLI and launch file approaches use **dynamic composition**: the component container process is started first, and nodes are loaded into it at runtime through a service call. This is flexible — you can add or remove nodes while the system is running — but it carries a small overhead from the component manager service and the dynamic library loader.
+The CLI and launch file approaches use **dynamic composition**: the component container process is started first, and nodes are loaded into it at runtime through a service call. This is flexible, you can add or remove nodes while the system is running, but it carries a small overhead from the component manager service and the dynamic library loader.
 
 **Static composition** is an alternative where you instantiate the components directly in a `main()` function, wire them into an executor, and compile the whole thing into a single executable. There is no container service, no runtime loading, and no `ros2 component load` needed. Startup is faster and the binary is self-contained.
 
 ### When to use static composition
 
-| | Dynamic (container / launch file) | Static (C++ `main`) |
-| --- | --- | --- |
-| Add/remove nodes at runtime | Yes | No — fixed at build time |
-| Startup overhead | Component manager + service call | None |
-| Binary size | Shared libraries loaded on demand | All code linked in |
-| Flexibility | High | Low |
-| Use case | Robots with reconfigurable pipelines | Embedded systems, fixed production deploys |
+|                             | Dynamic (container / launch file)    | Static (C++ `main`)                        |
+| --------------------------- | ------------------------------------ | ------------------------------------------ |
+| Add/remove nodes at runtime | Yes                                  | No, fixed at build time                    |
+| Startup overhead            | Component manager + service call     | None                                       |
+| Binary size                 | Shared libraries loaded on demand    | All code linked in                         |
+| Flexibility                 | High                                 | Low                                        |
+| Use case                    | Robots with reconfigurable pipelines | Embedded systems, fixed production deploys |
 
 Use static composition when the set of nodes is fixed, binary size is not a concern, and you want the simplest possible deployment (a single executable, no launch file required).
 
@@ -590,7 +597,7 @@ int main(int argc, char * argv[])
   rclcpp::NodeOptions options;
   options.use_intra_process_comms(true);
 
-  // Instantiate components directly — no container service needed
+  // Instantiate components directly, no container service needed
   auto talker   = std::make_shared<composition_demo::TalkerComponent>(options);
   auto listener = std::make_shared<composition_demo::ListenerComponent>(options);
 
@@ -622,7 +629,7 @@ install(TARGETS static_composition
 )
 ```
 
-After rebuilding the package you can run the composed system with a single command — no launch file, no container:
+After rebuilding the package you can run the composed system with a single command, no launch file, no container:
 
 ```bash
 colcon build --packages-select composition_demo
@@ -630,7 +637,7 @@ source install/setup.bash
 ros2 run composition_demo static_composition
 ```
 
-> :pushpin: **Note**: with static composition the `RCLCPP_COMPONENTS_REGISTER_NODE` macros in the `.cpp` files are still present and harmless — they register the plugin metadata for the dynamic loading path. The static executable simply ignores them and uses the class constructors directly.
+> :pushpin: **Note**: with static composition the `RCLCPP_COMPONENTS_REGISTER_NODE` macros in the `.cpp` files are still present and harmless, they register the plugin metadata for the dynamic loading path. The static executable simply ignores them and uses the class constructors directly.
 
 ## Intra-Process Communication
 
@@ -651,23 +658,90 @@ explicit TalkerComponent(const rclcpp::NodeOptions & options)
 
 ### Zero-copy publishing
 
-For IPC to be zero-copy, the publisher must use `std::unique_ptr` or `std::shared_ptr` message ownership and the subscription must accept the same:
+ROS 2 provides two mechanisms for zero-copy message passing. Both require `use_intra_process_comms` to be enabled on all participating nodes.
+
+#### Approach 1: `unique_ptr` ownership transfer
+
+The publisher allocates the message, fills it, and moves ownership into `publish()`. The middleware passes the pointer directly to the subscriber without any copy:
 
 ```cpp
-// Publisher: allocate and move ownership
+// Publisher: allocate, fill, and transfer ownership
 auto msg = std::make_unique<std_msgs::msg::String>();
 msg->data = "Hello World: " + std::to_string(count_++);
-pub_->publish(std::move(msg));  // ownership transferred, no copy
+pub_->publish(std::move(msg));  // pointer handed off, no copy
 ```
 
+The subscription callback must accept a `UniquePtr` (or `SharedPtr`) to receive the message without a copy:
+
 ```cpp
-// Subscription: receive as shared_ptr
+// Subscription: take ownership of the pointer
 sub_ = create_subscription<std_msgs::msg::String>(
   "chatter", 10,
   [this](std_msgs::msg::String::UniquePtr msg) {
     RCLCPP_INFO(get_logger(), "I heard: '%s'", msg->data.c_str());
   });
 ```
+
+This is the simplest and most portable approach and works with any RMW implementation.
+
+#### Approach 2: loaned messages
+
+Some RMW implementations (e.g., Eclipse iceoryx) support **loaned messages**: the publisher borrows a pre-allocated slot directly from the middleware's shared memory, fills it in place, and returns the loan on publish; no heap allocation, no copy, even across process boundaries.
+
+```cpp
+// Publisher: borrow a slot from the middleware memory pool
+auto loan = pub_->borrow_loaned_message();
+loan.get().data = "Hello World: " + std::to_string(count_++);
+pub_->publish(std::move(loan));  // slot returned to middleware, zero copy
+```
+
+The subscription side is unchanged, the callback still receives a `SharedPtr` (or `UniquePtr`); the RMW handles the memory mapping transparently:
+
+```cpp
+sub_ = create_subscription<std_msgs::msg::String>(
+  "chatter", 10,
+  [this](std_msgs::msg::String::SharedPtr msg) {
+    RCLCPP_INFO(get_logger(), "I heard: '%s'", msg->data.c_str());
+  });
+```
+
+> :pushpin: **Note**: `borrow_loaned_message()` throws `rclcpp::exceptions::UnimplementedError` if the active RMW does not support loans. Wrap it in a `try/catch` or check `pub_->can_loan_messages()` before use if your code must work across multiple RMW implementations.
+
+#### RMW support for loaned messages
+
+Not all DDS middleware implementations expose the loaned messages API. The table below summarises the status for the two active LTS distributions:
+
+| RMW package          | Middleware         | Humble (Humble Hawksbill) | Jazzy (Jazzy Jalisco) | Notes |
+| -------------------- | ------------------ | ------------------------- | --------------------- | --- |
+| `rmw_iceoryx_cpp`    | Eclipse iceoryx    | Yes                       | Yes                   | Full zero-copy via shared memory; the reference implementation for loans in ROS 2 |
+| `rmw_fastrtps_cpp`   | eProsima Fast DDS  | No                        | No                    | Fast DDS has its own SHM transport but does not expose the ROS 2 loaned messages API through `borrow_loaned_message()` |
+| `rmw_cyclonedds_cpp` | Eclipse CycloneDDS | No                        | No                    | CycloneDDS does not implement the loan API; zero-copy between processes requires pairing it with iceoryx via the `CycloneDDS + iceoryx` integration |
+
+`rmw_fastrtps_cpp` is the default RMW in both Humble and Jazzy. To use loaned messages you must switch to `rmw_iceoryx_cpp`:
+
+```bash
+# Install iceoryx and its RMW
+sudo apt install ros-jazzy-rmw-iceoryx-cpp
+
+# Select it for the current shell session
+export RMW_IMPLEMENTATION=rmw_iceoryx_cpp
+```
+
+> :bulb: **Tip**: iceoryx requires a running `iox-roudi` daemon to manage its shared memory segments. Start it before launching any nodes:
+
+```bash
+iox-roudi
+```
+
+#### Comparison
+
+|                         | `unique_ptr` transfer      | Loaned messages                   |
+| ----------------------- | -------------------------- | --------------------------------- |
+| Zero-copy intra-process | Yes                        | Yes                               |
+| Zero-copy inter-process | No                         | Yes (with iceoryx or similar)     |
+| Heap allocation         | One allocation per message | None (middleware pool)            |
+| RMW portability         | All RMW implementations    | Requires loan-capable RMW         |
+| Code complexity         | Low                        | Low, but needs availability check |
 
 > :pushpin: **Note**: IPC is only active when **both** the publisher and the subscriber are in the same process **and** both have `use_intra_process_comms` enabled. If one node is in a different process, ROS 2 automatically falls back to the normal DDS path without any code change needed.
 
@@ -679,9 +753,9 @@ Node composition is a powerful ROS 2 feature that lets you reduce system overhea
 - **Component containers** host one or more composable nodes. ROS 2 provides `component_container` (single-threaded), `component_container_mt` (multi-threaded), and `component_container_isolated` (per-node thread).
 - **CLI management**: `ros2 component load / unload / list` lets you dynamically add or remove nodes at runtime.
 - **Launch file integration**: `ComposableNodeContainer` and `LoadComposableNodes` are the standard launch actions for defining and populating containers declaratively.
-- **Static composition**: instantiate components directly in a `main()` function and spin them on a single executor — no container service, no launch file, ideal for embedded or fixed production deployments.
+- **Static composition**: instantiate components directly in a `main()` function and spin them on a single executor; no container service, no launch file, ideal for embedded or fixed production deployments.
 - **Intra-process communication**: enable it with `use_intra_process_comms(true)` and use `std::unique_ptr` ownership in publishers and subscribers to achieve zero-copy message passing.
 
 ### What's next
 
-- **Lifecycle Nodes** — nodes that follow the ROS 2 managed-node lifecycle, giving you fine-grained control over startup, shutdown, and error recovery.
+- **Lifecycle Nodes**, nodes that follow the ROS 2 managed-node lifecycle, giving you fine-grained control over startup, shutdown, and error recovery.

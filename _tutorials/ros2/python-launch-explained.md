@@ -3,7 +3,7 @@ title: "ROS 2 Python launch file explained"
 excerpt: "This tutorial explains how to create and use launch files in ROS 2 using Python, with best practices."
 author: "Walter Lucetti"
 index: 900
-date: 2026-05-12 21:30:00 +01:00
+date: 2026-05-11 21:30:00 +01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

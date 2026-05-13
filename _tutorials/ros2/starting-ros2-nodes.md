@@ -62,13 +62,13 @@ As an example, we will start a simple talker node from the `demo_nodes_cpp` pack
 
 This command will start the talker node, which will begin publishing messages to the `/topic` topic.
 
-:pushpin: **NOTE**: Make sure that the `demo_nodes_cpp` package is installed in your ROS 2 environment:
+> :pushpin: **NOTE**: Make sure that the `demo_nodes_cpp` package is installed in your ROS 2 environment:
 
 ```bash
 sudo apt install ros-<ros2-distro>-demo-nodes-cpp
 ```
 
-:bulb: **TIP**: After entering `ros2 run` in the terminal, you can press the `TAB` key twice to see a list of available packages. Type the first few letters of the package name and press `TAB` again to complete it. You can do the same for the node executable after typing the package name.
+> :bulb: **TIP**: After entering `ros2 run` in the terminal, you can press the `TAB` key twice to see a list of available packages. Type the first few letters of the package name and press `TAB` again to complete it. You can do the same for the node executable after typing the package name.
 
 The `talker` node will start publishing messages to the `/topic` topic:
 
@@ -117,7 +117,7 @@ $ ros2 run demo_nodes_cpp listener
 [...]
 ```
 
-:pushpin: **NOTE**: You can see that the listener node is receiving messages published by the talker node in real time, so the message indexes do not start from 1 but continue from where the talker node is currently publishing.
+> :pushpin: **NOTE**: You can see that the listener node is receiving messages published by the talker node in real time, so the message indexes do not start from 1 but continue from where the talker node is currently publishing.
 If you want the listener to start receiving messages from the beginning, you need to start it before starting the talker node.
 
 ### Stopping a ROS 2 Node
@@ -136,7 +136,7 @@ For more complex applications, you may want to start multiple nodes simultaneous
 
 For example, we can create a launch file to start both the talker and listener nodes together.
 
-:pushpin: **NOTE**: In this tutorial, I will not cover how to create launch files in detail. If you are interested in learning more about launch files, please refer to the official ROS 2 documentation on the [Launch System](https://docs.ros.org/en/rolling/Tutorials/Intermediate/Launch/Creating-Launch-Files.html).
+> :pushpin: **NOTE**: In this tutorial, I will not cover how to create launch files in detail. If you are interested in learning more about launch files, please refer to the official ROS 2 documentation on the [Launch System](https://docs.ros.org/en/rolling/Tutorials/Intermediate/Launch/Creating-Launch-Files.html).
 
 #### Creating a Simple Launch File
 
@@ -185,6 +185,8 @@ cd ~/ros2_ws/src
 ros2 pkg create --build-type ament_python test_launch_pkg
 cd test_launch_pkg
 ```
+
+> :pushpin: **Note**: `ros2 pkg create` scaffolds a new ROS 2 package directory with the required boilerplate files (`package.xml`, `CMakeLists.txt`, and a skeleton source tree). The `--build-type ament_cmake` flag selects a C++ package; use `ament_python` for pure Python packages. The `--dependencies` flag pre-populates both `package.xml` and `CMakeLists.txt` with the listed dependencies so you do not have to add them by hand. The generated `CMakeLists.txt` and `package.xml` still need to be edited to add the component-specific CMake calls shown below.
 
 Now create a `launch` directory and save the above launch file as `talker_listener.launch.py`:
 
@@ -261,7 +263,7 @@ This output shows that both nodes are running simultaneously, with the talker pu
 
 It is clear that the Python launch system also provides more logging information, such as process IDs and log file locations, which can be very useful for debugging and monitoring your nodes.
 
-:pushpin: **NOTE**: I will cover more advanced topics about packages, the details of their structure, and how to create them in future tutorials. If you are interested in learning more about ROS 2 packages, please refer to the official ROS 2 documentation on [Creating a ROS 2 Package](https://docs.ros.org/en/rolling/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html).
+> :pushpin: **NOTE**: I will cover more advanced topics about packages, the details of their structure, and how to create them in future tutorials. If you are interested in learning more about ROS 2 packages, please refer to the official ROS 2 documentation on [Creating a ROS 2 Package](https://docs.ros.org/en/rolling/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html).
 
 ## Conclusion
 

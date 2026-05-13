@@ -59,7 +59,7 @@ $ ros2 param list
     use_sim_time
 ```
 
-:pushpin: **Note**: here comes again the name "QoS" as `qos_overrides`. This is a concept that we will analyze in a later important tutorial.
+> :pushpin: **Note**: here comes again the name "QoS" as `qos_overrides`. This is a concept that we will analyze in a later important tutorial.
 
 ### Reading parameter values and types
 
@@ -142,7 +142,7 @@ to launch the rqt GUI forcing a new discovery of the available plugins.
 
 {% include figure popup=true image_path="/assets/images/tutorials/configure_ros2_nodes/rqt_dynamic_reconfigure.jpg" alt="rqt Dynamic Reconfigure" caption="The rqt Dynamic Reconfigure plugin" %}
 
-:pushpin: **Note**: The parameters that are not declared as "dynamic" in the node's code are grayed out and not editable.
+> :pushpin: **Note**: The parameters that are not declared as "dynamic" in the node's code are grayed out and not editable.
 
 The GUI allows you to export the parameters to a YAML file and use it to set your default values for the node at startup, as described below.
 
