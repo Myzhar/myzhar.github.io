@@ -43,3 +43,35 @@ html {
     font-size: 20px; // change to whatever
   }
 }
+
+#main {
+  @media (min-width: 80em) {
+    max-width: 1600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (min-width: 80em) {
+  .masthead__inner-wrap {
+    max-width: 1600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (min-width: 80em) {
+  .page__footer footer {
+    max-width: 1600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+div.highlighter-rouge
+{
+  border-radius: 20px !important;
+  width: 95% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
