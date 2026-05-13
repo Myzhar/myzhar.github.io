@@ -1,5 +1,6 @@
 ---
 title: Projects
+description: "Robotics and computer vision projects by Walter Lucetti, including MyzharBot — an autonomous tracked robot powered by AI and NVIDIA Jetson."
 layout: collection
 author: "Walter Lucetti"
 permalink: /projects/

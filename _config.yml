@@ -8,25 +8,45 @@ minimal_mistakes_skin: "air"
 
 title: "Myzhar & MyzharBot"
 subtitle: "Beyond Perception / Beyond Robotics"
-name: &name "Walter Lucetti"
-description: &description "Insights, projects, and stories about seeing, thinking, and moving machines."
+name: "Walter Lucetti"
+description: "Insights, projects, and stories about seeing, thinking, and moving machines."
 url: "https://myzhar.tech"
 repository: "Myzhar/myzhar.github.io/"
-teaser: "assets/images/MyzharbotLogo.png"
-logo: "assets/images/MyzharbotLogo_transparent.png"
+teaser: "/assets/images/MyzharbotLogo.png"
+logo: "/assets/images/MyzharbotLogo_transparent.png"
+
+author:
+  name: "Walter Lucetti"
+  bio: "Computer Engineer — Passionate about Computer Vision, Robotics, and Artificial Intelligence."
+  avatar: "/assets/images/team/lucetti/walter_lucetti.jpg"
+  links:
+    - label: "LinkTree"
+      icon: "fab fa-fw fa-linktree"
+      url: "https://linktr.ee/myzhar"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/walterlucetti/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/myzhar"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@myzhar"
 
 search: true
 search_full_content: true
-breadcrumbs: false  # disabled by default
+breadcrumbs: true
 enable_copy_code_button: true
 
 github: [metadata]
 
 social:
-  links: # An array of links to social media profiles
+  links:
     - "https://linktr.ee/myzhar"
     - "https://instagram.com/myzharbot"
     - "https://www.linkedin.com/in/walterlucetti/"
+    - "https://github.com/myzhar"
+    - "https://www.youtube.com/@myzhar"
 
 analytics:
   provider: "google-gtag"
