@@ -299,18 +299,25 @@ Using `ros2 component` commands is convenient for interactive debugging, but in 
 
 ### All-in-one: container + nodes
 
-The simplest pattern is to declare the container and its initial set of components together:
+The simplest pattern is to declare the container and its initial set of components together. Using the `OpaqueFunction` template from the [Python launch file tutorial](/tutorials/ros2/python-launch-explained/) we can expose configurable arguments — here `namespace` and `use_ipc` — while keeping all construction logic in plain Python:
 
 ```python
 from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, OpaqueFunction
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import ComposableNodeContainer
 from launch_ros.descriptions import ComposableNode
 
 
-def generate_launch_description():
+def launch_setup(context, *args, **kwargs):
+    actions = []
+
+    namespace = LaunchConfiguration('namespace').perform(context)
+    use_ipc   = LaunchConfiguration('use_ipc').perform(context).lower() == 'true'
+
     container = ComposableNodeContainer(
         name='demo_container',
-        namespace='',
+        namespace=namespace,
         package='rclcpp_components',
         executable='component_container',
         composable_node_descriptions=[
@@ -318,34 +325,60 @@ def generate_launch_description():
                 package='composition_demo',
                 plugin='composition_demo::TalkerComponent',
                 name='talker',
+                extra_arguments=[{'use_intra_process_comms': use_ipc}],
             ),
             ComposableNode(
                 package='composition_demo',
                 plugin='composition_demo::ListenerComponent',
                 name='listener',
+                extra_arguments=[{'use_intra_process_comms': use_ipc}],
             ),
         ],
         output='screen',
     )
+    actions.append(container)
+    return actions
 
-    return LaunchDescription([container])
+
+def generate_launch_description():
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'namespace',
+            default_value='',
+            description='Namespace for the container and its nodes'
+        ),
+        DeclareLaunchArgument(
+            'use_ipc',
+            default_value='true',
+            description='Enable intra-process communication'
+        ),
+        OpaqueFunction(function=launch_setup),
+    ])
 ```
 
 ### Splitting container and nodes
 
-When you want to load components into an already-running container — for example, a container started by another launch file — use `LoadComposableNodes`:
+When you want to load components into an already-running container — for example, a container started by another launch file — use `LoadComposableNodes`. The same `launch_setup` pattern applies: resolve the arguments first, then build both actions as plain Python objects:
 
 ```python
 from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, OpaqueFunction
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import ComposableNodeContainer, LoadComposableNodes
 from launch_ros.descriptions import ComposableNode
 
 
-def generate_launch_description():
+def launch_setup(context, *args, **kwargs):
+    actions = []
+
+    namespace = LaunchConfiguration('namespace').perform(context)
+    use_ipc   = LaunchConfiguration('use_ipc').perform(context).lower() == 'true'
+    cont_name = 'demo_container'
+
     # Start an empty container
     container = ComposableNodeContainer(
-        name='demo_container',
-        namespace='',
+        name=cont_name,
+        namespace=namespace,
         package='rclcpp_components',
         executable='component_container',
         composable_node_descriptions=[],
@@ -354,65 +387,93 @@ def generate_launch_description():
 
     # Load nodes into the container defined above
     load_nodes = LoadComposableNodes(
-        target_container='demo_container',
+        target_container=cont_name,
         composable_node_descriptions=[
             ComposableNode(
                 package='composition_demo',
                 plugin='composition_demo::TalkerComponent',
                 name='talker',
+                namespace=namespace,
+                extra_arguments=[{'use_intra_process_comms': use_ipc}],
             ),
             ComposableNode(
                 package='composition_demo',
                 plugin='composition_demo::ListenerComponent',
                 name='listener',
+                namespace=namespace,
+                extra_arguments=[{'use_intra_process_comms': use_ipc}],
             ),
         ],
     )
 
-    return LaunchDescription([container, load_nodes])
+    actions.append(container)
+    actions.append(load_nodes)
+    return actions
+
+
+def generate_launch_description():
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'namespace',
+            default_value='',
+            description='Namespace for the container and its nodes'
+        ),
+        DeclareLaunchArgument(
+            'use_ipc',
+            default_value='true',
+            description='Enable intra-process communication'
+        ),
+        OpaqueFunction(function=launch_setup),
+    ])
 ```
 
 ### Passing parameters and remappings
 
-`ComposableNode` accepts the same `parameters` and `remappings` arguments as a regular `Node`:
+`ComposableNode` accepts the same `parameters` and `remappings` arguments as a regular `Node`. Inside `launch_setup`, the resolved string values can be used directly:
 
 ```python
-ComposableNode(
-    package='composition_demo',
-    plugin='composition_demo::TalkerComponent',
-    name='talker',
-    namespace='demo',
-    parameters=[{'publish_rate': 2.0}],
-    remappings=[('chatter', 'demo/chatter')],
-),
+def launch_setup(context, *args, **kwargs):
+    actions = []
+
+    namespace    = LaunchConfiguration('namespace').perform(context)
+    publish_rate = float(LaunchConfiguration('publish_rate').perform(context))
+    use_ipc      = LaunchConfiguration('use_ipc').perform(context).lower() == 'true'
+
+    container = ComposableNodeContainer(
+        name='demo_container',
+        namespace=namespace,
+        package='rclcpp_components',
+        executable='component_container',
+        composable_node_descriptions=[
+            ComposableNode(
+                package='composition_demo',
+                plugin='composition_demo::TalkerComponent',
+                name='talker',
+                parameters=[{'publish_rate': publish_rate}],
+                remappings=[('chatter', namespace + '/chatter')],
+                extra_arguments=[{'use_intra_process_comms': use_ipc}],
+            ),
+            ComposableNode(
+                package='composition_demo',
+                plugin='composition_demo::ListenerComponent',
+                name='listener',
+                remappings=[('chatter', namespace + '/chatter')],
+                extra_arguments=[{'use_intra_process_comms': use_ipc}],
+            ),
+        ],
+        output='screen',
+    )
+    actions.append(container)
+    return actions
 ```
 
 ## Intra-Process Communication
 
 The main performance benefit of composition is **intra-process communication (IPC)**. When two nodes in the same process exchange messages, ROS 2 can pass ownership of the message directly via a shared pointer, bypassing the DDS middleware entirely. This eliminates serialization, deserialization, and memory copies.
 
-To enable IPC, pass `use_intra_process_comms=True` in the `NodeOptions` when creating the container or node:
-
-### In the launch file
-
-```python
-ComposableNode(
-    package='composition_demo',
-    plugin='composition_demo::TalkerComponent',
-    name='talker',
-    extra_arguments=[{'use_intra_process_comms': True}],
-),
-ComposableNode(
-    package='composition_demo',
-    plugin='composition_demo::ListenerComponent',
-    name='listener',
-    extra_arguments=[{'use_intra_process_comms': True}],
-),
-```
+To enable IPC, pass `use_intra_process_comms=True` in the `NodeOptions` when creating the container or node. In the launch files above this is driven by the `use_ipc` argument, which resolves to a plain Python `bool` inside `launch_setup` and is forwarded via `extra_arguments`. IPC can also be enabled directly in the node source code:
 
 ### In the node source code
-
-IPC can also be enabled programmatically from within the component:
 
 ```cpp
 explicit TalkerComponent(const rclcpp::NodeOptions & options)
@@ -458,4 +519,3 @@ Node composition is a powerful ROS 2 feature that lets you reduce system overhea
 ### What's next
 
 - **Lifecycle Nodes** — nodes that follow the ROS 2 managed-node lifecycle, giving you fine-grained control over startup, shutdown, and error recovery.
-- **Advanced launch patterns** — conditional includes, event-driven actions, and multi-robot setups.
