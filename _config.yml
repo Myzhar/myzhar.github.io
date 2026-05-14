@@ -36,7 +36,7 @@ author:
 
 search: true
 search_full_content: true
-breadcrumbs: true
+breadcrumbs: false
 enable_copy_code_button: true
 
 github: [metadata]
