@@ -10,10 +10,10 @@ header:
   overlay_image: /assets/images/ros2/ros2-node-composition-explained.jpg
   teaser: /assets/images/ros2/ros2-node-composition-explained.jpg
   actions:
-    - label: "Official ROS 2 Website"
+    - label: "<i class='fas fa-globe'></i> Official ROS 2 Website"
       url: "https://www.ros.org/"
       target: _blank
-    - label: "Official ROS 2 Composition doc"
+    - label: "<i class='fas fa-book'></i> Official ROS 2 Composition doc"
       url: "https://docs.ros.org/en/jazzy/Concepts/Intermediate/About-Composition.html"
       target: _blank
 layout: single
