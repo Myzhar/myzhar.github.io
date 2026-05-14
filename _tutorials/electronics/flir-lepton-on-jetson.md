@@ -9,7 +9,7 @@ header:
   overlay_image: /assets/images/tutorials/flir_jetson/breadboard.jpg
   teaser: /assets/images/tutorials/flir_jetson/breadboard.jpg
   actions:
-    - label: "GitHub Repository"
+    - label: "<i class='fab fa-github'></i> GitHub Repository"
       url: "https://github.com/Myzhar/Lepton3_Jetson"
       target: _blank
 layout: single

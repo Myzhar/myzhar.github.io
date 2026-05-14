@@ -9,7 +9,7 @@ header:
   overlay_image: /assets/images/tutorials/compute_capability/geforce-rtx-50series-nv-sfg-thumbnail-1920x1080.jpeg
   teaser: /assets/images/tutorials/compute_capability/geforce-rtx-50series-nv-sfg-thumbnail-1920x1080.jpeg
   actions:
-    - label: "Official Source"
+    - label: "<i class='fas fa-microchip'></i> Official Source"
       url: "https://developer.nvidia.com/cuda/gpus"
       target: _blank
 layout: single

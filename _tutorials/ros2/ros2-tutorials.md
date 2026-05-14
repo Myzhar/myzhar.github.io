@@ -9,7 +9,7 @@ header:
   overlay_image: /assets/images/ros2/ros2-tutorials.jpg
   teaser: /assets/images/ros2/ros2-tutorials.jpg
   actions:
-    - label: "Official ROS 2 Website"
+    - label: "<i class='fas fa-globe'></i> Official ROS 2 Website"
       url: "https://www.ros.org/"
       target: _blank
 layout: single

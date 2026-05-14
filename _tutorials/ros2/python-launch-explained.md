@@ -10,8 +10,9 @@ header:
   overlay_image: /assets/images/ros2/python-launch-explained.jpg
   teaser: /assets/images/ros2/python-launch-explained.jpg
   actions:
-    - label: "Official ROS 2 Website"
+    - label: "<i class='fas fa-globe'></i> Official ROS 2 Website"
       url: "https://www.ros.org/"
+      target: _blank
 layout: single
 classes: single
 ---
