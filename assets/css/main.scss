@@ -68,6 +68,59 @@ html {
   }
 }
 
+/* Latest News section: force 5-column grid with compact text and images */
+.latest-news .grid__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+
+.latest-news .grid__item {
+  float: none !important;
+  clear: none !important;
+  margin: 0 !important;
+  margin-bottom: 1em !important;
+  width: 100%;
+
+  @media (min-width: 37.5em) {
+    width: 48%;
+  }
+
+  @media (min-width: 64em) {
+    width: 18.8%;
+  }
+}
+
+.latest-news .archive__item-teaser {
+  max-height: 110px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.latest-news .archive__item-title {
+  font-size: 0.72em;
+  margin-bottom: 0.2em;
+  line-height: 1.3;
+}
+
+.latest-news .archive__item-excerpt {
+  font-size: 0.62em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.latest-news .page__meta {
+  font-size: 0.55em;
+}
+
 div.highlighter-rouge
 {
   border-radius: 20px !important;

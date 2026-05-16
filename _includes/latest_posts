@@ -1,7 +1,7 @@
-<section class="feature__wrapper" aria-labelledby="latest-news-heading">
+<section class="feature__wrapper latest-news" aria-labelledby="latest-news-heading">
     <h2 id="latest-news-heading" class="feature__title">Latest News</h2>
     <div class="grid__wrapper">
-        {% for post in site.posts limit:4 %}
+        {% for post in site.posts limit:5 %}
             {% include archive-single.html type="grid" %}
         {% endfor %}
     </div>
