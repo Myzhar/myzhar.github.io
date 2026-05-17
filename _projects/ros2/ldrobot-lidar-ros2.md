@@ -144,6 +144,8 @@ Demonstrates how to use the driver together with [SLAM Toolbox](https://github.c
 ros2 launch ldlidar_node ldlidar_slam.launch.py
 ```
 
+> :bulb: **`ldlidar_slam.launch.py` as a learning reference**: beyond its practical use, this launch file is a concrete, working example of how to combine [lifecycle nodes](/tutorials/ros2/ros2-lifecycle-nodes/) and [node composition](/tutorials/ros2/ros2-node-composition-explained/) in a single Python launch file — a pattern that recurs in any production-grade ROS 2 bringup. It shows how to spin up a composable container, load a lifecycle component into it, and wire a `lifecycle_manager` to drive the configure → activate sequence automatically.
+
 {% include gallery id="gallery_screens" caption="RViz2 scan (left), SLAM Toolbox map (center), TF tree (right)" %}
 
 ## Node Parameters
