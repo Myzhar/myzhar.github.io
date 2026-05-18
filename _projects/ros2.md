@@ -8,20 +8,20 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/ros2/ros2-projects.jpg
   teaser: /assets/images/ros2/ros2-projects.jpg
-
-gallery_ldrobot:
-  - url: /assets/images/projects/ldrobot-lidar-ros2/teaser.jpg
-    image_path: /assets/images/projects/ldrobot-lidar-ros2/teaser.jpg
-    alt: "LD Lidar ROS 2 Driver"
-    title: "LD Lidar ROS 2 Driver"
+layout: single
+classes: wide
+toc: false
 ---
 
 A collection of open source ROS 2 packages for robotics development.
 
-## LD Lidar ROS 2 Driver
+|  | Project | Description |
+| :----: | :------: | :---------- |
+| [![LD Lidar ROS 2 Driver](/assets/images/projects/ldrobot-lidar-ros2/teaser.jpg)](/projects/ros2/ldrobot-lidar-ros2/) | [**LD Lidar ROS 2 Driver**](/projects/ros2/ldrobot-lidar-ros2/) | ROS 2 driver for LDRobot LD19/LD06 DToF 2D lidars, built on Nav2 Lifecycle nodes with full robot integration support, SLAM Toolbox compatibility, and benchmarking tools. |
+{: style="table-layout: fixed;" }
 
-[Details about this project](/projects/ros2/ldrobot-lidar-ros2/)
-
-ROS 2 driver for the LDRobot LD19/LD06 DToF 2D lidars. Built on Nav2 Lifecycle nodes with full robot integration support, SLAM Toolbox compatibility, and benchmarking tools.
-
-{% include gallery id="gallery_ldrobot" %}
+<style>
+  table th:nth-child(1), table td:nth-child(1) { width: 20%; }
+  table th:nth-child(2), table td:nth-child(2) { width: 25%; }
+  table th:nth-child(3), table td:nth-child(3) { width: 55%; }
+</style>
