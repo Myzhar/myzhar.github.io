@@ -6,6 +6,7 @@ author: "Walter Lucetti"
 layout: single
 classes: wide
 toc: false
+breadcrumbs: false
 
 categories: 
   - updates

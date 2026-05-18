@@ -6,6 +6,8 @@ author: "Walter Lucetti"
 layout: single
 classes: wide
 toc: false
+breadcrumbs: false
+
 header:
   teaser: /assets/images/projects/ldrobot-lidar-ros2/teaser.jpg
 

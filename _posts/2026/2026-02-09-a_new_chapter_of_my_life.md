@@ -6,6 +6,8 @@ author: "Walter Lucetti"
 layout: single
 classes: wide
 toc: false
+breadcrumbs: false
+
 header:
   teaser: /assets/images/posts/20260209-ouster_x_stereolabs/OUST_SL_Hero.png
 

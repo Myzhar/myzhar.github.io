@@ -16,7 +16,7 @@
     {% endif %}
   {% endfor %}
   {% if pager_prev or pager_next %}
-    <nav class="pagination">
+    <nav class="pagination" style="align-items: stretch;">
       {% if pager_prev %}
         {% assign prev_teaser = pager_prev.header.teaser | default: site.teaser %}
         <a href="{{ pager_prev.url | relative_url }}" class="pagination--pager" title="{{ pager_prev.title | markdownify | strip_html | strip}}">
@@ -40,7 +40,7 @@
     </nav>
   {% endif %}
 {% elsif page.previous or page.next %}
-  <nav class="pagination">
+  <nav class="pagination" style="align-items: stretch;">
     {% if page.previous %}
       {% assign prev_teaser = page.previous.header.teaser | default: site.teaser %}
       <a href="{{ page.previous.url | relative_url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html | strip}}">

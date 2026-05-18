@@ -6,6 +6,8 @@ author: "Walter Lucetti"
 layout: single
 classes: wide
 toc: false
+breadcrumbs: false
+
 header:
   teaser: /assets/images/ros2/configure-ros2-nodes.jpg
 
