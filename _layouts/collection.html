@@ -1,0 +1,31 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% assign entries = site[page.collection] %}
+{% if page.sort_by %}
+  {% if page.sort_order == 'reverse' %}
+    {% assign entries = entries | sort: page.sort_by | reverse %}
+  {% else %}
+    {% assign entries = entries | sort: page.sort_by %}
+  {% endif %}
+{% endif %}
+
+{% assign url_prefix = "/" | append: page.collection | append: "/" %}
+
+<div class="{{ entries_layout }}__wrapper">
+  {% for post in entries %}
+    {% if page.filter_to_root %}
+      {% assign p_rel = post.url | remove: url_prefix %}
+      {% assign p_parts = p_rel | split: "/" %}
+      {% if p_parts.size == 1 %}
+        {% include archive-single.html type=entries_layout %}
+      {% endif %}
+    {% else %}
+      {% include archive-single.html type=entries_layout %}
+    {% endif %}
+  {% endfor %}
+</div>

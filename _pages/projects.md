@@ -9,4 +9,5 @@ entries_layout: grid
 classes: wide
 sort_by: index
 sort_order: forward
+filter_to_root: true
 ---

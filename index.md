@@ -11,7 +11,7 @@ header:
   - label: ":robot: MyzharBot Project"
     url: "/projects/myzharbot/"
   - label: ":turtle: ROS 2 Tutorials"
-    url: "/tutorials/ros2/ros2-tutorials/"
+    url: "/tutorials/ros2/"
 
 intro:
   - excerpt: "**Welcome to the personal lab space of Walter 'Myzhar' Lucetti** — a place where robots come to life through code, sensors, and a relentless curiosity about machines that see and think. Expect hands‑on tutorials, deep‑dive guides, and honest project stories spanning ROS 2, stereo vision, NVIDIA Jetson, CUDA, 3D printing, and AI, all grounded in real hardware and real problems."
