@@ -14,6 +14,8 @@ header:
       target: _blank
 layout: single
 classes: single
+breadcrumbs: false
+
 gallery:
     - url: /assets/images/events/ROSCon2025/20251026_063946.jpg
       image_path: /assets/images/events/ROSCon2025/20251026_063946.jpg
