@@ -121,6 +121,16 @@ html {
   font-size: 0.55em;
 }
 
+nav.breadcrumbs {
+  text-transform: uppercase;
+}
+
+nav.breadcrumbs ol {
+  float: none !important;
+  width: 100% !important;
+  text-align: center;
+}
+
 div.highlighter-rouge
 {
   border-radius: 20px !important;

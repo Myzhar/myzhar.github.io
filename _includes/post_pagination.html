@@ -20,17 +20,17 @@
       {% if pager_prev %}
         {% assign prev_teaser = pager_prev.header.teaser | default: site.teaser %}
         <a href="{{ pager_prev.url | relative_url }}" class="pagination--pager" title="{{ pager_prev.title | markdownify | strip_html | strip}}">
-          <span style="background-color:#0092ca;border-radius:3px;padding:0 4px;">⬅️</span> PREVIOUS<br>
+          ⬅️ PREVIOUS<br>
           {% if prev_teaser %}<img src="{{ prev_teaser | relative_url }}" alt="{{ pager_prev.title | markdownify | strip_html | strip }}" style="width:100%;height:80px;object-fit:cover;display:block;margin:0.4em 0;border-radius:4px;">{% endif %}
           {{ pager_prev.title | markdownify | strip_html | strip}}
         </a>
       {% else %}
-        <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "<span style="background-color:#0092ca;border-radius:3px;padding:0 4px;">⬅️</span> PREVIOUS<br>---" }}</a>
+        <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "⬅️ PREVIOUS<br>---" }}</a>
       {% endif %}
       {% if pager_next %}
         {% assign next_teaser = pager_next.header.teaser | default: site.teaser %}
         <a href="{{ pager_next.url | relative_url }}" class="pagination--pager" title="{{ pager_next.title | markdownify | strip_html | strip}}">
-          NEXT <span style="background-color:#0092ca;border-radius:3px;padding:0 4px;">➡️</span><br>
+          NEXT ➡️<br>
           {% if next_teaser %}<img src="{{ next_teaser | relative_url }}" alt="{{ pager_next.title | markdownify | strip_html | strip }}" style="width:100%;height:80px;object-fit:cover;display:block;margin:0.4em 0;border-radius:4px;">{% endif %}
           {{ pager_next.title | markdownify | strip_html | strip}}
         </a>
@@ -44,17 +44,17 @@
     {% if page.previous %}
       {% assign prev_teaser = page.previous.header.teaser | default: site.teaser %}
       <a href="{{ page.previous.url | relative_url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html | strip}}">
-        <span style="background-color:#0092ca;border-radius:3px;padding:0 4px;">⬅️</span> PREVIOUS<br>
+        ⬅️ PREVIOUS<br>
         {% if prev_teaser %}<img src="{{ prev_teaser | relative_url }}" alt="{{ page.previous.title | markdownify | strip_html | strip }}" style="width:100%;height:80px;object-fit:cover;display:block;margin:0.4em 0;border-radius:4px;">{% endif %}
         {{ page.previous.title | markdownify | strip_html | strip}}
       </a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "<span style="background-color:#0092ca;border-radius:3px;padding:0 4px;">⬅️</span> PREVIOUS<br>---" }}</a>
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "⬅️ PREVIOUS<br>---" }}</a>
     {% endif %}
     {% if page.next %}
       {% assign next_teaser = page.next.header.teaser | default: site.teaser %}
       <a href="{{ page.next.url | relative_url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html | strip}}">
-        NEXT <span style="background-color:#0092ca;border-radius:3px;padding:0 4px;">➡️</span><br>
+        NEXT ➡️<br>
         {% if next_teaser %}<img src="{{ next_teaser | relative_url }}" alt="{{ page.next.title | markdownify | strip_html | strip }}" style="width:100%;height:80px;object-fit:cover;display:block;margin:0.4em 0;border-radius:4px;">{% endif %}
         {{ page.next.title | markdownify | strip_html | strip}}
       </a>

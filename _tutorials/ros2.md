@@ -6,8 +6,8 @@ index: 250
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/ros2/ros2-tutorials.jpg
-  teaser: /assets/images/ros2/ros2-tutorials.jpg
+  overlay_image: /assets/images/tutorials/ros2-tutorials-banner.svg
+  teaser: /assets/images/tutorials/ros2-tutorials-banner.svg
   actions:
     - label: "<i class='fas fa-globe'></i> Official ROS 2 Website"
       url: "https://www.ros.org/"

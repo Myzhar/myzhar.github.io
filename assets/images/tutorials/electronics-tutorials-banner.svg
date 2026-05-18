@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 480" width="1280" height="480">
+  <defs>
+    <radialGradient id="glow_el" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="480" fill="#0d1117"/>
+
+  <!-- PCB grid dots -->
+  <g fill="#f59e0b" opacity="0.12">
+    <circle cx="60"  cy="60"  r="2.5"/> <circle cx="120" cy="60"  r="2.5"/> <circle cx="180" cy="60"  r="2.5"/> <circle cx="240" cy="60"  r="2.5"/> <circle cx="300" cy="60"  r="2.5"/>
+    <circle cx="60"  cy="120" r="2.5"/> <circle cx="120" cy="120" r="2.5"/> <circle cx="180" cy="120" r="2.5"/> <circle cx="240" cy="120" r="2.5"/> <circle cx="300" cy="120" r="2.5"/>
+    <circle cx="60"  cy="180" r="2.5"/> <circle cx="120" cy="180" r="2.5"/> <circle cx="180" cy="180" r="2.5"/> <circle cx="240" cy="180" r="2.5"/> <circle cx="300" cy="180" r="2.5"/>
+    <circle cx="60"  cy="240" r="2.5"/> <circle cx="120" cy="240" r="2.5"/> <circle cx="180" cy="240" r="2.5"/> <circle cx="240" cy="240" r="2.5"/> <circle cx="300" cy="240" r="2.5"/>
+    <circle cx="60"  cy="300" r="2.5"/> <circle cx="120" cy="300" r="2.5"/> <circle cx="180" cy="300" r="2.5"/> <circle cx="240" cy="300" r="2.5"/> <circle cx="300" cy="300" r="2.5"/>
+    <circle cx="60"  cy="360" r="2.5"/> <circle cx="120" cy="360" r="2.5"/> <circle cx="180" cy="360" r="2.5"/> <circle cx="240" cy="360" r="2.5"/> <circle cx="300" cy="360" r="2.5"/>
+    <circle cx="60"  cy="420" r="2.5"/> <circle cx="120" cy="420" r="2.5"/> <circle cx="180" cy="420" r="2.5"/> <circle cx="240" cy="420" r="2.5"/> <circle cx="300" cy="420" r="2.5"/>
+    <circle cx="980" cy="60"  r="2.5"/> <circle cx="1040" cy="60"  r="2.5"/> <circle cx="1100" cy="60"  r="2.5"/> <circle cx="1160" cy="60"  r="2.5"/> <circle cx="1220" cy="60"  r="2.5"/>
+    <circle cx="980" cy="120" r="2.5"/> <circle cx="1040" cy="120" r="2.5"/> <circle cx="1100" cy="120" r="2.5"/> <circle cx="1160" cy="120" r="2.5"/> <circle cx="1220" cy="120" r="2.5"/>
+    <circle cx="980" cy="180" r="2.5"/> <circle cx="1040" cy="180" r="2.5"/> <circle cx="1100" cy="180" r="2.5"/> <circle cx="1160" cy="180" r="2.5"/> <circle cx="1220" cy="180" r="2.5"/>
+    <circle cx="980" cy="240" r="2.5"/> <circle cx="1040" cy="240" r="2.5"/> <circle cx="1100" cy="240" r="2.5"/> <circle cx="1160" cy="240" r="2.5"/> <circle cx="1220" cy="240" r="2.5"/>
+    <circle cx="980" cy="300" r="2.5"/> <circle cx="1040" cy="300" r="2.5"/> <circle cx="1100" cy="300" r="2.5"/> <circle cx="1160" cy="300" r="2.5"/> <circle cx="1220" cy="300" r="2.5"/>
+    <circle cx="980" cy="360" r="2.5"/> <circle cx="1040" cy="360" r="2.5"/> <circle cx="1100" cy="360" r="2.5"/> <circle cx="1160" cy="360" r="2.5"/> <circle cx="1220" cy="360" r="2.5"/>
+    <circle cx="980" cy="420" r="2.5"/> <circle cx="1040" cy="420" r="2.5"/> <circle cx="1100" cy="420" r="2.5"/> <circle cx="1160" cy="420" r="2.5"/> <circle cx="1220" cy="420" r="2.5"/>
+  </g>
+
+  <!-- Circuit traces (left side) -->
+  <g stroke="#f59e0b" stroke-width="1.5" fill="none" opacity="0.35">
+    <polyline points="60,60 60,120 120,120 120,180 180,180"/>
+    <polyline points="240,60 240,120 300,120"/>
+    <polyline points="60,300 120,300 120,360 180,360 180,420"/>
+    <polyline points="240,420 240,360 300,360 300,300"/>
+    <!-- Via pads -->
+    <circle cx="120" cy="120" r="5" fill="#f59e0b" opacity="0.5"/>
+    <circle cx="120" cy="300" r="5" fill="#f59e0b" opacity="0.5"/>
+    <circle cx="240" cy="120" r="5" fill="#f59e0b" opacity="0.5"/>
+    <circle cx="240" cy="360" r="5" fill="#f59e0b" opacity="0.5"/>
+    <!-- Resistor symbol -->
+    <line x1="60" y1="240" x2="90" y2="240" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+    <rect x="90" y="232" width="40" height="16" rx="2" stroke="#f59e0b" stroke-width="1.5" fill="#0d1117" opacity="1"/>
+    <line x1="130" y1="240" x2="160" y2="240" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+    <!-- Capacitor symbol -->
+    <line x1="180" y1="300" x2="210" y2="300" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+    <line x1="210" y1="290" x2="210" y2="310" stroke="#f59e0b" stroke-width="2.5" opacity="0.8"/>
+    <line x1="218" y1="290" x2="218" y2="310" stroke="#f59e0b" stroke-width="2.5" opacity="0.8"/>
+    <line x1="218" y1="300" x2="248" y2="300" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Circuit traces (right side) -->
+  <g stroke="#f59e0b" stroke-width="1.5" fill="none" opacity="0.35">
+    <polyline points="1220,60 1220,120 1160,120 1160,180 1100,180"/>
+    <polyline points="980,60 980,120 1040,120"/>
+    <polyline points="1220,300 1160,300 1160,360 1100,360 1100,420"/>
+    <polyline points="980,420 980,360 1040,360 1040,300"/>
+    <circle cx="1160" cy="120" r="5" fill="#f59e0b" opacity="0.5"/>
+    <circle cx="1160" cy="300" r="5" fill="#f59e0b" opacity="0.5"/>
+    <circle cx="980"  cy="120" r="5" fill="#f59e0b" opacity="0.5"/>
+    <circle cx="980"  cy="360" r="5" fill="#f59e0b" opacity="0.5"/>
+    <!-- Resistor right -->
+    <line x1="1090" y1="240" x2="1120" y2="240" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+    <rect x="1120" y="232" width="40" height="16" rx="2" stroke="#f59e0b" stroke-width="1.5" fill="#0d1117" opacity="1"/>
+    <line x1="1160" y1="240" x2="1190" y2="240" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+    <!-- Capacitor right -->
+    <line x1="980" y1="240" x2="1010" y2="240" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+    <line x1="1010" y1="230" x2="1010" y2="250" stroke="#f59e0b" stroke-width="2.5" opacity="0.8"/>
+    <line x1="1018" y1="230" x2="1018" y2="250" stroke="#f59e0b" stroke-width="2.5" opacity="0.8"/>
+    <line x1="1018" y1="240" x2="1048" y2="240" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Central glow -->
+  <ellipse cx="640" cy="240" rx="480" ry="260" fill="url(#glow_el)"/>
+
+  <!-- Text -->
+  <text x="640" y="210" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="68" font-weight="900" fill="#f59e0b" letter-spacing="3">ELECTRONICS</text>
+  <text x="640" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="300" fill="#ffffff" letter-spacing="8" opacity="0.85">TUTORIALS</text>
+</svg>

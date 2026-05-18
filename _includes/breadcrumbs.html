@@ -1,0 +1,31 @@
+{% if page.breadcrumbs or layout.breadcrumbs or site.breadcrumbs %}
+  {% unless paginator and paginator.page == 1 %}
+    {% assign crumbs = page.url | split: "/" %}
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        {% assign position = 1 %}
+        {% assign crumb_path = "" %}
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="{{ "/" | relative_url }}" itemprop="item"><span itemprop="name">{{ site.data.ui-text[site.locale].breadcrumb_home_label | default: "Home" }}</span></a>
+          <meta itemprop="position" content="{{ position }}" />
+        </li>
+        <span class="sep"> &nbsp;›&nbsp;</span>
+        {% for crumb in crumbs %}
+          {% unless crumb == "" %}
+            {% assign crumb_path = crumb_path | append: "/" | append: crumb %}
+            {% assign position = position | plus: 1 %}
+            {% if forloop.last %}
+              <li class="current">{{ page.title }}</li>
+            {% else %}
+              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="{{ crumb_path | relative_url }}" itemprop="item"><span itemprop="name">{{ crumb | replace: "-", " " | capitalize }}</span></a>
+                <meta itemprop="position" content="{{ position }}" />
+              </li>
+              <span class="sep"> &nbsp;›&nbsp;</span>
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </ol>
+    </nav>
+  {% endunless %}
+{% endif %}
