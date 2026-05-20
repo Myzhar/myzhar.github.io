@@ -36,8 +36,6 @@ On this website, I:
 - Publish notes, experiments, and lessons learned from real robots, sensors, and software stacks.
 - Provide resources and examples for developers working with stereo cameras, ROS/ROS 2, and embedded GPU systems.
 
-The site is progressively evolving toward a **lightweight, static-friendly setup** to reduce maintenance and make it easier to publish clear, focused technical content.
-
 ## My Tools and Technologies
 
 My daily toolbox includes:
