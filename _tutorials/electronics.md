@@ -2,7 +2,7 @@
 title: "Electronics Tutorials"
 excerpt: "Hands-on electronics tutorials covering embedded systems, sensors, and hardware integration with NVIDIA Jetson and other platforms."
 author: "Walter Lucetti"
-index: 175
+index: 2000
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

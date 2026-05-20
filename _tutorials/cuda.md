@@ -2,7 +2,7 @@
 title: "CUDA Tutorials"
 excerpt: "Tutorials on NVIDIA CUDA programming and GPU computing, from fundamental concepts to practical applications."
 author: "Walter Lucetti"
-index: 75
+index: 3000
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

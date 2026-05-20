@@ -2,7 +2,7 @@
 title: "ROS 2 Node Composition Explained"
 excerpt: "Learn how to use ROS 2 node composition to run multiple nodes in a single process, reducing overhead and enabling zero-copy intra-process communication."
 author: "Walter Lucetti"
-index: 1000
+index: 1100
 date: 2026-05-12 22:30:00 +01:00
 header:
   overlay_color: "#000"

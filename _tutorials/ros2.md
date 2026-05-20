@@ -2,7 +2,7 @@
 title: "ROS 2 Tutorials"
 excerpt: "A series of tutorials designed to help you get started with ROS 2."
 author: "Walter Lucetti"
-index: 250
+index: 1000
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

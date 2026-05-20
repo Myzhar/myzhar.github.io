@@ -2,7 +2,7 @@
 title: "Understanding ROS 2 Node Names and Namespaces"
 excerpt: "This tutorial explains the concepts of node names and namespaces in ROS 2."
 author: "Walter Lucetti"
-index: 800
+index: 1080
 date: 2026-02-21 10:00:00 +01:00
 header:
   overlay_color: "#000"

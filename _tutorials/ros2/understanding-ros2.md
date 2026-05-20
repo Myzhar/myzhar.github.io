@@ -2,7 +2,7 @@
 title: "Understanding ROS 2"
 excerpt: "An overview of ROS 2, its features, and why it is so popular in the robotics community."
 author: "Walter Lucetti"
-index: 300
+index: 1030
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

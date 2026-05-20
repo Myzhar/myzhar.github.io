@@ -2,7 +2,7 @@
 title: "Configure a ROS 2 node using parameters"
 excerpt: "Learn how to configure a ROS 2 node using parameters."
 author: "Walter Lucetti"
-index: 700
+index: 1070
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
