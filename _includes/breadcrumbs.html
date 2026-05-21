@@ -6,7 +6,8 @@
         {% assign position = 1 %}
         {% assign crumb_path = "" %}
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="{{ "/" | relative_url }}" itemprop="item"><span itemprop="name"><i class="fas fa-home" aria-label="Home"></i></span></a>
+          <a href="{{ "/" | relative_url }}" itemprop="item"><i class="fas fa-home" aria-hidden="true"></i></a>
+          <meta itemprop="name" content="Home" />
           <meta itemprop="position" content="{{ position }}" />
         </li>
         <span class="sep"> &nbsp;›&nbsp;</span>
@@ -15,7 +16,10 @@
             {% assign crumb_path = crumb_path | append: "/" | append: crumb %}
             {% assign position = position | plus: 1 %}
             {% if forloop.last %}
-              <li class="current">{{ page.title }}</li>
+              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="current">
+                <span itemprop="name">{{ page.title }}</span>
+                <meta itemprop="position" content="{{ position }}" />
+              </li>
             {% else %}
               <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="{{ crumb_path | relative_url }}" itemprop="item"><span itemprop="name">{{ crumb | replace: "-", " " | capitalize }}</span></a>
