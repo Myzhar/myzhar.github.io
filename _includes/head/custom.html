@@ -11,7 +11,18 @@
 <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<!-- Preconnect to external origins -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://consent.cookiebot.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+<!-- LCP preload: hero background image used on splash/home pages -->
+{% if page.header.overlay_image %}<link rel="preload" as="image" href="{{ page.header.overlay_image | relative_url }}" fetchpriority="high">{% endif %}
+
+<!-- CookieConsent CSS loaded non-render-blocking -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"></noscript>
 
 <!-- CookieBot - Before every script -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e399cfb4-af9c-47ca-b926-16983c6fdbfe" data-blockingmode="auto" type="text/javascript"></script>

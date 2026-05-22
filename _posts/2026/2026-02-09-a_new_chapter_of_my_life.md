@@ -9,7 +9,7 @@ toc: false
 breadcrumbs: false
 
 header:
-  teaser: /assets/images/posts/20260209-ouster_x_stereolabs/OUST_SL_Hero.png
+  teaser: /assets/images/posts/20260209-ouster_x_stereolabs/OUST_SL_Hero.jpg
 
 categories: 
   - updates

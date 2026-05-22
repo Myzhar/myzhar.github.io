@@ -150,3 +150,28 @@ nav.pagination {
     justify-content: flex-start !important;
   }
 }
+
+/* font-display: swap for FontAwesome to avoid invisible text during webfont load */
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/webfonts/fa-regular-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/webfonts/fa-brands-400.woff2") format("woff2");
+}
