@@ -12,6 +12,10 @@ header:
   teaser: /assets/images/ros2/ros2-lyrical-luth-teaser.jpg
   overlay_image: /assets/images/ros2/ros2-lyrical-luth-teaser.jpg
   overlay_filter: "0.4"
+  actions:
+    - label: "Official Announcement"
+      url: "https://discourse.openrobotics.org/t/ros-2-lyrical-luth-released/"
+      target: _blank
 
 categories:
   - news
@@ -131,6 +135,6 @@ Behind every `apt install ros-lyrical-*` there's a massive community effort: **2
 
 The next non-LTS distribution, **ROS 2 Makoa Mata-mata**, is already on the calendar for May 2027.
 
-If you're on Jazzy, migration should be pretty smooth; most new features are additive and things like the executor change are opt-in. I covered the highlights here, but the full changelog is extensive, so check the [official Lyrical Luth release notes](https://docs.ros.org/en/lyrical/Releases/Release-Lyrical-Luth.html) for the complete picture before jumping in on production systems.
+If you're on Jazzy, migration should be pretty smooth; most new features are additive and things like the executor change are opt-in. I covered the highlights here, but the full changelog is extensive, so check the [official Lyrical Luth release notes](https://docs.ros.org/en/lyrical/Releases/Release-Lyrical-Luth.html){:target="_blank"} for the complete picture before jumping in on production systems.
 
 Happy robotics programming! 🤖
