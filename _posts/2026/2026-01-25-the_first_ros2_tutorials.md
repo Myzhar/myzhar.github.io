@@ -10,6 +10,8 @@ breadcrumbs: false
 
 header:
   teaser: /assets/images/ros2/ROS2_TM_Color.svg
+  overlay_image: /assets/images/ros2/ROS2_TM_Color.svg
+  overlay_filter: "0.5"
 
 categories: 
   - updates

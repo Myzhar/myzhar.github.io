@@ -10,6 +10,8 @@ breadcrumbs: false
 
 header:
   teaser: /assets/images/tutorials/compute_capability/geforce-rtx-50series-nv-sfg-thumbnail-1920x1080.jpeg
+  overlay_image: /assets/images/tutorials/compute_capability/geforce-rtx-50series-nv-sfg-thumbnail-1920x1080.jpeg
+  overlay_filter: "0.5"
 
 categories: 
   - updates

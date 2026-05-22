@@ -10,6 +10,8 @@ breadcrumbs: false
 
 header:
   teaser: /assets/images/ros2/understanding-ros2-node-names-namespaces.jpg
+  overlay_image: /assets/images/ros2/understanding-ros2-node-names-namespaces.jpg
+  overlay_filter: "0.5"
 
 categories: 
   - updates

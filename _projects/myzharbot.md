@@ -20,6 +20,8 @@ MyzharBot is an open source and open hardware robotic platform born to study sen
 | [![MyzharBot v1](/assets/images/projects/myzharbot/v1/MyzharBot-v1.0.jpg)](/projects/myzharbot/myzharbot-v1/) | [**MyzharBot v1**](/projects/myzharbot/myzharbot-v1/) | The first version of MyzharBot, a tracked robot platform built from scratch to study sensor fusion for autonomous navigation. |
 | [![MyzharBot v2](/assets/images/projects/myzharbot/v2/MyzharBot-v2.0.jpg)](/projects/myzharbot/myzharbot-v2/) | [**MyzharBot v2**](/projects/myzharbot/myzharbot-v2/) | First steps toward autonomous navigation, with improved hardware and early autonomous capabilities. |
 | [![MyzharBot v3](/assets/images/projects/myzharbot/v3/MyzharBot-v3.1.jpg)](/projects/myzharbot/myzharbot-v3/) | [**MyzharBot v3**](/projects/myzharbot/myzharbot-v3/) | The robot that made me a Jetson™ Champion, powered by NVIDIA Jetson and advanced AI-driven navigation. |
+| ![MyzharBot v4](/assets/images/projects/myzharbot/v4/MyzharBot-v4.1.jpg) | **MyzharBot v4** | Coming soon … |
+| | **MyzharBot v5** | Coming soon … |
 {: style="table-layout: fixed;" }
 
 <style>

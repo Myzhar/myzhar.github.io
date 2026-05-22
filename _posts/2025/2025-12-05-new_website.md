@@ -8,6 +8,11 @@ classes: wide
 toc: false
 breadcrumbs: false
 
+header:
+  teaser: /assets/images/post_default.jpg
+  overlay_image: /assets/images/post_default.jpg
+  overlay_filter: "0.5"
+
 categories: 
   - updates
   - website

@@ -10,6 +10,8 @@ breadcrumbs: false
 
 header:
   teaser: /assets/images/tutorials/flir_jetson/breadboard.jpg
+  overlay_image: /assets/images/tutorials/flir_jetson/breadboard.jpg
+  overlay_filter: "0.5"
 
 categories: 
   - updates

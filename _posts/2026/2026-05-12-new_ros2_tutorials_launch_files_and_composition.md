@@ -10,6 +10,8 @@ breadcrumbs: false
 
 header:
   teaser: /assets/images/ros2/python-launch-explained.jpg
+  overlay_image: /assets/images/ros2/python-launch-explained.jpg
+  overlay_filter: "0.5"
 
 categories: 
   - updates

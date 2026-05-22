@@ -10,6 +10,8 @@ breadcrumbs: false
 
 header:
   teaser: /assets/images/posts/20260209-ouster_x_stereolabs/OUST_SL_Hero.jpg
+  overlay_image: /assets/images/posts/20260209-ouster_x_stereolabs/OUST_SL_Hero.jpg
+  overlay_filter: "0.5"
 
 categories: 
   - updates

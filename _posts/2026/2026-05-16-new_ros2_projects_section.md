@@ -10,6 +10,8 @@ breadcrumbs: false
 
 header:
   teaser: /assets/images/projects/ldrobot-lidar-ros2/teaser.jpg
+  overlay_image: /assets/images/projects/ldrobot-lidar-ros2/teaser.jpg
+  overlay_filter: "0.5"
 
 gallery_ldlidar:
   - url: /assets/images/projects/ldrobot-lidar-ros2/ldlidar_rviz2.png
