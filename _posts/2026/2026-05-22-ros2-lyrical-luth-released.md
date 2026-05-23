@@ -1,7 +1,7 @@
 ---
 title: "ROS 2 Lyrical Luth is Here!"
 excerpt: "The twelfth ROS 2 release lands today. A new LTS distribution built on Ubuntu 26.04, packed with performance gains, async Python support, zero-copy GPU transfers, and much more."
-date: 2026-05-22 12:00:00 +01:00
+date: 2026-05-22 22:00:00 +01:00
 author: "Walter Lucetti"
 layout: single
 classes: single
