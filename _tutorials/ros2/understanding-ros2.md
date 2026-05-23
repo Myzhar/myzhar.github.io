@@ -145,6 +145,90 @@ To improve communication performance, nodes can be loaded into the same process 
 
 With this tutorial, I intended to give you a brief overview of what ROS 2 is and how it works to help you understand why I decided to use it for my MyzharBot robot and why it is so popular in the robotics community.
 
+## Test your knowledge
+
+**1. What is ROS 2?**
+
+- a) A traditional operating system for robots
+- b) A flexible open-source framework for writing robot software
+- c) A hardware platform for robot development
+- d) A proprietary middleware by Willow Garage
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) A flexible open-source framework for writing robot software</strong><br>
+ROS 2 is not an operating system in the traditional sense; it is a flexible framework for writing robot software.
+</details>
+
+---
+
+**2. Which organization currently leads the development of ROS 2?**
+
+- a) Willow Garage
+- b) Stanford University
+- c) Open Robotics
+- d) OSRF (Open Source Robotics Foundation)
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) Open Robotics</strong><br>
+In 2017, OSRF became Open Robotics, which continues to lead the development of ROS 2 today.
+</details>
+
+---
+
+**3. Which of the following are key features of ROS 2? (select all that apply)**
+
+- a) Modularity
+- b) Real-time capabilities
+- c) Improved security
+- d) Cross-platform support
+- e) A centralized global parameter server
+
+<details>
+<summary>Show correct answers</summary>
+<br>
+<strong>a) Modularity, b) Real-time capabilities, c) Improved security, d) Cross-platform support</strong><br>
+ROS 2 features modularity, real-time capabilities, improved security, and cross-platform support. Unlike ROS 1, ROS 2 does <em>not</em> use a centralized global parameter server — each node maintains its own parameter store.
+</details>
+
+---
+
+**4. What communication middleware does ROS 2 use by default?**
+
+- a) MQTT
+- b) ZeroMQ
+- c) DDS (Data Distribution Service)
+- d) ROS 1 master
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) DDS (Data Distribution Service)</strong><br>
+ROS 2 uses DDS for communication, allowing for more efficient and reliable data exchange between components.
+</details>
+
+---
+
+**5. Which ROS 2 distributions are currently LTS (Long-Term Support)? (select all that apply)**
+
+- a) Foxy Fitzroy
+- b) Humble Hawksbill
+- c) Iron Irwini
+- d) Jazzy Jalisco
+- e) Lyrical Luthier
+
+<details>
+<summary>Show correct answers</summary>
+<br>
+<strong>b) Humble Hawksbill, d) Jazzy Jalisco, e) Lyrical Luthier</strong><br>
+Humble Hawksbill (EOL 06/2027), Jazzy Jalisco (EOL 05/2029), and Lyrical Luthier (EOL 05/2031) are the current and upcoming LTS distributions. Foxy Fitzroy was an LTS but reached EOL in 06/2023. Iron Irwini is not an LTS release.
+</details>
+
+---
+
 ## Next Steps
 
 In the [next tutorial](/tutorials/ros2/installing-ros2/), I will guide you through the process of setting up your first ROS 2 workspace, and installing the necessary tools. By the end of that tutorial, you will have a functional ROS 2 environment ready for your robotics projects.

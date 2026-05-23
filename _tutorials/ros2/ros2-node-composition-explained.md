@@ -759,3 +759,83 @@ Node composition is a powerful ROS 2 feature that lets you reduce system overhea
 ### What's next
 
 - **Lifecycle Nodes**, nodes that follow the ROS 2 managed-node lifecycle, giving you fine-grained control over startup, shutdown, and error recovery.
+
+## Test your knowledge
+
+**1. What is the key structural difference between a regular node and a composable node?**
+
+- a) Composable nodes are written in Python; regular nodes are written in C++
+- b) Composable nodes are packaged as shared library plugins instead of standalone executables
+- c) Composable nodes cannot use publishers or subscribers
+- d) Composable nodes run on a separate machine from the container
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) Composable nodes are packaged as shared library plugins instead of standalone executables</strong><br>
+A composable node has no <code>main()</code> function and is compiled as a shared library (<code>.so</code>). The <code>RCLCPP_COMPONENTS_REGISTER_NODE</code> macro registers it so it can be loaded at runtime into any compatible component container.
+</details>
+
+---
+
+**2. Which component container type assigns a dedicated executor thread to each loaded node?**
+
+- a) `component_container`
+- b) `component_container_mt`
+- c) `component_container_isolated`
+- d) `component_container_realtime`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) component_container_isolated</strong><br>
+<code>component_container_isolated</code> gives each loaded component its own dedicated executor thread, so a slow or blocking callback in one node cannot delay callbacks in another node sharing the same container.
+</details>
+
+---
+
+**3. Which of the following are true about intra-process communication (IPC) in ROS 2? (select all that apply)**
+
+- a) IPC skips DDS serialization when both publisher and subscriber are in the same process
+- b) IPC is enabled by setting `use_intra_process_comms=True` in NodeOptions
+- c) IPC works automatically even if the nodes are in different processes
+- d) Using `std::unique_ptr` in publishers and subscribers enables zero-copy message transfer with IPC
+
+<details>
+<summary>Show correct answers</summary>
+<br>
+<strong>a) IPC skips DDS serialization when both publisher and subscriber are in the same process, b) IPC is enabled by setting use_intra_process_comms=True in NodeOptions, d) Using std::unique_ptr in publishers and subscribers enables zero-copy message transfer with IPC</strong><br>
+IPC only activates when both nodes are in the same process and both have <code>use_intra_process_comms</code> enabled. Cross-process communication always falls back to the normal DDS path. Moving a <code>std::unique_ptr</code> into <code>publish()</code> transfers ownership without any copy.
+</details>
+
+---
+
+**4. What is the difference between dynamic and static composition?**
+
+- a) Dynamic composition uses C++; static composition uses Python
+- b) Dynamic composition loads nodes into a container at runtime via a service; static composition instantiates nodes directly in a `main()` function at compile time
+- c) Dynamic composition requires a separate machine for the container
+- d) Static composition only supports single-threaded executors
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) Dynamic composition loads nodes into a container at runtime via a service; static composition instantiates nodes directly in a main() function at compile time</strong><br>
+With dynamic composition the container process starts first and nodes are loaded later using <code>ros2 component load</code> or a launch file. With static composition the set of nodes is fixed at build time and wired directly into a <code>main()</code>, resulting in a single self-contained executable with no container service overhead.
+</details>
+
+---
+
+**5. Which launch actions from `launch_ros` are used to manage composable nodes? (select all that apply)**
+
+- a) `ComposableNodeContainer`
+- b) `LoadComposableNodes`
+- c) `Node`
+- d) `LifecycleNode`
+
+<details>
+<summary>Show correct answers</summary>
+<br>
+<strong>a) ComposableNodeContainer, b) LoadComposableNodes</strong><br>
+<code>ComposableNodeContainer</code> starts a new container process and optionally loads an initial set of components into it. <code>LoadComposableNodes</code> loads components into an already-running container. <code>Node</code> and <code>LifecycleNode</code> are for regular and lifecycle nodes respectively.
+</details>

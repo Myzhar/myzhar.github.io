@@ -170,3 +170,83 @@ By hovering the mouse cursor over a node or a topic, you can highlight all of it
 In this tutorial, we explored the concept of node names and namespaces in ROS 2. You learned how namespaces can be used to organize and isolate nodes, topics, and services, allowing for better modularity and reduced naming conflicts in complex robotic systems. We also demonstrated how to run nodes with specific names and namespaces, visualize the ROS 2 graph using `rqt_graph`, and use topic name remapping to subscribe to topics across different namespaces.
 
 Understanding and effectively using node names and namespaces is crucial for developing robust ROS 2 applications, especially when dealing with multiple robots or components. By leveraging these concepts, you can enhance the overall organization and clarity of your robotic systems.
+
+## Test your knowledge
+
+**1. How do you assign a custom name to a node at startup without modifying its code?**
+
+- a) `ros2 run demo_nodes_cpp talker --name my_talker`
+- b) `ros2 run demo_nodes_cpp talker --ros-args -r __node:=my_talker`
+- c) `ros2 run demo_nodes_cpp talker --ros-args --node-name my_talker`
+- d) `ros2 run demo_nodes_cpp talker -n my_talker`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) ros2 run demo_nodes_cpp talker --ros-args -r __node:=my_talker</strong><br>
+Node name remapping uses <code>--ros-args -r __node:=new_name</code>. This changes the node's name in the ROS graph without altering the executable or its source code.
+</details>
+
+---
+
+**2. What is the fully qualified name of a node with name `sensor` running under namespace `/robot1`?**
+
+- a) `robot1/sensor`
+- b) `/sensor/robot1`
+- c) `/robot1/sensor`
+- d) `sensor_robot1`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) /robot1/sensor</strong><br>
+A fully qualified node name combines the namespace prefix and the node name with a leading slash: <code>/robot1/sensor</code>.
+</details>
+
+---
+
+**3. Which command assigns the namespace `/robot2` to a node at startup?**
+
+- a) `ros2 run demo_nodes_cpp talker --ros-args --namespace /robot2`
+- b) `ros2 run demo_nodes_cpp talker --ros-args -r __ns:=/robot2`
+- c) `ros2 run demo_nodes_cpp talker /robot2`
+- d) `ros2 run demo_nodes_cpp talker --ns /robot2`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) ros2 run demo_nodes_cpp talker --ros-args -r __ns:=/robot2</strong><br>
+Namespace remapping uses <code>--ros-args -r __ns:=/namespace_name</code>. This prepends the given namespace to the node name and all its relative topic and service names.
+</details>
+
+---
+
+**4. What does topic name remapping allow you to do? (select all that apply)**
+
+- a) Subscribe to a topic from a different namespace without changing the node's namespace
+- b) Rename a topic to a fully qualified name at runtime
+- c) Create a new topic type
+- d) Redirect a node's topic to a topic published under another namespace
+
+<details>
+<summary>Show correct answers</summary>
+<br>
+<strong>a) Subscribe to a topic from a different namespace without changing the node's namespace, b) Rename a topic to a fully qualified name at runtime, d) Redirect a node's topic to a topic published under another namespace</strong><br>
+Topic name remapping (e.g., <code>--ros-args -r chatter:=/robot1/chatter</code>) lets you redirect a node's relative topic name to any fully qualified topic name at launch time, without touching the node's source code or namespace.
+</details>
+
+---
+
+**5. Which tool provides a graphical view of active nodes and their topic connections?**
+
+- a) `ros2 node list`
+- b) `rviz2`
+- c) `rqt_graph`
+- d) `ros2 topic echo`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) rqt_graph</strong><br>
+<code>rqt_graph</code> renders the live ROS 2 graph as a visual diagram showing nodes (circles), topics (rectangles), and the data-flow arrows between them.
+</details>

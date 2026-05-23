@@ -246,3 +246,83 @@ You can find an example of this pattern in the [ZED-ROS2-Wrapper package](https:
 ## Conclusion
 
 In this tutorial, we explored how to manage parameters in ROS 2 using YAML files, command-line tools, and dynamic updates via services and callbacks. By leveraging these techniques, you can create flexible and configurable nodes that adapt to different environments and requirements.
+
+## Test your knowledge
+
+**1. How do you pass multiple parameters to a node at startup from the command line?**
+
+- a) `ros2 run my_pkg my_node param1:=val1 param2:=val2`
+- b) `ros2 run my_pkg my_node --ros-args -p param1:=val1 -p param2:=val2`
+- c) `ros2 run my_pkg my_node --params param1=val1,param2=val2`
+- d) `ros2 run my_pkg my_node --set param1 val1 --set param2 val2`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) ros2 run my_pkg my_node --ros-args -p param1:=val1 -p param2:=val2</strong><br>
+The correct syntax uses <code>--ros-args</code> followed by one <code>-p param_name:=value</code> flag per parameter. Multiple parameters are passed by repeating the <code>-p</code> flag.
+</details>
+
+---
+
+**2. What is the mandatory YAML key that groups a node's parameters in a ROS 2 parameter file?**
+
+- a) `parameters:`
+- b) `ros_params:`
+- c) `ros__parameters:`
+- d) `node_params:`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) ros__parameters:</strong><br>
+ROS 2 parameter YAML files use the structure <code>node_name: ros__parameters: ...</code>. The double underscore in <code>ros__parameters</code> is mandatory and distinguishes it from other YAML keys.
+</details>
+
+---
+
+**3. Which command loads parameters from a YAML file when starting a node?**
+
+- a) `ros2 run my_pkg my_node --ros-args --params-file /path/to/params.yaml`
+- b) `ros2 run my_pkg my_node --config /path/to/params.yaml`
+- c) `ros2 run my_pkg my_node --yaml /path/to/params.yaml`
+- d) `ros2 param load /path/to/params.yaml my_node`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>a) ros2 run my_pkg my_node --ros-args --params-file /path/to/params.yaml</strong><br>
+The <code>--ros-args --params-file</code> option tells the node to load all parameters defined in the given YAML file at startup.
+</details>
+
+---
+
+**4. Which of the following are parameter-related services exposed by every ROS 2 node? (select all that apply)**
+
+- a) `SetParameters`
+- b) `GetParameters`
+- c) `ListParameters`
+- d) `DeleteParameters`
+
+<details>
+<summary>Show correct answers</summary>
+<br>
+<strong>a) SetParameters, b) GetParameters, c) ListParameters</strong><br>
+Every ROS 2 node automatically exposes <code>SetParameters</code>, <code>GetParameters</code>, <code>ListParameters</code>, <code>DescribeParameters</code>, <code>GetParameterTypes</code>, and <code>SetParametersAtomically</code>. There is no <code>DeleteParameters</code> service in the standard interface.
+</details>
+
+---
+
+**5. What happens when you call `ros2 param set` with a value of an incompatible type?**
+
+- a) The parameter is silently ignored
+- b) The node crashes
+- c) The service returns an error and the parameter value does not change
+- d) The parameter is cast to the nearest compatible type
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) The service returns an error and the parameter value does not change</strong><br>
+ROS 2 parameters are strongly typed. If the new value is incompatible with the declared type, the <code>SetParameters</code> service returns a failure result and the parameter retains its previous value.
+</details>

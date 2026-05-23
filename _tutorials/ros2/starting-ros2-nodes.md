@@ -272,3 +272,83 @@ In this tutorial, we explored how to start and manage ROS 2 nodes using both the
 Understanding how to start and manage nodes is essential for building complex robotics applications using ROS 2. In future tutorials, we will delve deeper into node communication, parameter management, and more advanced topics.
 
 Happy coding with ROS 2!
+
+## Test your knowledge
+
+**1. What is the correct command to run the `talker` executable from the `demo_nodes_cpp` package?**
+
+- a) `ros2 start demo_nodes_cpp talker`
+- b) `ros2 run demo_nodes_cpp talker`
+- c) `ros2 launch demo_nodes_cpp talker`
+- d) `ros2 node demo_nodes_cpp talker`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) ros2 run demo_nodes_cpp talker</strong><br>
+The <code>ros2 run &lt;package_name&gt; &lt;node_executable&gt;</code> command is used to start a single node from a package.
+</details>
+
+---
+
+**2. How do you stop a running ROS 2 node in the terminal?**
+
+- a) `ros2 node stop`
+- b) `kill -9 <pid>`
+- c) `Ctrl + C`
+- d) `ros2 shutdown`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) Ctrl + C</strong><br>
+Pressing Ctrl + C sends a SIGINT termination signal to the node, allowing it to shut down gracefully via the rclcpp signal handler.
+</details>
+
+---
+
+**3. Which of the following are valid formats for writing ROS 2 launch files? (select all that apply)**
+
+- a) Python
+- b) XML
+- c) YAML
+- d) JSON
+
+<details>
+<summary>Show correct answers</summary>
+<br>
+<strong>a) Python, b) XML, c) YAML</strong><br>
+ROS 2 supports launch files written in Python, XML, and YAML. JSON is not a supported format.
+</details>
+
+---
+
+**4. What does the `output='screen'` argument do in a Python launch file Node action?**
+
+- a) Opens a new terminal window for the node
+- b) Directs the node's stdout/stderr output to the terminal running the launch file
+- c) Saves the output to a log file on screen
+- d) Enables graphical output for the node
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) Directs the node's stdout/stderr output to the terminal running the launch file</strong><br>
+Setting <code>output='screen'</code> causes the node's log messages to be printed directly in the terminal where <code>ros2 launch</code> was invoked, which is useful for monitoring nodes interactively.
+</details>
+
+---
+
+**5. What function must a Python launch file define for the ROS 2 launch system to use it?**
+
+- a) `main()`
+- b) `launch()`
+- c) `generate_launch_description()`
+- d) `create_launch_description()`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) generate_launch_description()</strong><br>
+The ROS 2 launch system looks for a function named <code>generate_launch_description()</code> in the launch file. This function must return a <code>LaunchDescription</code> object containing all the nodes and actions to start.
+</details>

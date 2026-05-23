@@ -277,3 +277,83 @@ In this tutorial, you learned how to install ROS 2 on your system, set up your e
 With ROS 2 installed and configured, you're now ready to start exploring the powerful features of ROS 2 and begin developing your own robotics applications. In the next tutorial, we will dive into creating and managing ROS 2 packages, so stay tuned!
 
 The next tutorial of this series explains how to start ROS 2 nodes: [Starting ROS 2 Nodes](/tutorials/ros2/starting-ros2-nodes/).
+
+## Test your knowledge
+
+**1. What is the recommended installation method for ROS 2 on Ubuntu?**
+
+- a) Building from source
+- b) Installing via binary packages using `apt`
+- c) Using a Docker image
+- d) Using pip
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) Installing via binary packages using apt</strong><br>
+Installing from binary packages is the recommended method for most users. Building from source is possible but is typically only necessary for advanced use cases or when the latest unreleased features are needed.
+</details>
+
+---
+
+**2. Why does ROS 2 require UTF-8 locale configuration?**
+
+- a) To support non-ASCII node names
+- b) Because the ROS 2 build tools and package names depend on proper locale settings
+- c) To enable multilingual documentation generation
+- d) To allow YAML parameter files with unicode characters
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) Because the ROS 2 build tools and package names depend on proper locale settings</strong><br>
+ROS 2 requires UTF-8 locales to be set up on the system before installation. Without the correct locale, package tools may misbehave during installation or use.
+</details>
+
+---
+
+**3. Which commands are needed to initialize rosdep? (select all that apply)**
+
+- a) `sudo rosdep init`
+- b) `rosdep update`
+- c) `sudo apt install rosdep`
+- d) `rosdep install --from-paths src`
+
+<details>
+<summary>Show correct answers</summary>
+<br>
+<strong>a) sudo rosdep init, b) rosdep update</strong><br>
+After installing the ROS 2 development tools, you must run <code>sudo rosdep init</code> followed by <code>rosdep update</code> to initialize rosdep and fetch the latest package dependency database.
+</details>
+
+---
+
+**4. What does sourcing `/opt/ros/<distro>/setup.bash` do?**
+
+- a) Installs the ROS 2 distribution
+- b) Sets up environment variables so ROS 2 commands and tools are available in the current shell
+- c) Creates a new ROS 2 workspace
+- d) Updates the ROS 2 package index
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) Sets up environment variables so ROS 2 commands and tools are available in the current shell</strong><br>
+The setup script configures the shell environment (PATH, AMENT_PREFIX_PATH, etc.) so that ROS 2 commands like <code>ros2 run</code> and <code>ros2 pkg list</code> are accessible.
+</details>
+
+---
+
+**5. Which environment variable is used to identify the active ROS 2 workspace paths?**
+
+- a) `ROS_DISTRO`
+- b) `ROS_DOMAIN_ID`
+- c) `COLCON_PREFIX_PATH`
+- d) `RMW_IMPLEMENTATION`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) COLCON_PREFIX_PATH</strong><br>
+<code>COLCON_PREFIX_PATH</code> lists the install directories of all sourced ROS 2 workspaces. Running <code>echo $COLCON_PREFIX_PATH</code> after sourcing the workspace setup script confirms that the workspace is correctly included in the environment.
+</details>

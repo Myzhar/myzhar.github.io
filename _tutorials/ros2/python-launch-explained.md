@@ -716,3 +716,83 @@ Future tutorials will cover more advanced launch patterns:
 - **Node Composition** — loading multiple nodes into a single process using `ComposableNodeContainer` and `LoadComposableNodes` to reduce inter-process communication overhead.
 - **Lifecycle Node Management** — orchestrating nodes that follow the ROS 2 managed-node lifecycle with `LifecycleNode` and `OnStateTransition` event handlers.
 
+## Test your knowledge
+
+**1. What is the entry point function that the ROS 2 launch system requires in every Python launch file?**
+
+- a) `main()`
+- b) `launch()`
+- c) `generate_launch_description()`
+- d) `create_launch()`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) generate_launch_description()</strong><br>
+The ROS 2 launch system looks for a function named <code>generate_launch_description()</code> and calls it to obtain the <code>LaunchDescription</code> object that defines all nodes and actions to start.
+</details>
+
+---
+
+**2. Which action is used to declare a configurable argument in a Python launch file?**
+
+- a) `LaunchArgument`
+- b) `DeclareLaunchArgument`
+- c) `SetLaunchArgument`
+- d) `AddLaunchArgument`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) DeclareLaunchArgument</strong><br>
+<code>DeclareLaunchArgument</code> from <code>launch.actions</code> declares a named argument that can be passed on the command line when running <code>ros2 launch</code>, and optionally sets a default value and description.
+</details>
+
+---
+
+**3. What is the purpose of `OpaqueFunction` in a Python launch file?**
+
+- a) It hides sensitive launch arguments from the terminal output
+- b) It wraps a plain Python function so it executes during the launch process, allowing arguments to be resolved before building nodes
+- c) It launches a node without any output
+- d) It creates an anonymous node with no name
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) It wraps a plain Python function so it executes during the launch process, allowing arguments to be resolved before building nodes</strong><br>
+<code>OpaqueFunction</code> defers node construction to a regular Python function (<code>launch_setup</code>). Inside that function you can call <code>.perform(context)</code> on any <code>LaunchConfiguration</code> to get its resolved string value and use plain Python logic to build the actions.
+</details>
+
+---
+
+**4. Which substitution resolves the value of a declared launch argument at runtime?**
+
+- a) `TextSubstitution`
+- b) `LaunchConfiguration`
+- c) `FindPackage`
+- d) `EnvironmentVariable`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) LaunchConfiguration</strong><br>
+<code>LaunchConfiguration('arg_name')</code> is a substitution that resolves to the current value of a declared launch argument at the moment the launch description is executed.
+</details>
+
+---
+
+**5. Which actions from `launch_ros.actions` can be used to start a standard ROS 2 node? (select all that apply)**
+
+- a) `Node`
+- b) `LifecycleNode`
+- c) `ComposableNodeContainer`
+- d) `ExecuteProcess`
+
+<details>
+<summary>Show correct answers</summary>
+<br>
+<strong>a) Node, b) LifecycleNode</strong><br>
+<code>Node</code> starts a regular ROS 2 node, and <code>LifecycleNode</code> starts a managed lifecycle node. <code>ComposableNodeContainer</code> starts a container for composable nodes (not a standalone node), and <code>ExecuteProcess</code> is a generic process launcher from the core <code>launch</code> module, not ROS 2 specific.
+</details>
+

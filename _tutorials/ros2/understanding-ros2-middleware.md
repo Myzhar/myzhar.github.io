@@ -372,3 +372,83 @@ In short, the daemon is there to **accelerate** and stabilize ROS 2 introspectio
 Choosing the right RMW implementation is crucial for the performance and compatibility of your ROS 2 applications. By understanding the strengths and weaknesses of each middleware option, you can make informed decisions that align with your project's requirements. Remember to test your setup thoroughly and consult the documentation for any specific configuration details.
 
 A final note: I cited QoS (Quality of Service) settings throughout this guide, but I consciously avoided deep diving into them. QoS settings are essential for fine-tuning the behavior of your ROS 2 nodes and ensuring reliable communication, especially in complex systems. I will dedicate a special section to QoS settings in a future tutorial.
+
+## Test your knowledge
+
+**1. What environment variable do you set to select the RMW implementation in ROS 2?**
+
+- a) `ROS_DISTRO`
+- b) `RMW_IMPLEMENTATION`
+- c) `ROS_MIDDLEWARE`
+- d) `DDS_VENDOR`
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) RMW_IMPLEMENTATION</strong><br>
+You select the active middleware by exporting <code>RMW_IMPLEMENTATION</code> to the desired value (e.g., <code>rmw_fastrtps_cpp</code>, <code>rmw_cyclonedds_cpp</code>) before running your nodes.
+</details>
+
+---
+
+**2. Which DDS implementation is the default middleware in ROS 2 distributions such as Humble, Jazzy, and Kilted?**
+
+- a) Cyclone DDS
+- b) Connext DDS
+- c) Fast DDS (eProsima)
+- d) GurumDDS
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) Fast DDS (eProsima)</strong><br>
+Fast DDS (formerly Fast RTPS) is the default DDS middleware in Foxy, Humble, Iron, Jazzy, and Kilted. Cyclone DDS was the default in Galactic.
+</details>
+
+---
+
+**3. Which statements about Zenoh as a ROS 2 middleware are correct? (select all that apply)**
+
+- a) Zenoh is a DDS implementation
+- b) Zenoh is designed for heterogeneous networks including WAN and constrained links
+- c) Zenoh is used via the `rmw_zenoh_cpp` RMW implementation
+- d) Zenoh integrates pub/sub, queries, and data persistence in a unified stack
+
+<details>
+<summary>Show correct answers</summary>
+<br>
+<strong>b) Zenoh is designed for heterogeneous networks including WAN and constrained links, c) Zenoh is used via the rmw_zenoh_cpp RMW implementation, d) Zenoh integrates pub/sub, queries, and data persistence in a unified stack</strong><br>
+Zenoh is <em>not</em> a DDS implementation — it is a distinct data-centric protocol. It targets diverse network topologies (LAN, WAN, 4G/5G) and provides an integrated stack for pub/sub, queries, and storage.
+</details>
+
+---
+
+**4. What is the purpose of the ROS 2 daemon?**
+
+- a) It acts as a mandatory message broker between all nodes
+- b) It caches ROS graph information to speed up CLI introspection commands
+- c) It replaces the ROS 1 master node
+- d) It manages DDS security certificates
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>b) It caches ROS graph information to speed up CLI introspection commands</strong><br>
+The ROS 2 daemon is an optional background process that tracks the ROS graph (nodes, topics, services) to make commands like <code>ros2 node list</code> return quickly. Nodes do not depend on it to communicate.
+</details>
+
+---
+
+**5. What should you do after switching the RMW implementation to avoid stale CLI behaviour?**
+
+- a) Reboot the machine
+- b) Reinstall the ROS 2 packages
+- c) Stop and restart the ROS 2 daemon
+- d) Delete the `~/.ros` directory
+
+<details>
+<summary>Show correct answer</summary>
+<br>
+<strong>c) Stop and restart the ROS 2 daemon</strong><br>
+If you switch <code>RMW_IMPLEMENTATION</code> while the daemon is running, CLI tools can get confused because the daemon was started with a different middleware. Running <code>ros2 daemon stop</code> followed by <code>ros2 daemon start</code> forces the CLI to use the new RMW.
+</details>
