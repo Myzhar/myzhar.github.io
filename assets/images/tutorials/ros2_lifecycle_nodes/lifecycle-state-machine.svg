@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 900" width="1500" height="900">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#4ade80"/>
+    </marker>
+    <marker id="arr-fail" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#f87171"/>
+    </marker>
+    <marker id="arr-err" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#fb923c"/>
+    </marker>
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-amber" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1500" height="900" fill="#0d1117"/>
+  <rect width="1500" height="900" fill="url(#bg-grad)" opacity="0.3"/>
+
+  <!-- Title -->
+  <text x="750" y="44" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="26" font-weight="bold" fill="#e2e8f0">
+    ROS 2 Lifecycle Node — State Machine
+  </text>
+
+  <!-- ===== PRIMARY STATES (blue) ===== -->
+  <!-- box helper: x,y = top-left corner; w=220 h=60 r=12 -->
+
+  <!-- Unconfigured: center=(150,240) box=(40,210,220,60) -->
+  <rect x="40" y="210" width="220" height="60" rx="12"
+        fill="#0f2d4a" stroke="#3b82f6" stroke-width="2.5" filter="url(#glow-blue)"/>
+  <text x="150" y="246" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#93c5fd">
+    Unconfigured
+  </text>
+
+  <!-- Inactive: center=(750,240) box=(660,210,180,60) -->
+  <rect x="660" y="210" width="180" height="60" rx="12"
+        fill="#0f2d4a" stroke="#3b82f6" stroke-width="2.5" filter="url(#glow-blue)"/>
+  <text x="750" y="246" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#93c5fd">
+    Inactive
+  </text>
+
+  <!-- Active: center=(1340,240) box=(1250,210,180,60) -->
+  <rect x="1250" y="210" width="180" height="60" rx="12"
+        fill="#0f2d4a" stroke="#3b82f6" stroke-width="2.5" filter="url(#glow-blue)"/>
+  <text x="1340" y="246" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#93c5fd">
+    Active
+  </text>
+
+  <!-- Finalized: center=(750,810) box=(660,780,180,60) -->
+  <rect x="660" y="780" width="180" height="60" rx="12"
+        fill="#0d2438" stroke="#3b82f6" stroke-width="1.8" stroke-dasharray="7,4"/>
+  <text x="750" y="816" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#60a5fa">
+    Finalized
+  </text>
+
+  <!-- ===== TRANSITION STATES (amber) ===== -->
+
+  <!-- Configuring: center=(450,130) box=(360,100,180,60) -->
+  <rect x="360" y="100" width="180" height="60" rx="10"
+        fill="#2d1a00" stroke="#f59e0b" stroke-width="2" filter="url(#glow-amber)"/>
+  <text x="450" y="136" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#fbbf24">
+    Configuring
+  </text>
+
+  <!-- CleaningUp: center=(450,390) box=(360,360,180,60) -->
+  <rect x="360" y="360" width="180" height="60" rx="10"
+        fill="#2d1a00" stroke="#f59e0b" stroke-width="2" filter="url(#glow-amber)"/>
+  <text x="450" y="396" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#fbbf24">
+    CleaningUp
+  </text>
+
+  <!-- Activating: center=(1000,130) box=(910,100,180,60) -->
+  <rect x="910" y="100" width="180" height="60" rx="10"
+        fill="#2d1a00" stroke="#f59e0b" stroke-width="2" filter="url(#glow-amber)"/>
+  <text x="1000" y="136" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#fbbf24">
+    Activating
+  </text>
+
+  <!-- Deactivating: center=(1000,390) box=(910,360,180,60) -->
+  <rect x="910" y="360" width="180" height="60" rx="10"
+        fill="#2d1a00" stroke="#f59e0b" stroke-width="2" filter="url(#glow-amber)"/>
+  <text x="1000" y="396" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#fbbf24">
+    Deactivating
+  </text>
+
+  <!-- ShuttingDown: center=(340,590) box=(240,560,200,60) -->
+  <rect x="240" y="560" width="200" height="60" rx="10"
+        fill="#2d1a00" stroke="#f59e0b" stroke-width="2" filter="url(#glow-amber)"/>
+  <text x="340" y="596" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#fbbf24">
+    ShuttingDown
+  </text>
+
+  <!-- ErrorProcessing: center=(1050,590) box=(935,560,230,60) -->
+  <rect x="935" y="560" width="230" height="60" rx="10"
+        fill="#2d0000" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="1050" y="596" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#fca5a5">
+    ErrorProcessing
+  </text>
+
+  <!-- ===== MAIN FLOW ARROWS ===== -->
+
+  <!-- configure: Unconfigured(260,240) → Configuring(360,130) -->
+  <line x1="263" y1="233" x2="365" y2="158"
+        stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="290" y="186" font-family="'Courier New', monospace" font-size="12"
+        fill="#94a3b8" transform="rotate(-36, 290, 186)">configure</text>
+
+  <!-- Configuring(540,130) → Inactive(660,230) : success -->
+  <line x1="538" y1="158" x2="660" y2="228"
+        stroke="#4ade80" stroke-width="2" marker-end="url(#arr-ok)"/>
+  <text x="598" y="182" font-family="'Courier New', monospace" font-size="12"
+        fill="#4ade80" transform="rotate(37, 598, 182)">success</text>
+
+  <!-- Configuring failure → Unconfigured : arc from (360,118) curving up-left to (150,210) -->
+  <path d="M 362 112 Q 240 44 148 210"
+        stroke="#f87171" stroke-width="1.8" fill="none" marker-end="url(#arr-fail)"/>
+  <text x="220" y="100" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="12" fill="#f87171">failure</text>
+
+  <!-- activate: Inactive(840,240) → Activating(910,130) -->
+  <line x1="840" y1="232" x2="915" y2="158"
+        stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="862" y="186" font-family="'Courier New', monospace" font-size="12"
+        fill="#94a3b8" transform="rotate(-46, 862, 186)">activate</text>
+
+  <!-- Activating(1090,130) → Active(1250,228) : success -->
+  <line x1="1090" y1="158" x2="1252" y2="228"
+        stroke="#4ade80" stroke-width="2" marker-end="url(#arr-ok)"/>
+  <text x="1178" y="182" font-family="'Courier New', monospace" font-size="12"
+        fill="#4ade80" transform="rotate(34, 1178, 182)">success</text>
+
+  <!-- Activating failure → Inactive : arc from (910,118) curve to (840,210) -->
+  <path d="M 912 110 Q 860 60 750 210"
+        stroke="#f87171" stroke-width="1.8" fill="none" marker-end="url(#arr-fail)"/>
+  <text x="836" y="84" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="12" fill="#f87171">failure</text>
+
+  <!-- deactivate: Active(1250,260) → Deactivating(1090,360) -->
+  <line x1="1248" y1="270" x2="1090" y2="362"
+        stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="1200" y="322" font-family="'Courier New', monospace" font-size="12"
+        fill="#94a3b8" transform="rotate(-48, 1200, 322)">deactivate</text>
+
+  <!-- Deactivating(910,390) → Inactive(840,260) : success -->
+  <line x1="912" y1="375" x2="840" y2="268"
+        stroke="#4ade80" stroke-width="2" marker-end="url(#arr-ok)"/>
+  <text x="860" y="332" font-family="'Courier New', monospace" font-size="12"
+        fill="#4ade80" transform="rotate(55, 860, 332)">success</text>
+
+  <!-- Deactivating failure → Active : small arc -->
+  <path d="M 1090 362 Q 1200 330 1252 268"
+        stroke="#f87171" stroke-width="1.8" fill="none" marker-end="url(#arr-fail)"/>
+  <text x="1185" y="322" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="11" fill="#f87171">failure</text>
+
+  <!-- cleanup: Inactive(660,260) → CleaningUp(540,360) -->
+  <line x1="660" y1="268" x2="538" y2="362"
+        stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="586" y="320" font-family="'Courier New', monospace" font-size="12"
+        fill="#94a3b8" transform="rotate(48, 586, 320)">cleanup</text>
+
+  <!-- CleaningUp(360,390) → Unconfigured(260,260) : success -->
+  <line x1="362" y1="375" x2="258" y2="268"
+        stroke="#4ade80" stroke-width="2" marker-end="url(#arr-ok)"/>
+  <text x="290" y="332" font-family="'Courier New', monospace" font-size="12"
+        fill="#4ade80" transform="rotate(54, 290, 332)">success</text>
+
+  <!-- CleaningUp failure → Inactive : arc right -->
+  <path d="M 540 388 Q 630 440 660 268"
+        stroke="#f87171" stroke-width="1.8" fill="none" marker-end="url(#arr-fail)"/>
+  <text x="658" y="440" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="11" fill="#f87171">failure</text>
+
+  <!-- ===== SHUTDOWN ARROWS (dashed, from all primary states) ===== -->
+
+  <!-- Unconfigured(150,270) → ShuttingDown(240,575) -->
+  <line x1="152" y1="270" x2="252" y2="562"
+        stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+  <text x="165" y="425" font-family="'Courier New', monospace" font-size="11"
+        fill="#94a3b8" transform="rotate(72, 165, 425)">shutdown</text>
+
+  <!-- Inactive(710,270) → ShuttingDown(340,560) -->
+  <path d="M 700 270 Q 550 460 440 562"
+        stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#arr)"/>
+  <text x="555" y="440" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="11" fill="#94a3b8">shutdown</text>
+
+  <!-- Active(1250,260) → ShuttingDown(440,575) - long path -->
+  <path d="M 1260 272 Q 800 500 440 578"
+        stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#arr)"/>
+  <text x="890" y="510" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="11" fill="#94a3b8">shutdown</text>
+
+  <!-- ShuttingDown(440,590) → Finalized(660,790) -->
+  <path d="M 442 618 Q 540 720 660 798"
+        stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arr-ok)"/>
+  <text x="520" y="724" font-family="'Courier New', monospace" font-size="12"
+        fill="#4ade80" transform="rotate(40, 520, 724)">success</text>
+
+  <!-- ShuttingDown(440,590) → ErrorProcessing(935,595) -->
+  <line x1="440" y1="592" x2="934" y2="592"
+        stroke="#fb923c" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-err)"/>
+  <text x="690" y="582" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="11" fill="#fb923c">error</text>
+
+  <!-- ===== ERROR TRANSITIONS (dashed orange, from transition states) ===== -->
+
+  <!-- Configuring(450,160) → ErrorProcessing(1050,560) -->
+  <path d="M 536 156 Q 800 380 937 572"
+        stroke="#fb923c" stroke-width="1.4" stroke-dasharray="4,4" fill="none" marker-end="url(#arr-err)"/>
+
+  <!-- CleaningUp(450,390) → ErrorProcessing(935,590) -->
+  <path d="M 540 398 Q 740 505 936 578"
+        stroke="#fb923c" stroke-width="1.4" stroke-dasharray="4,4" fill="none" marker-end="url(#arr-err)"/>
+
+  <!-- Activating(1000,160) → ErrorProcessing(1050,560) -->
+  <line x1="1002" y1="160" x2="1050" y2="562"
+        stroke="#fb923c" stroke-width="1.4" stroke-dasharray="4,4" marker-end="url(#arr-err)"/>
+
+  <!-- Deactivating(1000,390) → ErrorProcessing(1000,560) -->
+  <line x1="1002" y1="420" x2="1025" y2="562"
+        stroke="#fb923c" stroke-width="1.4" stroke-dasharray="4,4" marker-end="url(#arr-err)"/>
+
+  <!-- Dashed label for error transitions group -->
+  <text x="804" y="460" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="11" fill="#fb923c" opacity="0.75">error</text>
+
+  <!-- ===== ERROR RECOVERY ===== -->
+
+  <!-- ErrorProcessing(935,600) → Unconfigured(150,240): arc going left and up -->
+  <path d="M 937 578 Q 560 700 150 270"
+        stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arr-ok)"/>
+  <text x="510" y="710" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="12" fill="#4ade80">success</text>
+
+  <!-- ErrorProcessing(1050,620) → Finalized(840,790) -->
+  <path d="M 1055 620 Q 990 720 840 795"
+        stroke="#f87171" stroke-width="2" fill="none" marker-end="url(#arr-fail)"/>
+  <text x="990" y="736" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="12" fill="#f87171">failure</text>
+
+  <!-- ===== INITIAL "create" ARROW ===== -->
+  <line x1="40" y1="240" x2="10" y2="240"
+        stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="40,240 30,234 30,246" fill="#94a3b8"/>
+  <text x="5" y="228" text-anchor="start"
+        font-family="'Courier New', monospace" font-size="11" fill="#94a3b8">create</text>
+
+  <!-- ===== destroy ARROW from Finalized ===== -->
+  <line x1="840" y1="810" x2="900" y2="810"
+        stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="905" y="815" text-anchor="start"
+        font-family="'Courier New', monospace" font-size="11" fill="#94a3b8">destroy</text>
+
+  <!-- ===== LEGEND ===== -->
+  <rect x="20" y="846" width="1460" height="42" rx="8"
+        fill="#161f2c" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- Primary state swatch -->
+  <rect x="40" y="858" width="18" height="18" rx="4"
+        fill="#0f2d4a" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="65" y="871" font-family="'Courier New', monospace" font-size="13" fill="#93c5fd">Primary State</text>
+
+  <!-- Transition state swatch -->
+  <rect x="225" y="858" width="18" height="18" rx="4"
+        fill="#2d1a00" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="250" y="871" font-family="'Courier New', monospace" font-size="13" fill="#fbbf24">Transition State</text>
+
+  <!-- Error state swatch -->
+  <rect x="440" y="858" width="18" height="18" rx="4"
+        fill="#2d0000" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="465" y="871" font-family="'Courier New', monospace" font-size="13" fill="#fca5a5">Error State</text>
+
+  <!-- Arrow legends -->
+  <line x1="640" y1="867" x2="680" y2="867"
+        stroke="#4ade80" stroke-width="2" marker-end="url(#arr-ok)"/>
+  <text x="688" y="871" font-family="'Courier New', monospace" font-size="13" fill="#4ade80">Success</text>
+
+  <line x1="800" y1="867" x2="840" y2="867"
+        stroke="#f87171" stroke-width="2" marker-end="url(#arr-fail)"/>
+  <text x="848" y="871" font-family="'Courier New', monospace" font-size="13" fill="#f87171">Failure</text>
+
+  <line x1="960" y1="867" x2="1000" y2="867"
+        stroke="#fb923c" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-err)"/>
+  <text x="1008" y="871" font-family="'Courier New', monospace" font-size="13" fill="#fb923c">Error / Shutdown</text>
+
+  <line x1="1190" y1="867" x2="1230" y2="867"
+        stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="1238" y="871" font-family="'Courier New', monospace" font-size="13" fill="#94a3b8">Trigger</text>
+
+</svg>

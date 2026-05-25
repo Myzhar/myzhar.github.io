@@ -271,8 +271,6 @@ In this tutorial, we explored how to start and manage ROS 2 nodes using both the
 
 Understanding how to start and manage nodes is essential for building complex robotics applications using ROS 2. In future tutorials, we will delve deeper into node communication, parameter management, and more advanced topics.
 
-Happy coding with ROS 2!
-
 ## Test your knowledge
 
 **1. What is the correct command to run the `talker` executable from the `demo_nodes_cpp` package?**
@@ -352,3 +350,11 @@ Setting <code>output='screen'</code> causes the node's log messages to be printe
 <strong>c) generate_launch_description()</strong><br>
 The ROS 2 launch system looks for a function named <code>generate_launch_description()</code> in the launch file. This function must return a <code>LaunchDescription</code> object containing all the nodes and actions to start.
 </details>
+
+---
+
+## What's next
+
+The next tutorial of this series will explain how different ROS 2 nodes communicate: [Understanding the ROS 2 Communication Middleware](/tutorials/ros2/understanding-ros2-middleware/).
+
+**Happy robotics programming!** :robot:

@@ -274,9 +274,7 @@ In future tutorials, I will explain in detail the meaning of the environment var
 
 In this tutorial, you learned how to install ROS 2 on your system, set up your environment, and create a custom terminal configuration for a better development experience. By following these steps, you can ensure that your ROS 2 environment is tailored to your needs and that you have quick access to important information about your setup.
 
-With ROS 2 installed and configured, you're now ready to start exploring the powerful features of ROS 2 and begin developing your own robotics applications. In the next tutorial, we will dive into creating and managing ROS 2 packages, so stay tuned!
-
-The next tutorial of this series explains how to start ROS 2 nodes: [Starting ROS 2 Nodes](/tutorials/ros2/starting-ros2-nodes/).
+With ROS 2 installed and configured, you're now ready to start exploring the powerful features of ROS 2 and begin developing your own robotics applications.
 
 ## Test your knowledge
 
@@ -357,3 +355,11 @@ The setup script configures the shell environment (PATH, AMENT_PREFIX_PATH, etc.
 <strong>c) COLCON_PREFIX_PATH</strong><br>
 <code>COLCON_PREFIX_PATH</code> lists the install directories of all sourced ROS 2 workspaces. Running <code>echo $COLCON_PREFIX_PATH</code> after sourcing the workspace setup script confirms that the workspace is correctly included in the environment.
 </details>
+
+---
+
+## What's next
+
+The next tutorial of this series explains how to start ROS 2 nodes: [Starting ROS 2 Nodes](/tutorials/ros2/starting-ros2-nodes/).
+
+**Happy robotics programming!** :robot:

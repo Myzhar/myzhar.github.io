@@ -250,3 +250,11 @@ Topic name remapping (e.g., <code>--ros-args -r chatter:=/robot1/chatter</code>)
 <strong>c) rqt_graph</strong><br>
 <code>rqt_graph</code> renders the live ROS 2 graph as a visual diagram showing nodes (circles), topics (rectangles), and the data-flow arrows between them.
 </details>
+
+---
+
+## What's next
+
+The next tutorial of this series will explain how to create Python scripts to launch multiple configured nodes with a single command: [ROS 2 Python Launch File Explained](/tutorials/ros2/python-launch-explained/).
+
+**Happy robotics programming!** :robot:

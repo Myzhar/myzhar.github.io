@@ -326,3 +326,11 @@ Every ROS 2 node automatically exposes <code>SetParameters</code>, <code>GetPara
 <strong>c) The service returns an error and the parameter value does not change</strong><br>
 ROS 2 parameters are strongly typed. If the new value is incompatible with the declared type, the <code>SetParameters</code> service returns a failure result and the parameter retains its previous value.
 </details>
+
+---
+
+## What's next
+
+The next tutorial of this series explains important concepts as **Namespace** and **Node Name**: [Understanding ROS 2 Node Names and Namespaces](/tutorials/ros2/understanding-ros2-namespace-node-name/).
+
+**Happy robotics programming!** :robot:

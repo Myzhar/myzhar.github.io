@@ -756,10 +756,6 @@ Node composition is a powerful ROS 2 feature that lets you reduce system overhea
 - **Static composition**: instantiate components directly in a `main()` function and spin them on a single executor; no container service, no launch file, ideal for embedded or fixed production deployments.
 - **Intra-process communication**: enable it with `use_intra_process_comms(true)` and use `std::unique_ptr` ownership in publishers and subscribers to achieve zero-copy message passing.
 
-### What's next
-
-- **Lifecycle Nodes**, nodes that follow the ROS 2 managed-node lifecycle, giving you fine-grained control over startup, shutdown, and error recovery.
-
 ## Test your knowledge
 
 **1. What is the key structural difference between a regular node and a composable node?**
@@ -839,3 +835,11 @@ With dynamic composition the container process starts first and nodes are loaded
 <strong>a) ComposableNodeContainer, b) LoadComposableNodes</strong><br>
 <code>ComposableNodeContainer</code> starts a new container process and optionally loads an initial set of components into it. <code>LoadComposableNodes</code> loads components into an already-running container. <code>Node</code> and <code>LifecycleNode</code> are for regular and lifecycle nodes respectively.
 </details>
+
+---
+
+## What's next
+
+The next tutorial of this series deep dives into the concepts of **Lifecycle Nodes**: [Lifecycle (Managed) Nodes](/tutorials/ros2/ros2-lifecycle-nodes/).
+
+**Happy robotics programming!** :robot:

@@ -229,6 +229,8 @@ Humble Hawksbill (EOL 06/2027), Jazzy Jalisco (EOL 05/2029), and Lyrical Luthier
 
 ---
 
-## Next Steps
+## What's next
 
-In the [next tutorial](/tutorials/ros2/installing-ros2/), I will guide you through the process of setting up your first ROS 2 workspace, and installing the necessary tools. By the end of that tutorial, you will have a functional ROS 2 environment ready for your robotics projects.
+The next tutorial in this series will guide you through installing ROS 2 and laying the foundations for controlling your robot: [Installing ROS 2](/tutorials/ros2/installing-ros2/).
+
+**Happy robotics programming!** :robot:
