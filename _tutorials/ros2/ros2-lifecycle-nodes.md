@@ -28,7 +28,7 @@ Or maybe you have a system with ten nodes that all need to be configured *before
 
 The ROS 2 **lifecycle node** (also called a *managed node*) was designed precisely for these situations. Instead of a node being either "running" or "dead", a lifecycle node exposes a well-defined **state machine**. An external supervisor, a launch file, or another node can drive it through that state machine in a controlled, deterministic order. The node only starts publishing when told to activate. It can be safely deactivated, reconfigured, and re-activated without being destroyed. Errors in individual transition callbacks are isolated and handled without taking down the whole process.
 
-This is not just a nice-to-have. In production robotics, where you have hardware that must be initialized in a specific order, where a robot must start up safely even when some sensors are not yet available, lifecycle nodes are the right tool. They are also the foundation of the entire **Nav2** stack, as we will see later.
+This is not just a nice-to-have. In production robotics, where you have hardware that must be initialized in a specific order, where a robot must start up safely even when some sensors are not yet available, lifecycle nodes are the right tool. They are also the foundation of the entire [Nav2](https://docs.nav2.org/){:target="_blank"} stack, as we will see later.
 
 By the end of this tutorial you will be able to:
 
@@ -36,7 +36,7 @@ By the end of this tutorial you will be able to:
 - Read and explain the lifecycle state machine diagram: primary states, transition states, all transitions.
 - Implement the required callbacks in a C++ lifecycle node.
 - Use the `ros2 lifecycle` CLI to manage a running lifecycle node.
-- Understand how Nav2's Lifecycle Manager orchestrates multiple lifecycle nodes and why the `bond` mechanism was added.
+- Understand how [Nav2's Lifecycle Manager](https://docs.nav2.org/configuration/packages/configuring-lifecycle.html){:target="_blank"} orchestrates multiple lifecycle nodes and why the `bond` mechanism was added.
 - Recognize lifecycle nodes in a real project ([ldrobot-lidar-ros2](https://myzhar.tech/projects/ros2/ldrobot-lidar-ros2/){:target="_blank"}).
 
 ## Prerequisites
@@ -291,20 +291,22 @@ ros2 topic echo /my_node/transition_event
 
 This echoes every `TransitionEvent` message, so you can see exactly when the node changes state and whether transitions succeed or fail. Very handy for debugging.
 
-## A Real-World Example: ldrobot-lidar-ros2
+## A Real-World Example: [LD Lidar ROS 2 Driver](/projects/ros2/ldrobot-lidar-ros2/){:target="_blank"}
 
-I maintain the [ldrobot-lidar-ros2](https://myzhar.tech/projects/ros2/ldrobot-lidar-ros2/){:target="_blank"} project, which provides ROS 2 support for the LDRobot LD-series LiDAR sensors. Hardware drivers are one of the canonical use cases for lifecycle nodes, and this project is a good example of why.
+I maintain the [ldrobot-lidar-ros2](https://myzhar.tech/projects/ros2/ldrobot-lidar-ros2/){:target="_blank"} GitHub repository, which provides ROS 2 support for the LDRobot LD-series LiDAR sensors. Hardware drivers are one of the canonical use cases for lifecycle nodes, and this project is a good example of why.
+
+> You can find all the details about the [LD Lidar ROS 2 Driver](/projects/ros2/ldrobot-lidar-ros2/){:target="_blank"} in the [ROS 2 Project section](/projects/ros2/){:target="_blank"} of the website.
 
 The LiDAR driver must:
 
 1. **Configure**: open the serial port, read device parameters, create the `/scan` publisher.
-2. **Activate**: start the motor, begin streaming laser data, start publishing `/scan` messages.
-3. **Deactivate**: stop the motor, stop publishing — but keep the serial port open.
+2. **Activate**: begin streaming laser data, start publishing `/scan` messages.
+3. **Deactivate**: stop publishing — but keep the serial port open.
 4. **Cleanup**: close the serial port, release all OS resources.
 
-With a plain node, you have no clean way to stop the motor without destroying the node. With a lifecycle node, a supervisor can call `deactivate` to stop the motor safely and `activate` again to restart it — without reinitializing the serial connection. This is exactly the pattern used in the driver.
+With a plain node, you have no clean way to reconfigure the sensor without destroying the node. With a lifecycle node, a supervisor can call `deactivate` to clean up the configuration safely and `activate` again to restart it — without reinitializing the serial connection. This is exactly the pattern used in the driver.
 
-The driver exposes the standard lifecycle services, so Nav2 or any other lifecycle manager can control it in the same way it controls any other lifecycle node in the stack. No custom integration code needed.
+The driver exposes the standard lifecycle services, so [Nav2](https://docs.nav2.org/){:target="_blank"} or any other lifecycle manager can control it in the same way it controls any other lifecycle node in the stack. No custom integration code needed.
 
 See the [project page](https://myzhar.tech/projects/ros2/ldrobot-lidar-ros2/){:target="_blank"} for the full source, launch files, and usage instructions.
 
@@ -312,7 +314,7 @@ See the [project page](https://myzhar.tech/projects/ros2/ldrobot-lidar-ros2/){:t
 
 In a complex system like a mobile robot navigation stack, you typically have *many* lifecycle nodes that must be brought up and down in a specific order. Doing this by hand with `ros2 lifecycle set` is impractical and error-prone.
 
-Nav2 solves this with its [**Lifecycle Manager**](https://docs.nav2.org/configuration/packages/configuring-lifecycle.html){:target="_blank"} (`nav2_lifecycle_manager`). It takes a list of node names and brings them up through `configure` → `activate` **in order**, and brings them down in the **reverse order** on shutdown.
+[Nav2](https://docs.nav2.org/){:target="_blank"} solves this with its [**Lifecycle Manager**](https://docs.nav2.org/configuration/packages/configuring-lifecycle.html){:target="_blank"} (`nav2_lifecycle_manager`). It takes a list of node names and brings them up through `configure` → `activate` **in order**, and brings them down in the **reverse order** on shutdown.
 
 ```yaml
 lifecycle_manager:
@@ -330,9 +332,9 @@ With `autostart: true`, the Lifecycle Manager automatically calls `configure` an
 
 ### Why a custom `Lifecycle` base class was added to Nav2
 
-The standard `rclcpp_lifecycle::LifecycleNode` is correct but minimal. Nav2 added an additional feature that the base ROS 2 lifecycle implementation does not provide: **bonds**.
+The standard `rclcpp_lifecycle::LifecycleNode` is correct but minimal. [Nav2 added an additional feature that the base ROS 2 lifecycle implementation](https://docs.nav2.org/concepts/index.html#lifecycle-nodes-and-bond){:target="_blank"} does not provide: **bonds**. 
 
-A *bond* is a bidirectional heartbeat connection between the Lifecycle Manager and each managed node. The Lifecycle Manager monitors the bond; if a managed node crashes or becomes unresponsive, the bond breaks. When a bond breaks, the Lifecycle Manager automatically transitions **all** managed nodes down to a safe state.
+A *bond* is a bidirectional heartbeat connection between the Lifecycle Manager and each Nav2 managed node. The Lifecycle Manager monitors the bond; if a managed node crashes or becomes unresponsive, the bond breaks. When a bond breaks, the Lifecycle Manager automatically transitions **all** managed nodes down to a safe state.
 
 This matters enormously in a navigation stack. Imagine `amcl` (localization) crashes silently. Without bonds, `bt_navigator` keeps running, sending velocity commands to a robot that no longer knows where it is. With bonds, the broken `amcl` bond immediately triggers a coordinated shutdown of the whole stack.
 
@@ -345,22 +347,22 @@ The key configuration parameters for the bond mechanism are:
 | `attempt_respawn_reconnection` | `true` | Try to reconnect if a node was respawned (e.g., by a process manager) |
 | `bond_respawn_max_duration` | `10.0` s | How long to wait for a respawned node before giving up |
 
-> :bulb: **Tip**: When writing your own lifecycle nodes for use with Nav2, you can extend `nav2_util::LifecycleNode` instead of `rclcpp_lifecycle::LifecycleNode`. The Nav2 variant adds the bond mechanism automatically and integrates with the Lifecycle Manager out of the box.
-
-```cpp
-#include "nav2_util/lifecycle_node.hpp"
-
-class MyNav2Node : public nav2_util::LifecycleNode
-{
-public:
-  MyNav2Node()
-  : nav2_util::LifecycleNode("my_nav2_node")
-  {}
-  // ... same callbacks as before ...
-};
-```
-
-The Nav2 `LifecycleNode` handles all the bond setup and teardown internally. From your callback perspective it is identical to the standard lifecycle node — you just get crash detection for free.
+> :bulb: **Tip**: When writing your own lifecycle nodes for use with Nav2, you can extend [`nav2_util::LifecycleNode`](https://docs.nav2.org/concepts/index.html#lifecycle-nodes-and-bond){:target="_blank"}  instead of `rclcpp_lifecycle::LifecycleNode`. The Nav2 variant adds the bond mechanism automatically and integrates with the Lifecycle Manager out of the box.
+>
+> ```cpp
+> #include "nav2_util/lifecycle_node.hpp"
+>
+> class MyNav2Node : public nav2_util::LifecycleNode
+> {
+> public:
+>   MyNav2Node()
+>   : nav2_util::LifecycleNode("my_nav2_node")
+>   {}
+>   // ... same callbacks as before ...
+> };
+> ```
+>
+> The Nav2 `LifecycleNode` handles all the bond setup and teardown internally. From your callback perspective it is identical to the standard lifecycle > node — you just get crash detection for free.
 
 ## Lifecycle Nodes in Launch Files
 
@@ -534,24 +536,18 @@ When a bond breaks, the Lifecycle Manager begins a coordinated shutdown of all m
 
 **6. You are writing a LiDAR driver as a lifecycle node. Which operations belong in `on_configure` and which in `on_activate`? (select all that apply)**
 
-*Should go in `on_configure`:*
-
 - a) Open the serial port
-- b) Start the motor and begin laser scanning
+- b) begin laser scanning
 - c) Create the `/scan` lifecycle publisher
 - d) Start the publishing timer
-
-*Should go in `on_activate`:*
-
 - e) Call `scan_pub_->on_activate()`
 - f) Read device parameters from the parameter server
-- g) Start the motor
 
 <details>
 <summary>Show correct answers</summary>
 <br>
 <strong>In on_configure: a) Open the serial port, c) Create the /scan lifecycle publisher, f) Read device parameters</strong><br>
-<strong>In on_activate: d) Start the publishing timer, e) Call scan_pub_->on_activate(), g) Start the motor</strong><br>
+<strong>In on_activate: d) Start the publishing timer, e) Call scan_pub_->on_activate()</strong><br>
 <code>on_configure</code> sets up the interface: open hardware connections, allocate publishers, read parameters. The node is now <code>Inactive</code> — nothing flows yet. <code>on_activate</code> starts the data flow: enable the publisher, start timers, command the hardware to begin operating.
 </details>
 
