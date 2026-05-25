@@ -446,10 +446,6 @@ The key takeaways:
 - Nav2's Lifecycle Manager orchestrates an entire stack and adds the `bond` mechanism to detect silent crashes.
 - Real-world hardware drivers like [ldrobot-lidar-ros2](https://myzhar.tech/projects/ros2/ldrobot-lidar-ros2/){:target="_blank"} use lifecycle nodes to ensure clean hardware initialization and safe teardown.
 
-## What's Next
-
-The next tutorials will cover **services** and **actions** to really understand the difference between them, and when using one instead of the other.
-
 ## Test your knowledge
 
 **1. Which of the following are primary states in the ROS 2 lifecycle state machine? (select all that apply)**
@@ -579,3 +575,8 @@ Every lifecycle node exposes these four services automatically. <code>set_parame
 
 ---
 
+## What's next
+
+The next tutorial of this series will cover **Services** and **Actions** to understand the main differences, and when to use one or the other. **Stay tuned**.
+
+**Happy robotics programming!** :robot:

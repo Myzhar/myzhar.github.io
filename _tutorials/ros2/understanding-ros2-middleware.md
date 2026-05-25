@@ -452,3 +452,11 @@ The ROS 2 daemon is an optional background process that tracks the ROS graph (no
 <strong>c) Stop and restart the ROS 2 daemon</strong><br>
 If you switch <code>RMW_IMPLEMENTATION</code> while the daemon is running, CLI tools can get confused because the daemon was started with a different middleware. Running <code>ros2 daemon stop</code> followed by <code>ros2 daemon start</code> forces the CLI to use the new RMW.
 </details>
+
+---
+
+## What's next
+
+The next tutorial of this series will explain how different ROS 2 nodes communicate: [Configuring a ROS 2 Node Using Parameters](/tutorials/ros2/configure-node-with-parameters/).
+
+**Happy robotics programming!** :robot:

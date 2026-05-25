@@ -709,13 +709,6 @@ def generate_launch_description():
     ])
 ```
 
-### What's next
-
-Future tutorials will cover more advanced launch patterns:
-
-- **Node Composition** — loading multiple nodes into a single process using `ComposableNodeContainer` and `LoadComposableNodes` to reduce inter-process communication overhead.
-- **Lifecycle Node Management** — orchestrating nodes that follow the ROS 2 managed-node lifecycle with `LifecycleNode` and `OnStateTransition` event handlers.
-
 ## Test your knowledge
 
 **1. What is the entry point function that the ROS 2 launch system requires in every Python launch file?**
@@ -796,3 +789,10 @@ The ROS 2 launch system looks for a function named <code>generate_launch_descrip
 <code>Node</code> starts a regular ROS 2 node, and <code>LifecycleNode</code> starts a managed lifecycle node. <code>ComposableNodeContainer</code> starts a container for composable nodes (not a standalone node), and <code>ExecuteProcess</code> is a generic process launcher from the core <code>launch</code> module, not ROS 2 specific.
 </details>
 
+---
+
+## What's next
+
+The next tutorial of this series explains how to leverage **ROS 2 Composition** to improve the communication performance: [ROS 2 Node Composition Explained](/tutorials/ros2/ros2-node-composition-explained/).
+
+**Happy robotics programming!** :robot:
