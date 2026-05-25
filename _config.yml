@@ -101,6 +101,7 @@ include:
   - Ads.txt
   - ads.txt
   - robots.txt
+  - db3dcb01dd74432e8cc792f921c7f6d5.txt
 exclude:
   - README.md
   - LICENSE
