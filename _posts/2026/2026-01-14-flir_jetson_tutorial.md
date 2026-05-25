@@ -31,16 +31,28 @@ tags:
 gallery: 
   - url: /assets/images/tutorials/flir_jetson/breadboard.jpg
     image_path: /assets/images/tutorials/flir_jetson/breadboard.jpg
+    alt: "FLIR Lepton3 breadboard assembly on Jetson Nano"
+    title: "FLIR Lepton3 breadboard assembly on Jetson Nano"
   - url: /assets/images/tutorials/flir_jetson/case_lepton.jpg
     image_path: /assets/images/tutorials/flir_jetson/case_lepton.jpg
+    alt: "FLIR Lepton3 camera mounted in 3D-printed case"
+    title: "FLIR Lepton3 camera mounted in 3D-printed case"
   - url: /assets/images/tutorials/flir_jetson/connections.jpg
     image_path: /assets/images/tutorials/flir_jetson/connections.jpg
+    alt: "Hardware connections between FLIR Lepton3 and Jetson Nano"
+    title: "Hardware connections between FLIR Lepton3 and Jetson Nano"
   - url: /assets/images/tutorials/flir_jetson/FeverNormal.png
     image_path: /assets/images/tutorials/flir_jetson/FeverNormal.png
+    alt: "Thermal image showing normal body temperature reading"
+    title: "Thermal image showing normal body temperature reading"
   - url: /assets/images/tutorials/flir_jetson/FeverWarning.png
     image_path: /assets/images/tutorials/flir_jetson/FeverWarning.png
+    alt: "Thermal image showing fever warning threshold exceeded"
+    title: "Thermal image showing fever warning threshold exceeded"
   - url: /assets/images/tutorials/flir_jetson/FeverAlert.png
     image_path: /assets/images/tutorials/flir_jetson/FeverAlert.png
+    alt: "Thermal image showing high fever alert level"
+    title: "Thermal image showing high fever alert level"
 ---
 
 I'm pleased to announce that I have restored the tutorial titled ["Thermal Images on Jetson™ Nano with FLIR Lepton3"](/tutorials/electronics/flir-lepton-on-jetson/).
