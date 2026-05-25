@@ -1,6 +1,6 @@
 ---
 title: "ROS 2 Tutorials"
-excerpt: "A series of tutorials designed to help you get started with ROS 2."
+excerpt: "Structured ROS 2 tutorials for all skill levels, covering nodes, topics, services, middleware, namespaces, parameters, launch files, and node composition."
 author: "Walter Lucetti"
 index: 1000
 header:

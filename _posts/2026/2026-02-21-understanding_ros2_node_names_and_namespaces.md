@@ -1,6 +1,6 @@
 ---
 title: "New ROS 2 Tutorial: Understanding ROS 2 Node Names and Namespaces"
-excerpt: "A new tutorial is available on understanding ROS 2 node names and namespaces."
+excerpt: "New tutorial: understand how ROS 2 node names and namespaces work, learn to rename and remap nodes at launch, and follow best practices for multi-robot systems."
 date: 2026-02-21 10:00:00 +01:00
 author: "Walter Lucetti"
 layout: single

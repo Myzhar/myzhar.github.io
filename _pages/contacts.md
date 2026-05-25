@@ -1,5 +1,6 @@
 ---
 title: Contact
+description: "Get in touch with Walter Lucetti — robotics engineer, ROS 2 expert, and computer vision specialist. Reach out via email or connect on social platforms."
 author: "Walter Lucetti"
 layout: collection
 permalink: /contact/

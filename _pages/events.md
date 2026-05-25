@@ -1,6 +1,6 @@
 ---
 title: Events
-description: "Conferences, talks, and robotics events attended or presented by Walter Lucetti — including ROSCon and other robotics community events."
+description: "Conferences, workshops, and community events where Walter Lucetti presents and attends — covering ROS 2, robotics, computer vision, and AI in Italy and beyond."
 layout: collection
 author: "Walter Lucetti"
 permalink: /events/

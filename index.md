@@ -1,5 +1,6 @@
 ---
 layout: splash
+description: "Personal robotics and AI lab of Walter Lucetti: hands-on ROS 2 tutorials, stereo vision, NVIDIA Jetson, CUDA, and 3D printing — from concept to hardware."
 excerpt: "Beyond Perception / Beyond Robotics"
 header:
   overlay_color: "#000"

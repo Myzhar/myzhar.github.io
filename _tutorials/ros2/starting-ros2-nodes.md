@@ -1,6 +1,6 @@
 ---
 title: "Starting ROS 2 Nodes"
-excerpt: "Learn how to start and manage ROS 2 nodes in your robotics applications."
+excerpt: "Step-by-step guide to starting ROS 2 nodes with ros2 run and ros2 launch, inspecting active nodes with CLI tools, and understanding the node execution model."
 author: "Walter Lucetti"
 index: 1050
 header:

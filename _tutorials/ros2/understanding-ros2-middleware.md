@@ -1,6 +1,6 @@
 ---
 title: "Understanding the ROS 2 Communication Middleware"
-excerpt: "Learn how ROS 2 handles communication between nodes and the underlying middleware."
+excerpt: "Explore how the ROS 2 communication middleware works: DDS, QoS policies, the RMW abstraction layer, and practical tips for choosing the right DDS vendor."
 author: "Walter Lucetti"
 index: 1060
 header:

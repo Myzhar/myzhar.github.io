@@ -1,6 +1,6 @@
 ---
 title: "Configure a ROS 2 node using parameters"
-excerpt: "Learn how to configure a ROS 2 node using parameters."
+excerpt: "Learn how to declare, read, and dynamically update ROS 2 node parameters with the rclcpp API, YAML configuration files, and the ros2 param command-line tool."
 author: "Walter Lucetti"
 index: 1070
 header:

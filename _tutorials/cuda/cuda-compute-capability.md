@@ -1,6 +1,6 @@
 ---
 title: "NVIDIA® CUDA™ Compute Capability"
-excerpt: "An overview of CUDA™ Compute Capability and its importance in GPU programming"
+excerpt: "Understand CUDA Compute Capability: how to find it for your NVIDIA GPU, why it matters when compiling CUDA code, and a reference table for all GPU generations."
 author: "Walter Lucetti"
 index: 3010
 header:
