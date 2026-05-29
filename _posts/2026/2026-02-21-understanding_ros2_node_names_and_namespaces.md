@@ -8,6 +8,9 @@ classes: wide
 toc: false
 breadcrumbs: false
 
+sitemap: false
+noindex: true
+
 header:
   teaser: /assets/images/ros2/understanding-ros2-node-names-namespaces.jpg
   overlay_image: /assets/images/ros2/understanding-ros2-node-names-namespaces.jpg

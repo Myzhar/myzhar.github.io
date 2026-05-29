@@ -67,13 +67,27 @@ gallery:
       title: "Yes, I was there!"
 ---
 
-On October 27-29, 2025, I had the opportunity to attend [ROSCon 2025 in Singapore](https://roscon.ros.org/2025/), representing [Stereolabs](https://www.stereolabs.com) as a sponsor and exhibitor. It was an incredible experience to connect with the [ROS](https://www.ros.org/) community and showcase our latest advancements in robotics technology.
+On October 27-29, 2025, I had the opportunity to attend [ROSCon 2025 in Singapore](https://roscon.ros.org/2025/), representing [Stereolabs](https://www.stereolabs.com) as a sponsor and exhibitor. It was my first time at ROSCon, and also my first time in Singapore — so the whole trip felt like a double adventure from the very start.
 
-It was my first time attending ROSCon, and I was thrilled to be part of such a prestigious event. The conference featured a variety of talks, workshops, and networking opportunities that highlighted the latest developments in the [Robot Operating System (ROS)](https://www.ros.org/) ecosystem.
+## Robots before the conference even began
 
-During the event, I had the chance to meet with fellow robotics enthusiasts, developers, and industry experts. The atmosphere was vibrant, filled with innovative ideas and collaborative spirit. Stereolabs' booth attracted a lot of attention, and I was proud to demonstrate our cutting-edge solutions that leverage [ROS](https://www.ros.org/) for enhanced robotic capabilities.
+I landed the day before the event, and Singapore wasted no time making an impression. At the airport I spotted my first robot of the trip: an autonomous cleaning machine quietly doing its rounds between travellers. A few hours later, riding the subway into the city, I found another one — a different design, but same idea. It felt oddly fitting: I was heading to a robotics conference, and the city was already showing me what the future of autonomous systems looks like when deployed at scale in the real world. I took photos of both, half amused and half genuinely impressed.
 
-Overall, ROSCon 2025 was an unforgettable experience that reinforced my passion for robotics and the [ROS](https://www.ros.org/) community. I look forward to attending future events and continuing to contribute to the exciting world of robotics.
+## The conference
+
+This was my first ROSCon, and I honestly didn't know exactly what to expect. What I found was a community that is both deeply technical and genuinely welcoming. The talks covered a wide range of topics, from middleware performance and lifecycle node management to hardware integration and AI-driven perception, and the quality of the presentations was consistently high. There were moments where I found myself scribbling notes just to keep up.
+
+The [Stereolabs](https://www.stereolabs.com) booth was a constant buzz of activity. We showcased our latest [ROS 2](https://docs.ros.org/en/rolling/index.html) integrations and I brought along something close to my heart: the perception head of **MyzharBot v5**, my personal robotics project, repurposed as a live demo of a multi-camera setup. Seeing people interact with it and ask questions about the hardware choices and the software stack was genuinely rewarding; it's one thing to share a project online, it's another to walk someone through it in person.
+
+One of the highlights I didn't anticipate was seeing a dual-arm robot at the event using a ZED Mini camera in its head for object detection. It was a great reminder of how versatile the ZED ecosystem has become, and it sparked a few good conversations about perception pipelines and how teams integrate depth sensing into manipulation tasks.
+
+## Beyond the conference
+
+Singapore itself deserves a mention. One evening we made our way to Gardens by the Bay, and standing beneath those giant illuminated Supertrees at night is one of those experiences that's hard to describe without sounding like a tourist brochure, but it genuinely was spectacular. The contrast between high-tech robotics talks during the day and that surreal, almost sci-fi landscape at night felt very on-brand for the week.
+
+## Wrapping up
+
+ROSCon 2025 left me energised in a way that's hard to replicate behind a screen. Meeting the people behind projects I'd only followed online, having real conversations about the challenges and trade-offs in building robust robot systems, and being part of the [ROS](https://www.ros.org/) community in person, it all reinforced why this field is so exciting to work in. I'm already looking forward to the next one.
 
 ## Highlights
 

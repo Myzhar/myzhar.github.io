@@ -8,6 +8,9 @@ classes: wide
 toc: false
 breadcrumbs: false
 
+sitemap: false
+noindex: true
+
 header:
   teaser: /assets/images/posts/20260209-ouster_x_stereolabs/OUST_SL_Hero.jpg
   overlay_image: /assets/images/posts/20260209-ouster_x_stereolabs/OUST_SL_Hero.jpg
