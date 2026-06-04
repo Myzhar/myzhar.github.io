@@ -8,6 +8,9 @@ classes: wide
 toc: false
 breadcrumbs: false
 
+sitemap: false
+noindex: true
+
 header:
   teaser: /assets/images/projects/ldrobot-lidar-ros2/teaser.jpg
   overlay_image: /assets/images/projects/ldrobot-lidar-ros2/teaser.jpg

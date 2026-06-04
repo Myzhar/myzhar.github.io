@@ -8,6 +8,9 @@ classes: single
 toc: true
 breadcrumbs: false
 
+sitemap: true
+noindex: false
+
 header:
   teaser: /assets/images/ros2/ros2-lyrical-luth-teaser.jpg
   overlay_image: /assets/images/ros2/ros2-lyrical-luth-teaser.jpg

@@ -8,6 +8,9 @@ classes: wide
 toc: false
 breadcrumbs: false
 
+sitemap: false
+noindex: true
+
 header:
   teaser: /assets/images/post_default.jpg
   overlay_image: /assets/images/post_default.jpg

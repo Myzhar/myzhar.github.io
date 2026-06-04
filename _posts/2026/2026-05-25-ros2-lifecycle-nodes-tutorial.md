@@ -8,6 +8,9 @@ classes: wide
 toc: false
 breadcrumbs: false
 
+sitemap: false
+noindex: true
+
 header:
   teaser: /assets/images/ros2/ros2-lifecycle-nodes.jpg
   overlay_image: /assets/images/ros2/ros2-lifecycle-nodes.jpg
