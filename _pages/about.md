@@ -1,6 +1,6 @@
 ---
 title: Walter Lucetti
-description: "Walter Lucetti (Myzhar) — Italian computer engineer and Senior Software Engineer at Stereolabs, specializing in robotics, computer vision, and AI."
+description: "Walter Lucetti (Myzhar) — Italian computer engineer and Senior Software Engineer at Stereolabs, specializing in robotics, computer vision, AI, and autonomous systems."
 author: "Walter Lucetti"
 layout: collection
 permalink: /about/

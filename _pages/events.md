@@ -1,6 +1,6 @@
 ---
 title: Events
-description: "Conferences, workshops, and community events where Walter Lucetti presents and attends — covering ROS 2, robotics, computer vision, and AI in Italy and beyond."
+description: "Conferences, workshops, and community events where Walter Lucetti presents and attends — covering ROS 2, robotics, computer vision, and AI in Italy and across Europe."
 layout: collection
 author: "Walter Lucetti"
 permalink: /events/
