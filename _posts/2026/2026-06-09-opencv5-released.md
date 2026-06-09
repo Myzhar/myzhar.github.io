@@ -48,7 +48,6 @@ The official launch happened at **[CVPR 2026 in Denver](https://cvpr.thecvf.com/
 
 Given how important OpenCV is to me, I read through the full announcement pretty carefully, and there's a lot to unpack.
 
-
 ## The DNN engine rewrite: the headline feature
 
 If there is one thing that defines this release, it's the **complete redesign of the deep learning inference engine**. The old DNN module in OpenCV 4.x was functional but limited; ONNX operator coverage sat at around **22%**, which meant you constantly ran into missing ops when trying to load modern models. OpenCV 5 brings that number to **80%+**. That is not an incremental improvement; that is a fundamental change in what you can actually run with OpenCV out of the box.
@@ -86,7 +85,6 @@ There's also support for **0D (scalar) and 1D tensor** representations, proper b
 
 On raw performance: the team reports **up to 2x improvements** on mathematical workloads and **3 to 4x speedups** on ARM for operations like resizing and warping. The Universal Intrinsics layer has been updated to v2.0 with support for SSE, AVX2/512, NEON, SVE, and RISC-V Vector. This is great news for anyone running embedded vision on ARM boards.
 
-
 ## Hardware Acceleration Layer (HAL)
 
 This is a feature that I think will have a big long-term impact: OpenCV 5 introduces an automatic dispatch mechanism to **vendor-optimized kernels** through a Hardware Acceleration Layer. Currently supported backends include [Intel IPP](https://www.intel.com/content/www/us/en/developer/tools/oneapi/ipp.html){:target="_blank"} (IPPICV) for x86/x64 with SSE/AVX, [Arm KleidiCV](https://gitlab.arm.com/kleidi/kleidicv){:target="_blank"} for AArch64, [Qualcomm FastCV](https://developer.qualcomm.com/software/fastcv-sdk){:target="_blank"} for Snapdragon/Hexagon DSP, and [RISC-V Vector](https://github.com/riscv/riscv-v-spec){:target="_blank"} extensions. The dispatch is automatic; the same OpenCV code just runs faster on each platform.
@@ -95,7 +93,6 @@ For robotics and edge deployments, this is a big deal. You write once and the li
 
 {% include figure popup=true image_path="/assets/images/opencv5/opencv5-hal-diagram.jpg" alt="HAL architecture diagram: OpenCV code dispatched transparently to CPU, GPU, or NPU" caption="The HAL transparently dispatches the same OpenCV code to the best available backend, whether CPU, GPU, or NPU." max_width="400px" %}
 
-
 ## 3D vision: a long-overdue reorganization
 
 This section is personally very relevant to my work. The `calib3d` module, which had grown into a bloated catch-all over the years, has been split into three focused modules:
@@ -103,7 +100,6 @@ This section is personally very relevant to my work. The `calib3d` module, which
 **`3d`** covers geometry, I/O, ICP, and SLAM components. **`calib`** handles single and multi-camera calibration, including hand-eye and robot-world calibration. **`stereo`** covers depth estimation from stereo pairs.
 
 The new `calibrateMultiview` API for multi-camera setups, point cloud and mesh I/O for OBJ and PLY formats, dense RGB-D fusion with TSDF, HashTSDF, and ColorTSDF, and the USAC framework with MAGSAC robust estimation are all welcome additions. At Stereolabs, we deal with 3D reconstruction and depth pipelines every day; a well-structured API for these building blocks makes a real difference.
-
 
 ## Features module: deep learning meets classic detectors
 
@@ -115,13 +111,11 @@ The combination of learned features with the classic OpenCV pipeline architectur
 
 {% include figure popup=true image_path="/assets/images/opencv5/opencv5-lightglue-matching.jpg" alt="LightGlue keypoint matching on easy and difficult image pairs with adaptive depth" caption="LightGlue adapts computation to scene difficulty: easy pairs stop after 3 layers (16.9ms), hard pairs go deeper (8 layers, 32.3ms)." max_width="400px" %}
 
-
 ## Generative models in OpenCV
 
 I wouldn't have predicted this one a couple of years ago. OpenCV 5 ships with **[LaMa inpainting](https://github.com/advimman/lama){:target="_blank"}** for mask-guided object removal and a **diffusion-based inpainting** pipeline as a second option. This feels a bit out of scope for a library historically focused on classical and discriminative vision, but given where the field has gone, I understand the push. It makes OpenCV more self-contained for demo and prototyping use cases.
 
 {% include figure popup=true image_path="/assets/images/opencv5/opencv5-lama-inpainting.jpg" alt="LaMa inpainting example: input image, masked region, and clean output" caption="LaMa inpainting: the original image, the masked region, and the restored output with the tree seamlessly removed." max_width="400px" %}
-
 
 ## Python and C++ improvements
 
@@ -131,11 +125,9 @@ On the C++ side: **[C++17](https://en.cppreference.com/w/cpp/17){:target="_blank
 
 The documentation has also been migrated from [Doxygen](https://www.doxygen.nl){:target="_blank"} to [Sphinx](https://www.sphinx-doc.org){:target="_blank"} + Doxygen, with persistent navigation, hand-written tutorials alongside the API reference, and Python and C++ signatures shown together. A small change in appearance, but a big improvement in day-to-day usability.
 
-
 ## What's coming next in the 5.x cycle
 
 The work isn't done. The team has committed to GPU acceleration for the new DNN engine ([CUDA](https://developer.nvidia.com/cuda-toolkit){:target="_blank"} and [TensorRT](https://developer.nvidia.com/tensorrt){:target="_blank"}), a non-CPU HAL for accelerated pre/post-processing that avoids GPU-to-CPU round trips during inference, and C++20 module support. These are the pieces that will make OpenCV 5 really complete for production deep learning pipelines; right now the new engine is CPU-only, which limits where you'd actually deploy it.
-
 
 ## Final thoughts
 
