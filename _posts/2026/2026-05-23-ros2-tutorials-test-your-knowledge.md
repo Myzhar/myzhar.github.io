@@ -29,10 +29,13 @@ tags:
   - robotics
   - learning
 ---
+I've always believed that the best way to learn robotics is by doing, but I also know how easy it is to read a long technical guide, nod along, and then realize five minutes later that I didn't actually retain the core concepts. When I was learning ROS 2 myself, I often found myself re-reading the same documentation pages over and over because I hadn't properly tested my understanding of the "why" behind certain features.
 
-One of the goals I set for the ROS 2 tutorial series was to make each entry genuinely useful for learning, not just a reference to skim and forget. A tutorial that explains concepts clearly should also give you a way to check whether those concepts actually stuck.
+One of the main goals I set for this tutorial series was to make each entry a genuine learning tool, not just a reference document to skim and forget. I want to make sure that when I explain a concept, I’m giving you a way to verify that it actually stuck.
 
-That's why I've added a **"Test Your Knowledge"** section at the end of every ROS 2 tutorial.
+That's why I'm excited to announce that I've added a **"Test Your Knowledge"** section at the end of every ROS 2 tutorial on the site.
+
+I didn't want these to be boring, academic tests. I've personally designed each quiz to be a short set of multiple-choice questions that target the specific ideas that I've seen trip people up—including the mistakes I made myself during my first few months with ROS 2. 
 
 ## What it looks like
 
@@ -73,8 +76,8 @@ Scroll to the bottom of any of these pages to find it.
 
 ## Let me know what you think
 
-This is an experiment. I'm genuinely curious whether you find it useful, whether the questions hit the right level, whether they actually help you consolidate what you've read, or whether the format could be improved.
+This is a bit of an experiment for me. I'm genuinely curious if you find these quizzes useful. Do the questions hit the right difficulty level? Do they actually help you feel more confident about the material? I'm always looking for ways to make my site a better resource for the community, and I'd love to hear your thoughts on how I can improve this format.
 
-If you have feedback, drop me a message at **[info@myzhar.com](mailto:info@myzhar.com)** or reach out via the [contact page](/contact/). I read every message.
+If you have any feedback, please drop me a message at **info@myzhar.com** or reach out through my contact page. I read every single message I get, and I'm always happy to chat about robotics.
 
 Happy robotics programming! 🤖

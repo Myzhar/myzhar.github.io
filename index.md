@@ -15,7 +15,7 @@ header:
     url: "/tutorials/ros2/"
 
 intro:
-  - excerpt: "**Welcome to the personal lab space of Walter 'Myzhar' Lucetti** — a place where robots come to life through code, sensors, and a relentless curiosity about machines that see and think. Expect hands‑on tutorials, deep‑dive guides, and honest project stories spanning ROS 2, stereo vision, NVIDIA Jetson, CUDA, 3D printing, and AI, all grounded in real hardware and real problems."
+  - excerpt: "**Welcome to my personal lab space!**<br/>I'm Walter 'Myzhar' Lucetti, a Computer Engineer who loves robotics.<br/>This is where my robots come alive. It's a place fueled by code, sensors, and my endless curiosity about machines that can see and think for themselves. Here, you'll find my hands-on tutorials, in-depth guides, and honest stories from my projects. I dive into everything from **ROS 2** and stereo vision to **NVIDIA® Jetson**, **CUDA**, **3D printing**, and **AI**... always keeping things grounded in real hardware and the actual problems I'm trying to solve."
 
 feature_row:
   - image_path: /assets/images/robots_default.jpg

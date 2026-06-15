@@ -29,16 +29,24 @@ tags:
   - robotics
 ---
 
-My life has taken an exciting turn as [Stereolabs](https://www.stereolabs.com/), the company I work for, has been acquired by [Ouster](https://www.ouster.com/), a leader in 3D LiDAR technology. This acquisition marks a significant milestone in my career and opens up new opportunities for growth and innovation.
+My life has taken an incredibly exciting turn recently. The company I’ve called home since 2018, [Stereolabs](https://www.stereolabs.com/), has been acquired by [Ouster](https://www.ouster.com/), a global leader in high-resolution digital 3D LiDAR technology. For me, this acquisition isn't just a corporate milestone or a change in the email signature, it marks a profound moment in my professional journey that feels both transformative and deeply personal.
 
 ## A Circle Closing?
 
-Twenty-three years ago, in 2003, I began my Computer Engineering thesis by transforming a 2D Sick LiDAR into a 3D sensor to digitize environments for robotic navigation.
+I can’t help but look back to where it all started. Twenty-three years ago, in 2003, I was a student deep in the trenches of my Computer Engineering thesis. At that time, 3D sensing was a massive, expensive, and hardware-intensive challenge. I spent months working with a classic 2D SICK LiDAR, a heavy, boxy piece of equipment, and my task was to transform it into a 3D sensor.
 
-{% include figure popup=true image_path="/assets/images/posts/20260209-ouster_x_stereolabs/thesis_robot_lidar.jpg" alt="The robot that I used for my experiments with 3D LiDAR scans" caption="The robot that I used for my experiments with 3D LiDAR scans" %}
+I remember the late nights in the lab, designing and building a mechanical tilting system that would physically oscillate that heavy laser scanner up and down while it spun. By combining the 2D planar data with the encoder values from the tilt motor, I was able to digitize entire environments for robotic navigation. It was my first real taste of the "magic" of 3D perception, and I was hooked.
 
-Today, the circle closes as [Stereolabs](https://www.stereolabs.com/), the incredible company I've been with since 2018, joins forces with [Ouster](https://www.ouster.com/), a pioneer in 3D LiDAR technology.
+{% include figure popup=true max_width="600px" image_path="/assets/images/posts/20260209-ouster_x_stereolabs/thesis_robot_lidar.jpg" alt="The robot that I used for my experiments with 3D LiDAR scans" caption="The robot that I used for my experiments with 3D LiDAR scans" %}
 
-Stereo vision and 3D lasers, two passions I've cultivated for decades, along with Robotics and AI, are converging in my professional life. It feels like destiny. I'm still processing the emotions of this moment.
+Today, that circle is finally closing in a way I never could have predicted. I’ve spent the last several years at Stereolabs perfecting passive stereo vision and Spatial AI, helping cameras "see" more like humans do. Now, joining forces with Ouster, a company that has revolutionized active sensing with their digital LiDAR silicon, feels like the ultimate convergence.
 
-I'm eager to see what the future holds as we embark on this new journey together. The possibilities are boundless, and I'm excited to be part of this transformative chapter.
+Stereo vision and 3D lasers have been the two defining passions of my technical life for decades. When I add Robotics and AI into that mix, I see a future where these technologies don't just coexist, but truly fuse together to create the next generation of autonomous machines. It genuinely feels like destiny. I’m still processing the sheer scale of the possibilities, but the excitement far outweighs the nerves.
+
+I've always believed that to solve the hardest problems in robotics, you need to use the best tools available, regardless of whether they are based on light reflection or image disparity. Now, I have the opportunity to work at the intersection of both. 
+
+I’m incredibly eager to see what I can contribute to this new chapter. My journey from that tilting 2D laser in 2003 to the cutting-edge digital LiDAR and stereo cameras of 2026 has been long, but I feel like I'm exactly where I'm supposed to be. 
+
+The horizon for autonomous systems is wider than ever, and I'm ready to get back to work.
+
+Happy robotics programming (into a new era)! 🤖
