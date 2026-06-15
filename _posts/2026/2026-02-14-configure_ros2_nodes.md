@@ -8,7 +8,7 @@ classes: wide
 toc: false
 breadcrumbs: false
 
-sitemap: false
+sitemap: true
 noindex: false
 
 header:
