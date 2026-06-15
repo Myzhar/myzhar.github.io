@@ -1,6 +1,8 @@
 ---
 title: "Terms and Privacy Policy"
-permalink: /terms/
+permalink: /privacy/
+redirect_from:
+  - /terms/
 author: "Walter Lucetti"
 author_profile: true
 date: 2026-02-24 00:00:00 +01:00

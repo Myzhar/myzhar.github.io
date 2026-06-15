@@ -89,9 +89,9 @@ footer:
     - label: "Contact"
       icon: "fas fa-fw fa-envelope-square"
       url: "/contact/"
-    - label: "Terms"
+    - label: "Privacy Policy"
       icon: "fas fa-fw fa-file-contract"
-      url: "/terms/"
+      url: "/privacy/"
 
 
 # Reading Files
@@ -229,6 +229,7 @@ timezone: "Europe/Rome" # https://en.wikipedia.org/wiki/List_of_tz_database_time
 
 # Plugins (previously gems:)
 plugins:
+  - jekyll-redirect-from
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
@@ -240,6 +241,7 @@ plugins:
 
 # mimic GitHub Pages with --safe
 whitelist:
+  - jekyll-redirect-from
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
