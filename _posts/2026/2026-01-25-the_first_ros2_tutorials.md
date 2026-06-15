@@ -9,7 +9,7 @@ toc: false
 breadcrumbs: false
 
 sitemap: false
-noindex: true
+noindex: false
 
 header:
   teaser: /assets/images/ros2/ROS2_TM_Color.svg

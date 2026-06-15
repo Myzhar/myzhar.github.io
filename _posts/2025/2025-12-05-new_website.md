@@ -9,7 +9,7 @@ toc: false
 breadcrumbs: false
 
 sitemap: false
-noindex: true
+noindex: false
 
 header:
   teaser: /assets/images/post_default.jpg
