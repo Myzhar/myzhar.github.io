@@ -52,7 +52,7 @@ I've implemented YALIO as a managed (lifecycle) ROS 2 component that loads into 
 
 ⚠️ Please keep in mind that the project is still a **work in progress**. I’m currently refining the error handling and tuning the parameters for higher speeds. In the next few weeks, once I have validated and tested it in different lighting and geometric conditions, I will add a new page to the ROS 2 Projects section to describe its internal architecture in detail.
 
-In the meantime, I've already added a new branch to my **LD Lidar ROS 2 Driver** repository, `add_yalio_odometry`{:target="_blank"}. This branch uses YALIO as the primary odometry source in a new demo SLAM launch file. I finally got to replace the "fake" static odometry node I used in the original launch file with a real, dynamic estimate. This makes the SLAM demo much more meaningful and closer to how a real autonomous robot should behave.
+In the meantime, I've already added a [new branch to my **LD Lidar ROS 2 Driver** repository](https://github.com/Myzhar/ldrobot-lidar-ros2/tree/add_yalio_odometry), `add_yalio_odometry`{:target="_blank"}. This branch uses YALIO as the primary odometry source in a new demo SLAM launch file. I finally got to replace the "fake" static odometry node I used in the original launch file with a real, dynamic estimate. This makes the SLAM demo much more meaningful and closer to how a real autonomous robot should behave.
 
 I'm excited to see how this performs on MyzharBot in more complex environments. Stay tuned for updates, and feel free to try it out and open issues on GitHub if you find problems or have ideas for improvements!
 
