@@ -573,6 +573,6 @@ Every lifecycle node exposes these four services automatically. <code>set_parame
 
 ## What's next
 
-The next tutorial of this series tackles one of the most underrated — and most frequently misunderstood — topics in ROS 2, the one behind countless "my nodes won't talk to each other" headaches: [ROS 2 QoS: Why Your Nodes Aren't Talking (and How to Fix It)](/tutorials/ros2/understanding-ros2-qos/).
+The next tutorial of this series tackles one of the most underrated, and most frequently misunderstood, topics in ROS 2, the one behind countless "my nodes won't talk to each other" headaches: [ROS 2 QoS: Why Your Nodes Aren't Talking (and How to Fix It)](/tutorials/ros2/understanding-ros2-qos/).
 
 **Happy robotics programming!** :robot:

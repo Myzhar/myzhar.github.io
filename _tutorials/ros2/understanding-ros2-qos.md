@@ -21,11 +21,11 @@ classes: single
 
 ## Introduction
 
-Let me start with a confession. The single most frustrating bug I keep running into — and that I keep seeing new ROS 2 users run into — has nothing to do with broken code, segfaults, or build errors. It's two perfectly healthy nodes that simply *refuse to talk to each other*.
+Let me start with a confession. The single most frustrating bug I keep running into, and that I keep seeing new ROS 2 users run into, has nothing to do with broken code, segfaults, or build errors. It's two perfectly healthy nodes that simply *refuse to talk to each other*.
 
 The publisher is up. The subscriber is up. `ros2 topic list` shows the topic. `ros2 node info` looks fine. And yet the subscriber's callback is never called, and `ros2 topic echo` prints nothing but a blinking cursor. No error, no warning, no crash. Just silence.
 
-Nine times out of ten, the culprit is **QoS — Quality of Service**.
+Nine times out of ten, the culprit is **QoS, Quality of Service**.
 
 I promised in the [Understanding the ROS 2 Communication Middleware](/tutorials/ros2/understanding-ros2-middleware/) tutorial that I would dedicate a full chapter to QoS, and that I mentioned it again, almost in passing, in the [Configure a ROS 2 node using parameters](/tutorials/ros2/configure-node-with-parameters/) tutorial when those mysterious `qos_overrides` parameters showed up. This is that chapter. By the end of it, that silent-topic bug will stop being a mystery and become a five-second diagnosis.
 
@@ -39,15 +39,15 @@ ROS 2 inherits from [DDS](/tutorials/ros2/understanding-ros2-middleware/) a much
 - The **subscription** declares the QoS it *requests*.
 - The middleware connects the two **only if the offered QoS is compatible with the requested QoS**.
 
-This last point is the whole game. If the contracts are incompatible, DDS does exactly what a good lawyer would do: it refuses to sign. The two endpoints stay disconnected, and — historically the most painful part — it often happened *silently*. Modern ROS 2 distributions are much better at warning you, but the underlying rule hasn't changed.
+This last point is the whole game. If the contracts are incompatible, DDS does exactly what a good lawyer would do: it refuses to sign. The two endpoints stay disconnected and, historically the most painful part, it often happened *silently*. Modern ROS 2 distributions are much better at warning you, but the underlying rule hasn't changed.
 
-> :pushpin: **Note**: QoS is set **independently** on each endpoint, and it is **immutable after creation**. You choose it when you create the publisher or the subscription, and you cannot change it on the fly. To "change" QoS you destroy the endpoint and recreate it — which is exactly what `qos_overrides` does for you at startup, as we'll see later.
+> :pushpin: **Note**: QoS is set **independently** on each endpoint, and it is **immutable after creation**. You choose it when you create the publisher or the subscription, and you cannot change it on the fly. To "change" QoS you destroy the endpoint and recreate it, which is exactly what `qos_overrides` does for you at startup, as we'll see later.
 
 ## Why QoS matters in the real world
 
 QoS isn't academic. It maps directly onto the kind of trade-offs you make every day on a real robot:
 
-- **A LiDAR or camera stream**: you push hundreds of messages per second. If one frame is lost on a congested Wi‑Fi link, who cares — the next one is already on its way. You want *speed over guarantees*. That's `BEST_EFFORT` reliability.
+- **A LiDAR or camera stream**: you push hundreds of messages per second. If one frame is lost on a congested Wi‑Fi link, who cares; the next one is already on its way. You want *speed over guarantees*. That's `BEST_EFFORT` reliability.
 - **A goal command or an emergency-stop flag**: losing this message is unacceptable. You want *guarantees over speed*. That's `RELIABLE`.
 - **A static map or a robot description (`/tf_static`, `/map`, `/robot_description`)**: it's published once, but nodes that start *later* still need it. You want the last value to be *latched* and replayed to late joiners. That's `TRANSIENT_LOCAL` durability.
 
@@ -55,7 +55,7 @@ Pick the wrong profile and you get the classic failure modes I've personally bur
 
 - Your image topic floods the network and starves your control loop, because you left it `RELIABLE` with a huge queue.
 - Your subscriber never receives the static map, because it joined after the single publication and durability was `VOLATILE`.
-- `ros2 topic echo` shows nothing on a sensor topic, because `echo` defaults to `RELIABLE` while the sensor publishes `BEST_EFFORT` — incompatible contract, no data.
+- `ros2 topic echo` shows nothing on a sensor topic, because `echo` defaults to `RELIABLE` while the sensor publishes `BEST_EFFORT`, an incompatible contract, so no data.
 
 That last one deserves a frame, because it catches *everyone* at least once.
 
@@ -67,11 +67,11 @@ That last one deserves a frame, because it catches *everyone* at least once.
 
 ## The QoS policies in detail
 
-A QoS profile is made of several policies. Let's go through each one, because understanding them individually is what lets you reason about compatibility later.
+A QoS profile is made of several policies. Let's go through each one, because understanding them individually is what lets you reason about compatibility later. The authoritative reference for the full list is the official [About Quality of Service Settings](https://docs.ros.org/en/lyrical/Concepts/Intermediate/About-Quality-of-Service-Settings.html){:target="_blank"} page, which is well worth keeping open in a tab as you read.
 
 ### History and Depth
 
-These two control the **outgoing/incoming message queue** — what to keep when messages are produced faster than they can be sent or processed.
+These two control the **outgoing/incoming message queue**, what to keep when messages are produced faster than they can be sent or processed.
 
 - **History**
   - `KEEP_LAST`: keep only the last *N* messages, where *N* is the **depth**. Old messages are dropped. This is the common, bounded-memory choice.
@@ -100,7 +100,7 @@ The **maximum expected period between two consecutive messages** on a topic.
 
 - The publisher *offers* a deadline: "I promise to publish at least this often."
 - The subscription *requests* a deadline: "I expect a new message at least this often."
-- If a deadline is missed, the middleware fires an event you can hook into — extremely useful for detecting a sensor that has gone quiet.
+- If a deadline is missed, the middleware fires an event you can hook into, extremely useful for detecting a sensor that has gone quiet.
 
 The default is "infinite" (no deadline), meaning the policy is effectively disabled.
 
@@ -184,13 +184,13 @@ The recurring pattern across *all* policies: **the publisher must make a promise
 
 ## Diagnosing a QoS mismatch
 
-When a topic stays silent, don't guess — inspect. The most useful command is `ros2 topic info` with the verbose flag:
+When a topic stays silent, don't guess; inspect. The most useful command is `ros2 topic info` with the verbose flag:
 
 ```bash
 ros2 topic info /my_topic --verbose
 ```
 
-This prints, for every publisher and subscription on the topic, the **full QoS profile** of each endpoint. You can line them up against the tables above and spot the offending policy in seconds. For example, you might see a publisher with `Reliability: BEST_EFFORT` and a subscription with `Reliability: RELIABLE` — there's your culprit.
+This prints, for every publisher and subscription on the topic, the **full QoS profile** of each endpoint. You can line them up against the tables above and spot the offending policy in seconds. For example, you might see a publisher with `Reliability: BEST_EFFORT` and a subscription with `Reliability: RELIABLE`; there's your culprit.
 
 On recent distributions the middleware also emits a warning to the console when it detects an incompatible QoS pair, naming the exact policy that doesn't match. If you've enabled it, watch the logs:
 
@@ -205,7 +205,7 @@ That single log line would have saved me an embarrassing number of hours over th
 
 Now to the part that ties this tutorial back to [Configure a ROS 2 node using parameters](/tutorials/ros2/configure-node-with-parameters/). Normally, QoS is hard-coded by the developer when the publisher or subscription is created. That's fine until you deploy on a different network, a flaky Wi‑Fi link, or a multi-robot setup where you'd love to retune QoS **without recompiling**.
 
-ROS 2 solves this with **QoS overrides**: a mechanism that exposes a node's QoS settings as ordinary **node parameters**, so you can override them from the command line or, much more commonly, from a YAML file.
+ROS 2 solves this with **QoS overrides**: a mechanism that exposes a node's QoS settings as ordinary **node parameters**, so you can override them from the command line or, much more commonly, from a YAML file. If you want the full rationale and design behind this feature, the [QoS configurability](https://design.ros2.org/articles/qos_configurability.html){:target="_blank"} design article on the official ROS 2 design website is the canonical reference.
 
 ### Where those `qos_overrides` parameters come from
 
@@ -257,23 +257,96 @@ ros2 run my_pkg my_node \
     --ros-args --params-file /path/to/qos_config.yaml
 ```
 
-> :pushpin: **Note**: by default a node only lets you override the policies it considers safe to change. A node can declare which policies are overridable, and can even register a **validation callback** that rejects a combination it knows would break it. So don't be surprised if some overrides are accepted and others are silently ignored or refused — that's by design, and it's the node author protecting you from yourself.
+> :pushpin: **Note**: by default a node only lets you override the policies it considers safe to change. A node can declare which policies are overridable, and can even register a **validation callback** that rejects a combination it knows would break it. So don't be surprised if some overrides are accepted and others are silently ignored or refused; that's by design, and it's the node author protecting you from yourself.
 
-### The pragmatic reality: custom QoS parameters
+### Enabling QoS overrides in your own node (C++)
 
-In practice, a large fraction of mature ROS 2 drivers don't rely on `qos_overrides` at all. They expose their **own**, friendlier parameters — something like `general.pub_resolution` or `video.qos_reliability` — and translate them internally into a QoS profile. It's less standardized, but often clearer for the end user.
+Enabling overrides on the developer side takes two steps. First, you attach a `QosOverridingOptions` to the publisher (or subscription) options. Second, and this is the part people forget, you must pass those options into **every** `create_publisher` / `create_subscription` call, because overrides are enabled per endpoint:
 
-The [ZED ROS 2 Wrapper](https://github.com/stereolabs/zed-ros2-wrapper) I work on takes this route: it exposes explicit QoS parameters per stream so you can tune reliability, durability, and history depth for the image, depth, and sensor topics straight from the camera's YAML configuration files, without ever touching `qos_overrides`. When you adopt a new package, always check its documentation to learn *which* of the two styles it uses.
+```cpp
+// 1. Enable parameter-based QoS overrides on the options object
+rclcpp::PublisherOptions pub_options;
+pub_options.qos_overriding_options =
+    rclcpp::QosOverridingOptions::with_default_policies();
+
+// 2. Pass the options as the last argument when creating the endpoint.
+//    The QoS you pass here is just the DEFAULT; parameters override it.
+auto pub = create_publisher<sensor_msgs::msg::Image>(
+    "image", rclcpp::SensorDataQoS(), pub_options);
+```
+
+The same applies to subscriptions, with the options object as the final argument. Mind the argument order: `create_subscription` takes the callback *before* the options:
+
+```cpp
+rclcpp::SubscriptionOptions sub_options;
+sub_options.qos_overriding_options =
+    rclcpp::QosOverridingOptions::with_default_policies();
+
+auto sub = create_subscription<sensor_msgs::msg::Image>(
+    "image", rclcpp::SensorDataQoS(),
+    std::bind(&MyNode::imageCallback, this, std::placeholders::_1),
+    sub_options);
+```
+
+> :pushpin: **Note**: `with_default_policies()` exposes only **history**, **depth**, and **reliability**. If you also want **durability** (or deadline, lifespan, liveliness) to be overridable, you have to list the policy kinds explicitly in the `QosOverridingOptions` constructor. It's also worth knowing that two endpoints sharing the same topic name and kind need a unique `id`, otherwise the parameter would be declared twice and `rclcpp` will throw.
+
+To go beyond the default set of policies, list the `QosPolicyKind` values yourself. Here we make durability overridable too:
+
+```cpp
+rclcpp::PublisherOptions pub_options;
+pub_options.qos_overriding_options = rclcpp::QosOverridingOptions{
+    {
+      rclcpp::QosPolicyKind::History,
+      rclcpp::QosPolicyKind::Depth,
+      rclcpp::QosPolicyKind::Reliability,
+      rclcpp::QosPolicyKind::Durability,
+    }
+};
+```
+
+A common and tidy pattern in larger nodes is to keep a single shared `rclcpp::PublisherOptions` / `rclcpp::SubscriptionOptions` member, configure `qos_overriding_options` **once** in the constructor, and then reuse it for every endpoint the node creates:
+
+```cpp
+class MyNode : public rclcpp::Node
+{
+public:
+  MyNode() : rclcpp::Node("my_node")
+  {
+    mPubOpt.qos_overriding_options =
+        rclcpp::QosOverridingOptions::with_default_policies();
+    mSubOpt.qos_overriding_options =
+        rclcpp::QosOverridingOptions::with_default_policies();
+
+    mPub = create_publisher<sensor_msgs::msg::Image>("image", mQos, mPubOpt);
+    mSub = create_subscription<sensor_msgs::msg::Imu>(
+        "imu", mQos,
+        std::bind(&MyNode::imuCallback, this, std::placeholders::_1),
+        mSubOpt);
+  }
+
+private:
+  rclcpp::QoS mQos{10};                 // the DEFAULT profile
+  rclcpp::PublisherOptions mPubOpt;
+  rclcpp::SubscriptionOptions mSubOpt;
+  // ... publisher/subscription handles and callbacks ...
+};
+```
+
+With this pattern, **every** topic the node publishes or subscribes to automatically exposes its `qos_overrides.<topic>.<publisher|subscription>.<policy>` parameter tree, and the whole node becomes tunable from a single YAML file without recompiling.
+
+### The pragmatic reality: check the docs
+
+Standardizing on `qos_overrides` is clearly the direction the ecosystem is moving, but you'll still meet packages, and older releases of packages, that expose their **own**, friendlier QoS parameters (something like `video.qos_reliability`) and translate them internally into a profile. It's less standardized, but sometimes clearer for the end user. When you adopt a new package, always check its documentation to learn *which* of the two styles it uses before you start tuning.
 
 ## Conclusion
 
 QoS is the layer that turns ROS 2 from "messages on a wire" into a system you can actually tune for the real world: lossy links, late joiners, high-rate sensors, and safety-critical commands. The mechanics boil down to three things worth remembering:
 
 1. **QoS is a contract**, set per endpoint and immutable after creation.
-2. **A connection happens only when the offered QoS is at least as strong as the requested QoS** — that one inequality generates every compatibility table.
+2. **A connection happens only when the offered QoS is at least as strong as the requested QoS**; that one inequality generates every compatibility table.
 3. When a topic is silent, **`ros2 topic info --verbose` is your friend**, and `qos_overrides` (or a driver's custom parameters) is how you fix it without recompiling.
 
-Internalize the "offered ≥ requested" rule and the next silent topic won't cost you an afternoon — it'll cost you five seconds. For the full reference, the official [QoS Settings concept page](https://docs.ros.org/en/lyrical/Concepts/Intermediate/About-Quality-of-Service-Settings.html){:target="_blank"} and the hands-on [Quality of Service demo](https://docs.ros.org/en/lyrical/Tutorials/Demos/Quality-of-Service.html){:target="_blank"} are excellent next stops.
+Internalize the "offered ≥ requested" rule and the next silent topic won't cost you an afternoon; it'll cost you five seconds. For the full reference, the official [QoS Settings concept page](https://docs.ros.org/en/lyrical/Concepts/Intermediate/About-Quality-of-Service-Settings.html){:target="_blank"} and the hands-on [Quality of Service demo](https://docs.ros.org/en/lyrical/Tutorials/Demos/Quality-of-Service.html){:target="_blank"} are excellent next stops.
 
 ## Test your knowledge
 
