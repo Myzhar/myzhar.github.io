@@ -3,7 +3,7 @@ name: Submit URLs to IndexNow
 on:
   push:
     branches:
-      - main        # change to 'master' if that's your default branch
+      - gh-pages        # change to 'master' if that's your default branch
   workflow_dispatch:
 
 permissions:
