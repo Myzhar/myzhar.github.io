@@ -27,7 +27,7 @@ The publisher is up. The subscriber is up. `ros2 topic list` shows the topic. `r
 
 Nine times out of ten, the culprit is **QoS, Quality of Service**.
 
-I promised in the [Understanding the ROS 2 Communication Middleware](/tutorials/ros2/understanding-ros2-middleware/) tutorial that I would dedicate a full chapter to QoS, and that I mentioned it again, almost in passing, in the [Configure a ROS 2 node using parameters](/tutorials/ros2/configure-node-with-parameters/) tutorial when those mysterious `qos_overrides` parameters showed up. This is that chapter. By the end of it, that silent-topic bug will stop being a mystery and become a five-second diagnosis.
+I promised in the [Understanding the ROS 2 Communication Middleware](/tutorials/ros2/understanding-ros2-middleware/) tutorial that I would dedicate a full chapter to QoS, and I mentioned it again, almost in passing, in the [Configure a ROS 2 node using parameters](/tutorials/ros2/configure-node-with-parameters/) tutorial when those mysterious `qos_overrides` parameters showed up. This is that chapter. By the end of it, that silent-topic bug will stop being a mystery and become a five-second diagnosis.
 
 ## What QoS actually is
 
@@ -131,7 +131,7 @@ This is how the system decides whether a publisher is still **alive**.
 
 ## Built-in QoS profiles
 
-You rarely build a profile policy-by-policy. ROS 2 ships a handful of **predefined profiles** tuned for common use cases. Knowing their values saves you from a lot of head-scratching, because they explain the defaults used by the CLI tools and by most nodes.
+You rarely build a profile policy-by-policy. ROS 2 ships a handful of **predefined profiles** tuned for common use cases, whose exact values are defined in the middleware layer's [`rmw/qos_profiles.h`](https://github.com/ros2/rmw/blob/rolling/rmw/include/rmw/qos_profiles.h){:target="_blank"} header. Knowing their values saves you from a lot of head-scratching, because they explain the defaults used by the CLI tools and by most nodes.
 
 | Profile | History / Depth | Reliability | Durability | Typical use |
 | :--- | :--- | :--- | :--- | :--- |
@@ -184,7 +184,7 @@ The recurring pattern across *all* policies: **the publisher must make a promise
 
 ## Diagnosing a QoS mismatch
 
-When a topic stays silent, don't guess; inspect. The most useful command is `ros2 topic info` with the verbose flag:
+When a topic stays silent, don't guess; inspect. The most useful command is [`ros2 topic info`](https://docs.ros.org/en/lyrical/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html){:target="_blank"} with the verbose flag:
 
 ```bash
 ros2 topic info /my_topic --verbose
@@ -209,7 +209,7 @@ ROS 2 solves this with **QoS overrides**: a mechanism that exposes a node's QoS 
 
 ### Where those `qos_overrides` parameters come from
 
-This is the detail that trips people up, so let me be blunt about it: **`qos_overrides` parameters only exist for endpoints whose author explicitly enabled them.** In C++ the developer passes `QosOverridingOptions` to `create_publisher`/`create_subscription`; in Python it's the equivalent `qos_overriding_options`. If the developer didn't opt in, there is nothing to override from parameters, and you have to fall back on whatever custom parameters the node exposes (more on that below).
+This is the detail that trips people up, so let me be blunt about it: **`qos_overrides` parameters only exist for endpoints whose author explicitly enabled them.** In C++ the developer passes [`QosOverridingOptions`](https://docs.ros.org/en/lyrical/p/rclcpp/generated/classrclcpp_1_1QosOverridingOptions.html){:target="_blank"} to `create_publisher`/`create_subscription`; in Python it's the equivalent [`qos_overriding_options`](https://docs.ros.org/en/lyrical/p/rclpy/rclpy.qos_overriding_options.html){:target="_blank"}. If the developer didn't opt in, there is nothing to override from parameters, and you have to fall back on whatever custom parameters the node exposes (more on that below).
 
 When a node *does* opt in, listing its parameters reveals the override tree. Remember this from the parameters tutorial?
 
