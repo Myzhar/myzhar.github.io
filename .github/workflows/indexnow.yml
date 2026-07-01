@@ -1,0 +1,99 @@
+name: Submit URLs to IndexNow
+
+on:
+  push:
+    branches:
+      - gh-pages        # change to 'master' if that's your default branch
+  workflow_dispatch:
+
+permissions:
+  pages: read       # needed to read Pages build status
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for GitHub Pages build to finish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          echo "Waiting for the latest Pages build to reach 'built'..."
+          for i in $(seq 1 30); do
+            status=$(curl -s \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/$REPO/pages/builds/latest" \
+              | python3 -c "import sys, json; print(json.load(sys.stdin).get('status',''))")
+            echo "Attempt $i: status=$status"
+            if [ "$status" = "built" ]; then
+              echo "Pages build complete."
+              # Brief grace period for the CDN to serve the new files
+              sleep 15
+              exit 0
+            fi
+            if [ "$status" = "errored" ]; then
+              echo "Pages build errored; aborting submission."
+              exit 1
+            fi
+            sleep 20
+          done
+          echo "Timed out waiting for Pages build."
+          exit 1
+
+      - name: Submit sitemap URLs to IndexNow
+        env:
+          INDEXNOW_KEY: db3dcb01dd74432e8cc792f921c7f6d5
+          SITE_HOST: myzhar.tech
+          SITE_BASE: https://myzhar.tech
+        run: |
+          python3 - <<'EOF'
+          import os, sys, json, urllib.request
+          import xml.etree.ElementTree as ET
+
+          key  = os.environ["INDEXNOW_KEY"]
+          host = os.environ["SITE_HOST"]
+          base = os.environ["SITE_BASE"].rstrip("/")
+
+          sitemap_url  = f"{base}/sitemap.xml"
+          key_location = f"{base}/{key}.txt"
+
+          try:
+              with urllib.request.urlopen(sitemap_url, timeout=30) as resp:
+                  sitemap_data = resp.read()
+          except Exception as e:
+              print(f"Could not fetch sitemap at {sitemap_url}: {e}")
+              sys.exit(1)
+
+          ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          root = ET.fromstring(sitemap_data)
+          urls = [loc.text.strip() for loc in root.findall(".//sm:url/sm:loc", ns)]
+
+          if not urls:
+              print("No URLs found in sitemap; nothing to submit.")
+              sys.exit(0)
+
+          print(f"Found {len(urls)} URLs to submit.")
+
+          payload = {
+              "host": host,
+              "key": key,
+              "keyLocation": key_location,
+              "urlList": urls,
+          }
+
+          req = urllib.request.Request(
+              "https://api.indexnow.org/IndexNow",
+              data=json.dumps(payload).encode("utf-8"),
+              headers={"Content-Type": "application/json; charset=utf-8"},
+              method="POST",
+          )
+
+          try:
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  print(f"IndexNow response: {resp.status} {resp.reason}")
+          except urllib.error.HTTPError as e:
+              print(f"IndexNow returned HTTP {e.code}: {e.read().decode(errors='replace')}")
+              if e.code not in (200, 202):
+                  sys.exit(1)
+          EOF
