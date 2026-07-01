@@ -49,11 +49,11 @@ social:
     - "https://github.com/myzhar"
     - "https://www.youtube.com/@myzhar"
 
-analytics:
-  provider: "google-gtag"
-  google:
-    tracking_id: "G-PYMBS7K65Z"
-    anonymize_ip: false # default
+# analytics:
+#   provider: "google-gtag"
+#   google:
+#     tracking_id: "G-PYMBS7K65Z"
+#     anonymize_ip: false # default
 
 # Site Footer
 footer:
