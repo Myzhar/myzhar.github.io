@@ -16,18 +16,26 @@
 {% endcapture %}
 {% assign video_src = video_src | strip %}
 
+{% capture video_url %}
+  {% case video_provider %}
+  {% when "vimeo" %}
+    https://vimeo.com/{{ video_id }}
+  {% when "youtube" %}
+    https://www.youtube.com/watch?v={{ video_id }}
+  {% when "google-drive" %}
+    https://drive.google.com/file/d/{{ video_id }}/view
+  {% when "bilibili" %}
+    https://www.bilibili.com/video/{{ video_id }}
+  {% endcase %}
+{% endcapture %}
+{% assign video_url = video_url | strip %}
+
 {% unless video_src == "" %}
-  <div class="responsive-video-container responsive-video-container--consent">
-    <iframe data-cookieconsent="marketing"
-      data-cookieblock-src="{{ video_src }}"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <div class="video-consent-notice cookieconsent-optout-marketing">
-    <p>This video is hosted by a third party and requires marketing-cookie consent.</p>
-    <a href="javascript:Cookiebot.renew()" class="btn btn--info">Manage cookie preferences</a>
+  <div class="responsive-video-container video-embed" data-video-embed>
+    <div class="video-embed__placeholder">
+      <p>This video is hosted by a third party. Loading it allows the provider to set its own cookies.</p>
+      <button type="button" class="btn btn--info" data-video-load data-video-src="{{ video_src }}" data-video-title="YouTube video player">Load video</button>
+      <a href="{{ video_url }}" target="_blank" rel="noopener noreferrer">Watch on its original platform <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+    </div>
   </div>
 {% endunless %}

@@ -259,4 +259,4 @@ tag_archive:
 
 after_footer_scripts :
   - /assets/js/copyCode.js
-
+  - /assets/js/video-embed.js
