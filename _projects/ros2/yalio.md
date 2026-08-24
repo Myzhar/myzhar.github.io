@@ -26,8 +26,6 @@ The core of the project is a **Point-to-Line Iterative Closest Point (PL-ICP)** 
 
 YALIO deliberately focuses on one job: estimating relative motion from lidar data. It is not a full SLAM system, so drift will accumulate over time; for global localization and mapping it can be paired with a SLAM back-end. The resulting odometry is also a practical replacement for the static or simulated motion estimates often used in early robot bring-up.
 
-> :warning: **Work in progress; field testing and contributions welcome**: YALIO is actively being refined, particularly around error handling and parameter tuning at higher robot speeds. I would greatly appreciate tests with different robots, lidars, environments, and motion profiles. If you find an issue, have a tuning suggestion, or would like to improve the code, please [open an issue or pull request on GitHub](https://github.com/Myzhar/yalio-ros2){: target="_blank"}.
-
 ## Architecture
 
 The repository is split into three ROS 2 packages:
@@ -156,3 +154,7 @@ The core PL-ICP library includes unit tests:
 colcon test --packages-select yalio_lib
 colcon test-result --verbose
 ```
+
+## Call to Action
+
+> :warning: **Work in progress; field testing and contributions welcome**: YALIO is actively being refined, particularly around error handling and parameter tuning at higher robot speeds. I would greatly appreciate tests with different robots, lidars, environments, and motion profiles. If you find an issue, have a tuning suggestion, or would like to improve the code, please [open an issue or pull request on GitHub](https://github.com/Myzhar/yalio-ros2){: target="_blank"}.
