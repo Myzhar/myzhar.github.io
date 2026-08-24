@@ -25,7 +25,13 @@ I currently serve as a **Senior Software Engineer at [Stereolabs](http://www.ste
 
 At the heart of my work is **MyzharBot**, my intelligent tracked mobile robot used as a development and experimentation platform for autonomous navigation, computer vision, and AI-based obstacle avoidance. Largely **3D-printed** and powered by embedded GPU hardware, MyzharBot embodies my approach: hands-on, open, and focused on turning advanced algorithms into working robots.
 
-Over the years, I've contributed to several open-source and community projects, including humanoid and mobile robots, thermal imaging systems such as the "SmarTC – Smart Thermal Camera", and ROS drivers and tools for depth and stereo sensors. These projects reflect my belief that complex robotics should be **accessible**, **documented**, and **shareable**.
+Other work includes humanoid and mobile robots, thermal-imaging systems such as **SmarTC – Smart Thermal Camera**, and practical tools for depth and stereo sensors. Explore the full collection in the [Projects section](/projects/).
+
+## Open Source
+
+I publish ROS and ROS 2 drivers, utilities, examples, and hardware resources so that useful robotics solutions can be reused, improved, and shared. My open-source work is grounded in the same challenges I encounter on real robots—from sensor integration and perception to navigation and embedded GPU deployment.
+
+You can find the code, documentation, and issue trackers on [GitHub](https://github.com/myzhar). Contributions, feedback, and bug reports are always welcome.
 
 ## What You'll Find Here
 
