@@ -17,12 +17,17 @@
 {% assign video_src = video_src | strip %}
 
 {% unless video_src == "" %}
-  <div class="responsive-video-container">
-    <iframe src="{{ video_src }}"
+  <div class="responsive-video-container responsive-video-container--consent">
+    <iframe data-cookieconsent="marketing"
+      data-cookieblock-src="{{ video_src }}"
       title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
     </iframe>
+  </div>
+  <div class="video-consent-notice cookieconsent-optout-marketing">
+    <p>This video is hosted by a third party and requires marketing-cookie consent.</p>
+    <a href="javascript:Cookiebot.renew()" class="btn btn--info">Manage cookie preferences</a>
   </div>
 {% endunless %}

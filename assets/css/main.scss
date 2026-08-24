@@ -151,6 +151,19 @@ nav.pagination {
   }
 }
 
+/* Third-party video consent placeholder */
+.video-consent-notice {
+  margin: 0 0 1em;
+  padding: 1.5em;
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
 /* font-display: swap for FontAwesome to avoid invisible text during webfont load */
 @font-face {
   font-family: "Font Awesome 6 Free";
