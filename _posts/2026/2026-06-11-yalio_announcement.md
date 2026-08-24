@@ -12,8 +12,8 @@ sitemap: true
 noindex: false
 
 header:
-  teaser: /assets/images/yalio/yalio-odometry.png
-  overlay_image: /assets/images/yalio/yalio-odometry.png
+  teaser: /assets/images/projects/yalio/yalio-odometry.png
+  overlay_image: /assets/images/projects/yalio/yalio-odometry.png
   overlay_filter: "0.5"
   actions:
     - label: "YALIO on GitHub"
