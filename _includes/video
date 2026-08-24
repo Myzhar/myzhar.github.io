@@ -36,6 +36,7 @@
       <p>This video is hosted by a third party. Loading it allows the provider to set its own cookies.</p>
       <button type="button" class="btn btn--info" data-video-load data-video-src="{{ video_src }}" data-video-title="YouTube video player">Load video</button>
       <a href="{{ video_url }}" target="_blank" rel="noopener noreferrer">Watch on its original platform <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+      <button type="button" class="video-embed__renew" data-video-consent-renew hidden>Change cookie settings</button>
     </div>
   </div>
 {% endunless %}
