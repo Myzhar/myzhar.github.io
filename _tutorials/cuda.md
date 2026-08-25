@@ -22,6 +22,7 @@ A collection of tutorials on NVIDIA® CUDA™ and GPU computing.
 |  | Tutorial | Description |
 | :----: | :------: | :---------- |
 | [![NVIDIA CUDA Compute Capability](/assets/images/tutorials/compute_capability/geforce-rtx-50series-nv-sfg-thumbnail-1920x1080.jpeg)](/tutorials/cuda/cuda-compute-capability/) | [**NVIDIA® CUDA™ Compute Capability**](/tutorials/cuda/cuda-compute-capability/) | An overview of CUDA Compute Capability and its importance in GPU programming, helping you understand which GPU features are available on your hardware. |
+| [![Object detection with YOLO, OpenCV and CUDA](/assets/images/tutorials/yolo_opencv_cuda/yolo-opencv-cuda-banner.svg)](/tutorials/opencv/yolo-object-detection-cuda/) | [**Detecting Everyday Objects with YOLO, OpenCV DNN and CUDA**](/tutorials/opencv/yolo-object-detection-cuda/) | Put the GPU to work on real-time object detection: build OpenCV with the CUDA DNN backend, verify it is actually being used, and run a COCO-trained YOLO model from Python or C++. |
 {: style="table-layout: fixed;" }
 
 <style>

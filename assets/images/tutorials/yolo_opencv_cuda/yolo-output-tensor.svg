@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 900" width="1520" height="900">
+  <defs>
+    <marker id="ta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1520" height="900" fill="#0d1117"/>
+
+  <text x="760" y="46" text-anchor="middle" font-family="'Courier New', monospace" font-size="26" font-weight="bold" fill="#e2e8f0">
+    Anatomy of the YOLO11 output tensor: 1 x 84 x 8400
+  </text>
+  <text x="760" y="76" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" fill="#94a3b8">
+    (identical for YOLOv8, YOLOv9 and YOLO12; 84 = 4 box values + 80 COCO class scores)
+  </text>
+
+  <!-- ============ LEFT: raw tensor as returned by forward() ============ -->
+  <text x="90" y="130" font-family="'Courier New', monospace" font-size="17" font-weight="bold" fill="#93c5fd">What net.forward() returns</text>
+  <text x="90" y="154" font-family="'Courier New', monospace" font-size="14" fill="#64748b">84 rows (attributes) x 8400 columns (candidates)</text>
+
+  <!-- outer matrix -->
+  <rect x="90" y="176" width="520" height="470" rx="8" fill="#111827" stroke="#475569" stroke-width="2"/>
+
+  <!-- box rows -->
+  <rect x="90" y="176" width="520" height="120" fill="#0f2d4a" stroke="#3b82f6" stroke-width="2"/>
+  <text x="106" y="206" font-family="'Courier New', monospace" font-size="15" fill="#93c5fd">row 0   cx  cx  cx  cx  cx  cx  ...  cx</text>
+  <text x="106" y="232" font-family="'Courier New', monospace" font-size="15" fill="#93c5fd">row 1   cy  cy  cy  cy  cy  cy  ...  cy</text>
+  <text x="106" y="258" font-family="'Courier New', monospace" font-size="15" fill="#93c5fd">row 2   w   w   w   w   w   w   ...  w</text>
+  <text x="106" y="284" font-family="'Courier New', monospace" font-size="15" fill="#93c5fd">row 3   h   h   h   h   h   h   ...  h</text>
+
+  <!-- class rows -->
+  <rect x="90" y="296" width="520" height="350" fill="#2a1533" stroke="#c084fc" stroke-width="2"/>
+  <text x="106" y="322" font-family="'Courier New', monospace" font-size="15" fill="#e9d5ff">row 4   person       score per candidate</text>
+  <text x="106" y="350" font-family="'Courier New', monospace" font-size="15" fill="#e9d5ff">row 5   bicycle      score per candidate</text>
+  <text x="106" y="378" font-family="'Courier New', monospace" font-size="15" fill="#e9d5ff">row 6   car          score per candidate</text>
+  <text x="106" y="406" font-family="'Courier New', monospace" font-size="15" fill="#a78bfa">  .</text>
+  <text x="106" y="428" font-family="'Courier New', monospace" font-size="15" fill="#a78bfa">  .</text>
+  <text x="106" y="450" font-family="'Courier New', monospace" font-size="15" fill="#a78bfa">  .</text>
+  <text x="106" y="482" font-family="'Courier New', monospace" font-size="15" fill="#e9d5ff">row 64  dining table score per candidate</text>
+  <text x="106" y="510" font-family="'Courier New', monospace" font-size="15" fill="#e9d5ff">row 71  cell phone   score per candidate</text>
+  <text x="106" y="538" font-family="'Courier New', monospace" font-size="15" fill="#a78bfa">  .</text>
+  <text x="106" y="560" font-family="'Courier New', monospace" font-size="15" fill="#a78bfa">  .</text>
+  <text x="106" y="592" font-family="'Courier New', monospace" font-size="15" fill="#e9d5ff">row 83  toothbrush   score per candidate</text>
+
+  <text x="350" y="676" text-anchor="middle" font-family="'Courier New', monospace" font-size="14" fill="#f87171">
+    Attribute-major: NOT one detection per row
+  </text>
+
+  <!-- ============ transpose arrow ============ -->
+  <line x1="630" y1="410" x2="740" y2="410" stroke="#94a3b8" stroke-width="3" marker-end="url(#ta)"/>
+  <text x="685" y="392" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#e2e8f0">transpose</text>
+  <text x="685" y="436" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#64748b">output[0].T</text>
+
+  <!-- ============ RIGHT: transposed ============ -->
+  <text x="770" y="130" font-family="'Courier New', monospace" font-size="17" font-weight="bold" fill="#4ade80">What you actually want</text>
+  <text x="770" y="154" font-family="'Courier New', monospace" font-size="14" fill="#64748b">8400 rows (candidates) x 84 columns (attributes)</text>
+
+  <rect x="770" y="176" width="660" height="470" rx="8" fill="#111827" stroke="#475569" stroke-width="2"/>
+
+  <!-- header strip -->
+  <rect x="770" y="176" width="660" height="40" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="790" y="203" font-family="'Courier New', monospace" font-size="14" fill="#94a3b8">idx</text>
+  <text x="880" y="203" font-family="'Courier New', monospace" font-size="14" fill="#93c5fd">cx</text>
+  <text x="960" y="203" font-family="'Courier New', monospace" font-size="14" fill="#93c5fd">cy</text>
+  <text x="1040" y="203" font-family="'Courier New', monospace" font-size="14" fill="#93c5fd">w</text>
+  <text x="1110" y="203" font-family="'Courier New', monospace" font-size="14" fill="#93c5fd">h</text>
+  <text x="1190" y="203" font-family="'Courier New', monospace" font-size="14" fill="#e9d5ff">cls[0..79]</text>
+
+  <g font-family="'Courier New', monospace" font-size="14" fill="#cbd5e1">
+    <text x="790" y="248">0</text>    <text x="866" y="248">312.4</text> <text x="946" y="248">210.7</text> <text x="1028" y="248">58.1</text> <text x="1098" y="248">120.3</text> <text x="1190" y="248">0.01 0.00 ... 0.02</text>
+    <text x="790" y="280">1</text>    <text x="866" y="280">313.9</text> <text x="946" y="280">211.2</text> <text x="1028" y="280">59.4</text> <text x="1098" y="280">121.9</text> <text x="1190" y="280">0.03 0.00 ... 0.01</text>
+  </g>
+
+  <!-- highlighted row -->
+  <rect x="772" y="296" width="656" height="44" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+  <g font-family="'Courier New', monospace" font-size="14" fill="#bbf7d0" font-weight="bold">
+    <text x="790" y="324">2</text>    <text x="866" y="324">314.5</text> <text x="946" y="324">212.0</text> <text x="1028" y="324">61.0</text> <text x="1098" y="324">124.5</text> <text x="1190" y="324">0.91 0.00 ... 0.00</text>
+  </g>
+
+  <g font-family="'Courier New', monospace" font-size="14" fill="#cbd5e1">
+    <text x="790" y="372">3</text>    <text x="866" y="372">316.1</text> <text x="946" y="372">213.4</text> <text x="1028" y="372">60.2</text> <text x="1098" y="372">123.0</text> <text x="1190" y="372">0.88 0.00 ... 0.00</text>
+    <text x="790" y="404">.</text>
+    <text x="790" y="426">.</text>
+    <text x="790" y="448">.</text>
+    <text x="790" y="480">8399</text> <text x="866" y="480">602.8</text> <text x="946" y="480">498.3</text> <text x="1028" y="480">37.7</text> <text x="1098" y="480">41.2</text>  <text x="1190" y="480">0.00 0.04 ... 0.00</text>
+  </g>
+
+  <!-- decode callout -->
+  <rect x="790" y="512" width="620" height="118" rx="10" fill="#16300a" stroke="#76b900" stroke-width="2"/>
+  <text x="810" y="540" font-family="'Courier New', monospace" font-size="14" font-weight="bold" fill="#bef264">Decoding row 2:</text>
+  <text x="810" y="566" font-family="'Courier New', monospace" font-size="14" fill="#d9f99d">class_id   = argmax(cls) = 0        -&gt; "person"</text>
+  <text x="810" y="590" font-family="'Courier New', monospace" font-size="14" fill="#d9f99d">confidence = max(cls)    = 0.91     -&gt; keep (&gt; 0.25)</text>
+  <text x="810" y="614" font-family="'Courier New', monospace" font-size="14" fill="#d9f99d">box        = (cx-w/2, cy-h/2, w, h) -&gt; (284, 150, 61, 124)</text>
+
+  <text x="1100" y="676" text-anchor="middle" font-family="'Courier New', monospace" font-size="14" fill="#4ade80">
+    One detection candidate per row, ready for NMS
+  </text>
+
+  <!-- ============ bottom: where 8400 comes from ============ -->
+  <rect x="90" y="710" width="1340" height="150" rx="12" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="110" y="742" font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#e2e8f0">Where do the 8400 candidates come from?</text>
+  <text x="110" y="774" font-family="'Courier New', monospace" font-size="15" fill="#94a3b8">
+    The detection head predicts on three feature-map strides, one cell per candidate:
+  </text>
+
+  <rect x="110" y="792" width="250" height="48" rx="8" fill="#0f2d4a" stroke="#3b82f6" stroke-width="2"/>
+  <text x="235" y="822" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" fill="#93c5fd">stride 8: 80x80 = 6400</text>
+
+  <rect x="390" y="792" width="250" height="48" rx="8" fill="#0f2d4a" stroke="#3b82f6" stroke-width="2"/>
+  <text x="515" y="822" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" fill="#93c5fd">stride 16: 40x40 = 1600</text>
+
+  <rect x="670" y="792" width="250" height="48" rx="8" fill="#0f2d4a" stroke="#3b82f6" stroke-width="2"/>
+  <text x="795" y="822" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" fill="#93c5fd">stride 32: 20x20 = 400</text>
+
+  <text x="950" y="822" font-family="'Courier New', monospace" font-size="17" font-weight="bold" fill="#fbbf24">= 8400 candidates @ 640x640</text>
+</svg>
