@@ -6,7 +6,9 @@ author: "Walter Lucetti"
 permalink: /tutorials/
 collection: tutorials
 entries_layout: grid
-classes: wide
+classes:
+  - wide
+  - grid-3
 sort_by: index
 sort_order: forward
 filter_to_root: true

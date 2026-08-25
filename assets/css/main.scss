@@ -121,6 +121,57 @@ html {
   font-size: 0.55em;
 }
 
+/*
+Utility: render a page's entry grid with 3 columns instead of the theme's 4.
+Opt a page in by adding `grid-3` to its `classes:` front matter, e.g.
+`_pages/tutorials.md` and `_pages/tag-archive.md`. `page.classes` is emitted on
+the <body> tag by minimal-mistakes, so nothing else needs a hook.
+
+The `.archive` step is REQUIRED, not cosmetic: the "Latest News" block in the
+site footer uses the same `.grid__wrapper` / `.grid__item` classes on every
+page, and without it these rules would override its 6-column layout.
+
+The theme lays `.grid__item` out with floats plus `nth-child(4n + ...)` clears,
+so those have to be neutralised before the flex widths can take over.
+*/
+.grid-3 .archive {
+  .grid__wrapper,   /* collection pages: /tutorials/, /projects/, /events/ */
+  .entries-grid {   /* taxonomy pages:   /tags/, /categories/, /posts/     */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.7%;
+
+    /* The theme pulls `.archive .grid__wrapper` 300px into the right sidebar
+       gutter to fit its 4 float columns, which on this site already sends a
+       full row ~250px past the viewport. Reset the pull so the grid fills
+       `.archive` exactly and all 3 columns stay on screen. */
+    margin-inline-end: 0;
+  }
+
+  .grid__item {
+    float: none !important;
+    clear: none !important;
+    margin-inline: 0 !important;
+    width: 100%;
+
+    @include breakpoint($small) {
+      width: 49.15%;
+    }
+
+    @include breakpoint($medium) {
+      width: 32.2%;
+    }
+
+    /* Wider cards make the theme's 120px teaser cap crop harder, so grow it by
+       the same ratio the card width grew (23.7% -> 32.2%). */
+    .archive__item-teaser {
+      @include breakpoint($medium) {
+        max-height: 165px;
+      }
+    }
+  }
+}
+
 nav.breadcrumbs {
   text-transform: uppercase;
 }

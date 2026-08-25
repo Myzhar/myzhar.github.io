@@ -43,4 +43,3 @@ Interested in **guest posts, technical reviews, or sponsored content** related t
 ---
 
 *Based in Massa, Tuscany, Italy 🇮🇹*
-

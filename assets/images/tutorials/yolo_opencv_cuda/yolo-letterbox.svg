@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" width="1400" height="700">
+  <defs>
+    <marker id="la" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="700" fill="#0d1117"/>
+
+  <text x="700" y="46" text-anchor="middle" font-family="'Courier New', monospace" font-size="26" font-weight="bold" fill="#e2e8f0">
+    Letterbox: fitting a 16:9 frame into a square network input
+  </text>
+  <text x="700" y="76" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" fill="#94a3b8">
+    Uniform scale + symmetric padding; aspect ratio is preserved, so the boxes stay undistorted
+  </text>
+
+  <!-- ===== Panel 1: original ===== -->
+  <text x="60" y="126" font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#93c5fd">1. Camera frame</text>
+  <rect x="60" y="146" width="460" height="259" fill="#1e293b" stroke="#3b82f6" stroke-width="2.5"/>
+  <rect x="180" y="196" width="110" height="160" fill="none" stroke="#4ade80" stroke-width="3"/>
+  <text x="185" y="190" font-family="'Courier New', monospace" font-size="14" font-weight="bold" fill="#4ade80">person</text>
+  <text x="290" y="428" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" fill="#cbd5e1">1280 x 720 (BGR)</text>
+
+  <!-- arrow 1 -->
+  <line x1="540" y1="276" x2="600" y2="276" stroke="#94a3b8" stroke-width="3" marker-end="url(#la)"/>
+  <text x="570" y="258" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">resize</text>
+  <text x="570" y="302" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#fbbf24">r = 0.5</text>
+
+  <!-- ===== Panel 2: scaled ===== -->
+  <text x="620" y="126" font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#93c5fd">2. Uniform scale</text>
+  <rect x="620" y="206" width="300" height="140" fill="#1e293b" stroke="#3b82f6" stroke-width="2.5"/>
+  <rect x="698" y="233" width="72" height="87" fill="none" stroke="#4ade80" stroke-width="3"/>
+  <text x="770" y="428" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" fill="#cbd5e1">640 x 360</text>
+  <text x="770" y="452" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#64748b">r = min(640/1280, 640/720)</text>
+
+  <!-- arrow 2 -->
+  <line x1="940" y1="276" x2="1000" y2="276" stroke="#94a3b8" stroke-width="3" marker-end="url(#la)"/>
+  <text x="970" y="258" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">pad</text>
+  <text x="970" y="302" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#fbbf24">114,114,114</text>
+
+  <!-- ===== Panel 3: letterboxed ===== -->
+  <text x="1020" y="126" font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#93c5fd">3. Network input</text>
+  <rect x="1020" y="146" width="300" height="300" fill="#727272" stroke="#3b82f6" stroke-width="2.5"/>
+  <rect x="1020" y="212" width="300" height="140" fill="#1e293b"/>
+  <rect x="1098" y="239" width="72" height="87" fill="none" stroke="#4ade80" stroke-width="3"/>
+
+  <!-- pad annotations -->
+  <line x1="1000" y1="146" x2="1000" y2="212" stroke="#fbbf24" stroke-width="2"/>
+  <line x1="994" y1="146" x2="1006" y2="146" stroke="#fbbf24" stroke-width="2"/>
+  <line x1="994" y1="212" x2="1006" y2="212" stroke="#fbbf24" stroke-width="2"/>
+  <text x="990" y="185" text-anchor="end" font-family="'Courier New', monospace" font-size="14" fill="#fbbf24">top = 140</text>
+
+  <line x1="1000" y1="352" x2="1000" y2="446" stroke="#fbbf24" stroke-width="2"/>
+  <line x1="994" y1="352" x2="1006" y2="352" stroke="#fbbf24" stroke-width="2"/>
+  <line x1="994" y1="446" x2="1006" y2="446" stroke="#fbbf24" stroke-width="2"/>
+  <text x="990" y="404" text-anchor="end" font-family="'Courier New', monospace" font-size="14" fill="#fbbf24">bottom = 140</text>
+
+  <text x="1170" y="480" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" fill="#cbd5e1">640 x 640</text>
+  <text x="1170" y="504" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#64748b">left = right = 0</text>
+
+  <!-- ===== formulas ===== -->
+  <rect x="60" y="530" width="1260" height="140" rx="12" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="84" y="562" font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#e2e8f0">Mapping detections back to the camera frame</text>
+
+  <text x="84"  y="596" font-family="'Courier New', monospace" font-size="15" fill="#4ade80">x_frame = (x_net - left) / r</text>
+  <text x="500" y="596" font-family="'Courier New', monospace" font-size="15" fill="#4ade80">y_frame = (y_net - top) / r</text>
+  <text x="84"  y="624" font-family="'Courier New', monospace" font-size="15" fill="#4ade80">w_frame = w_net / r</text>
+  <text x="500" y="624" font-family="'Courier New', monospace" font-size="15" fill="#4ade80">h_frame = h_net / r</text>
+  <text x="84" y="656" font-family="'Courier New', monospace" font-size="14" fill="#f87171">
+    Forget the "- left" / "- top" terms and every box drifts down the image by exactly the padding amount.
+  </text>
+</svg>

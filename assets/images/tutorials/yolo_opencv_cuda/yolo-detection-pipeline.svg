@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 700" width="1560" height="700">
+  <defs>
+    <marker id="pa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="pa-gpu" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#76b900"/>
+    </marker>
+    <filter id="g-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="g-green" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1560" height="700" fill="#0d1117"/>
+
+  <text x="780" y="46" text-anchor="middle" font-family="'Courier New', monospace" font-size="26" font-weight="bold" fill="#e2e8f0">
+    YOLO + OpenCV DNN + CUDA: the full inference pipeline
+  </text>
+
+  <!-- ===== HOST lane ===== -->
+  <rect x="40" y="90" width="1480" height="200" rx="14" fill="#111827" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="62" y="118" font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#94a3b8">HOST (CPU / cv::Mat)</text>
+
+  <!-- 1 capture -->
+  <rect x="70" y="140" width="210" height="110" rx="12" fill="#0f2d4a" stroke="#3b82f6" stroke-width="2.5" filter="url(#g-blue)"/>
+  <text x="175" y="176" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#93c5fd">1. Capture</text>
+  <text x="175" y="200" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#cbd5e1">VideoCapture</text>
+  <text x="175" y="222" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#64748b">BGR 1280x720</text>
+
+  <!-- 2 letterbox -->
+  <rect x="330" y="140" width="230" height="110" rx="12" fill="#0f2d4a" stroke="#3b82f6" stroke-width="2.5" filter="url(#g-blue)"/>
+  <text x="445" y="176" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#93c5fd">2. Letterbox</text>
+  <text x="445" y="200" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#cbd5e1">resize + border</text>
+  <text x="445" y="222" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#64748b">640x640, pad=114</text>
+
+  <!-- 3 blob -->
+  <rect x="610" y="140" width="250" height="110" rx="12" fill="#0f2d4a" stroke="#3b82f6" stroke-width="2.5" filter="url(#g-blue)"/>
+  <text x="735" y="176" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#93c5fd">3. blobFromImage</text>
+  <text x="735" y="200" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#cbd5e1">/255, swapRB, NCHW</text>
+  <text x="735" y="222" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#64748b">1x3x640x640 float</text>
+
+  <!-- 7 decode -->
+  <rect x="1000" y="140" width="230" height="110" rx="12" fill="#0f2d4a" stroke="#3b82f6" stroke-width="2.5" filter="url(#g-blue)"/>
+  <text x="1115" y="176" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#93c5fd">7. Decode + NMS</text>
+  <text x="1115" y="200" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#cbd5e1">argmax, threshold</text>
+  <text x="1115" y="222" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#64748b">NMSBoxesBatched</text>
+
+  <!-- 8 draw -->
+  <rect x="1280" y="140" width="210" height="110" rx="12" fill="#0f2d4a" stroke="#3b82f6" stroke-width="2.5" filter="url(#g-blue)"/>
+  <text x="1385" y="176" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#93c5fd">8. Un-letterbox</text>
+  <text x="1385" y="200" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#cbd5e1">+ draw boxes</text>
+  <text x="1385" y="222" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#64748b">original coords</text>
+
+  <!-- host arrows -->
+  <line x1="280" y1="195" x2="322" y2="195" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#pa)"/>
+  <line x1="560" y1="195" x2="602" y2="195" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#pa)"/>
+  <line x1="1230" y1="195" x2="1272" y2="195" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#pa)"/>
+
+  <!-- ===== DEVICE lane ===== -->
+  <rect x="40" y="400" width="1480" height="200" rx="14" fill="#111827" stroke="#3f6212" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="62" y="428" font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#a3e635">DEVICE (NVIDIA GPU, DNN_BACKEND_CUDA)</text>
+
+  <!-- 4 upload -->
+  <rect x="470" y="450" width="220" height="110" rx="12" fill="#16300a" stroke="#76b900" stroke-width="2.5" filter="url(#g-green)"/>
+  <text x="580" y="486" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#bef264">4. H2D copy</text>
+  <text x="580" y="510" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#d9f99d">blob -&gt; VRAM</text>
+  <text x="580" y="532" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#65a30d">~4.9 MB / frame</text>
+
+  <!-- 5 inference -->
+  <rect x="740" y="450" width="280" height="110" rx="12" fill="#16300a" stroke="#76b900" stroke-width="2.5" filter="url(#g-green)"/>
+  <text x="880" y="486" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#bef264">5. net.forward()</text>
+  <text x="880" y="510" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#d9f99d">cuDNN + custom kernels</text>
+  <text x="880" y="532" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#65a30d">FP32 or FP16 target</text>
+
+  <!-- 6 download -->
+  <rect x="1070" y="450" width="220" height="110" rx="12" fill="#16300a" stroke="#76b900" stroke-width="2.5" filter="url(#g-green)"/>
+  <text x="1180" y="486" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#bef264">6. D2H copy</text>
+  <text x="1180" y="510" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#d9f99d">output -&gt; RAM</text>
+  <text x="1180" y="532" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#65a30d">1x84x8400 float</text>
+
+  <!-- device arrows -->
+  <line x1="690" y1="505" x2="732" y2="505" stroke="#76b900" stroke-width="2.5" marker-end="url(#pa-gpu)"/>
+  <line x1="1020" y1="505" x2="1062" y2="505" stroke="#76b900" stroke-width="2.5" marker-end="url(#pa-gpu)"/>
+
+  <!-- cross-lane arrows -->
+  <path d="M 735 255 L 735 330 L 580 330 L 580 442" fill="none" stroke="#76b900" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#pa-gpu)"/>
+  <path d="M 1180 442 L 1180 330 L 1115 330 L 1115 258" fill="none" stroke="#76b900" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#pa-gpu)"/>
+
+  <text x="700" y="322" text-anchor="end" font-family="'Courier New', monospace" font-size="13" fill="#a3e635">setInput()</text>
+  <text x="1200" y="322" font-family="'Courier New', monospace" font-size="13" fill="#a3e635">forward() returns</text>
+
+  <!-- footnote -->
+  <rect x="40" y="628" width="1480" height="46" rx="10" fill="#1f2937" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="60" y="657" font-family="'Courier New', monospace" font-size="14" fill="#fcd34d">
+    Steps 4 and 6 are unavoidable with the OpenCV DNN API: setInput() takes a host cv::Mat, so every frame pays one round trip across the PCIe bus.
+  </text>
+</svg>
