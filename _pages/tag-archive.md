@@ -6,7 +6,9 @@ layout: tags
 entries_layout: grid
 author: "Walter Lucetti"
 author_profile: true
-classes: wide
+classes:
+  - wide
+  - grid-3
 show_date: true
 read_time: true
 header:
