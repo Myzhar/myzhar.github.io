@@ -6,7 +6,7 @@ redirect_from:
   - /privacy-policy/
 author: "Walter Lucetti"
 author_profile: true
-date: 2026-02-24 00:00:00 +01:00
+date: 2026-08-25 00:00:00 +01:00
 classes: single
 layout: single
 toc: true
