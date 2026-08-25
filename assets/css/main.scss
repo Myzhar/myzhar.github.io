@@ -175,20 +175,6 @@ nav.pagination {
   &__placeholder a {
     font-size: 0.9em;
   }
-
-  &__renew {
-    padding: 0;
-    border: 0;
-    background: none;
-    color: inherit;
-    font-size: 0.9em;
-    text-decoration: underline;
-    cursor: pointer;
-
-    &[hidden] {
-      display: none;
-    }
-  }
 }
 
 /* font-display: swap for FontAwesome to avoid invisible text during webfont load */
