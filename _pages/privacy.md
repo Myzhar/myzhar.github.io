@@ -19,7 +19,7 @@ share: false
 noindex: false
 ---
 
-_Last updated: 24 February 2026_
+_Last updated: 25 August 2026_
 
 This Privacy Policy describes how **myzhar.tech** (“we”, “us”, “our”) collects, uses and protects information when you visit **https://myzhar.tech** (the “Website”).
 
@@ -62,11 +62,29 @@ This information is mainly collected through cookies and similar tracking techno
 
 We use cookies and similar technologies to operate and improve the Website, analyze traffic, and display advertising.
 
-- **Necessary cookies:** Required for the Website to function (security, basic functionality, preferences).  
-- **Analytics cookies:** Help us understand how visitors use the Website (Google Analytics).  
-- **Advertising cookies:** Used to show relevant ads and measure ad performance (Google AdSense, Adsterra).
+- **Necessary cookies:** Required for the Website to function (security, basic functionality, storing your consent choices).  
+- **Analytics cookies:** Help us understand how visitors use the Website (Google Analytics, Microsoft Clarity).  
+- **Advertising cookies:** Used to show ads and measure ad performance (Google AdSense).
 
-You can control cookies through your browser settings.
+The next section lists every third‑party service used on the Website. You can review and change your choices at any time through our consent manager, and you can also control cookies through your browser settings.
+
+## Services used on this Website
+
+The table below lists all third‑party services that the Website may load, what they are used for, and what they store on your device.
+
+| Service (provider) | Purpose | Cookies / storage | Consent required |
+| --- | --- | --- | --- |
+| **GitHub Pages** (GitHub / Microsoft) | Hosting and delivery of the Website. Your IP address appears in the hosting provider’s server logs. | None | No – strictly necessary |
+| **Klaro consent manager** (KiProtect GmbH) | Shows the consent banner and stores your privacy choices. | `klaro` cookie (approx. 60 days) | No – strictly necessary |
+| **jsDelivr CDN** (Volentio JSD Ltd) | Delivers the Font Awesome icon font used across the Website. | None | No – strictly necessary |
+| **GitHub asset CDN** (GitHub / Microsoft) | Delivers the emoji images used in articles. | None | No – strictly necessary |
+| **Google Analytics 4** (Google) | Aggregated traffic and usage statistics. | `_ga`, `_ga_*` (up to 2 years) | Yes – analytics |
+| **Microsoft Clarity** (Microsoft) | Usage analytics, heatmaps and session replay of interactions with pages. | `_clck`, `_clsk` | Yes – analytics |
+| **Google AdSense** (Google) | Displays advertising and measures ad performance. May also contact `doubleclick.net` and related Google ad domains. | `__gads`, `__gpi` and similar Google advertising cookies | Yes – advertising |
+| **YouTube** (Google) | Video playback for embedded videos, in privacy‑enhanced mode (`youtube-nocookie.com`). Videos are **not** loaded until you accept embedded media in the consent manager, or click “Load video” on an individual video. | Set by YouTube only once a video is loaded | Yes – embedded media |
+| **Google Programmable Search** and **Internet Archive** | Used only on the “page not found” (404) page, to suggest alternative pages and archived versions. | Set by those providers on that page only | No – 404 page only |
+
+We do not use comment systems, newsletter services, social media widgets or A/B testing tools. Links to social networks are plain links: no request is sent to those platforms until you click one.
 
 ## Google Analytics
 
@@ -87,7 +105,22 @@ You can opt out of Google Analytics by:
   https://tools.google.com/dlpage/gaoptout  
 - Adjusting your browser’s privacy and cookie settings.
 
-<!-- ## Google AdSense and advertising
+## Microsoft Clarity
+
+We use **Microsoft Clarity** to understand how the Website is used, through aggregated usage metrics, heatmaps and session replay.
+
+Clarity may record:
+
+- Pages visited, clicks, scrolling and mouse movement  
+- Device, browser and screen information  
+- Your IP address (used by Microsoft for approximate location and fraud prevention)  
+
+Clarity is configured to mask text input, and we do not use it to identify individual visitors. Microsoft may use the data it collects in accordance with its own privacy statement:  
+https://privacy.microsoft.com/privacystatement
+
+You can opt out through our consent manager or by adjusting your browser’s privacy settings.
+
+## Google AdSense and advertising
 
 We use **Google AdSense** to display ads on the Website.
 
@@ -100,7 +133,7 @@ You may opt out of personalized advertising by visiting:
 - For more information about how Google uses data in ads:  
   https://policies.google.com/technologies/ads  
 
-You may also manage third‑party advertising cookies through your browser and, where available, through our consent/cookie banner. -->
+You may also manage third‑party advertising cookies through your browser and through our consent manager.
 
 ## Legal bases for processing (GDPR)
 
@@ -133,7 +166,7 @@ Analytics and log data may be kept for a limited period defined in our tools’ 
 
 We may share information with:
 
-- **Service providers:** For hosting, analytics, security, and advertising (e.g., Google Analytics, Google AdSense).  
+- **Service providers:** For hosting, consent management, analytics, content delivery and advertising, as listed in the “Services used on this Website” section above.  
 - **Authorities:** When required by law, court order or to protect our rights or the rights of others.
 
 We do not share your personal data with third parties for their own direct marketing purposes.
@@ -161,8 +194,9 @@ To exercise your rights, contact us using the contact information above.
 
 You can manage cookies and tracking in several ways:
 
+- Via our consent manager, which lets you enable or disable each group of services individually. It appears the first time you visit the Website, and you can reopen it at any time to review or withdraw your consent: <a href="#" onclick="if (window.klaro) { klaro.show(); } return false;">change your cookie settings</a>.  
 - Via your browser settings (block, delete or restrict cookies).  
-- For Google Analytics and Google Ads, using the tools listed in the sections above.
+- For Google Analytics, Microsoft Clarity and Google Ads, using the tools listed in the sections above.
 
 Please note that disabling certain cookies may affect the functionality and user experience of the Website.
 
