@@ -19,6 +19,8 @@ header:
     - label: "Official Announcement"
       url: "https://opencv.org/opencv-5/"
       target: _blank
+    - label: "Install OpenCV 5 Tutorial"
+      url: "/tutorials/opencv/installing-opencv5-cuda-ubuntu/"
 
 categories:
   - news
@@ -35,6 +37,9 @@ tags:
 ---
 
 It's out! **OpenCV 5** has officially been released, and honestly, this one feels like a bigger deal than most people might realize at first glance.
+
+{: .notice--info}
+**Want to try it yourself?** I wrote a full step-by-step guide to building it from source with GPU support: [**Installing OpenCV 5 with CUDA and DNN Support on Ubuntu 24.04**](/tutorials/opencv/installing-opencv5-cuda-ubuntu/).
 
 {% include figure popup=true image_path="/assets/images/opencv5/opencv5-release.jpg" alt="OpenCV 5 Release" max_width="400px" %}
 
@@ -134,5 +139,7 @@ The work isn't done. The team has committed to GPU acceleration for the new DNN 
 OpenCV 5 is a real release. The DNN engine rewrite alone would justify a major version bump; everything else on top, the HAL, the 3D reorganization, the new data types, and the Python modernization, makes this feel like the library catching up to where the field has been for the past few years. The ~1 million daily installs figure and [86,000+ GitHub stars](https://github.com/opencv/opencv){:target="_blank"} show how many projects still depend on it; this update will have a wide impact.
 
 If you're maintaining a computer vision pipeline that uses OpenCV's DNN module, this is the time to start testing. The `ENGINE_AUTO` default means migration should be smooth for most cases, but it's worth validating explicitly rather than assuming. The [full OpenCV 5.0 documentation](https://docs.opencv.org/5.0/){:target="_blank"} is the best place to start.
+
+If you want to get your hands on it right away, I put together a complete walkthrough of building 5.0.0 from source on Ubuntu 24.04 with the CUDA DNN backend: [**Installing OpenCV 5 with CUDA and DNN Support on Ubuntu 24.04**](/tutorials/opencv/installing-opencv5-cuda-ubuntu/). It covers the NVIDIA® driver, CUDA and cuDNN stack, every CMake flag that actually decides whether GPU inference works, the NumPy 2 trap Ubuntu 24.04 sets for you, and a verification ladder that catches the silent failures OpenCV never reports.
 
 Happy robotics programming... with vision! 🤖
