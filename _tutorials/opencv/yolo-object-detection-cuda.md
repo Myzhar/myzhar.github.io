@@ -11,10 +11,13 @@ header:
   teaser: /assets/images/tutorials/yolo_opencv_cuda/yolo-opencv-cuda-banner.svg
   actions:
     - label: "<i class='fas fa-book'></i> OpenCV DNN Tutorials"
-      url: "https://docs.opencv.org/5.0/d2/d58/tutorial_table_of_content_dnn.html"
+      url: "https://docs.opencv.org/5.0/tutorials/dnn/table_of_content_dnn.html"
       target: _blank
     - label: "<i class='fab fa-github'></i> Ultralytics YOLO"
       url: "https://github.com/ultralytics/ultralytics"
+      target: _blank
+    - label: "<i class='fas fa-code'></i> Source Code"
+      url: "https://github.com/Myzhar/tutorial-opencv-yolo"
       target: _blank
 layout: single
 classes: single
@@ -43,6 +46,12 @@ By the end of this tutorial you will be able to:
 - Explain the shape `1 x 84 x 8400` and decode it correctly.
 - Write a complete real-time detector in Python **and** in C++.
 - Recognise the handful of failure modes that produce "almost working" detections.
+
+{: .notice--info}
+**All the code on this page is available on GitHub**, ready to clone and run:
+[**Myzhar/tutorial-opencv-yolo**](https://github.com/Myzhar/tutorial-opencv-yolo){: target="_blank"}. The repository carries the Python and C++ detectors
+exactly as they are printed below, a model export script, and a test that checks both implementations against a
+reference produced by Ultralytics itself.
 
 ## Prerequisites
 
@@ -139,6 +148,10 @@ This downloads `yolo11s.pt` automatically and writes `yolo11s.onnx` next to it. 
 | `nms=False` | Keeps NMS *out* of the graph. We want the raw candidate grid, because we are going to run OpenCV's own NMS, which is faster and gives us per-class control. |
 
 You can now deactivate and delete the virtual environment. The `.onnx` file is entirely self-contained.
+
+> :bulb: **Tip**: the companion repository wraps all of the above in one script,
+[`models/export_yolo11.sh`](https://github.com/Myzhar/tutorial-opencv-yolo/blob/main/models/export_yolo11.sh){: target="_blank"}, which builds the throwaway
+environment, exports the model, and prints the output shape so you can check it straight away.
 
 Verify what you got before going further:
 
@@ -383,6 +396,8 @@ A sensible starting point is `score_threshold=0.25`, `nms_threshold=0.45`. Raise
 ## Part 4: The complete Python detector
 
 Here is the whole thing. Save it as `yolo_coco_detect.py`; it has no dependencies beyond OpenCV and NumPy.
+You can also grab it straight from the companion repository:
+[`python/yolo_coco_detect.py`](https://github.com/Myzhar/tutorial-opencv-yolo/blob/main/python/yolo_coco_detect.py){: target="_blank"}.
 
 ```python
 #!/usr/bin/env python3
@@ -393,6 +408,7 @@ Here is the whole thing. Save it as `yolo_coco_detect.py`; it has no dependencie
 """
 
 import argparse
+import os
 import sys
 import time
 
@@ -418,9 +434,15 @@ COCO_CLASSES = (
 INPUT_SIZE = 640
 PAD_VALUE = 114
 
-# One stable colour per class (fixed seed, so labels keep their colour).
-_rng = np.random.default_rng(0xC0FFEE)
-COLORS = _rng.integers(60, 255, size=(len(COCO_CLASSES), 3)).tolist()
+def _class_color(class_id):
+    """Deterministic, well-separated colours via a golden-ratio walk around the
+    hue circle. Same formula as the C++ version, so both draw identical boxes."""
+    hue = int((class_id * 0.61803398875 * 180.0) % 180.0)
+    bgr = cv2.cvtColor(np.uint8([[[hue, 200, 255]]]), cv2.COLOR_HSV2BGR)[0][0]
+    return int(bgr[0]), int(bgr[1]), int(bgr[2])
+
+
+COLORS = [_class_color(i) for i in range(len(COCO_CLASSES))]
 
 
 def cuda_device_available():
@@ -433,6 +455,9 @@ def cuda_device_available():
 
 def build_network(model_path, use_cuda, fp16):
     """Load the ONNX graph and pin it to the requested backend."""
+    if not os.path.isfile(model_path):
+        sys.exit(f"Model file not found: {model_path}")
+
     if hasattr(cv2.dnn, "ENGINE_CLASSIC"):
         # OpenCV 5: ENGINE_AUTO resolves to the new engine, which is CPU-only.
         # ENGINE_CLASSIC is the one that owns the CUDA backend.
@@ -522,7 +547,9 @@ def postprocess(output, ratio, pad_left, pad_top, frame_shape,
             "class_id": int(class_ids[i]),
             "label": COCO_CLASSES[class_ids[i]],
             "confidence": float(confidences[i]),
-            "box": (int(bx), int(by), int(bw), int(bh)),
+            # round(), not int(): matches cvRound() in the C++ version and
+            # Ultralytics itself. Truncating biases every box toward the origin.
+            "box": (round(bx), round(by), round(bw), round(bh)),
         })
     return detections
 
@@ -660,6 +687,10 @@ Run those last two back to back. The difference between the `inference` figures 
 ## Part 5: The same detector in C++
 
 For anything embedded, or anything that has to live inside a ROS 2 node, you want the C++ version. It is the same eight steps; only the syntax changes.
+
+Both files are in the companion repository:
+[`cpp/yolo_coco_detect.cpp`](https://github.com/Myzhar/tutorial-opencv-yolo/blob/main/cpp/yolo_coco_detect.cpp){: target="_blank"} and
+[`cpp/CMakeLists.txt`](https://github.com/Myzhar/tutorial-opencv-yolo/blob/main/cpp/CMakeLists.txt){: target="_blank"}.
 
 ### `yolo_coco_detect.cpp`
 
@@ -882,9 +913,10 @@ void draw(cv::Mat& frame, const std::vector<Detection>& detections)
     }
 }
 
-}  // namespace
-
-int main(int argc, char** argv)
+/// Everything the program does. Wrapped by main() so that an OpenCV error
+/// (a missing model file, a graph it cannot parse) prints one clear line
+/// instead of terminating the process with an uncaught exception.
+int runDetector(int argc, char** argv)
 {
     const cv::String keys =
         "{help h usage ? |       | print this message }"
@@ -990,6 +1022,21 @@ int main(int argc, char** argv)
     cap.release();
     cv::destroyAllWindows();
     return 0;
+}
+
+}  // namespace
+
+int main(int argc, char** argv)
+{
+    try
+    {
+        return runDetector(argc, argv);
+    }
+    catch (const cv::Exception& e)
+    {
+        std::cerr << "OpenCV error: " << e.what() << '\n';
+        return 1;
+    }
 }
 ```
 
@@ -1215,7 +1262,7 @@ Happy detecting!
 
 ## References
 
-- [OpenCV DNN module tutorials](https://docs.opencv.org/5.0/d2/d58/tutorial_table_of_content_dnn.html){:target="_blank"}
+- [OpenCV DNN module tutorials](https://docs.opencv.org/5.0/tutorials/dnn/table_of_content_dnn.html){:target="_blank"}
 - [OpenCV: YOLO DNNs tutorial](https://docs.opencv.org/5.0/tutorials/dnn/dnn_yolo/dnn_yolo.html){:target="_blank"}, the upstream reference, including the list of supported YOLO variants
 - [OpenCV 5 announcement](https://opencv.org/opencv-5/){:target="_blank"} and my write-up, [OpenCV 5 is Finally Here!](/posts/opencv5-released/)
 - [Ultralytics YOLO11 documentation](https://docs.ultralytics.com/models/yolo11/){:target="_blank"} and [export arguments](https://docs.ultralytics.com/modes/export/){:target="_blank"}
@@ -1224,3 +1271,4 @@ Happy detecting!
 - [COCO dataset](https://cocodataset.org/){:target="_blank"}
 - [opencv/opencv#26566](https://github.com/opencv/opencv/issues/26566){:target="_blank"}, the YOLO11 + CUDA fusion bug, fixed by [PR #27326](https://github.com/opencv/opencv/pull/27326){:target="_blank"} in OpenCV 4.12.0
 - [NVIDIA® CUDA™ Compute Capability](/tutorials/cuda/cuda-compute-capability/), for the `CUDA_ARCH_BIN` value you need
+- [**Myzhar/tutorial-opencv-yolo**](https://github.com/Myzhar/tutorial-opencv-yolo){: target="_blank"}, the complete source code for this tutorial
