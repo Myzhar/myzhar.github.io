@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 830" width="1480" height="830">
+  <defs>
+    <marker id="up" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#76b900"/>
+    </marker>
+  </defs>
+
+  <rect width="1480" height="830" fill="#0d1117"/>
+
+  <text x="740" y="44" text-anchor="middle" font-family="'Courier New', monospace" font-size="26" font-weight="bold" fill="#e2e8f0">
+    The CUDA DNN stack: every layer has one gate, and one way of telling you it is missing
+  </text>
+
+  <!-- header -->
+  <g font-family="'Courier New', monospace" font-size="14" font-weight="bold" fill="#64748b">
+    <text x="76" y="94">LAYER</text>
+    <text x="620" y="94">GATE</text>
+    <text x="1000" y="94">WHAT YOU SEE IF IT IS MISSING</text>
+  </g>
+  <line x1="60" y1="104" x2="1420" y2="104" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- row 7: your code (top) -->
+  <rect x="60" y="120" width="520" height="76" rx="10" fill="#1f2937" stroke="#fbbf24" stroke-width="2.5"/>
+  <text x="80" y="152" font-family="'Courier New', monospace" font-size="17" font-weight="bold" fill="#fbbf24">7. your code</text>
+  <text x="80" y="178" font-family="'Courier New', monospace" font-size="13" fill="#94a3b8">run time, not build time</text>
+  <rect x="600" y="132" width="360" height="52" rx="6" fill="#0d1117" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="616" y="152" font-family="'Courier New', monospace" font-size="13" fill="#fde68a">engine = ENGINE_CLASSIC</text>
+  <text x="616" y="172" font-family="'Courier New', monospace" font-size="13" fill="#fde68a">setPreferableBackend(CUDA)</text>
+  <text x="1000" y="148" font-family="'Courier New', monospace" font-size="12" fill="#f87171">2 warnings at load time:</text>
+  <text x="1000" y="166" font-family="'Courier New', monospace" font-size="12" fill="#94a3b8">"not supported by the new</text>
+  <text x="1000" y="182" font-family="'Courier New', monospace" font-size="12" fill="#94a3b8"> graph engine", then CPU speed</text>
+
+  <!-- row 6 -->
+  <rect x="60" y="216" width="520" height="76" rx="10" fill="#0f2d18" stroke="#76b900" stroke-width="2.5"/>
+  <text x="80" y="248" font-family="'Courier New', monospace" font-size="17" font-weight="bold" fill="#a3e635">6. dnn CUDA backend</text>
+  <text x="80" y="274" font-family="'Courier New', monospace" font-size="13" fill="#94a3b8">CV_CUDA4DNN, the actual kernels</text>
+  <rect x="600" y="228" width="360" height="52" rx="6" fill="#0d1117" stroke="#76b900" stroke-width="1.5"/>
+  <text x="616" y="260" font-family="'Courier New', monospace" font-size="14" fill="#a3e635">OPENCV_DNN_CUDA=ON</text>
+  <text x="1000" y="248" font-family="'Courier New', monospace" font-size="13" fill="#f87171">one stderr warning, once:</text>
+  <text x="1000" y="272" font-family="'Courier New', monospace" font-size="12" fill="#94a3b8">"DNN module was not built with</text>
+  <text x="1000" y="288" font-family="'Courier New', monospace" font-size="12" fill="#94a3b8"> CUDA backend; switching to CPU"</text>
+
+  <!-- row 5 -->
+  <rect x="60" y="312" width="520" height="76" rx="10" fill="#0f2035" stroke="#38bdf8" stroke-width="2.5"/>
+  <text x="80" y="344" font-family="'Courier New', monospace" font-size="17" font-weight="bold" fill="#7dd3fc">5. cudev + cuda modules</text>
+  <text x="80" y="370" font-family="'Courier New', monospace" font-size="13" fill="#94a3b8">they live in opencv_contrib</text>
+  <rect x="600" y="324" width="360" height="52" rx="6" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="616" y="356" font-family="'Courier New', monospace" font-size="13" fill="#7dd3fc">OPENCV_EXTRA_MODULES_PATH</text>
+  <text x="1000" y="356" font-family="'Courier New', monospace" font-size="13" fill="#fbbf24">CMake error: requires enabled</text>
+  <text x="1000" y="374" font-family="'Courier New', monospace" font-size="13" fill="#fbbf24">'cudev' module from opencv_contrib</text>
+
+  <!-- row 4 -->
+  <rect x="60" y="408" width="520" height="76" rx="10" fill="#0f2d18" stroke="#76b900" stroke-width="2.5"/>
+  <text x="80" y="440" font-family="'Courier New', monospace" font-size="17" font-weight="bold" fill="#a3e635">4. cuDNN 9</text>
+  <text x="80" y="466" font-family="'Courier New', monospace" font-size="13" fill="#94a3b8">separate download, must match CUDA major</text>
+  <rect x="600" y="420" width="360" height="52" rx="6" fill="#0d1117" stroke="#76b900" stroke-width="1.5"/>
+  <text x="616" y="452" font-family="'Courier New', monospace" font-size="14" fill="#a3e635">WITH_CUDNN=ON</text>
+  <text x="1000" y="444" font-family="'Courier New', monospace" font-size="13" fill="#fbbf24">summary line "cuDNN: NO", then</text>
+  <text x="1000" y="466" font-family="'Courier New', monospace" font-size="12" fill="#94a3b8">"CUDA backend requires cuDNN"</text>
+
+  <!-- row 3 -->
+  <rect x="60" y="504" width="520" height="76" rx="10" fill="#0f2d18" stroke="#76b900" stroke-width="2.5"/>
+  <text x="80" y="536" font-family="'Courier New', monospace" font-size="17" font-weight="bold" fill="#a3e635">3. cuBLAS</text>
+  <text x="80" y="562" font-family="'Courier New', monospace" font-size="13" fill="#94a3b8">ships inside the CUDA Toolkit</text>
+  <rect x="600" y="516" width="360" height="52" rx="6" fill="#0d1117" stroke="#76b900" stroke-width="1.5"/>
+  <text x="616" y="548" font-family="'Courier New', monospace" font-size="14" fill="#a3e635">WITH_CUBLAS=ON</text>
+  <text x="1000" y="548" font-family="'Courier New', monospace" font-size="12" fill="#94a3b8">"CUDA backend requires cuBLAS"</text>
+
+  <!-- row 2 -->
+  <rect x="60" y="600" width="520" height="76" rx="10" fill="#0f2d18" stroke="#76b900" stroke-width="2.5"/>
+  <text x="80" y="632" font-family="'Courier New', monospace" font-size="17" font-weight="bold" fill="#a3e635">2. CUDA Toolkit (nvcc)</text>
+  <text x="80" y="658" font-family="'Courier New', monospace" font-size="13" fill="#94a3b8">plus CUDA_ARCH_BIN for your GPU</text>
+  <rect x="600" y="612" width="360" height="52" rx="6" fill="#0d1117" stroke="#76b900" stroke-width="1.5"/>
+  <text x="616" y="644" font-family="'Courier New', monospace" font-size="14" fill="#a3e635">WITH_CUDA=ON</text>
+  <text x="1000" y="644" font-family="'Courier New', monospace" font-size="13" fill="#fbbf24">summary line "NVIDIA CUDA: NO"</text>
+
+  <!-- row 1 -->
+  <rect x="60" y="696" width="520" height="76" rx="10" fill="#111827" stroke="#94a3b8" stroke-width="2.5"/>
+  <text x="80" y="728" font-family="'Courier New', monospace" font-size="17" font-weight="bold" fill="#e2e8f0">1. GPU + driver</text>
+  <text x="80" y="754" font-family="'Courier New', monospace" font-size="13" fill="#94a3b8">driver newer than the toolkit</text>
+  <rect x="600" y="708" width="360" height="52" rx="6" fill="#0d1117" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="616" y="740" font-family="'Courier New', monospace" font-size="13" fill="#cbd5e1">nvidia-smi must work first</text>
+  <text x="1000" y="740" font-family="'Courier New', monospace" font-size="13" fill="#fbbf24">cuda.getCudaEnabledDeviceCount() = 0</text>
+
+  <!-- dependency arrows up the left edge -->
+  <g stroke="#76b900" stroke-width="2.5" marker-end="url(#up)" opacity="0.8">
+    <line x1="40" y1="700" x2="40" y2="680"/>
+    <line x1="40" y1="604" x2="40" y2="584"/>
+    <line x1="40" y1="508" x2="40" y2="488"/>
+    <line x1="40" y1="412" x2="40" y2="392"/>
+    <line x1="40" y1="316" x2="40" y2="296"/>
+    <line x1="40" y1="220" x2="40" y2="200"/>
+  </g>
+
+  <text x="740" y="808" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" fill="#64748b">
+    Layers 2 to 5 stop the build. Layers 6 and 7 only warn, once, during loading. Nothing ever fails at the point where you notice the slowness.
+  </text>
+</svg>
