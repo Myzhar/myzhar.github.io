@@ -1,6 +1,6 @@
 ---
 title: "Detecting Everyday Objects with YOLO, OpenCV DNN and CUDA"
-excerpt: "Run a COCO-trained YOLO model in real time with nothing but OpenCV and an NVIDIA GPU. Complete Python and C++ code, the letterbox and output-tensor maths explained, CUDA build instructions, and the OpenCV 5 engine trap that silently sends your inference back to the CPU."
+excerpt: "Run a COCO-trained YOLO model in real time with nothing but OpenCV and an NVIDIA GPU. Complete Python and C++ code, the letterbox and output-tensor maths explained, CUDA build instructions, and the OpenCV 5 engine trap that sends your inference back to the CPU behind two warning lines."
 author: "Walter Lucetti"
 index: 4010
 date: 2026-08-25 12:00:00 +01:00
@@ -34,7 +34,7 @@ The alternative is much simpler than most people realise: **OpenCV can run YOLO 
 
 The catch is that OpenCV gives you a *tensor*, not a list of objects. Everything between "raw pixels" and "there is a dog at (312, 48, 190, 240)" is your job: the letterbox, the normalisation, the transposition, the confidence filtering, the non-maximum suppression, and the mapping back into the original frame. Get any one of those wrong and you get boxes that are subtly shifted, or objects that vanish near the image border, or a wall of duplicates.
 
-This tutorial walks through every one of those steps, in Python and in C++, with the maths spelled out. It also covers the part that most guides skip: **how to make sure the inference actually runs on the GPU**, which on OpenCV 5 is no longer the default and fails *silently*.
+This tutorial walks through every one of those steps, in Python and in C++, with the maths spelled out. It also covers the part that most guides skip: **how to make sure the inference actually runs on the GPU**, which on OpenCV 5 is no longer the default and announces itself with nothing more than two easily-missed warning lines.
 
 We will use the **COCO** dataset's 80 classes, because those are precisely the objects that fill an ordinary day: people, pets, cups, laptops, chairs, bottles, phones, cars, bicycles.
 
@@ -57,7 +57,7 @@ reference produced by Ultralytics itself.
 
 1. **An NVIDIA® GPU** with a known compute capability. If you are not sure what yours is, see my [NVIDIA® CUDA™ Compute Capability](/tutorials/cuda/cuda-compute-capability/) tutorial; you will need that number to build OpenCV.
 2. **CUDA™ Toolkit and cuDNN** installed. The OpenCV DNN CUDA backend depends on cuDNN; there is no way around it.
-3. **OpenCV 4.12.0 or newer** (or 5.0.0), built with CUDA support. We cover the build below.
+3. **OpenCV 4.12.0 or newer** (or 5.0.0), built with CUDA support. There is a condensed build recipe [below](#building-opencv-with-the-cuda-dnn-backend), and a full step-by-step in [Installing OpenCV 5 with CUDA and DNN Support on Ubuntu 24.04](/tutorials/opencv/installing-opencv5-cuda-ubuntu/).
 4. **Python 3.8+** for the export step and the Python example, **or** a C++17 toolchain for the C++ example.
 5. Basic familiarity with OpenCV `Mat` / `ndarray` handling.
 
@@ -163,7 +163,7 @@ You are looking for a single output of shape `[1, 84, 8400]`. If you see somethi
 
 ## Part 2: Getting OpenCV to actually use your GPU {#part-2--getting-opencv-to-actually-use-your-gpu}
 
-This is the section that determines whether you get 60 FPS or 6 FPS, and it is the one where OpenCV is least helpful, because **every failure here is silent or nearly silent**.
+This is the section that determines whether you get 60 FPS or 6 FPS, and it is the one where OpenCV is least helpful, because **every failure here announces itself once, quietly, and then never again**.
 
 ### The OpenCV 5 engine trap
 
@@ -183,7 +183,24 @@ enum EngineType
 };
 ```
 
-The default is `ENGINE_AUTO`, which tries the **new** engine first. A YOLO11 ONNX graph loads perfectly well on the new engine, so `ENGINE_AUTO` succeeds, the classic engine is never reached, and your subsequent call to `setPreferableBackend(DNN_BACKEND_CUDA)` is quietly ignored. The model runs. The results are correct. It is just running entirely on your CPU.
+The default is `ENGINE_AUTO`, which tries the **new** engine first. A YOLO11 ONNX graph loads perfectly well on the new engine, so `ENGINE_AUTO` succeeds, the classic engine is never reached, and your subsequent call to `setPreferableBackend(DNN_BACKEND_CUDA)` has nowhere to go. The model runs. The results are correct. It is just running entirely on your CPU.
+
+OpenCV 5.0.0 does say so, during loading rather than at inference time:
+
+```
+[ WARN:0@0.100] global net_impl_backend.cpp:297 setPreferableBackend Back-ends are not supported by the new graph engine for now
+[ WARN:0@0.100] global net_impl_backend.cpp:345 setPreferableTarget Targets are not supported by the new graph engine for now
+```
+
+Two lines, printed once, before your application has produced any output worth reading. In a robot's log they are gone in a second. Here is what they cost, measured on an RTX 3060 Laptop with YOLO11n at 640x640:
+
+| Engine and backend | ms per `forward()` |
+| :----------------- | -----------------: |
+| `ENGINE_AUTO` + `DNN_BACKEND_CUDA` | 55.2 |
+| `ENGINE_CLASSIC` + CPU, for reference | 54.3 |
+| `ENGINE_CLASSIC` + `DNN_BACKEND_CUDA` | 16.3 |
+
+Asking `ENGINE_AUTO` for CUDA lands within 2% of the plain CPU path. The GPU is idle.
 
 > :exploding_head: **This is the single most common reason "OpenCV 5 is slower than OpenCV 4" reports appear.** Nothing is broken; the backend request simply had nowhere to go.
 
@@ -206,6 +223,9 @@ On OpenCV 4.x there is no `engine` parameter at all; there is only one engine, a
 ### Building OpenCV with the CUDA DNN backend
 
 The `pip` wheels and the distribution packages (`libopencv-dev`, JetPack's bundled OpenCV) are all built **without** `OPENCV_DNN_CUDA`. There is no shortcut here; you have to build.
+
+{: .notice--info}
+What follows is the short version, enough to get you a working build. For the full walkthrough, including the driver and cuDNN installation, the NumPy 2 trap on Ubuntu 24.04, a private install prefix that does not fight with ROS 2, and a five-step verification ladder, see [**Installing OpenCV 5 with CUDA and DNN Support on Ubuntu 24.04**](/tutorials/opencv/installing-opencv5-cuda-ubuntu/).
 
 The DNN CUDA backend also needs the `cudev` module, which lives in **opencv_contrib**, so you need both repositories:
 
@@ -288,15 +308,42 @@ print("CUDA devices:", cv2.cuda.getCudaEnabledDeviceCount())
 
 A `0` here means the driver is not visible to OpenCV, even if the build was correct.
 
-**3. Does the *DNN module* accept the CUDA backend?**
+**3. Does the *DNN module* have a CUDA target registered?**
 
-This is the only check that actually matters, and OpenCV tells you when it does not; watch stderr for:
+This is the only check that actually matters, and it is the one to automate, because it answers the question directly rather than by inference:
+
+```python
+import cv2
+
+# The OpenCV 5 bindings return a NumPy array here, not a list, so convert it
+# before testing it: `if not targets` on a multi-element array raises.
+targets = list(cv2.dnn.getAvailableTargets(cv2.dnn.DNN_BACKEND_CUDA))
+
+names = {cv2.dnn.DNN_TARGET_CUDA: "CUDA (FP32)",
+         cv2.dnn.DNN_TARGET_CUDA_FP16: "CUDA (FP16)"}
+print([names.get(int(t), int(t)) for t in targets]
+      or "NO CUDA TARGETS: this build cannot do GPU inference")
+```
+
+On a correct build you get:
+
+```text
+['CUDA (FP32)', 'CUDA (FP16)']
+```
+
+An empty list is unambiguous: either the CUDA kernels are not in the binary, or no compatible device was found. Nothing else needs interpreting.
+
+The reason to prefer this over the first two checks is that it cannot be fooled. Inside the DNN module, `HAVE_CUDA` is undefined unless `CV_CUDA4DNN` was set, which happens only when CUDA, cuBLAS **and** cuDNN were all found *and* `OPENCV_DNN_CUDA=ON`; the backend registry then only registers a target after confirming a compatible device at run time. Check 1 tells you about `WITH_CUDA`, which can be `YES` with no DNN CUDA support at all, and check 2 covers the `cv::cuda` modules rather than `cv::dnn`.
+
+The failure also shows up on stderr at the first `forward()`, if you happen to be watching:
 
 ```
-[ WARN:0@0.123] global net_impl.cpp:178 setUpNet DNN module was not built with CUDA backend; switching to CPU
+[ WARN:0@0.123] global net_impl.cpp:234 setUpNet DNN module was not built with CUDA backend; switching to CPU
 ```
 
-That warning is easy to miss in a busy log, and once it has been printed the network runs on the CPU forever without complaining again. The example scripts below re-print it as a loud banner precisely because of this.
+The line number moves between releases. That warning is easy to miss in a busy log, and once it has been printed the network runs on the CPU forever without complaining again. The example scripts below re-print it as a loud banner precisely because of this.
+
+> :bulb: **Tip**: my [OpenCV 5 with CUDA install tutorial](/tutorials/opencv/installing-opencv5-cuda-ubuntu/) wraps this and four other checks into one script, ending with a CPU-versus-GPU timing run so you can see the speed-up rather than infer it.
 
 > :pushpin: **Note**: There is a subtler variant, `CUDA backend will fallback to the CPU implementation for the layer <name>`. That one means the backend *is* active but a particular operator has no CUDA implementation, so that layer round-trips to the host. A handful of these at the very end of the graph is normal. Dozens of them scattered through the middle means your export used an opset with operators the backend does not know, and you should re-export with `opset=12`.
 
@@ -1184,13 +1231,15 @@ The first `forward()` on the CUDA backend is not representative of anything. It 
 
 | Lever | Typical effect | Cost |
 | :---- | :------------- | :--- |
-| **`DNN_TARGET_CUDA_FP16`** | Large speed-up on Turing and newer (tensor cores) | A negligible mAP drop for detection; needs compute capability >= 5.3 |
+| **`DNN_TARGET_CUDA_FP16`** | Usually 15% to 30% faster on Turing and newer; not guaranteed, measure it | A negligible mAP drop for detection; needs compute capability >= 5.3 |
 | **Smaller model** (`s` -> `n`) | Roughly proportional to FLOPs | Noticeably more missed small objects |
 | **Smaller input** (`imgsz=480`) | ~1.8x fewer FLOPs than 640 | Small objects degrade fast; you must re-export |
 | **Skip frames** | Linear | Latency on fast-moving objects |
 | **Tighter `--conf`** | Small (only post-processing) | Free, if your threshold was too loose |
 
-FP16 is the first thing to try, because it is a one-line change and it costs almost nothing in accuracy for detection work.
+FP16 is the first thing to try, because it is a one-line change and it costs almost nothing in accuracy for detection work. It is not, however, the free win it is often described as. Measuring YOLO11n at 640x640 on an RTX 3060 Laptop, OpenCV 5.0.0 with the classic engine, I got FP16 at 0.67x to 0.85x of the FP32 time across interleaved runs, so a real but moderate gain rather than a transformation.
+
+> :warning: **Do not trust a single-shot comparison.** In those same measurements the *identical* configuration ranged from 10 ms to 17 ms per forward pass, purely from the GPU clocking up, and my first run made FP16 look **slower** than FP32. That is entirely an artefact. Alternate the two targets and repeat at least three times before believing either number.
 
 ### Measuring properly
 
@@ -1223,7 +1272,7 @@ The failure modes here are unusually deceptive, because most of them produce out
 | Symptom | Cause | Fix |
 | :------ | :---- | :-- |
 | `setUpNet DNN module was not built with CUDA backend; switching to CPU` | OpenCV built without `OPENCV_DNN_CUDA=ON`, or `WITH_CUDNN` was off | Rebuild. Check the CMake summary for `cuDNN: YES` |
-| Correct results, no speed-up, **on OpenCV 5** | `ENGINE_AUTO` selected the new CPU-only engine, so the backend request was ignored | `readNetFromONNX(path, ENGINE_CLASSIC)` |
+| Correct results, no speed-up, **on OpenCV 5**, with two `not supported by the new graph engine` warnings while loading | `ENGINE_AUTO` selected the new CPU-only engine, so the backend request was dropped | `readNetFromONNX(path, ENGINE_CLASSIC)`, or `OPENCV_FORCE_DNN_ENGINE=1` in the environment to test without touching the code |
 | `(-215:Assertion failed) biasLayerData->outputBlobsWrappers.size() == 1 in function 'fuseLayers'` with YOLO11 + CUDA | Known layer-fusion bug, fixed in **OpenCV 4.12.0** | Upgrade to >= 4.12.0. On older builds, `net.enableFusion(False)` before `forward()` |
 | Boxes shifted down or right by a constant amount | Padding offsets not subtracted when inverting the letterbox | `x = (cx - w/2 - pad_left) / ratio` |
 | Boxes are the right size but in the wrong place, only on non-square frames | Plain `cv2.resize()` to 640x640 instead of a letterbox | Use the letterbox |
@@ -1252,7 +1301,7 @@ For a single camera, an everyday object detector, and a codebase that already li
 
 ## Conclusion
 
-The pipeline in this tutorial is short enough to read in one sitting, but every step in it has a way of going subtly wrong: the letterbox that is not inverted, the tensor that is not transposed, the class-agnostic NMS that eats the cup on the table, and, on OpenCV 5, the engine that quietly declines to use your GPU at all.
+The pipeline in this tutorial is short enough to read in one sitting, but every step in it has a way of going subtly wrong: the letterbox that is not inverted, the tensor that is not transposed, the class-agnostic NMS that eats the cup on the table, and, on OpenCV 5, the engine that declines to use your GPU at all and mentions it only in passing.
 
 Get those right and you have a dependency-light, real-time detector for the eighty objects that make up an ordinary day, in Python or C++, on a GPU you already own.
 
@@ -1270,5 +1319,6 @@ Happy detecting!
 - [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX){:target="_blank"}, an Apache-2.0 alternative, also supported by OpenCV DNN
 - [COCO dataset](https://cocodataset.org/){:target="_blank"}
 - [opencv/opencv#26566](https://github.com/opencv/opencv/issues/26566){:target="_blank"}, the YOLO11 + CUDA fusion bug, fixed by [PR #27326](https://github.com/opencv/opencv/pull/27326){:target="_blank"} in OpenCV 4.12.0
+- [Installing OpenCV 5 with CUDA and DNN Support on Ubuntu 24.04](/tutorials/opencv/installing-opencv5-cuda-ubuntu/), the full build and verification walkthrough
 - [NVIDIA® CUDA™ Compute Capability](/tutorials/cuda/cuda-compute-capability/), for the `CUDA_ARCH_BIN` value you need
 - [**Myzhar/tutorial-opencv-yolo**](https://github.com/Myzhar/tutorial-opencv-yolo){: target="_blank"}, the complete source code for this tutorial
