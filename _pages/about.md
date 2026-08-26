@@ -1,6 +1,6 @@
 ---
 title: Walter Lucetti
-description: "Walter Lucetti (Myzhar) — Italian computer engineer and Senior Software Engineer at Stereolabs, specializing in robotics, computer vision, AI, and autonomous systems."
+description: "Walter Lucetti (Myzhar), Italian computer engineer and Senior Software Engineer at Stereolabs, specializing in robotics, computer vision, AI, and autonomous systems."
 author: "Walter Lucetti"
 layout: collection
 permalink: /about/
@@ -29,7 +29,7 @@ Other work includes humanoid and mobile robots, thermal-imaging systems such as 
 
 ## Open Source
 
-I publish ROS and ROS 2 drivers, utilities, examples, and hardware resources so that useful robotics solutions can be reused, improved, and shared. My open-source work is grounded in the same challenges I encounter on real robots—from sensor integration and perception to navigation and embedded GPU deployment.
+I publish ROS and ROS 2 drivers, utilities, examples, and hardware resources so that useful robotics solutions can be reused, improved, and shared. My open-source work is grounded in the same challenges I encounter on real robots, from sensor integration and perception to navigation and embedded GPU deployment.
 
 You can find the code, documentation, and issue trackers on [GitHub](https://github.com/myzhar). Contributions, feedback, and bug reports are always welcome.
 
@@ -64,6 +64,6 @@ By publishing my work openly, I aim to:
 - Give other engineers and enthusiasts solid starting points for their own projects.
 - Show how advanced perception and autonomy can be implemented on real hardware.
 
-If you're interested in robots that truly *see* and interact with the world, this is where you can follow my journey — and, hopefully, build along with me.
+If you're interested in robots that truly *see* and interact with the world, this is where you can follow my journey, and, hopefully, build along with me.
 
-— *Myzhar*
+*Myzhar*

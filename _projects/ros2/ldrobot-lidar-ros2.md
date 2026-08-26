@@ -45,15 +45,15 @@ gallery_screens:
 
 ## Overview
 
-Back in 2021 I backed the [LDRobot Kickstarter campaign](https://www.kickstarter.com/projects/ldrobot/ld-air-lidar-360-tof-sensor-for-all-robotic-applications){: target="_blank"} and got my hands on the **LD19** — a compact, affordable DToF 360° lidar I was planning to mount on [MyzharBot](/projects/myzharbot/) to improve its obstacle detection. When the sensor arrived, I hit an immediate wall: there was no ROS 2 driver for it. A ROS 1 package existed, but I had already committed to building MyzharBot's new stack entirely on ROS 2, so that was no help.
+Back in 2021 I backed the [LDRobot Kickstarter campaign](https://www.kickstarter.com/projects/ldrobot/ld-air-lidar-360-tof-sensor-for-all-robotic-applications){: target="_blank"} and got my hands on the **LD19**, a compact, affordable DToF 360° lidar I was planning to mount on [MyzharBot](/projects/myzharbot/) to improve its obstacle detection. When the sensor arrived, I hit an immediate wall: there was no ROS 2 driver for it. A ROS 1 package existed, but I had already committed to building MyzharBot's new stack entirely on ROS 2, so that was no help.
 
-Rather than waiting for someone else to write it, I wrote it myself. What started as a quick weekend project to get a `/scan` topic publishing turned into a proper driver — Lifecycle nodes, Nav2 lifecycle manager integration, full YAML configuration, SLAM Toolbox support, and a URDF 3D model. If the sensor was going to live on my robot, it had to work like a real robot component, not a prototype script.
+Rather than waiting for someone else to write it, I wrote it myself. What started as a quick weekend project to get a `/scan` topic publishing turned into a proper driver, Lifecycle nodes, Nav2 lifecycle manager integration, full YAML configuration, SLAM Toolbox support, and a URDF 3D model. If the sensor was going to live on my robot, it had to work like a real robot component, not a prototype script.
 
 The repository contains three ROS 2 packages:
 
-- **`ldlidar`** — meta-package that groups the other two, so a single `rosdep install` pulls everything in.
-- **`ldlidar_component`** — the actual driver, implemented as a ROS 2 Lifecycle component. It handles serial communication with the sensor, parses the DToF scan data, and publishes `sensor_msgs/msg/LaserScan`. Being a component means it can be loaded into a shared container process, reducing inter-process overhead.
-- **`ldlidar_node`** — packages the container executable together with the launch files, YAML parameter files, and the URDF description. This is the entry point most users interact with.
+- **`ldlidar`**, meta-package that groups the other two, so a single `rosdep install` pulls everything in.
+- **`ldlidar_component`**, the actual driver, implemented as a ROS 2 Lifecycle component. It handles serial communication with the sensor, parses the DToF scan data, and publishes `sensor_msgs/msg/LaserScan`. Being a component means it can be loaded into a shared container process, reducing inter-process overhead.
+- **`ldlidar_node`**, packages the container executable together with the launch files, YAML parameter files, and the URDF description. This is the entry point most users interact with.
 
 The driver supports the **LD19** (tested extensively) and the **LD06** (community-reported), and works on ROS 2 **Humble** and **Jazzy**.
 
@@ -78,7 +78,7 @@ sudo apt install libudev-dev
 
 The LD19 connects to the host via a **CP210x UART/USB adapter** that is included in the box. This adapter does more than just bridging serial data: it also supplies **power to the sensor** and generates the **PWM signal that controls the motor rotation speed**. Plugging in a single USB cable is all you need to get the lidar spinning and communicating.
 
-> :pushpin: **NOTE - Direct UART connection**: it is possible to wire the LD19 directly to a UART port (e.g. on a Jetson or Raspberry Pi), but in that case you must supply the sensor's operating voltage and provide the PWM signal yourself to spin the motor — the adapter board handles both automatically.
+> :pushpin: **NOTE - Direct UART connection**: it is possible to wire the LD19 directly to a UART port (e.g. on a Jetson or Raspberry Pi), but in that case you must supply the sensor's operating voltage and provide the PWM signal yourself to spin the motor; the adapter board handles both automatically.
 
 Without a udev rule, Linux assigns the adapter a generic `ttyUSB*` name that can change across reboots, and accessing it requires root privileges.
 
@@ -144,7 +144,7 @@ Demonstrates how to use the driver together with [SLAM Toolbox](https://github.c
 ros2 launch ldlidar_node ldlidar_slam.launch.py
 ```
 
-> :bulb: **`ldlidar_slam.launch.py` as a learning reference**: beyond its practical use, this launch file is a concrete, working example of how to combine [lifecycle nodes](/tutorials/ros2/ros2-lifecycle-nodes/) and [node composition](/tutorials/ros2/ros2-node-composition-explained/) in a single Python launch file — a pattern that recurs in any production-grade ROS 2 bringup. It shows how to spin up a composable container, load a lifecycle component into it, and wire a `lifecycle_manager` to drive the configure → activate sequence automatically.
+> :bulb: **`ldlidar_slam.launch.py` as a learning reference**: beyond its practical use, this launch file is a concrete, working example of how to combine [lifecycle nodes](/tutorials/ros2/ros2-lifecycle-nodes/) and [node composition](/tutorials/ros2/ros2-node-composition-explained/) in a single Python launch file, a pattern that recurs in any production-grade ROS 2 bringup. It shows how to spin up a composable container, load a lifecycle component into it, and wire a `lifecycle_manager` to drive the configure → activate sequence automatically.
 
 {% include gallery id="gallery_screens" caption="RViz2 scan (left), SLAM Toolbox map (center), TF tree (right)" %}
 
@@ -173,9 +173,9 @@ All parameters are loaded from [`ldlidar.yaml`](https://github.com/Myzhar/ldrobo
 
 ## 3D Model for URDF
 
-Integrating the sensor into a robot's URDF requires a 3D model for visualization and collision geometry — and LDRobot didn't provide one. So I modelled the LD19 myself in **OnShape**, matching the real sensor dimensions as accurately as I could.
+Integrating the sensor into a robot's URDF requires a 3D model for visualization and collision geometry, and LDRobot didn't provide one. So I modelled the LD19 myself in **OnShape**, matching the real sensor dimensions as accurately as I could.
 
-{% include figure popup=true image_path="/assets/images/projects/ldrobot-lidar-ros2/ld19_3d_preview.png" alt="LDRobot LD19 3D model" caption="LDRobot LD19 — 3D model created on OnShape" %}
+{% include figure popup=true image_path="/assets/images/projects/ldrobot-lidar-ros2/ld19_3d_preview.png" alt="LDRobot LD19 3D model" caption="LDRobot LD19, 3D model created on OnShape" %}
 
 [View LD19 3D model on OnShape](https://cad.onshape.com/documents/4e5c55c6b4197b7f25b0cb59/w/637dce9ca9784ab347b00f37/e/17d181a96866326011512344?renderMode=0&uiState=6a059468a37a177b9db00729){: .btn .btn--info target="_blank"}
 
@@ -207,7 +207,7 @@ The key integration points are:
 
 {% include video id="zyggXjW6cDo" provider="youtube" %}
 
-*LD19 tested outdoors — demonstrating range and stability in open environments.*
+*LD19 tested outdoors, demonstrating range and stability in open environments.*
 
 ## Benchmarking
 

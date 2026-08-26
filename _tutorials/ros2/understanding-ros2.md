@@ -1,6 +1,6 @@
 ---
 title: "Understanding ROS 2"
-excerpt: "A clear overview of ROS 2: why it was redesigned from ROS 1, its key concepts — nodes, topics, services, and actions — and when to choose it for your robot."
+excerpt: "A clear overview of ROS 2: why it was redesigned from ROS 1, its key concepts, nodes, topics, services, and actions, and when to choose it for your robot."
 author: "Walter Lucetti"
 index: 1030
 header:
@@ -191,7 +191,7 @@ In 2017, OSRF became Open Robotics, which continues to lead the development of R
 <summary>Show correct answers</summary>
 <br>
 <strong>a) Modularity, b) Real-time capabilities, c) Improved security, d) Cross-platform support</strong><br>
-ROS 2 features modularity, real-time capabilities, improved security, and cross-platform support. Unlike ROS 1, ROS 2 does <em>not</em> use a centralized global parameter server — each node maintains its own parameter store.
+ROS 2 features modularity, real-time capabilities, improved security, and cross-platform support. Unlike ROS 1, ROS 2 does <em>not</em> use a centralized global parameter server; each node maintains its own parameter store.
 </details>
 
 ---

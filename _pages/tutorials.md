@@ -1,6 +1,6 @@
 ---
 title: Tutorials
-description: "Step-by-step, hands-on tutorials on ROS 2, robotics, computer vision, CUDA, NVIDIA Jetson, and AI — written by Walter Lucetti for engineers and curious builders."
+description: "Step-by-step, hands-on tutorials on ROS 2, robotics, computer vision, CUDA, NVIDIA Jetson, and AI, written by Walter Lucetti for engineers and curious builders."
 layout: collection
 author: "Walter Lucetti"
 permalink: /tutorials/

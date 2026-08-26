@@ -37,7 +37,7 @@ That’s why I decided to write this tutorial. It’s designed to take you from 
 - **Using the command-line interface with `ros2 run`**: This is perfect for when I'm just testing a new driver or quickly debugging a single node. I use it every day for quick "sanity checks."
 - **Using Python launch files**: This was the real game-changer for me. Launch files allow me to start my entire robot with a single command. In this guide, I show you how to build flexible and scalable setups that can handle parameters, remappings, and multiple nodes simultaneously.
 
-I've also included a detailed section on how I organize my launch files within a package structure. This is where most people get stuck—specifically with the `setup.py` or `CMakeLists.txt` changes needed to make sure ROS 2 can actually find your files. I’ve found that keeping things tidy and standardized from day one saves me countless hours of searching for misnamed files later on.
+I've also included a detailed section on how I organize my launch files within a package structure. This is where most people get stuck, specifically with the `setup.py` or `CMakeLists.txt` changes needed to make sure ROS 2 can actually find your files. I’ve found that keeping things tidy and standardized from day one saves me countless hours of searching for misnamed files later on.
 
 I've spent a lot of time refining my own internal templates for these files, and I've tried to distill those "best practices" into this guide. This tutorial isn't just a list of commands; it's a reflection of the workflow I've honed over years of building and rebuilding autonomous systems. I hope it helps you move past the manual "tab-switching" phase and into a more professional, automated development style.
 

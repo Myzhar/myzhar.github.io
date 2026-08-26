@@ -644,7 +644,7 @@ def generate_launch_description():
 
 Let's break down the key parts of this launch file:
 
-- **Argument parsing**: `cam_names` and `cam_ids` are received as strings (e.g. `"[front,rear,left,right]"`). Inside `launch_setup()` the brackets are stripped and the values split on commas to produce plain Python lists. This must happen inside `launch_setup()` because `.perform(context)` — which resolves the actual runtime string — is only available there.
+- **Argument parsing**: `cam_names` and `cam_ids` are received as strings (e.g. `"[front,rear,left,right]"`). Inside `launch_setup()` the brackets are stripped and the values split on commas to produce plain Python lists. This must happen inside `launch_setup()` because `.perform(context)`, which resolves the actual runtime string, is only available there.
 
 - **Validation**: before creating any node, the lengths of the two lists are checked. A mismatch raises a `RuntimeError` early so the user gets a clear error message rather than a silent misconfiguration.
 

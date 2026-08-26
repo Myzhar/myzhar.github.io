@@ -18,7 +18,7 @@ A collection of open source ROS 2 packages for robotics development.
 |  | Project | Description |
 | :----: | :------: | :---------- |
 | [![LD Lidar ROS 2 Driver](/assets/images/projects/ldrobot-lidar-ros2/teaser.jpg)](/projects/ros2/ldrobot-lidar-ros2/) | [**LD Lidar ROS 2 Driver**](/projects/ros2/ldrobot-lidar-ros2/) | ROS 2 driver for LDRobot LD19/LD06 DToF 2D lidars, built on Nav2 Lifecycle nodes with full robot integration support, SLAM Toolbox compatibility, and benchmarking tools. |
-| [![YALIO](/assets/images/projects/yalio/yalio-odometry.png)](/projects/ros2/yalio/) | [**YALIO — Yet Another Lidar ICP Odometry**](/projects/ros2/yalio/) | ROS 2 lidar odometry for low-cost 2D sensors, using Point-to-Line ICP scan matching in a lifecycle-managed composable component. |
+| [![YALIO](/assets/images/projects/yalio/yalio-odometry.png)](/projects/ros2/yalio/) | [**YALIO, Yet Another Lidar ICP Odometry**](/projects/ros2/yalio/) | ROS 2 lidar odometry for low-cost 2D sensors, using Point-to-Line ICP scan matching in a lifecycle-managed composable component. |
 {: style="table-layout: fixed;" }
 
 <style>

@@ -1,6 +1,6 @@
 ---
 title: Projects
-description: "Robotics and computer vision projects by Walter Lucetti — including MyzharBot, an autonomous tracked robot built with AI, NVIDIA Jetson, ROS 2, and ZED stereo vision."
+description: "Robotics and computer vision projects by Walter Lucetti, including MyzharBot, an autonomous tracked robot built with AI, NVIDIA Jetson, ROS 2, and ZED stereo vision."
 layout: collection
 author: "Walter Lucetti"
 permalink: /projects/

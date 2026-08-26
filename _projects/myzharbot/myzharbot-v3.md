@@ -34,315 +34,315 @@ gallery_ros:
 gallery_myzharbot_v3:
     - url: /assets/images/projects/myzharbot/v3/1412411166051.jpg
       image_path: /assets/images/projects/myzharbot/v3/1412411166051.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/1412411317499.jpg
       image_path: /assets/images/projects/myzharbot/v3/1412411317499.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/1412411336445.jpg
       image_path: /assets/images/projects/myzharbot/v3/1412411336445.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/1412411486067.jpg
       image_path: /assets/images/projects/myzharbot/v3/1412411486067.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/18_06_14 - 2.jpg
       image_path: /assets/images/projects/myzharbot/v3/18_06_14 - 2.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140220_101215.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140220_101215.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140220_101222.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140220_101222.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140315_122752.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140315_122752.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140315_122800.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140315_122800.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140315_122813.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140315_122813.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140315_122833.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140315_122833.jpg      
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140315_122842.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140315_122842.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140315_122852.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140315_122852.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140315_122908.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140315_122908.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140315_122926.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140315_122926.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140315_122938.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140315_122938.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140315_122955.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140315_122955.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140315_123040.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140315_123040.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/2014-03-23(1).jpg
       image_path: /assets/images/projects/myzharbot/v3/2014-03-23(1).jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/2014-03-23.jpg
       image_path: /assets/images/projects/myzharbot/v3/2014-03-23.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140329_181917.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140329_181917.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140329_181940.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140329_181940.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140329_181954.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140329_181954.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/2014-03-29.jpg
       image_path: /assets/images/projects/myzharbot/v3/2014-03-29.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140401_183656.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140401_183656.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140401_183729.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140401_183729.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140401_194938.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140401_194938.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140401_194946.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140401_194946.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140401_194952.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140401_194952.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140401_195303.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140401_195303.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140401_195331.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140401_195331.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140401_195422.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140401_195422.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/2014-04-01.jpg
       image_path: /assets/images/projects/myzharbot/v3/2014-04-01.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140601_111938_Via Cucchiara.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140601_111938_Via Cucchiara.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/2014-06-01.jpg
       image_path: /assets/images/projects/myzharbot/v3/2014-06-01.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140624_224551_Via Cucchiara.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140624_224551_Via Cucchiara.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140624_224625_Via Cucchiara.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140624_224625_Via Cucchiara.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140624_224639_Via Cucchiara.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140624_224639_Via Cucchiara.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140624_224705_Via Cucchiara.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140624_224705_Via Cucchiara.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140624_224736_Via Cucchiara.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140624_224736_Via Cucchiara.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/2014-06-24.jpg
       image_path: /assets/images/projects/myzharbot/v3/2014-06-24.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140812_152034.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140812_152034.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140812_190355.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140812_190355.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140812_190448_Via Flavio Torello Baracchini.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140812_190448_Via Flavio Torello Baracchini.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/2014-08-12.jpg
       image_path: /assets/images/projects/myzharbot/v3/2014-08-12.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20140813_114038_Via Cucchiara.jpg
       image_path: /assets/images/projects/myzharbot/v3/20140813_114038_Via Cucchiara.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/2014-09-27.jpg
       image_path: /assets/images/projects/myzharbot/v3/2014-09-27.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20141001_180007_Via Cucchiara.jpg
       image_path: /assets/images/projects/myzharbot/v3/20141001_180007_Via Cucchiara.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20141003_112110_Via Giulio Gaudini.jpg
       image_path: /assets/images/projects/myzharbot/v3/20141003_112110_Via Giulio Gaudini.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20141003_113432.jpg
       image_path: /assets/images/projects/myzharbot/v3/20141003_113432.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150110_180028.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150110_180028.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150125_164222_Via Cucchiara_Richtone(HDR).jpg
       image_path: /assets/images/projects/myzharbot/v3/20150125_164222_Via Cucchiara_Richtone(HDR).jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150304_222222_Via Cucchiara.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150304_222222_Via Cucchiara.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150304_222242_Via Cucchiara.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150304_222242_Via Cucchiara.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150305_180031.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150305_180031.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150315_175912.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150315_175912.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150316_204419.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150316_204419.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150317_085231.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150317_085231.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150317_113735.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150317_113735.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150318_192534.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150318_192534.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150319_123334.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150319_123334.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150320_173647.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150320_173647.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150320_185657_Richtone(HDR).jpg
       image_path: /assets/images/projects/myzharbot/v3/20150320_185657_Richtone(HDR).jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150320_185722_Richtone(HDR).jpg
       image_path: /assets/images/projects/myzharbot/v3/20150320_185722_Richtone(HDR).jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150321_093821.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150321_093821.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/20150430_103328.jpg
       image_path: /assets/images/projects/myzharbot/v3/20150430_103328.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/FB_IMG_14124184970043271.jpg
       image_path: /assets/images/projects/myzharbot/v3/FB_IMG_14124184970043271.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/FB_STICKERS_FB_IMG_1426394585149_1426394641168.jpg
       image_path: /assets/images/projects/myzharbot/v3/FB_STICKERS_FB_IMG_1426394585149_1426394641168.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/IMG-20140220-WA0000.jpg
       image_path: /assets/images/projects/myzharbot/v3/IMG-20140220-WA0000.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/IMG-20141005-WA0003.jpg
       image_path: /assets/images/projects/myzharbot/v3/IMG-20141005-WA0003.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/IMG_20150316_101305.jpg
       image_path: /assets/images/projects/myzharbot/v3/IMG_20150316_101305.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/IMG_20150316_101317.jpg
       image_path: /assets/images/projects/myzharbot/v3/IMG_20150316_101317.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/IMG_20150316_192245.jpg
       image_path: /assets/images/projects/myzharbot/v3/IMG_20150316_192245.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/IMG_20150316_192338.jpg
       image_path: /assets/images/projects/myzharbot/v3/IMG_20150316_192338.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/IMG_20150317_155739.jpg
       image_path: /assets/images/projects/myzharbot/v3/IMG_20150317_155739.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/IMG_20150318_163315.jpg
       image_path: /assets/images/projects/myzharbot/v3/IMG_20150318_163315.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/IMG_20150430_103959.jpg
       image_path: /assets/images/projects/myzharbot/v3/IMG_20150430_103959.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
     - url: /assets/images/projects/myzharbot/v3/wp-1412263298162.jpg
       image_path: /assets/images/projects/myzharbot/v3/wp-1412263298162.jpg
-      alt: "MyzharBot v3 robot — development, testing and showcase"
+      alt: "MyzharBot v3 robot, development, testing and showcase"
       title: "MyzharBot v3"
 ---
 
@@ -364,7 +364,7 @@ In December 2014, I received an unexpected Facebook message from an NVIDIA® rep
 
 Weeks later, NVIDIA® invited me to showcase MyzharBot at their GTC 2015 booth in San Jose, California. I was thrilled: my first trip to the USA, representing NVIDIA®, and demonstrating my robot to a global audience!
 
-A new chapter was unfolding—a new robot, a powerful brain, and an exciting adventure ahead.
+A new chapter was unfolding, a new robot, a powerful brain, and an exciting adventure ahead.
 
 I was not alone on this journey; my old friend [Raffaello Bonghi](https://www.linkedin.com/in/raffaello-bonghi/) collaborated with me on the firmware for the motor driver board, ensuring seamless integration with the new system. For this reason, I asked NVIDIA® to invite him to GTC 2015 as well, and they gladly accepted. This was a great opportunity for Raffaello too, as he is now a Technical Marketing Engineer at NVIDIA®.
 
@@ -374,7 +374,7 @@ It was an unforgettable experience because we also had the chance to visit San F
 
 ## Software Overhaul: Embracing ROS
 
-Coincidentally, I decided to abandon my custom robotics framework and adopt [ROS (Robot Operating System)](https://www.ros.org/) as MyzharBot's primary software platform. Whether it was [ROS Hydro or Indigo](https://wiki.ros.org/Distributions#List_of_Distributions), within weeks I replicated my previous functionality while leveraging ROS's extensive ecosystem. Most importantly, I could finally focus on **high-level robotics software** without worrying about low-level details like data communication, hardware abstraction, or control interfaces—ROS handled it all.
+Coincidentally, I decided to abandon my custom robotics framework and adopt [ROS (Robot Operating System)](https://www.ros.org/) as MyzharBot's primary software platform. Whether it was [ROS Hydro or Indigo](https://wiki.ros.org/Distributions#List_of_Distributions), within weeks I replicated my previous functionality while leveraging ROS's extensive ecosystem. Most importantly, I could finally focus on **high-level robotics software** without worrying about low-level details like data communication, hardware abstraction, or control interfaces; ROS handled it all.
 
 {% include gallery id="gallery_ros" %}
 

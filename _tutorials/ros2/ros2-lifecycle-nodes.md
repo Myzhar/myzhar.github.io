@@ -113,7 +113,7 @@ Here is the complete list of **externally triggerable** transitions:
 
 Only the `Active` state triggers **automatic** `ErrorProcessing` when an unhandled error occurs during processing. For all other transition states, if the callback returns a failure result (not an exception), the node moves to the appropriate failure destination listed in the table above. If an exception is thrown during a transition, it is treated as a failure.
 
-The `onError` callback is special: it may be called from any transition state. This means it must be written defensively — it cannot assume what resources were allocated, because the error may have happened at any point during `Configuring`, `Activating`, or any other transition.
+The `onError` callback is special: it may be called from any transition state. This means it must be written defensively; it cannot assume what resources were allocated, because the error may have happened at any point during `Configuring`, `Activating`, or any other transition.
 
 ## Services Exposed by a Lifecycle Node
 
@@ -232,7 +232,7 @@ pub_->on_deactivate();
 
 > :bulb: **Tip**: Always call `on_activate()` / `on_deactivate()` on lifecycle publishers from `on_activate()` / `on_deactivate()` respectively. The base class does **not** do this automatically.
 
-> :exploding_head: **True story**: I have genuinely lost hours debugging a lifecycle node that refused to publish anything — checking QoS profiles, subscriber graphs, DDS configuration, you name it. The culprit every single time? I forgot to call `pub_->on_activate()` in `on_activate()`. The node was `Active`, the publisher existed, and `publish()` was being called — it just silently dropped every message. **Learn from my pain.**
+> :exploding_head: **True story**: I have genuinely lost hours debugging a lifecycle node that refused to publish anything, checking QoS profiles, subscriber graphs, DDS configuration, you name it. The culprit every single time? I forgot to call `pub_->on_activate()` in `on_activate()`. The node was `Active`, the publisher existed, and `publish()` was being called; it just silently dropped every message. **Learn from my pain.**
 
 ## Managing Lifecycle Nodes with the CLI
 
@@ -301,10 +301,10 @@ The LiDAR driver must:
 
 1. **Configure**: open the serial port, read device parameters, create the `/scan` publisher.
 2. **Activate**: begin streaming laser data, start publishing `/scan` messages.
-3. **Deactivate**: stop publishing — but keep the serial port open.
+3. **Deactivate**: stop publishing, but keep the serial port open.
 4. **Cleanup**: close the serial port, release all OS resources.
 
-With a plain node, you have no clean way to reconfigure the sensor without destroying the node. With a lifecycle node, a supervisor can call `deactivate` to clean up the configuration safely and `activate` again to restart it — without reinitializing the serial connection. This is exactly the pattern used in the driver.
+With a plain node, you have no clean way to reconfigure the sensor without destroying the node. With a lifecycle node, a supervisor can call `deactivate` to clean up the configuration safely and `activate` again to restart it, without reinitializing the serial connection. This is exactly the pattern used in the driver.
 
 The driver exposes the standard lifecycle services, so [Nav2](https://docs.nav2.org/){:target="_blank"} or any other lifecycle manager can control it in the same way it controls any other lifecycle node in the stack. No custom integration code needed.
 
@@ -362,7 +362,7 @@ The key configuration parameters for the bond mechanism are:
 > };
 > ```
 >
-> The Nav2 `LifecycleNode` handles all the bond setup and teardown internally. From your callback perspective it is identical to the standard lifecycle > node — you just get crash detection for free.
+> The Nav2 `LifecycleNode` handles all the bond setup and teardown internally. From your callback perspective it is identical to the standard lifecycle > node; you just get crash detection for free.
 
 ## Lifecycle Nodes in Launch Files
 
@@ -418,7 +418,7 @@ def generate_launch_description():
     ])
 ```
 
-This pattern — configure at startup, then activate once inactive — is the standard way to bring up a lifecycle node from a launch file without an external manager.
+This pattern, configure at startup, then activate once inactive, is the standard way to bring up a lifecycle node from a launch file without an external manager.
 
 > :pushpin: **Note**: For production systems with many lifecycle nodes, prefer the Nav2 Lifecycle Manager over manual `EmitEvent` chains. The event-chain approach is useful for small setups or when you need fine-grained control over the startup sequence.
 
@@ -426,14 +426,14 @@ This pattern — configure at startup, then activate once inactive — is the st
 
 | Scenario | Use lifecycle node? |
 |----------|--------------------|
-| Hardware driver (camera, LiDAR, IMU) | **Yes** — clean init/deinit |
-| Sensor fusion or processing pipeline | **Yes** — start only when all inputs are ready |
-| Simple CLI tool or one-shot script | No — overkill |
-| Navigation stack node | **Yes** — mandatory for Nav2 integration |
-| Debugging helper, data logger | No — usually simpler without lifecycle |
-| Any node controlled by Nav2 | **Yes** — required |
+| Hardware driver (camera, LiDAR, IMU) | **Yes**, clean init/deinit |
+| Sensor fusion or processing pipeline | **Yes**, start only when all inputs are ready |
+| Simple CLI tool or one-shot script | No, overkill |
+| Navigation stack node | **Yes**, mandatory for Nav2 integration |
+| Debugging helper, data logger | No, usually simpler without lifecycle |
+| Any node controlled by Nav2 | **Yes**, required |
 
-A useful heuristic: if a node controls hardware, must start in a specific order relative to other nodes, or must be gracefully stopped and restarted at runtime — make it a lifecycle node.
+A useful heuristic: if a node controls hardware, must start in a specific order relative to other nodes, or must be gracefully stopped and restarted at runtime, make it a lifecycle node.
 
 ## Conclusions
 
@@ -463,7 +463,7 @@ The key takeaways:
 <summary>Show correct answers</summary>
 <br>
 <strong>b) Unconfigured, c) Active, e) Finalized</strong><br>
-Primary states are stable: the node stays there until externally triggered. There are four in total — <code>Unconfigured</code>, <code>Inactive</code>, <code>Active</code>, and <code>Finalized</code>. <code>Configuring</code>, <code>Activating</code>, and <code>ErrorProcessing</code> are transition states: the node passes through them while executing a callback and cannot remain there.
+Primary states are stable: the node stays there until externally triggered. There are four in total, <code>Unconfigured</code>, <code>Inactive</code>, <code>Active</code>, and <code>Finalized</code>. <code>Configuring</code>, <code>Activating</code>, and <code>ErrorProcessing</code> are transition states: the node passes through them while executing a callback and cannot remain there.
 </details>
 
 ---
@@ -496,7 +496,7 @@ The node starts in <code>Unconfigured</code>. From there the only valid external
 <summary>Show correct answer</summary>
 <br>
 <strong>b) CallbackReturn::FAILURE</strong><br>
-<code>FAILURE</code> is the correct soft failure: the node transitions back to <code>Unconfigured</code> and can be re-configured later. You must close the serial port yourself before returning — there is no automatic rollback. <code>FAILURE</code> does not trigger <code>ErrorProcessing</code>; that only happens with <code>CallbackReturn::ERROR</code> or an unhandled exception (c or d), which are semantically reserved for unexpected faults, not anticipated failures.
+<code>FAILURE</code> is the correct soft failure: the node transitions back to <code>Unconfigured</code> and can be re-configured later. You must close the serial port yourself before returning; there is no automatic rollback. <code>FAILURE</code> does not trigger <code>ErrorProcessing</code>; that only happens with <code>CallbackReturn::ERROR</code> or an unhandled exception (c or d), which are semantically reserved for unexpected faults, not anticipated failures.
 </details>
 
 ---
@@ -513,7 +513,7 @@ The node starts in <code>Unconfigured</code>. From there the only valid external
 <summary>Show correct answers</summary>
 <br>
 <strong>a) Calling publish() while the node is Inactive silently discards the message, b) It must be explicitly activated in on_activate() via pub_->on_activate(), d) It behaves identically to a regular rclcpp::Publisher once activated, e) The recommended place to create it is in on_configure()</strong><br>
-A lifecycle publisher is state-aware: <code>publish()</code> is a no-op until you call <code>pub_->on_activate()</code> in your <code>on_activate</code> callback — the base class does not do it automatically (c is wrong). Once activated it behaves like any normal publisher. Creating it in <code>on_configure</code> is the standard pattern since that is where all resources are allocated.
+A lifecycle publisher is state-aware: <code>publish()</code> is a no-op until you call <code>pub_->on_activate()</code> in your <code>on_activate</code> callback; the base class does not do it automatically (c is wrong). Once activated it behaves like any normal publisher. Creating it in <code>on_configure</code> is the standard pattern since that is where all resources are allocated.
 </details>
 
 ---
@@ -529,7 +529,7 @@ A lifecycle publisher is state-aware: <code>publish()</code> is a no-op until yo
 <summary>Show correct answers</summary>
 <br>
 <strong>b) The Lifecycle Manager transitions all managed nodes down to a safe state, d) The Lifecycle Manager may attempt to reconnect if attempt_respawn_reconnection is true</strong><br>
-When a bond breaks, the Lifecycle Manager begins a coordinated shutdown of all managed nodes — not just the crashed one — to bring the entire stack to a safe state. If <code>attempt_respawn_reconnection</code> is <code>true</code> and the node was respawned by an external process manager, it will try to reconnect within <code>bond_respawn_max_duration</code>. Leaving the stack running without the failed node (c, a) is precisely the unsafe behavior bonds are designed to prevent.
+When a bond breaks, the Lifecycle Manager begins a coordinated shutdown of all managed nodes, not just the crashed one, to bring the entire stack to a safe state. If <code>attempt_respawn_reconnection</code> is <code>true</code> and the node was respawned by an external process manager, it will try to reconnect within <code>bond_respawn_max_duration</code>. Leaving the stack running without the failed node (c, a) is precisely the unsafe behavior bonds are designed to prevent.
 </details>
 
 ---
@@ -548,7 +548,7 @@ When a bond breaks, the Lifecycle Manager begins a coordinated shutdown of all m
 <br>
 <strong>In on_configure: a) Open the serial port, c) Create the /scan lifecycle publisher, f) Read device parameters</strong><br>
 <strong>In on_activate: d) Start the publishing timer, e) Call scan_pub_->on_activate()</strong><br>
-<code>on_configure</code> sets up the interface: open hardware connections, allocate publishers, read parameters. The node is now <code>Inactive</code> — nothing flows yet. <code>on_activate</code> starts the data flow: enable the publisher, start timers, command the hardware to begin operating.
+<code>on_configure</code> sets up the interface: open hardware connections, allocate publishers, read parameters. The node is now <code>Inactive</code>; nothing flows yet. <code>on_activate</code> starts the data flow: enable the publisher, start timers, command the hardware to begin operating.
 </details>
 
 ---
@@ -566,7 +566,7 @@ When a bond breaks, the Lifecycle Manager begins a coordinated shutdown of all m
 <summary>Show correct answers</summary>
 <br>
 <strong>a) change_state, b) get_state, d) get_available_transitions, e) get_available_states</strong><br>
-Every lifecycle node exposes these four services automatically. <code>set_parameters</code> (c) is a standard node service, not lifecycle-specific. There is no <code>restart</code> service (f) — restarting is a sequence of <code>deactivate</code> + <code>cleanup</code> + <code>configure</code> + <code>activate</code> calls.
+Every lifecycle node exposes these four services automatically. <code>set_parameters</code> (c) is a standard node service, not lifecycle-specific. There is no <code>restart</code> service (f); restarting is a sequence of <code>deactivate</code> + <code>cleanup</code> + <code>configure</code> + <code>activate</code> calls.
 </details>
 
 ---

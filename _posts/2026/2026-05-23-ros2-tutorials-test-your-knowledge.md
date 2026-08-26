@@ -35,7 +35,7 @@ One of the main goals I set for this tutorial series was to make each entry a ge
 
 That's why I'm excited to announce that I've added a **"Test Your Knowledge"** section at the end of every ROS 2 tutorial on the site.
 
-I didn't want these to be boring, academic tests. I've personally designed each quiz to be a short set of multiple-choice questions that target the specific ideas that I've seen trip people up—including the mistakes I made myself during my first few months with ROS 2. 
+I didn't want these to be boring, academic tests. I've personally designed each quiz to be a short set of multiple-choice questions that target the specific ideas that I've seen trip people up, including the mistakes I made myself during my first few months with ROS 2. 
 
 ## What it looks like
 

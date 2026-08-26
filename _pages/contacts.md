@@ -1,6 +1,6 @@
 ---
 title: Contact
-description: "Get in touch with Walter Lucetti — robotics engineer, ROS 2 expert, and computer vision specialist. Reach out via email or connect on LinkedIn, GitHub, and other social platforms."
+description: "Get in touch with Walter Lucetti, robotics engineer, ROS 2 expert, and computer vision specialist. Reach out via email or connect on LinkedIn, GitHub, and other social platforms."
 author: "Walter Lucetti"
 layout: collection
 permalink: /contact/
@@ -11,7 +11,7 @@ classes: wide
 
 ## Get in Touch
 
-Have a question about ROS 2, Computer Vision, or Robotics in general? Want to collaborate on a project or just say hi? Feel free to reach out — I'm always happy to connect with fellow engineers and robotics enthusiasts.
+Have a question about ROS 2, Computer Vision, or Robotics in general? Want to collaborate on a project or just say hi? Feel free to reach out; I'm always happy to connect with fellow engineers and robotics enthusiasts.
 
 ## 📬 Email
 
@@ -32,7 +32,7 @@ I typically reply within 1–3 business days.
 
 ## 🤖 Open Source & Community
 
-If you have a **bug report or feature request** related to one of my open-source projects, please open an issue directly on GitHub rather than emailing me — it helps keep things organized and benefits the whole community.
+If you have a **bug report or feature request** related to one of my open-source projects, please open an issue directly on GitHub rather than emailing me; it helps keep things organized and benefits the whole community.
 
 - **GitHub Issues:** [github.com/myzhar](https://github.com/myzhar)
 

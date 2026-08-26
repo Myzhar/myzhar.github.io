@@ -17,11 +17,11 @@ classes: single
 ---
 
 {: .notice--info}
-**Last update:** June 19, 2026 — synced with the [official NVIDIA® CUDA™ GPUs list](https://developer.nvidia.com/cuda/gpus){: target="_blank"}.
+**Last update:** June 19, 2026, synced with the [official NVIDIA® CUDA™ GPUs list](https://developer.nvidia.com/cuda/gpus){: target="_blank"}.
 
 ## Understanding CUDA™ Compute Capability
 
-The **Compute Capability** identifies the architecture and feature set of an NVIDIA® GPU. It is written as a `major.minor` version (e.g. `8.9`) and describes *what the GPU can do* — supported instructions, data types, and hardware features — not how fast it is. Each new GPU generation introduces a new compute capability.
+The **Compute Capability** identifies the architecture and feature set of an NVIDIA® GPU. It is written as a `major.minor` version (e.g. `8.9`) and describes *what the GPU can do*, supported instructions, data types, and hardware features, not how fast it is. Each new GPU generation introduces a new compute capability.
 
 When compiling CUDA™ code, you need to tell the compiler which compute capability to target. You may have encountered this error:
 
@@ -42,7 +42,7 @@ Add the appropriate flag to your `nvcc` compiler command:
 -gencode arch=compute_XX,code=[sm_XX,compute_XX]
 ```
 
-Replace `XX` with your GPU's compute capability value (without the decimal point — e.g. `8.9` becomes `89`).
+Replace `XX` with your GPU's compute capability value (without the decimal point, e.g. `8.9` becomes `89`).
 
 #### Virtual vs. Real Architectures
 
@@ -51,7 +51,7 @@ The `-gencode` flag references two kinds of architecture:
 - **`compute_XX`** is a *virtual* architecture: it produces **PTX**, an intermediate assembly that the driver can just-in-time (JIT) compile at runtime.
 - **`sm_XX`** is a *real* architecture: it produces **SASS**, the actual binary code that runs on a GPU with that exact compute capability.
 
-So `arch=compute_89,code=[sm_89,compute_89]` embeds both the ready-to-run SASS for compute capability 8.9 **and** the PTX. Keeping the PTX (`code=compute_89`) lets the binary JIT-compile and run on *future* GPUs that did not exist when you built it — at the cost of a small startup delay the first time.
+So `arch=compute_89,code=[sm_89,compute_89]` embeds both the ready-to-run SASS for compute capability 8.9 **and** the PTX. Keeping the PTX (`code=compute_89`) lets the binary JIT-compile and run on *future* GPUs that did not exist when you built it, at the cost of a small startup delay the first time.
 
 #### Simpler Shortcuts
 
@@ -75,7 +75,7 @@ If CUDA™ is already installed on your system, use the built-in device query to
 /usr/local/cuda/bin/__nvcc_device_query
 ```
 
-The output is the compute capability encoded as `major × 10 + minor` — a two- or three-digit number depending on the GPU. For example, with a **GeForce RTX 4070**:
+The output is the compute capability encoded as `major × 10 + minor`, a two- or three-digit number depending on the GPU. For example, with a **GeForce RTX 4070**:
 
 ```bash
 89

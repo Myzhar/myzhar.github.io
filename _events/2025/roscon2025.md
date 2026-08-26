@@ -67,11 +67,11 @@ gallery:
       title: "Yes, I was there!"
 ---
 
-On October 27-29, 2025, I had the opportunity to attend [ROSCon 2025 in Singapore](https://roscon.ros.org/2025/), representing [Stereolabs](https://www.stereolabs.com) as a sponsor and exhibitor. It was my first time at ROSCon, and also my first time in Singapore — so the whole trip felt like a double adventure from the very start.
+On October 27-29, 2025, I had the opportunity to attend [ROSCon 2025 in Singapore](https://roscon.ros.org/2025/), representing [Stereolabs](https://www.stereolabs.com) as a sponsor and exhibitor. It was my first time at ROSCon, and also my first time in Singapore; so the whole trip felt like a double adventure from the very start.
 
 ## Robots before the conference even began
 
-I landed the day before the event, and Singapore wasted no time making an impression. At the airport I spotted my first robot of the trip: an autonomous cleaning machine quietly doing its rounds between travellers. A few hours later, riding the subway into the city, I found another one — a different design, but same idea. It felt oddly fitting: I was heading to a robotics conference, and the city was already showing me what the future of autonomous systems looks like when deployed at scale in the real world. I took photos of both, half amused and half genuinely impressed.
+I landed the day before the event, and Singapore wasted no time making an impression. At the airport I spotted my first robot of the trip: an autonomous cleaning machine quietly doing its rounds between travellers. A few hours later, riding the subway into the city, I found another one, a different design, but same idea. It felt oddly fitting: I was heading to a robotics conference, and the city was already showing me what the future of autonomous systems looks like when deployed at scale in the real world. I took photos of both, half amused and half genuinely impressed.
 
 ## The conference
 

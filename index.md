@@ -1,6 +1,6 @@
 ---
 layout: splash
-description: "Personal robotics and AI lab of Walter Lucetti: hands-on ROS 2 tutorials, stereo vision, NVIDIA Jetson, CUDA, and 3D printing — from concept to working hardware and real results."
+description: "Personal robotics and AI lab of Walter Lucetti: hands-on ROS 2 tutorials, stereo vision, NVIDIA Jetson, CUDA, and 3D printing; from concept to working hardware and real results."
 excerpt: "Beyond Perception / Beyond Robotics"
 header:
   overlay_color: "#000"
@@ -11,8 +11,12 @@ header:
     url: "https://linktr.ee/myzhar"
   - label: ":robot: MyzharBot Project"
     url: "/projects/myzharbot/"
-  - label: ":turtle: ROS 2 Tutorials"
+  - label: ":turtle: ROS 2 Projects"
+    url: "/projects/ros2/"
+  - label: ":turtle: ROS 2 Tutorials :book:"
     url: "/tutorials/ros2/"
+  - label: ":eyes: OpenCV Tutorials :book:"
+    url: "/tutorials/opencv/"
 
 intro:
   - excerpt: "**Welcome to my personal lab space!**<br/>I'm Walter 'Myzhar' Lucetti, a Computer Engineer who loves robotics.<br/>This is where my robots come alive. It's a place fueled by code, sensors, and my endless curiosity about machines that can see and think for themselves. Here, you'll find my hands-on tutorials, in-depth guides, and honest stories from my projects. I dive into everything from **ROS 2** and stereo vision to **NVIDIA® Jetson**, **CUDA**, **3D printing**, and **AI**... always keeping things grounded in real hardware and the actual problems I'm trying to solve."
@@ -39,7 +43,6 @@ feature_row:
     url: "/events/"
     btn_label: "Upcoming"
     btn_class: "btn--success"
-
 
 ---
 

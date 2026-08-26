@@ -418,7 +418,7 @@ Fast DDS (formerly Fast RTPS) is the default DDS middleware in Foxy, Humble, Iro
 <summary>Show correct answers</summary>
 <br>
 <strong>b) Zenoh is designed for heterogeneous networks including WAN and constrained links, c) Zenoh is used via the rmw_zenoh_cpp RMW implementation, d) Zenoh integrates pub/sub, queries, and data persistence in a unified stack</strong><br>
-Zenoh is <em>not</em> a DDS implementation — it is a distinct data-centric protocol. It targets diverse network topologies (LAN, WAN, 4G/5G) and provides an integrated stack for pub/sub, queries, and storage.
+Zenoh is <em>not</em> a DDS implementation; it is a distinct data-centric protocol. It targets diverse network topologies (LAN, WAN, 4G/5G) and provides an integrated stack for pub/sub, queries, and storage.
 </details>
 
 ---

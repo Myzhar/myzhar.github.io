@@ -35,9 +35,9 @@ tags:
 
 New tutorial out tonight: **[Lifecycle (Managed) Nodes: why, what, and how](/tutorials/ros2/ros2-lifecycle-nodes/)**.
 
-I’ve had this one sitting on my to-do list for quite a while, and for a very good reason. Lifecycle nodes are one of those topics that you can technically ignore when you're first learning ROS 2—right up until the day a hardware conflict or a race condition crashes your robot in a way you can't explain. At that point, you usually find yourself wishing someone had forced you to learn about managed nodes weeks earlier. 
+I’ve had this one sitting on my to-do list for quite a while, and for a very good reason. Lifecycle nodes are one of those topics that you can technically ignore when you're first learning ROS 2, right up until the day a hardware conflict or a race condition crashes your robot in a way you can't explain. At that point, you usually find yourself wishing someone had forced you to learn about managed nodes weeks earlier. 
 
-I’ve often joked that in robotics, timing isn't just everything—it's the only thing. I’ve been burned enough times by unmanaged hardware drivers doing the wrong thing at startup, or trying to publish data before the serial port was even open, that I finally decided it was time to sit down and write a proper, in-depth guide to this architecture.
+I’ve often joked that in robotics, timing isn't just everything; it's the only thing. I’ve been burned enough times by unmanaged hardware drivers doing the wrong thing at startup, or trying to publish data before the serial port was even open, that I finally decided it was time to sit down and write a proper, in-depth guide to this architecture.
 
 I often find that beginners overlook Lifecycle nodes because they seem like unnecessary boilerplate. I certainly did at first. I remember thinking, "Why do I need a complex state machine just to start a node?" But as MyzharBot evolved from a simple mobile platform into a complex system with multiple GPUs and lidars, I realized that deterministic startup is the primary difference between a reliable robot and a fragile prototype.
 
@@ -49,7 +49,7 @@ On the practical side, I use my own ldrobot-lidar-ros2 driver as a concrete exam
 
 I also spent a good chunk of the guide talking about **Nav2's Lifecycle Manager**. More importantly, I explain why the Nav2 team felt the need to introduce their own `nav2_util::LifecycleNode` wrapper. I personally think the *bond* mechanism they added is a life-saver. If you've ever had your navigation stack silently fall apart because a depth camera node crashed and none of the other nodes noticed, you’ll appreciate why bonds are so important for safety-critical tasks.
 
-I’m also continuing my new tradition of adding a "Test Your Knowledge" section at the end. I’ve put together seven multiple-choice questions, and I’ll warn you now: some of them have more than one correct answer. I put a particular amount of care into the question about `on_activate()`—let's just say that one was inspired by a very long, very painful debugging session I had on MyzharBot a few years back! 😅
+I’m also continuing my new tradition of adding a "Test Your Knowledge" section at the end. I’ve put together seven multiple-choice questions, and I’ll warn you now: some of them have more than one correct answer. I put a particular amount of care into the question about `on_activate()`; let's just say that one was inspired by a very long, very painful debugging session I had on MyzharBot a few years back! 😅
 
 I really hope this tutorial helps you build more robust robots. 
 
