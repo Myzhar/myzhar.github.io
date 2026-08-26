@@ -1,0 +1,80 @@
+---
+title: "Ultrasonic sensor HC-SR04 holder"
+excerpt: "This is a custom-designed case/holder for the popular HC-SR04 ultrasonic sensor, commonly used in robotics and various other projects."
+author: "Walter Lucetti"
+index: 3200
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/overlay.jpg
+  teaser: /assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/teaser.jpg
+  actions:
+    - label: "<i class='fas fa-cube'></i> Download on MakerWorld"
+      url: "https://makerworld.com/en/models/647454-ultrasonic-sensor-hc-sr04-holder"
+      target: _blank
+    - label: "<i class='fas fa-cube'></i> 3D Model on OnShape"
+      url: "https://cad.onshape.com/documents/13fbeb1687d3e479bd119c8f/w/02fe54385272a973ea8aeb1a/e/5081490c32c47e5a3ea86de8?renderMode=0&uiState=66e975865b681a7292009b88"
+      target: _blank
+layout: single
+classes: single
+
+gallery_photos:
+  - url: /assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/gallery-1.jpg
+    image_path: /assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/gallery-1.jpg
+    alt: "Ultrasonic sensor HC-SR04 holder"
+  - url: /assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/gallery-2.jpg
+    image_path: /assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/gallery-2.jpg
+    alt: "Ultrasonic sensor HC-SR04 holder"
+  - url: /assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/gallery-3.jpg
+    image_path: /assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/gallery-3.jpg
+    alt: "Ultrasonic sensor HC-SR04 holder"
+  - url: /assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/gallery-4.jpg
+    image_path: /assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/gallery-4.jpg
+    alt: "Ultrasonic sensor HC-SR04 holder"
+---
+
+## Overview
+
+This is a custom-designed case/holder for the popular HC-SR04 ultrasonic sensor, commonly used in robotics and various other projects.
+
+I printed it using TPU for its flexibility, and I've included a Bambu Lab P1S profile optimized for this material. However, the design is versatile, and you can also print it using PLA or other rigid materials depending on your project needs.
+
+**The 3D CAD model is available for free customization on**[**OnShape**](https://cad.onshape.com/documents/13fbeb1687d3e479bd119c8f/w/02fe54385272a973ea8aeb1a/e/5081490c32c47e5a3ea86de8?renderMode=0&uiState=66e975865b681a7292009b88){: target="_blank"}**.**
+
+### Mounting
+
+- Size of the screws to fix the holder to a plate: **M3**
+- Size of the screws to fix the sensor to the holder: **M1.6**
+
+### Dimensions
+
+{% include figure popup=true image_path="/assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/inline-0.jpg" alt="Ultrasonic sensor HC-SR04 holder" %}
+
+### Printing
+
+This is the position to be used on the printer bed:
+
+{% include figure popup=true image_path="/assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/inline-1.jpg" alt="Ultrasonic sensor HC-SR04 holder" %}
+
+Supports are required:
+
+{% include figure popup=true image_path="/assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/inline-2.jpg" alt="Ultrasonic sensor HC-SR04 holder" %}
+
+Supports settings:
+
+{% include figure popup=true image_path="/assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/inline-3.jpg" alt="Ultrasonic sensor HC-SR04 holder" %}
+
+{% include figure popup=true image_path="/assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/inline-4.jpg" alt="Ultrasonic sensor HC-SR04 holder" %}
+
+This is what they look like when installed on my robot
+
+{% include figure popup=true image_path="/assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/inline-5.jpg" alt="Ultrasonic sensor HC-SR04 holder" %}
+
+{% include gallery id="gallery_photos" caption="Ultrasonic sensor HC-SR04 holder on MakerWorld" %}
+
+## Download
+
+The model is free to download and print, licensed under the Standard Digital File License.
+
+[Download on MakerWorld](https://makerworld.com/en/models/647454-ultrasonic-sensor-hc-sr04-holder){: .btn .btn--info target="_blank"}
+
