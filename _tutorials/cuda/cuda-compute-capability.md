@@ -17,7 +17,7 @@ classes: single
 ---
 
 {: .notice--info}
-**Last update:** June 19, 2026, synced with the [official NVIDIA® CUDA™ GPUs list](https://developer.nvidia.com/cuda/gpus){: target="_blank"}.
+**Last update:** August 26, 2026, synced with the [official NVIDIA® CUDA™ GPUs list](https://developer.nvidia.com/cuda/gpus){: target="_blank"}.
 
 ## Understanding CUDA™ Compute Capability
 
@@ -147,7 +147,7 @@ Here's a summary of NVIDIA® GPU architectures and their compute capabilities
 | 12.1 | | NVIDIA® GB10 (DGX Spark) | |
 | 12.0 | NVIDIA® RTX PRO 6000 Blackwell Server Edition<br/>NVIDIA® RTX PRO 4500 Blackwell Server Edition | NVIDIA® RTX PRO 6000 Blackwell Workstation Edition<br/>NVIDIA® RTX PRO 6000 Blackwell Max-Q Workstation Edition<br/>NVIDIA® RTX PRO 5000 Blackwell<br/>NVIDIA® RTX PRO 4500 Blackwell<br/>NVIDIA® RTX PRO 4000 Blackwell<br/>NVIDIA® RTX PRO 4000 Blackwell SFF Edition<br/>NVIDIA® RTX PRO 2000 Blackwell<br/>GeForce RTX 5090<br/>GeForce RTX 5080<br/>GeForce RTX 5070 Ti<br/>GeForce RTX 5070<br/>GeForce RTX 5060 Ti<br/>GeForce RTX 5060<br/>GeForce RTX 5050 | |
 | 11.0 | | | Jetson™ T5000 (AGX Thor)<br/>Jetson™ T4000 (Thor) |
-| 10.3 | NVIDIA® GB300<br/>NVIDIA® B300 | | |
+| 10.3 | NVIDIA® GB300<br/>NVIDIA® B300 | NVIDIA® GB300 (DGX Station) | |
 | 10.0 | NVIDIA® GB200<br/>NVIDIA® B200 | | |
 | 9.0 | NVIDIA® GH200<br/>NVIDIA® H200<br/>NVIDIA® H100 | | |
 | 8.9 | NVIDIA® L4<br/>NVIDIA® L40<br/>NVIDIA® L40S | NVIDIA® RTX 6000 Ada<br/>NVIDIA® RTX 5000 Ada<br/>NVIDIA® RTX 4500 Ada<br/>NVIDIA® RTX 4000 Ada<br/>NVIDIA® RTX 4000 SFF Ada<br/>NVIDIA® RTX 2000 Ada<br/>GeForce RTX 4090<br/>GeForce RTX 4080<br/>GeForce RTX 4070 Ti<br/>GeForce RTX 4070<br/>GeForce RTX 4060 Ti<br/>GeForce RTX 4060<br/>GeForce RTX 4050 | |
