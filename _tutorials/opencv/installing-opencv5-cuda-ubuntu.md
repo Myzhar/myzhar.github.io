@@ -240,7 +240,7 @@ A few notes on what is deliberately *not* in that list:
 - **`libhdf5-dev`** is only needed by the `hdf` contrib module, which you almost certainly do not want.
 - **Qt** is an alternative to GTK for the HighGUI backend. GTK is the path of least resistance on Ubuntu.
 
-If you are building for a robot or a container and never call `imshow`, drop the GUI and video groups entirely; the build gets noticeably faster.
+If you are building for a robot or a container and never call `imshow`, drop the GUI and video groups entirely; the build gets noticeably faster. Otherwise keep `libgtk-3-dev`; without it, `highgui` still builds, but with no backend behind it, and the [YOLO with OpenCV DNN and CUDA](/tutorials/opencv/yolo-object-detection-cuda/) tutorial's `imshow()` call is the first place that will notice.
 
 ### 2.2 Get the distribution OpenCV out of the way
 
@@ -432,6 +432,16 @@ CMake prints a long configuration summary. Do not skim it. These are the lines t
 --
 --   cuDNN:                         YES (ver 9.25.0)
 --
+--   GUI:
+--     GTK+:                        YES (ver 3.24.41)
+--       GThread :                  YES (ver 2.80.0)
+--       GtkGlExt:                  NO
+--
+--   Video I/O:
+--     FFMPEG:                      YES
+--     GStreamer:                   YES (1.24.2)
+--     v4l/v4l2:                    YES (linux/videodev2.h)
+--
 --   Python 3:
 --     Interpreter:                 /usr/bin/python3 (ver 3.12.3)
 --     Libraries:                   /usr/lib/x86_64-linux-gnu/libpython3.12.so (ver 3.12.3)
@@ -449,7 +459,8 @@ Check, in this order:
 3. **`cuDNN: YES`** with a version. If this says `NO`, **stop**. Building anyway gives you an OpenCV that cannot do GPU inference, and you will spend the next hour debugging your Python instead of your CMake.
 4. **`numpy:`** points at NumPy **2.x** headers, per [Part 2.3](#23-the-numpy-2-trap-specific-to-ubuntu-2404).
 5. **`install path:`** is where `cv2` will land, **relative to `CMAKE_INSTALL_PREFIX`**. Remember it; [Part 5.3](#53-make-the-installation-findable) wires it up.
-6. In the module list further up, `python3` appears under **`To be built`** and not under `Unavailable`.
+6. In the module list further up, `python3` and `highgui` both appear under **`To be built`** and not under `Unavailable`.
+7. **`GUI: GTK+: YES`** with a version. If this says `NO`, `highgui` still builds, but `imshow()` and `waitKey()` become no-ops or throw at run time instead of failing here; see [Part 8](#part-8-troubleshooting).
 
 > :bulb: **Tip**: add `-D ENABLE_CONFIG_VERIFICATION=ON` to turn every silent downgrade into a configure error. Every `WITH_*` option carries a `VERIFY HAVE_*` clause, so asking for `WITH_CUDNN=ON` on a machine without cuDNN then fails immediately instead of quietly producing a build without it. Be aware of `WITH_NVCUVID` and `WITH_NVCUVENC`: they default to `ON` whenever CUDA is enabled, and they need the [NVIDIA Video Codec SDK](https://developer.nvidia.com/nvidia-video-codec-sdk){:target="_blank"} headers, which the CUDA Toolkit does not ship. You will see this in the configure output even without verification:
 
@@ -598,7 +609,7 @@ print(f"module  : {cv2.__file__}")
 
 info = cv2.getBuildInformation()
 for line in info.splitlines():
-    if any(k in line for k in ("NVIDIA CUDA", "NVIDIA GPU arch", "cuDNN")):
+    if any(k in line for k in ("NVIDIA CUDA", "NVIDIA GPU arch", "cuDNN", "GTK", "GUI")):
         print(line.strip())
 
 # ---------------------------------------------------------------- check 2
@@ -826,6 +837,7 @@ The install is done; now your existing code meets it. These are the things that 
 | `find_package(OpenCV)` finds 4.6.0 | System package wins the search | Pass `-D OpenCV_DIR=/opt/opencv-5.0.0/lib/cmake/opencv5` |
 | ROS 2 nodes crash after installing to `/usr/local` | ABI mismatch with packages built against 4.6.0 | Install to a private prefix instead |
 | Dozens of `CUDA backend will fallback to the CPU implementation` lines | Operators the classic engine cannot run on the GPU | Re-export the model with a lower opset |
+| `The function is not implemented. Rebuild the library with Windows, GTK+ 2.x or Cocoa support` from `imshow`/`waitKey` | `highgui` built with no GUI backend, usually because `libgtk-3-dev` was missing at configure time | Install `libgtk-3-dev`, reconfigure and confirm `GUI: GTK+: YES` in the summary, then rebuild |
 
 ## The whole thing as one script
 
