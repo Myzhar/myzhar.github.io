@@ -731,6 +731,8 @@ Run those last two back to back. The difference between the `inference` figures 
 
 > :pushpin: **Note**: `--classes` filters *after* inference, not before; the network still scores all 80 classes, because there is no way to make it do less work. What filtering buys you is a much cleaner NMS stage and a display that is not covered in `chair` boxes.
 
+{% include figure max_width="500px" popup=true image_path="assets/images/tutorials/yolo_opencv_cuda/myzhar_phone.jpg" alt="A person detected by YOLO holding a cell phone, both boxed and labelled by the detector" caption="Myzhar detected with the phone" %}
+
 ## Part 5: The same detector in C++
 
 For anything embedded, or anything that has to live inside a ROS 2 node, you want the C++ version. It is the same eight steps; only the syntax changes.
