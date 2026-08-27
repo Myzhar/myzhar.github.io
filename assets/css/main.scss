@@ -242,6 +242,14 @@ nav.pagination {
   }
 }
 
+/* Fix: theme's `figure` is a flex row (`justify-content: space-between`) and
+   only gives `figcaption` `width: 100%` inside `&.half`/`&.third`. A gallery
+   include with a single photo gets no layout class at all, so its caption
+   sits beside the image instead of below it. Force full width always. */
+.page__content figure figcaption {
+  width: 100%;
+}
+
 /* Cap MakerWorld project images at 500px so galleries and inline figures
    stay a consistent, readable size instead of stretching to the content width. */
 .page__content img[src*="/assets/images/projects/makerworld/"] {
