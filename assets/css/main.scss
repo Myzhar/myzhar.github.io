@@ -242,6 +242,14 @@ nav.pagination {
   }
 }
 
+/* Cap MakerWorld project images at 500px so galleries and inline figures
+   stay a consistent, readable size instead of stretching to the content width. */
+.page__content img[src*="/assets/images/projects/makerworld/"] {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
 /* font-display: swap for FontAwesome to avoid invisible text during webfont load */
 @font-face {
   font-family: "Font Awesome 6 Free";

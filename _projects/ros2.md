@@ -2,7 +2,7 @@
 title: "ROS 2 Projects"
 excerpt: "Open source ROS 2 packages for robotics: drivers, tools, and integration libraries."
 author: "Walter Lucetti"
-index: 1000
+index: 2000
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
