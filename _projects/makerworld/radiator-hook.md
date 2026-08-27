@@ -38,11 +38,11 @@ gallery_photos:
 
 This hook is designed to hang towels and clothes on horizontal radiators with a 24mm tube diameter to dry and warm up.
 
-Bathroom radiators are usually the warmest, driest spot in the house, which makes them the obvious place to hang a damp towel or a hand-washed piece of clothing, except most radiators are not designed to hang anything from at all: the horizontal tubes are round, smooth, and offer nothing for a towel to grip onto without sliding straight off. I wanted a simple clip-on hook that could grab that round tube securely, without clamps, screws, or anything that would mark the radiator's paint.
+Bathroom radiators are usually the warmest, driest spot in the house, which makes them the obvious place to hang a damp towel or a hand-washed piece of clothing, except most radiators are not designed to hang anything from at all, the horizontal tubes are round, smooth, and offer nothing for a towel to grip onto without sliding straight off. I wanted a simple clip-on hook that could grab that round tube securely, without clamps, screws, or anything that would mark the radiator's paint.
 
 There are two different versions:
 
-- “*down*”, with the opening facing downwards. This is more robust, but it can be applied only on top tubes. {% include figure popup=true image_path="/assets/images/projects/makerworld/radiator-hook/inline-0.jpg" alt="Radiator hook" %}
+- “*down*”, with the opening facing downwards. This is more robust, but it can be applied only to top tubes. {% include figure popup=true image_path="/assets/images/projects/makerworld/radiator-hook/inline-0.jpg" alt="Radiator hook" %}
 - “*side*”, with the opening facing sideways. This is less robust, but it can be applied to every tube. {% include figure popup=true image_path="/assets/images/projects/makerworld/radiator-hook/inline-1.jpg" alt="Radiator hook" %}
 
 Who knew a hook could inspire such creativity in my wife? The bathroom radiator is now a quirky work of art!
@@ -53,7 +53,7 @@ Small, repeatable parts like this one are also a good match for keeping a printe
 
 **It's recommended to use PETG, ABS, or ASA filament material to prevent the hook from melting due to the high temperature of the radiator.**
 
-This is not a theoretical warning, it is the whole reason for the all-caps note at the top of this page: PLA starts softening at temperatures a hot water radiator can genuinely reach, especially in the middle of winter with the heating running at full blast, and a softened hook loses its grip and lets go of whatever it was holding, right onto the floor or worse. PETG, ABS, and ASA all have a meaningfully higher heat deflection temperature, which is why they are the only materials I recommend for this print despite PLA being the easier one to work with day to day.
+This is not a theoretical warning; it is the whole reason for the all-caps note at the top of this page: PLA starts softening at temperatures a hot water radiator can genuinely reach, especially in the middle of winter with the heating running at full blast, and a softened hook loses its grip and lets go of whatever it was holding, right onto the floor or worse. PETG, ABS, and ASA all have a meaningfully higher heat deflection temperature, which is why they are the only materials I recommend for this print despite PLA being the easier one to work with day to day.
 
 {% include gallery id="gallery_photos" caption="Radiator hook on MakerWorld" %}
 

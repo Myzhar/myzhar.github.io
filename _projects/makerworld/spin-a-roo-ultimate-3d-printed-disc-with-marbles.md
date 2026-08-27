@@ -58,7 +58,7 @@ So rev up that wrist, and let the Spin-a-Roo mania begin!
 
 The assembling is easy and it does not require tools:
 
-- Print the two half discs in PLA or PETG, print the bumper in TPU, and take five **16 mm** or **12 mm** marbles/balls with a diameter the most similar as possible
+- Print the two half discs in PLA or PETG, print the bumper in TPU, and take five **16 mm** or **12 mm** marbles/balls with diameters as close to each other as possible
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/spin-a-roo-ultimate-3d-printed-disc-with-marbles/inline-1.jpg" alt="Spin-a-Roo: Ultimate 3D-Printed Disc with Marbles" %}
 

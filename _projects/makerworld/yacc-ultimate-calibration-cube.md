@@ -1,6 +1,6 @@
 ---
 title: "YACC - Ultimate Calibration Cube"
-excerpt: "Yes, this is Another Calibration Cube You might be thinking, \"Not another calibration cube!\"but hold on, because this one is unlike any other."
+excerpt: "Yes, this is Another Calibration Cube. You might be thinking, \"Not another calibration cube!\" but hold on, because this one is unlike any other."
 author: "Walter Lucetti"
 index: 3260
 header:
@@ -39,11 +39,11 @@ gallery_photos:
 
 ### **Y**es, this is **A**nother **C**alibration **C**ube
 
-You might be thinking, **"Not another calibration cube!"**but hold on, because this one is unlike any other.
+You might be thinking, **"Not another calibration cube!"** but hold on, because this one is unlike any other.
 
 Picture this: a calibration cube that not only ensures your printer is finely tuned but also allows you to test those tricky small overhangs effortlessly. That's right, I've taken the classic calibration cube and given it a simple game-changing upgrade.
 
-Axis labels are passthrough, making it easier than ever to keep track of your prints while simultaneously expanding the cube's utility. Additionally, I applied chamfers to all edges, other small overhangs to the bottom surface.
+Axis labels are passthrough, making it easier than ever to keep track of your prints while simultaneously expanding the cube's utility. Additionally, I applied chamfers to all edges and added other small overhangs to the bottom surface.
 
 Join the revolution. Upgrade to the Ultimate Calibration Cube today.
 
@@ -51,8 +51,8 @@ Join the revolution. Upgrade to the Ultimate Calibration Cube today.
 
 - 4 profiles are available for 4 different common materials: **PLA**, **PETG**, **ABS**, and **ASA**
 - The size of the cube is standard: **20 mm**
-- The size of the chamfer at the edges is **3 mm**The width of the faces is **14 mm**
-- The height of the labels is **13.2 mm**The width of the X is **8.9 mm**The width of the Y is **8.5 mm**The width of the Z is **8.1 mm**
+- The size of the chamfer at the edges is **3 mm**. The width of the faces is **14 mm**.
+- The height of the labels is **13.2 mm**. The width of the X is **8.9 mm**. The width of the Y is **8.5 mm**. The width of the Z is **8.1 mm**.
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/yacc-ultimate-calibration-cube/inline-0.jpg" alt="YACC - Ultimate Calibration Cube" %}
 

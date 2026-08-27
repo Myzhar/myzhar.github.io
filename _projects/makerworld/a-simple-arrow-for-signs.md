@@ -1,6 +1,6 @@
 ---
 title: "A simple arrow for signs"
-excerpt: "This is a simple arrow to be used as a sign on walls and doors You can modify the 3D model for customizations directly with OnShape."
+excerpt: "This is a simple arrow to be used as a sign on walls and doors. You can modify the 3D model for customizations directly with OnShape."
 author: "Walter Lucetti"
 index: 3220
 header:
@@ -35,7 +35,7 @@ gallery_photos:
 
 ## Overview
 
-This is a simple arrow to be used as a sign on walls and doors
+This is a simple arrow to be used as a sign on walls and doors.
 
 I ended up designing this after needing a quick, no-nonsense directional sign more than once: pointing visitors toward a workshop, marking which way a hallway continues, or labeling a cable run so I would remember which connector goes where. Rather than buy a pack of generic arrow stickers, it took less time to model a clean, minimal arrow shape and print it in whatever color matched the wall or the object it was labeling.
 

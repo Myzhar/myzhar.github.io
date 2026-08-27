@@ -48,7 +48,7 @@ The case wraps around the camera PCB and holds the lens centered in a front open
 
 {% include gallery id="gallery_photos" caption="Box for USB Camera ELP 170 deg FOV on MakerWorld" %}
 
-I have reused this same case across a few different robotics builds whenever I needed a wide-angle view from a fixed, low-cost camera rather than a full stereo rig. It is a good reminder that not every vision sensor on a robot needs to be an expensive, purpose-built module, a cheap USB fish-eye camera in a solid printed case covers a lot of ground for very little money.
+I have reused this same case across a few different robotics builds whenever I needed a wide-angle view from a fixed, low-cost camera rather than a full stereo rig. It is a good reminder that not every vision sensor on a robot needs to be an expensive, purpose-built module; a cheap USB fish-eye camera in a solid printed case covers a lot of ground for very little money.
 
 The bolt-together assembly also makes it easy to swap the camera module out entirely if a project's requirements change, without having to reprint the whole enclosure from scratch.
 

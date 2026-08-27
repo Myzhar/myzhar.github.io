@@ -1,6 +1,6 @@
 ---
 title: "Yi Home Dome Camera - Upside Down support"
-excerpt: "For better home security, place the Yi Home Dome Camera on a corner of a furniture to have a top view. Design available on OnShape"
+excerpt: "For better home security, place the Yi Home Dome Camera on the corner of a piece of furniture to have a top view. Design available on OnShape"
 author: "Walter Lucetti"
 index: 3510
 header:
@@ -26,11 +26,11 @@ gallery_photos:
 
 ## Overview
 
-For better home security, place the Yi Home Dome Camera on a corner of a furniture to have a top view.
+For better home security, place the Yi Home Dome Camera on the corner of a piece of furniture to have a top view.
 
 The Yi Home Dome Camera is designed to be used sitting upright on a shelf or table, but that is rarely the most useful vantage point for actually keeping an eye on a room. Mounted upside down on top of a wardrobe, a tall bookshelf, or in the corner where two walls meet the ceiling, the same camera gets a much wider top-down view of the space, closer to what you would expect from a proper ceiling-mounted security camera, without having to drill into the ceiling itself.
 
-This support does exactly that: it lets you flip the camera upside down and rest it securely on any flat furniture corner, using the camera's own base and weight for stability rather than screws or adhesive. It is a small, purely mechanical part, there is no electronics or wiring involved, just a printed cradle that holds the camera at the right angle for a corner-mounted, top-down view.
+This support does exactly that: it lets you flip the camera upside down and rest it securely on any flat furniture corner, using the camera's own base and weight for stability rather than screws or adhesive. It is a small, purely mechanical part; there is no electronics or wiring involved, just a printed cradle that holds the camera at the right angle for a corner-mounted, top-down view.
 
 **Design available on OnShape**
 

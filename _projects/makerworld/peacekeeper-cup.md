@@ -60,7 +60,7 @@ The design is intentionally simple:
 
 You can find the project on [OnShape](https://cad.onshape.com/documents/294fac96cf9994a825988c07/w/1b465c991422cfac4811ce08/e/4f8cb2439c90fb3c0d07a28e?renderMode=0&uiState=69fc5dd2e61d0e56ad99e829){: target="_blank"} if you want to remix it.
 
-Sizing it for two spoon types rather than one also means it scales naturally to other small pairs of utensils, sugar and sweetener spoons, two different coffee capsule sizes, anything where you would otherwise be reaching into a single jumbled container and hoping for the right one.
+Sizing it for two spoon types rather than one also means it scales naturally to other small pairs of utensils: sugar and sweetener spoons, two different coffee capsule sizes, anything where you would otherwise be reaching into a single jumbled container and hoping for the right one.
 
 It is a small problem solved cleanly, and honestly one of my favorite kinds of print to design for exactly that reason.
 
@@ -68,7 +68,7 @@ A tiny fix for a tiny annoyance, which is exactly the kind of thing a home 3D pr
 
 Small problem, small print, solved for good.
 
-Both sizes share the same divider design, so whichever one fits your countertop and spoon collection best, the dividing wall works the same way; the larger size just gives more room per side for households that go through more capsules.
+Both sizes share the same divider design, so no matter which one fits your countertop and spoon collection best, the dividing wall works the same way; the larger size just gives more room per side for households that go through more capsules.
 
 ## Printing
 

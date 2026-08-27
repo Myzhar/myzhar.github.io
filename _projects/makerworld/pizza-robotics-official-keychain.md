@@ -32,7 +32,7 @@ This is the official Keychain of the **Pizza Robotics** team.
 
 **Who are we?** We are robotics enthusiasts who love to create autonomous robots in our free time.
 
-Pizza Robotics started the way a lot of good side projects do: a small group of people who already spent their free time building and racing robots decided it would be more fun to do it together, under a shared name, than to keep working in isolation. The name is exactly as lighthearted as it sounds, robotics is serious engineering, but there is no reason the team behind it cannot have some fun with its own identity.
+Pizza Robotics started the way a lot of good side projects do: a small group of people who already spent their free time building and racing robots decided it would be more fun to do it together, under a shared name, than to keep working in isolation. The name is exactly as lighthearted as it sounds; robotics is serious engineering, but there is no reason the team behind it cannot have some fun with its own identity.
 
 Having a proper keychain felt like a natural next step once the team had an actual logo worth carrying around. It is the kind of small object that ends up meaning more than its size suggests: something to hand out at a robotics meetup, clip onto a toolbox, or give to anyone who has helped out along the way. I put it together using MakerWorld's own Image-to-Keychain tool, starting from the team's logo artwork and turning it into a multi-color, ready-to-print keychain without having to model the lettering by hand.
 
@@ -57,7 +57,7 @@ It is a small object, but it does the job team merchandise is supposed to do: gi
 
 Team merch does not need to come from an outside printer when you already have the tool that made the robots in the first place.
 
-A small keychain that carries a lot of shared history behind it.
+A small keychain that carries a lot of shared history.
 
 ## Printing
 

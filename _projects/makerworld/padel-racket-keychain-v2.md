@@ -40,7 +40,7 @@ After printing and carrying around the original padel racket keychain for a whil
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/padel-racket-keychain-v2/inline-1.jpg" alt="Padel racket keychain v2" %}
 
-Holes are now larger and the racket handle is circular instead of flat. It should be printed vertically with a small amount of support, and a large brim. Printing it standing up on its edge, rather than flat on the bed like the original version, gives a cleaner finish on the racket face and keeps the perforations crisp, at the cost of needing a bit of support material under the overhangs and a wide brim to stop the tall, narrow print from tipping or lifting off the bed.
+Holes are now larger and the racket handle is circular instead of flat. It should be printed vertically with a small amount of support and a large brim. Printing it standing up on its edge, rather than flat on the bed like the original version, gives a cleaner finish on the racket face and keeps the perforations crisp, at the cost of needing a bit of support material under the overhangs and a wide brim to stop the tall, narrow print from tipping or lifting off the bed.
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/padel-racket-keychain-v2/inline-2.jpg" alt="Padel racket keychain v2" %}
 
@@ -63,7 +63,7 @@ Small revisions like this rarely make for exciting release notes, but they are u
 
 A second pass that fixed exactly the two things that bothered me about the first one.
 
-If you already have the original printed and it is holding up fine, there is no need to replace it, this version exists for anyone starting fresh or anyone who ran into the exact issues I was trying to fix.
+If you already have the original printed and it is holding up fine, there is no need to replace it; this version exists for anyone starting fresh or anyone who ran into the exact issues I was trying to fix.
 
 ## Download
 

@@ -1,6 +1,6 @@
 ---
 title: "Brain in Action - Door Sign"
-excerpt: "Brain in Action\" Door Sign Step right up to the door of intellect!"
+excerpt: "\"Brain in Action\" Door Sign: step right up to the door of intellect!"
 author: "Walter Lucetti"
 index: 3250
 header:
@@ -23,13 +23,13 @@ gallery_photos:
 
 ## Overview
 
-### Brain in Action" Door Sign
+### "Brain in Action" Door Sign
 
 ### Step right up to the door of intellect!
 
-My "Brain in Action" door sign is more than just a piece of plastic 3D printed sign, it's a proclamation of mental prowess with a humorous twist.
+My "Brain in Action" door sign is more than just a 3D-printed piece of plastic; it's a proclamation of mental prowess with a humorous twist.
 
-Crafted with care and a dash of whimsy, this sign adds a touch of lightheartedness to any doorway. Bold lettering spells out the message, making it clear that brains are not just in idle mode behind this door, they're revved up and ready to tackle any challenge.
+Crafted with care and a dash of whimsy, this sign adds a touch of lightheartedness to any doorway. Bold lettering spells out the message, making it clear that brains are not just in idle mode behind this door; they're revved up and ready to tackle any challenge.
 
 I put this together with MakerWorld's Make My Sign tool, which turns a short phrase into a printable single or multi-color sign automatically, rather than modeling the lettering by hand the way I would for a more technical part. It is a nice change of pace from the mechanical, dimension-driven parts that make up most of what I design: no tolerances to hit, no fasteners to plan around, just picking a phrase that made me smile and letting the tool lay it out.
 

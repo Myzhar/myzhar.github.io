@@ -36,7 +36,7 @@ This handy tool takes the guesswork out of choosing the right hole size for bras
 
 Simply push your insert into one of the labeled holes, and you'll instantly know if it's a snug fit. No more wasted time or materials!
 
-Heat-set brass inserts are only as strong as the hole you melt them into: too tight and the insert cracks the surrounding plastic as it goes in, too loose and it spins freely under load instead of biting into the walls once it cools. The right diameter depends on the exact insert you are using, the filament, and even the specific printer, since real hole diameters rarely come out exactly as designed once shrinkage and extrusion width are factored in. Rather than guess and ruin a finished print discovering the hole was wrong, printing this test piece once tells you the right number to use from then on.
+Heat-set brass inserts are only as strong as the hole you melt them into: too tight and the insert cracks the surrounding plastic as it goes in, too loose and it spins freely under load instead of biting into the walls once it cools. The right diameter depends on the exact insert you are using, the filament, and even the specific printer, since real hole diameters rarely come out exactly as designed once shrinkage and extrusion width are factored in. Rather than guessing and ruining a finished print when you discover the hole was wrong, printing this test piece once tells you the right number to use from then on.
 
 **Available tests:**
 
@@ -51,7 +51,7 @@ Heat-set brass inserts are only as strong as the hole you melt them into: too ti
 
 ### **Test procedure**
 
-Place 8 threaded brass inserts in correspondence with each of the eight test holes and search for the ones that better fit them
+Place the 8 threaded brass inserts into each of the eight test holes and find the ones that fit best
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/test-and-calibration-for-brass-threaded-inserts/inline-1.jpg" alt="Test and calibration for brass threaded inserts" %}
 
@@ -63,11 +63,11 @@ Turn on the iron welder, and set the temperature to 300°-350°.
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/test-and-calibration-for-brass-threaded-inserts/inline-3.jpg" alt="Test and calibration for brass threaded inserts" %}
 
-Push down each brass insert into its holes by using the edge of the welder until the top surface is parallel to the test piece's top surface.
+Push down each brass insert into its hole by using the edge of the welder until the top surface is parallel to the test piece's top surface.
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/test-and-calibration-for-brass-threaded-inserts/inline-4.jpg" alt="Test and calibration for brass threaded inserts" %}
 
-Now you can compare the result for all hole sizes from the top and bottom perspective. The bottom view allows you to get an idea of how well the insert fits into the inside of the hole and it is also useful to estimate the better depth of the holes.
+Now you can compare the result for all hole sizes from the top and bottom perspective. The bottom view allows you to get an idea of how well the insert fits into the inside of the hole and it is also useful to estimate the ideal depth for the holes.
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/test-and-calibration-for-brass-threaded-inserts/inline-5.jpg" alt="Test and calibration for brass threaded inserts" %}
 

@@ -43,7 +43,7 @@ Other models available:
 
 I print all three signs in the set from the same profile and filament color so they read as a matching set on the wall, even when printed at different times as replacements. If you only need this one right now, it prints just as cleanly on its own, and the other two are ready whenever you need them.
 
-Clear, dedicated signage for the accessible restroom is not optional the way a decorative sign might be, it is a basic courtesy that costs almost nothing to provide once you already have a printer on hand.
+Clear, dedicated signage for the accessible restroom is not optional the way a decorative sign might be; it is a basic courtesy that costs almost nothing to provide once you already have a printer on hand.
 
 Print all three once and you likely will not need to think about restroom signage again for a long time.
 

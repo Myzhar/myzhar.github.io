@@ -38,7 +38,7 @@ The model can be used to tune the settings while using the Bambu Lab [Support fo
 
 **Here's a neat trick: you can actually use PETG as support interface material for PLA prints!**
 
-While **PLA** and **PETG** share similar printing temperatures, their bond between layers is weak. This weakness becomes an advantage for supports – it allows easy removal without damaging the final PLA print, leaving a clean and smooth surface.
+While **PLA** and **PETG** share similar printing temperatures, their bond between layers is weak. This weakness becomes an advantage for supports; it allows easy removal without damaging the final PLA print, leaving a clean and smooth surface.
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-0.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
 
@@ -55,30 +55,30 @@ According to my test here are the best settings when using the **PLA** as the ma
 ### Support
 
 - **Type**: normal (auto)
-- **Style**: SnugThis allows to have a clean final contact surface
+- **Style**: Snug, this allows for a clean final contact surface
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-3.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
 
 ### Filament
 
-- **Support/raft base**: PLAfor fewer filament changes, simply **use the same filament for both the object and the supports**
-- **Support/raft interface**: PETGthis is the most important parameter, it allows you to choose the material of the layers of the interface between the object and the supports {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-4.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
+- **Support/raft base**: PLA, for fewer filament changes, simply **use the same filament for both the object and the supports**
+- **Support/raft interface**: PETG, this is the most important parameter; it allows you to choose the material of the layers of the interface between the object and the supports {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-4.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
 
 ### Advanced
 
-- **Support wall loops**: 0no walls around the supports
-- **Top Z distance**: 0.1 mmDon't overlook this setting! Setting it to 0 will make the nozzle smear the contact layer onto the interface, leading to a rough surface and difficult interface material removal. Instead, use a value like 0.1mm for a smooth contact surface and easy material removal. {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-5.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
-- **Bottom Z distance**: 0 mmDifferently from the TOP, you can set this to 0. {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-6.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
-- **Base pattern**: Rectilinearthis allows for easy removal of the support
-- **Base pattern spacing:**2 mmthis allows for easy removal of the support
-- **Pattern angle:**0°this is not important, you can use the value you prefer
-- **Top interface layers**: 2this setting offers a sweet spot between easy removal and minimizing filament changes. A value of 1 creates an interface layer that's too thin and difficult to remove. Conversely, values of 3 or higher make removal easier but require more filament swaps
-- **Bottom interface layers**: 2the same as the Top interface layers
-- **Interface pattern**: Gridthe grid pattern shines for easy removal! It breaks away cleanly, leaving a smooth surface on your printed object {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-7.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
-- **Top interface spacing**: 0 mmthis creates a dense grid leaving a smooth surface on your printed object
-- **Normal Support expansion**: 0.8 mma higher value here increases the distance the interface material stands off from the object, making it easier to remove
-- **Support/object xy distance**: 0.3 mmthis value allows to have a clear gap between the object and the support material
-- **Support/object first layer gap**: 0.3 mmyou can lower this value to 0.1 mm and use the first layer of the supports as a brim if you have first-layer adhesion issues
+- **Support wall loops**: 0, no walls around the supports
+- **Top Z distance**: 0.1 mm, don't overlook this setting! Setting it to 0 will make the nozzle smear the contact layer onto the interface, leading to a rough surface and difficult interface material removal. Instead, use a value like 0.1mm for a smooth contact surface and easy material removal. {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-5.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
+- **Bottom Z distance**: 0 mm, unlike the top, you can set this to 0. {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-6.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
+- **Base pattern**: Rectilinear, this allows for easy removal of the support
+- **Base pattern spacing**: 2 mm, this allows for easy removal of the support
+- **Pattern angle**: 0°, this is not important, you can use the value you prefer
+- **Top interface layers**: 2, this setting offers a sweet spot between easy removal and minimizing filament changes. A value of 1 creates an interface layer that's too thin and difficult to remove. Conversely, values of 3 or higher make removal easier but require more filament swaps
+- **Bottom interface layers**: 2, the same as the Top interface layers
+- **Interface pattern**: Grid, the grid pattern shines for easy removal! It breaks away cleanly, leaving a smooth surface on your printed object {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-7.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
+- **Top interface spacing**: 0 mm, this creates a dense grid leaving a smooth surface on your printed object
+- **Normal Support expansion**: 0.8 mm, a higher value here increases the distance the interface material stands off from the object, making it easier to remove
+- **Support/object xy distance**: 0.3 mm, this value allows for a clear gap between the object and the support material
+- **Support/object first layer gap**: 0.3 mm, you can lower this value to 0.1 mm and use the first layer of the supports as a brim if you have first-layer adhesion issues
 
 ### Flushing Volumes calibration
 

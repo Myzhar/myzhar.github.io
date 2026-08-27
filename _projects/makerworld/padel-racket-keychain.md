@@ -1,6 +1,6 @@
 ---
 title: "Padel racket keychain"
-excerpt: "I designed this keychain based on my padel racket. I'm not reporting the brand and model to not have copyright issues, but it would be clear for all the Padel lovers."
+excerpt: "I designed this keychain based on my padel racket. I'm not reporting the brand and model to avoid copyright issues, but it would be clear to all the Padel lovers."
 author: "Walter Lucetti"
 index: 3430
 header:
@@ -26,7 +26,7 @@ gallery_photos:
 
 ## Overview
 
-I designed this keychain based on my padel racket. I'm not reporting the brand and model to not have copyright issues, but it would be clear for all the Padel lovers.
+I designed this keychain based on my padel racket. I'm not reporting the brand and model to avoid copyright issues, but it would be clear to all the Padel lovers.
 
 Padel has become one of my favorite sports to play outside of robotics and 3D printing, and like most players I got a bit attached to my own racket, its shape, the hole pattern across the face, the rounded edges. Modeling a miniature of it as a keychain felt like a fun way to carry a small piece of that around, and a much better souvenir than yet another generic keychain from a sports shop.
 
@@ -40,7 +40,7 @@ I hope you will like it too.
 
 If padel is not your sport but you play something else, the same idea works for pretty much any racket, paddle, or piece of equipment you have gotten attached to: keep the silhouette recognizable, simplify the fine detail down to keychain scale, and print it flat in a single color.
 
-It has turned into a nice icebreaker at the club too, more than once another player has noticed it on my keys and asked where I got it, which is exactly the kind of small, unplanned payoff that makes designing your own objects worthwhile.
+It has turned into a nice icebreaker at the club too; more than once another player has noticed it on my keys and asked where I got it, which is exactly the kind of small, unplanned payoff that makes designing your own objects worthwhile.
 
 A small object, but a genuinely fun one to have designed myself and carried around ever since.
 

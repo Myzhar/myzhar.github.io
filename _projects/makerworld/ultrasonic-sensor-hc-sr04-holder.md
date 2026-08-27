@@ -39,9 +39,9 @@ This is a custom-designed case/holder for the popular HC-SR04 ultrasonic sensor,
 
 The HC-SR04 is one of those parts that shows up in nearly every beginner robotics kit, cheap, easy to wire to any microcontroller, and good enough for basic obstacle detection or distance measurement. What it does not come with is any kind of mount: it is a bare PCB with two open transducer cups on the front, meant to be glued, zip-tied, or otherwise improvised onto whatever chassis it ends up on. I got tired of improvising a new mounting solution every time I reused one of these sensors across different robots, so I designed a proper holder once and reused it since.
 
-I printed it using TPU for its flexibility, and I've included a Bambu Lab P1S profile optimized for this material. A flexible holder is genuinely useful here: it can flex slightly to snap-fit around the sensor's PCB edges rather than needing separate screws to clamp it, and it absorbs small vibrations from the robot's motors instead of transmitting them straight into the sensor. However, the design is versatile, and you can also print it using PLA or other rigid materials depending on your project needs, if you would rather bolt the sensor down solidly instead.
+I printed it using TPU for its flexibility, and I've included a Bambu Lab P1S profile optimized for this material. A flexible holder is genuinely useful here: it can flex slightly to snap-fit around the sensor's PCB edges rather than needing separate screws to clamp it, and it absorbs small vibrations from the robot's motors instead of transmitting them straight into the sensor. However, the design is versatile, and if you would rather bolt the sensor down solidly, you can print it using PLA or other rigid materials instead.
 
-**The 3D CAD model is available for free customization on**[**OnShape**](https://cad.onshape.com/documents/13fbeb1687d3e479bd119c8f/w/02fe54385272a973ea8aeb1a/e/5081490c32c47e5a3ea86de8?renderMode=0&uiState=66e975865b681a7292009b88){: target="_blank"}**.**
+**The 3D CAD model is available for free customization on** [**OnShape**](https://cad.onshape.com/documents/13fbeb1687d3e479bd119c8f/w/02fe54385272a973ea8aeb1a/e/5081490c32c47e5a3ea86de8?renderMode=0&uiState=66e975865b681a7292009b88){: target="_blank"}**.**
 
 ### Mounting
 
@@ -68,7 +68,7 @@ Supports settings:
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/inline-4.jpg" alt="Ultrasonic sensor HC-SR04 holder" %}
 
-Ultrasonic sensors are also directional, they need a relatively clear, unobstructed cone in front of the transducers to get a reliable echo back, so the holder's angle on the chassis matters just as much as how securely it is mounted. Getting that angle wrong is an easy way to end up with a robot that reports phantom obstacles or misses real ones, so I designed the holder's mounting geometry around the angles I actually needed on my own robot, rather than a generic flat bracket.
+Ultrasonic sensors are also directional; they need a relatively clear, unobstructed cone in front of the transducers to get a reliable echo back, so the holder's angle on the chassis matters just as much as how securely it is mounted. Getting that angle wrong is an easy way to end up with a robot that reports phantom obstacles or misses real ones, so I designed the holder's mounting geometry around the angles I actually needed on my own robot, rather than a generic flat bracket.
 
 This is what they look like when installed on my robot
 

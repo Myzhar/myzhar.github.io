@@ -39,7 +39,7 @@ I created this exhaust hose adapter for Bambu Lab P1S to reduce bad smells while
 
 The adapter has slots to add a hermetic seal and improve the overall performance.
 
-The assembly is easy, use the 4x M3 holes beside the exhaust output grid in the rear panel. You must remove the existing screw on the left, and use 3 additional screws (top, bottom, right) to fix it.
+The assembly is easy: use the 4x M3 holes beside the exhaust output grid in the rear panel. You must remove the existing screw on the left, and use 3 additional screws (top, bottom, right) to fix it.
 
 I recommend using a PVC flexible exhaust tube for 3" (8 cm) tubes fixed with a metal clamp.
 

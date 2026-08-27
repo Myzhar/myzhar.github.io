@@ -1,6 +1,6 @@
 ---
 title: "3D Printing Projects"
-excerpt: "3D printable designs by Walter Lucetti, published on MakerWorld: household fixes, robotics parts, and calibration tools."
+excerpt: "3D printable designs, published on MakerWorld: household fixes, robotics parts, and calibration tools."
 author: "Walter Lucetti"
 index: 3000
 header:

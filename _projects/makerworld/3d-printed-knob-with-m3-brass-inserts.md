@@ -65,7 +65,7 @@ I sized this one for a common M3 insert and a compact grip, but the underlying i
 
 ### Design:
 
-This model has a total length of 8 mm and a diameter of 7.5 mm and fits M3 heat brass inserts. Feel free to customize the model in the public [OnShape](https://cad.onshape.com/documents/6ada61f2f704a8c24fe919be/w/b42ea5fc1db9488f78e30d5e/e/f1be328fe05e62ebfb608dea?renderMode=0&uiState=66f921997f4a70243efcf297){: target="_blank"} project.
+This model has a total length of 8 mm and a diameter of 7.5 mm and fits M3 heat-set brass inserts. Feel free to customize the model in the public [OnShape](https://cad.onshape.com/documents/6ada61f2f704a8c24fe919be/w/b42ea5fc1db9488f78e30d5e/e/f1be328fe05e62ebfb608dea?renderMode=0&uiState=66f921997f4a70243efcf297){: target="_blank"} project.
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/3d-printed-knob-with-m3-brass-inserts/inline-0.jpg" alt="3D Printed Knob with M3 Brass Inserts" %}
 

@@ -28,7 +28,7 @@ gallery_photos:
 
 This is the keychain with the official logo of the [Olympia Sporting Club](https://maps.app.goo.gl/tRdfUgXAtKXFmLod9){: target="_blank"}.
 
-[Olympia Sporting Club](https://maps.app.goo.gl/tRdfUgXAtKXFmLod9){: target="_blank"} is an Italian Sport center in Marina di Massa (MS), Tuscany, where you can play Padel, Beach Tennis, Beach Volley, Pickleball, and Futsal. It is one of the clubs where I regularly play [padel](/projects/makerworld/padel-racket-keychain-v2/) myself, and after a season of matches there I wanted a small souvenir with the club's own logo rather than a generic sports keychain.
+[Olympia Sporting Club](https://maps.app.goo.gl/tRdfUgXAtKXFmLod9){: target="_blank"} is an Italian sports center in Marina di Massa (MS), Tuscany, where you can play Padel, Beach Tennis, Beach Volley, Pickleball, and Futsal. It is one of the clubs where I regularly play [padel](/projects/makerworld/padel-racket-keychain-v2/) myself, and after a season of matches there I wanted a small souvenir with the club's own logo rather than a generic sports keychain.
 
 Reproducing a real logo as a printable keychain is a bit different from designing an original shape from scratch: the geometry has to stay faithful to the source artwork while still being simple enough to print cleanly at keychain scale, with thin strokes thick enough to survive handling and clipping onto a keyring. This one is set up as a dual-color print, so the logo's lettering and background can come out in two different filament colors on a single plate rather than needing painting or post-processing afterward.
 

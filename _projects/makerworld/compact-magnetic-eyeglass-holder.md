@@ -50,7 +50,7 @@ It’s the best invention since sliced bread… at least for your specs!
 
 Once it is stuck in place, it genuinely changes the habit: instead of setting the glasses down wherever is convenient in the moment, there is a specific, obvious spot they belong, and that is usually enough to break the cycle of misplacing them in the first place.
 
-A tiny fix, admittedly, but one I reach for gratitude over almost daily.
+A tiny fix, admittedly, but one I'm grateful for almost daily.
 
 A tiny magnetic mount, and one less thing to lose track of every morning.
 

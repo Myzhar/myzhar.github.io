@@ -35,7 +35,7 @@ gallery_photos:
 Capture every rally, smash, and epic point with this specially designed **3D printed phone holder** for padel courts!
 Built with **two powerful suction cups**, it locks firmly onto the glass walls, giving you a rock-steady angle for recording your matches.
 
-Padel courts are enclosed by glass and mesh walls specifically so the ball can bounce off them during play, and those same glass panels turn out to be an ideal spot to mount a phone for filming a match from a wide, elevated angle. The problem is that most phone mounts are designed for a car dashboard or a tripod, not a vertical sheet of glass that a ball is going to slam into repeatedly during the match. A single suction cup can hold a phone's weight just fine sitting still, but it is not enough to resist the vibration and shock of the ball hitting the glass a few centimeters away, which is exactly what tends to knock loose, single-cup mounts free mid-match.
+Padel courts are enclosed by glass and mesh walls specifically so the ball can bounce off them during play, and those same glass panels turn out to be an ideal spot to mount a phone for filming a match from a wide, elevated angle. The problem is that most phone mounts are designed for a car dashboard or a tripod, not a vertical sheet of glass that a ball is going to slam into repeatedly during the match. A single suction cup can hold a phone's weight just fine sitting still, but it is not enough to resist the vibration and shock of the ball hitting the glass a few centimeters away, which is exactly what tends to knock single-cup mounts loose mid-match.
 
 ✨ **Why you’ll love it:**
 
