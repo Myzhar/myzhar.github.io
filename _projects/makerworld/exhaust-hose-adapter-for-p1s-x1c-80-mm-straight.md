@@ -75,6 +75,8 @@ A small print, but one that changes how comfortable it is to run ASA or ABS jobs
 
 A short piece of plastic that keeps a whole room smelling better.
 
+Securing the hose with a proper metal clamp rather than tape or a zip tie is worth the extra minute too, since the joint needs to stay sealed under the light vibration of a printer running for hours at a time, not just hold on the day you install it.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

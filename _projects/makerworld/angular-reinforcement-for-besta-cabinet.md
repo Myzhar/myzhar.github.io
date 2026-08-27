@@ -52,6 +52,8 @@ A cheap, sturdy fix for a problem furniture manufacturers rarely account for onc
 
 A small angle bracket standing in for the structural panel I removed.
 
+Since it mounts independently to the wall and to the cabinet's side panels, it does not rely on the cabinet's own screws or joinery at all, which means it works even on units that have already been assembled and loaded for a while, not just on a cabinet being built fresh.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

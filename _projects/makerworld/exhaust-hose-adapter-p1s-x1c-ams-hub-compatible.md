@@ -76,6 +76,8 @@ Revisiting an older design once your own setup outgrows it is, in my experience,
 
 A part designed around the hardware I actually run today, not the setup from a couple of years ago.
 
+The ribbed hose connection and screwdriver access hole both came out of hands-on frustration with the first version: fumbling with a hose clamp in a tight gap behind the printer is a lot easier when the fitting itself gives the clamp something to bite into and leaves room to actually turn a screwdriver.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

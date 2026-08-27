@@ -46,6 +46,8 @@ A small object, but a genuinely fun one to have designed myself and carried arou
 
 A small tribute to a sport I never expected to get this attached to.
 
+Leaving the brand and model off the design was a deliberate choice, not an oversight: it keeps the model shareable without stepping on anyone's trademark, while still being immediately recognizable to anyone who has held a padel racket in their hand.
+
 ## Download
 
 The model is free to download and print, licensed under the Creative Commons Attribution-Noncommercial.

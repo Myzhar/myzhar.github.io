@@ -59,6 +59,8 @@ Sometimes the most useful thing in a whole library of models is the plainest one
 
 Simple, reusable, and done in minutes.
 
+I keep coming back to this one specifically because it has no strong opinion about what it is for: print it in whatever color matches the wall it is going on, and it will look at home pointing toward a workshop door just as easily as marking a cable route inside an enclosure.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

@@ -68,6 +68,8 @@ A tiny fix for a tiny annoyance, which is exactly the kind of thing a home 3D pr
 
 Small problem, small print, solved for good.
 
+Both sizes share the same divider design, so whichever one fits your countertop and spoon collection best, the dividing wall works the same way; the larger size just gives more room per side for households that go through more capsules.
+
 ## Printing
 
 Two print profiles are provided on MakerWorld:

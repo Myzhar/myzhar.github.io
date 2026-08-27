@@ -54,6 +54,8 @@ A tiny fix, admittedly, but one I reach for gratitude over almost daily.
 
 A tiny magnetic mount, and one less thing to lose track of every morning.
 
+The three 6x3 mm magnets are sized to be strong enough to hold the weight of a pair of glasses reliably, without being so strong that removing them becomes a two-handed effort every time. If you print it for a heavier pair of glasses, or for something bulkier like sunglasses with a thick frame, it is worth sizing up the magnets slightly rather than assuming the same three will hold any weight.
+
 ## Download
 
 The model is free to download and print, licensed under the MakerWorld Exclusive License.

@@ -47,6 +47,8 @@ Simple ergonomics, solved with a print instead of a purchase.
 
 A flat piece of plastic, and a noticeably more comfortable afternoon at the desk.
 
+If your desk arrangement changes later, a new monitor, a different chair height, the riser is just as easy to reprint at a new height as it was the first time, rather than being a fixed piece of furniture you are stuck with.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

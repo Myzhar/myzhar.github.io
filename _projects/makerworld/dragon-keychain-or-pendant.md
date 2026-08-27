@@ -47,6 +47,8 @@ Sometimes the most meaningful thing you can design is not the most technically d
 
 A small keepsake, shrunk down but not any less meaningful.
 
+There is no fastener sizing, no clearance to check, no assembly, so if you want a project to try a filament color or a printer setting you have never used before, this is a low-risk one to experiment on.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

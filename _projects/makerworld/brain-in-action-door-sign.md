@@ -47,6 +47,8 @@ Sometimes the best use of a 3D printer is not solving a problem at all, just mak
 
 A silly little sign, and I would not have it any other way.
 
+If the phrase does not quite fit your own door, the underlying Make My Sign tool that generated this one works the same way for any short line of text, so swapping in your own line of humor is a matter of minutes, not a redesign.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

@@ -69,6 +69,8 @@ A functional part that still looks like it belongs on a finished project rather 
 
 A grip built to be trusted, not just to look the part.
 
+Even with the strongest material choice, I would still treat the disclaimer above as more than boilerplate: test the handle under a load close to what you actually expect before trusting it somewhere failure would be a real problem.
+
 ## Download
 
 The model is free to download and print, licensed under the MakerWorld Exclusive License.

@@ -52,6 +52,8 @@ A cheap kit robot with the right printed attachments can hold its own against fa
 
 A simple upgrade that turns a kit robot into a real sumo contender.
 
+I would lean toward the curved shovel once you have scouted an opponent's front end and it looks low or wedge-shaped, since sliding underneath tends to beat a straight head-on push against that kind of shape.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

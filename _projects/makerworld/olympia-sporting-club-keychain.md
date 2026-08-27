@@ -52,6 +52,8 @@ A small, personal print, but one that has genuinely become a conversation starte
 
 A small logo, printed with the same care I would put into any other project.
 
+Reproducing a real club logo also comes with a bit of extra care I do not need for my own original designs, keeping proportions and colors close to the source so it still reads as the club's actual mark, not a rough approximation of it.
+
 ## Download
 
 The model is free to download and print, licensed under the Creative Commons Attribution-Noncommercial-NoDerivatives.

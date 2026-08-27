@@ -58,6 +58,8 @@ A reusable enclosure like this ends up paying for its design time many times ove
 
 A small case that has followed this sensor across several very different projects.
 
+If you are just getting started with the Lepton3, pairing this case with one of the driver repositories linked above is the fastest way to get from an unopened breakout board to actual thermal images on screen.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

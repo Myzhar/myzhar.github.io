@@ -63,6 +63,8 @@ Small revisions like this rarely make for exciting release notes, but they are u
 
 A second pass that fixed exactly the two things that bothered me about the first one.
 
+If you already have the original printed and it is holding up fine, there is no need to replace it, this version exists for anyone starting fresh or anyone who ran into the exact issues I was trying to fix.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

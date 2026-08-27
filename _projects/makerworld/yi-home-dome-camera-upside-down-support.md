@@ -49,6 +49,8 @@ A small mechanical print like this one is often all it takes to get much more va
 
 A simple bracket, and a genuinely better vantage point for very little effort.
 
+Since the camera's own software already lets you flip the video feed to compensate for the inverted mounting, there is nothing extra to configure on the camera itself once it is sitting in the support, it just works the moment it is powered back on.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

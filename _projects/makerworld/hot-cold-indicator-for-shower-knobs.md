@@ -60,6 +60,8 @@ A silly problem, admittedly, but a genuinely satisfying one to fix permanently.
 
 Two tiny badges, and no more morning temperature roulette.
 
+I made these with MakerWorld's Make My Sign tool rather than modeling the icons by hand, which made it easy to try a few icon and color combinations before settling on the sun and snowflake pairing. If your knobs use a different color scheme than mine, it is worth regenerating the badges in matching colors rather than sticking with what worked in my bathroom.
+
 ## Download
 
 The model is free to download and print, licensed under the Creative Commons Attribution-Noncommercial.
