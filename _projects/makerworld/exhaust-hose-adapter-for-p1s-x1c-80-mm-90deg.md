@@ -60,6 +60,14 @@ I recommend using a PVC flexible exhaust tube for 3" (8 cm) tubes fixed with a m
 
 {% include gallery id="gallery_photos" caption="Exhaust Hose Adapter for P1S/X1C - 80 mm - 90° on MakerWorld" %}
 
+A 90 degree elbow is the right choice when the run from the printer to your exhaust point has to turn a corner shortly after leaving the machine, against a wall, into a nearby window, or down through a shelf, rather than running in a straight line. Keeping that first bend close to the printer, in a solid printed fitting rather than in the flexible hose itself, avoids putting a sharp kink in the hose a few centimeters from the port, which is exactly where flexible ducting likes to collapse and restrict airflow. If your setup instead has a clear straight run away from the printer, the [straight version](/projects/makerworld/exhaust-hose-adapter-for-p1s-x1c-80-mm-straight/) of this adapter is the simpler choice.
+
+Venting exhaust out of the room, rather than relying only on an enclosure's carbon filter, makes a real difference to how a small print room smells after a long ASA or ABS print, and this elbow is the piece that makes that routing possible when the printer sits against a wall or a corner.
+
+A small fitting that solves a routing problem no printer manufacturer thinks to solve for you.
+
+A short elbow that keeps a hose from fighting the printer's own layout.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

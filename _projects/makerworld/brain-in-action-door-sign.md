@@ -31,11 +31,21 @@ My "Brain in Action" door sign is more than just a piece of plastic 3D printed s
 
 Crafted with care and a dash of whimsy, this sign adds a touch of lightheartedness to any doorway. Bold lettering spells out the message, making it clear that brains are not just in idle mode behind this door, they're revved up and ready to tackle any challenge.
 
+I put this together with MakerWorld's Make My Sign tool, which turns a short phrase into a printable single or multi-color sign automatically, rather than modeling the lettering by hand the way I would for a more technical part. It is a nice change of pace from the mechanical, dimension-driven parts that make up most of what I design: no tolerances to hit, no fasteners to plan around, just picking a phrase that made me smile and letting the tool lay it out.
+
 Whether it's your office, study space, or secret laboratory (*I won't tell anyone*), this sign promises to bring a smile to everyone who passes by. So go ahead, hang it up, and let the world know that inside these walls, the gears are turning, the synapses are firing, and the brainpower is in full swing!
 
 *Powered by Make My Sign from MakerWorld (*[*https://makerworld.com/makerlab/MakeMySign*](https://makerworld.com/makerlab/MakeMySign){: target="_blank"}*)*
 
 {% include gallery id="gallery_photos" caption="Brain in Action - Door Sign on MakerWorld" %}
+
+If you like this kind of lighthearted signage, it pairs well with the more practical [restroom door signs](/projects/makerworld/men-s-toilet-door-sign/) in this collection, useful anywhere you want a shared office or workshop to feel a little less anonymous than a bare door.
+
+It costs almost nothing to print and takes almost no time to hang up, but it is exactly the kind of small personal touch that makes a shared office or workshop feel like a place people actually enjoy showing up to, instead of just another anonymous door in a hallway.
+
+Sometimes the best use of a 3D printer is not solving a problem at all, just making someone smile on their way through a door.
+
+A silly little sign, and I would not have it any other way.
 
 ## Download
 

@@ -34,7 +34,11 @@ gallery_photos:
 
 I reworked this [GrabCad project](https://grabcad.com/library/ardusimple-simplertk2b-heading-1){: target="_blank"} to create a custom box for the [ARDUSIMPLE simpleRTK2B Heading Starter Kit](https://www.ardusimple.com/product/simplertk2b-heading-basic-starter-kit-ip67/){: target="_blank"}.
 
-The bottom cover if fully closed, without holes and I printed it in ASA to make it more resistant to UV.
+This kit pairs two u-blox ZED-F9P RTK receivers to work out not just a robot's centimeter-level GPS position, but also its true compass heading, by comparing the signal phase between two antennas mounted a fixed distance apart. That is a big upgrade over estimating heading from a magnetometer or from GPS motion alone, both of which get unreliable at low speed or near ferrous metal, which is exactly the kind of sensor a mobile robot needs for reliable outdoor navigation. Two exposed RTK boards and a bundle of antenna and communication cabling are not something you want sitting bare on a robot chassis though, so a proper enclosure was one of the first things I needed once I started integrating this kit into my own projects.
+
+Rather than start a box from scratch, I found a compatible enclosure design already published on GrabCad and reworked it to fit my own needs: the exact board stack, the connector layout I needed exposed, and the assembly method I prefer for my projects.
+
+The bottom cover if fully closed, without holes and I printed it in ASA to make it more resistant to UV. That choice matters if the box is going to live outdoors on top of a robot for any length of time: PLA gets brittle and warps under sustained sun exposure, while ASA holds up to UV and temperature swings much better, which is why I reach for it by default on any enclosure meant to spend real time outside.
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/ardusimple-simplertk2b-heading-box-cover/inline-0.jpg" alt="Bottom cover" caption="Bottom cover" %}
 
@@ -43,6 +47,8 @@ The cover holes are suitable for M3 brass inserts to lock to top cover
 {% include figure popup=true image_path="/assets/images/projects/makerworld/ardusimple-simplertk2b-heading-box-cover/inline-1.jpg" alt="Brass inserts ready to be fitted" caption="Brass inserts ready to be fitted" %}
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/ardusimple-simplertk2b-heading-box-cover/inline-2.jpg" alt="Brass inserts pushed into the cover" caption="Brass inserts pushed into the cover" %}
+
+Starting from an existing, already-tested design and adapting it to the exact board stack and connector layout I needed was faster and more reliable here than modeling an enclosure from a blank canvas, especially for a stack with this many connectors and mounting constraints to get right.
 
 The box is perfect for fitting the main board with [u-blox ZED-F9P](https://www.u-blox.com/en/product/zed-f9p-module){: target="_blank"} and the heading board with a second [u-blox ZED-F9P](https://www.u-blox.com/en/product/zed-f9p-module){: target="_blank"}. It is also ready to fit the Xbee daughter board for local communication.
 

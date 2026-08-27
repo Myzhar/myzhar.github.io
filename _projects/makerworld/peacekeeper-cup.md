@@ -47,6 +47,8 @@ gallery_print:
 
 Tired of espresso spoons and tea spoons mixing in the same drawer, I designed this "peacekeeping" coffee cup: a small container with a thin internal wall that keeps the espresso spoons on one side and the tea spoons on the other.
 
+It is a small annoyance, but a very real one if you drink both coffee and tea in the same house: a jar or a cup on the counter fills up with a jumble of small spoons, and every time you reach in for one you end up with the wrong one, or a handful of the wrong ones, before finding the espresso spoon buried under the tea spoons. Buying a proper divided caddy for two spoon types felt like overkill for a problem this small, so I designed my own instead, sized specifically for the number of spoons that actually accumulate next to a home espresso machine.
+
 The design is intentionally simple:
 
 - Dual-compartment design, with a thin internal divider separating the two spoon types
@@ -57,6 +59,14 @@ The design is intentionally simple:
 {% include gallery id="gallery_use" caption="The Peacekeeper Cup in daily use, next to the coffee machine" %}
 
 You can find the project on [OnShape](https://cad.onshape.com/documents/294fac96cf9994a825988c07/w/1b465c991422cfac4811ce08/e/4f8cb2439c90fb3c0d07a28e?renderMode=0&uiState=69fc5dd2e61d0e56ad99e829){: target="_blank"} if you want to remix it.
+
+Sizing it for two spoon types rather than one also means it scales naturally to other small pairs of utensils, sugar and sweetener spoons, two different coffee capsule sizes, anything where you would otherwise be reaching into a single jumbled container and hoping for the right one.
+
+It is a small problem solved cleanly, and honestly one of my favorite kinds of print to design for exactly that reason.
+
+A tiny fix for a tiny annoyance, which is exactly the kind of thing a home 3D printer is best at.
+
+Small problem, small print, solved for good.
 
 ## Printing
 

@@ -36,6 +36,8 @@ This handy tool takes the guesswork out of choosing the right hole size for bras
 
 Simply push your insert into one of the labeled holes, and you'll instantly know if it's a snug fit. No more wasted time or materials!
 
+Heat-set brass inserts are only as strong as the hole you melt them into: too tight and the insert cracks the surrounding plastic as it goes in, too loose and it spins freely under load instead of biting into the walls once it cools. The right diameter depends on the exact insert you are using, the filament, and even the specific printer, since real hole diameters rarely come out exactly as designed once shrinkage and extrusion width are factored in. Rather than guess and ruin a finished print discovering the hole was wrong, printing this test piece once tells you the right number to use from then on.
+
 **Available tests:**
 
 - **M2** Brass threaded inserts
@@ -74,6 +76,10 @@ In this test with PLA filament for M3 inserts the hole with a diameter of 4.1 mm
 {% include figure popup=true image_path="/assets/images/projects/makerworld/test-and-calibration-for-brass-threaded-inserts/inline-6.jpg" alt="Test and calibration for brass threaded inserts" %}
 
 {% include gallery id="gallery_photos" caption="Test and calibration for brass threaded inserts on MakerWorld" %}
+
+A five-minute test that saves a lot of ruined prints down the line.
+
+A small test piece that turns a guess into a known-good number.
 
 ## Download
 

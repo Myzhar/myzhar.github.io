@@ -34,6 +34,8 @@ gallery_photos:
 
 🧩 If you’ve placed your AMS-HT on top of your 3D printer, you’ve probably noticed the PTFE tube bending a bit too much, making it harder for the filament to move smoothly and sometimes causing those annoying “motor effort” warnings.
 
+Mounting the AMS-HT directly on top of the printer is the obvious placement, it keeps the footprint small and the feed path short, but it also forces the PTFE tube into a tight bend right where it exits the unit on its way down to the toolhead. Filament, especially anything stiffer like PETG or ABS, does not like being forced through a sharp bend: the extra friction shows up as inconsistent extrusion, and on Bambu Lab printers it is often exactly what triggers those "motor effort too high" warnings during a print, sometimes even pausing it altogether.
+
 {% include figure popup=true image_path="/assets/images/projects/makerworld/ptfe-tube-guide-for-ams-ht/inline-0.jpg" alt="PTFE Tube Guide for AMS-HT" %}
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/ptfe-tube-guide-for-ams-ht/inline-1.jpg" alt="PTFE Tube Guide for AMS-HT" %}
@@ -41,6 +43,8 @@ gallery_photos:
 {% include figure popup=true image_path="/assets/images/projects/makerworld/ptfe-tube-guide-for-ams-ht/inline-2.jpg" alt="PTFE Tube Guide for AMS-HT" %}
 
 🌈 This little helper fits right after the rear exit of your AMS-HT and gives the tube a nice, gentle curve. The result? Easier filament flow, less friction, and smoother printing without extra stress on the motor.
+
+The idea is the same one used in cable management: a bend radius that is too tight creates stress and friction no matter what is running through it, whether that is a wire or a length of PTFE tubing. By guiding the tube through a wider, gentler curve right where it leaves the AMS-HT, the unbender keeps the tube from kinking, and the extruder motor no longer has to fight the tube's own resistance on top of the filament's.
 
 ### 🔧 Assembly steps:
 
@@ -55,6 +59,10 @@ gallery_photos:
 {% include figure popup=true image_path="/assets/images/projects/makerworld/ptfe-tube-guide-for-ams-ht/inline-5.jpg" alt="PTFE Tube Guide for AMS-HT" %}
 
 🎉 Now your AMS-HT setup looks cleaner and works more reliably, keeping your prints running smoothly!
+
+A tiny curved channel, and one less warning interrupting a long print.
+
+It is a small, unglamorous part, just a curved channel for a tube, but it is a good example of how a lot of the friction in multi-material printing setups is mechanical, not electronic. Before reaching for finer flow tuning or extruder recalibration whenever a print throws a motor-effort warning after adding an AMS-HT, it is worth checking whether the tube routing itself is fighting the system first.
 
 {% include gallery id="gallery_photos" caption="PTFE Tube Guide for AMS-HT on MakerWorld" %}
 

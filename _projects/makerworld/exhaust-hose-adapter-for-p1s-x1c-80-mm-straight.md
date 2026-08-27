@@ -67,6 +67,14 @@ I recommend using a PVC flexible exhaust tube for 3" (8 cm) tubes fixed with a m
 | PETG | 0.2mm layer, 2 walls, 15% infill | ~3.3 h |
 | ABS | 0.2mm layer, 2 walls, 15% infill | ~3.2 h |
 
+The 80 mm diameter matches standard flexible ducting hose sold for exactly this kind of application, so you are not stuck sourcing an odd size or trimming a hose down to fit. If your exhaust routing needs to change direction shortly after leaving the printer rather than running straight, I also published a [90 degree elbow version](/projects/makerworld/exhaust-hose-adapter-for-p1s-x1c-80-mm-90deg/) of this same adapter, which keeps the bend in a rigid printed fitting instead of forcing the flexible hose itself into a tight, airflow-restricting kink.
+
+Venting exhaust from ASA and ABS prints out of the room, rather than just relying on an enclosure's carbon filter, makes a noticeable difference to how a small print room smells after a long print, and this adapter is the piece that turns a printer's stock exhaust port into something you can actually connect a hose to.
+
+A small print, but one that changes how comfortable it is to run ASA or ABS jobs indoors.
+
+A short piece of plastic that keeps a whole room smelling better.
+
 ## Download
 
 The model is free to download and print, licensed under the Standard Digital File License.

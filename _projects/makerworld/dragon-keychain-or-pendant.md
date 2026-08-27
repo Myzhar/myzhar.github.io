@@ -31,13 +31,21 @@ gallery_photos:
 
 This keychain is a little reminder of a pendant that's always been special to me, so I turned it into something I could carry everywhere!
 
-I designed it to be used as a keychain, but it's so light that you can use it also as a pendant.
+The original was a piece of jewelry I had worn for years before the idea of recreating it in 3D even occurred to me. Modeling a dragon shape from a small, three-dimensional pendant is a different exercise from most of the parts I design: there is no functional requirement to satisfy, no bolt pattern to match, no clearance to respect, just capturing the curve of the tail, the posture of the body, and the silhouette that made the original piece recognizable in the first place, at a scale that still prints cleanly.
 
-It's super quick to print, and for the smoothest finish, I recommend using the smallest layer height you can and ironing the top surface.
+I designed it to be used as a keychain, but it's so light that you can use it also as a pendant. That dual purpose was intentional from the start: keeping the wall thickness low enough that the print stays light on a keyring, while leaving a small loop at the top so a chain or cord can go straight through it if you would rather wear it than carry it in your pocket.
+
+It's super quick to print, and for the smoothest finish, I recommend using the smallest layer height you can and ironing the top surface. Because the shape has no functional tolerances to hit, unlike most of the parts I publish, it is one of the more forgiving prints in this whole collection, so it is a good one to experiment on if you want to try a new filament color or a finer nozzle without risking a part that actually needs to fit something.
 
 Have fun printing!
 
 {% include gallery id="gallery_photos" caption="Dragon keychain or pendant on MakerWorld" %}
+
+It has become one of the small prints I hand out most often, to friends, family, anyone who compliments it, precisely because it costs so little in time and material but still comes across as a genuine, thought-out gift rather than something grabbed off a shelf.
+
+Sometimes the most meaningful thing you can design is not the most technically demanding one, and this little dragon is proof that a print does not need a bill of materials or a tolerance chart to be worth sharing.
+
+A small keepsake, shrunk down but not any less meaningful.
 
 ## Download
 

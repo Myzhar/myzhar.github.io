@@ -90,6 +90,8 @@ Happy tuning… and do not hesitate to add comments to improve the model.
 
 {% include gallery id="gallery_photos" caption="ABS ASA stress test and calibration on MakerWorld" %}
 
+One print, updated a couple of times as I learned more, and still the first thing I reach for whenever a new spool or a new printer needs dialing in.
+
 ## Printing
 
 | Profile | Settings | Print time |

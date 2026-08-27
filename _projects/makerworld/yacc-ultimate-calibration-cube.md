@@ -70,6 +70,14 @@ Do you want to modify my project? [You can find the 3D model on OnShape](https:/
 
 {% include gallery id="gallery_photos" caption="YACC - Ultimate Calibration Cube on MakerWorld" %}
 
+A calibration cube only earns its keep if you actually print it on every new spool or every time you touch your slicer profile, and a cube that only checks dimensional accuracy misses half the things that go wrong in practice, drooping overhangs, wobbly walls from loose belts, first-layer adhesion. Folding those checks into one object, rather than juggling three or four separate calibration prints, is the whole point of this one: one print, a few minutes of inspection, and you know whether your printer and filament combination is actually dialed in.
+
+Keeping a fresh one printed after any hardware change, a new nozzle, a bed leveling redo, a firmware update, takes the guesswork out of whether a print quality issue afterward is the machine or just the model you happened to print next.
+
+One small print, several calibration checks at once, and a lot less guessing about why a print came out wrong.
+
+One cube, several checks, and a lot less guesswork afterward.
+
 ## Download
 
 The model is free to download and print, licensed under the Creative Commons Attribution-Noncommercial-Share Alike.

@@ -25,10 +25,14 @@ gallery_photos:
 
 Men's toilet door sign
 
+This is the matching half of a small set of restroom door signs I designed for shared spaces, offices, and workshops that only ever seem to have a handwritten note taped to the bathroom door, if anything at all. A proper sign is a small detail, but it makes a room feel finished, and it is a great fit for 3D printing: a flat, single-color pictogram that would normally cost real money from a signage shop, made instead from a few grams of filament and a short, unattended print.
+
+I designed it as a simple, high-contrast silhouette rather than a detailed illustration, since a door sign needs to be legible at a glance, often from across a dim hallway. The flat profile means it prints quickly with no supports, and comes off the bed as a rigid, wipeable sign that will outlast any paper printout taped to a door.
+
 - **Height**: 20 cm
 - **Thickness**: 3 mm
 
-Use double-sided tape to hang it.
+Use double-sided tape to hang it. The 3 mm thickness keeps the sign flat and rigid without adding unnecessary print time, and the flat back sits cleanly against a painted or laminate door.
 
 Other models available:
 
@@ -36,6 +40,16 @@ Other models available:
 - [Wheelchair](/projects/makerworld/wheelchair-toilet-door-sign/)
 
 {% include gallery id="gallery_photos" caption="Men\'s toilet - Door Sign on MakerWorld" %}
+
+I print all three signs in the set from the same profile and the same filament color, so they match on the wall even if you print them weeks apart for different rooms or as replacements. If you only need one of the three right now, the model still prints just as cleanly on its own; you do not need to print the whole set at once to get a consistent-looking result later.
+
+A set like this is a small thing to put together, but it is the kind of small thing that makes a shared space feel like someone actually looked after it, rather than one more chore that got postponed indefinitely.
+
+Print all three once and you likely will not need to think about restroom signage again for a long time.
+
+A small detail, but the kind that makes a shared space feel cared for.
+
+Simple, clear, and done in one short print.
 
 ## Download
 

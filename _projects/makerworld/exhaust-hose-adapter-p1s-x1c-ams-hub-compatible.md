@@ -35,7 +35,9 @@ gallery_photos:
 
 ## Overview
 
-This is version 2 of my [**Exhaust Hose Adapter**](https://makerworld.com/en/models/156371-exhaust-hose-adapter-for-bambu-lab-p1s-80-mm-90deg){: target="_blank"}, redesigned to be fully compatible with the [**Bambu Lab AMS Hub**](https://eu.store.bambulab.com/products/ams-hub){: target="_blank"}.
+This is version 2 of my [**Exhaust Hose Adapter**](/projects/makerworld/exhaust-hose-adapter-for-p1s-x1c-80-mm-90deg/), redesigned to be fully compatible with the [**Bambu Lab AMS Hub**](https://eu.store.bambulab.com/products/ams-hub){: target="_blank"}.
+
+The original adapter worked well, but it was designed before the AMS Hub existed, and once I added the Hub to my own P1S the old adapter's footprint and hose routing no longer matched the new hardware around the back of the printer. Rather than leave the original design to slowly become obsolete, I went back into OnShape and reworked the whole thing around the AMS Hub's actual dimensions, so both pieces of hardware coexist cleanly instead of competing for the same space.
 
 🔧 **Key Improvements:**
 
@@ -62,11 +64,17 @@ This is version 2 of my [**Exhaust Hose Adapter**](https://makerworld.com/en/mod
 
 {% include gallery id="gallery_photos" caption="Exhaust Hose Adapter P1S/X1C – AMS Hub compatible on MakerWorld" %}
 
+The upward-angled outlet in this version also makes the hose itself easier to route once the AMS Hub is in the way, instead of fighting the tubing into an awkward downward bend right behind the printer.
+
 ## Printing
 
 | Profile | Settings | Print time |
 | --- | --- | --- |
 | Support Mat | 0.2mm layer, 4 walls, 15% Gyroid infill | ~5.8 h |
+
+Revisiting an older design once your own setup outgrows it is, in my experience, always worth the hour it takes in CAD.
+
+A part designed around the hardware I actually run today, not the setup from a couple of years ago.
 
 ## Download
 
