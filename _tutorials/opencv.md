@@ -15,6 +15,8 @@ header:
 layout: single
 classes: wide
 toc: false
+sitemap: true
+noindex: false
 ---
 
 A collection of hands-on **OpenCV** tutorials, focused on the parts of the library that turn a camera stream into something a machine can actually act on: deep learning inference, GPU acceleration, and real-time pipelines.
