@@ -11,6 +11,8 @@ header:
 layout: single
 classes: wide
 toc: false
+sitemap: true
+noindex: true
 ---
 
 MyzharBot is an open source and open hardware robotic platform born to study sensor fusion algorithms for autonomous navigation. It is my main project since 2012, and it has gone through several iterations and improvements over the years.

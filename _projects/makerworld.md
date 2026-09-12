@@ -15,6 +15,8 @@ header:
 layout: single
 classes: wide
 toc: false
+sitemap: true
+noindex: true
 ---
 
 A collection of 3D printable designs I publish on [MakerWorld](https://makerworld.com/en/@myzhar/upload){: target="_blank"}: practical fixes around the house, parts for my robotics projects, and printer calibration tools.

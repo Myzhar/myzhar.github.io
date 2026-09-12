@@ -11,6 +11,8 @@ header:
 layout: single
 classes: wide
 toc: false
+sitemap: true
+noindex: true
 ---
 
 A collection of open source ROS 2 packages for robotics development.
