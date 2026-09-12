@@ -50,7 +50,7 @@ Heat-set brass inserts are only as strong as the hole you melt them into: too ti
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/test-and-calibration-for-brass-threaded-inserts/inline-0.jpg" alt="Test and calibration for brass threaded inserts" %}
 
-### **Test procedure**
+### Test procedure
 
 Place the 8 threaded brass inserts into each of the eight test holes and find the ones that fit best
 
@@ -87,7 +87,7 @@ A small test piece that turns a guess into a known-good number.
 {% include makerworld-profiles.html %}
 
 ## Download
+
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/198751-test-and-calibration-for-brass-threaded-inserts){: .btn .btn--info target="_blank"}
-

@@ -24,9 +24,7 @@ gallery_photos:
 ---
 ## Overview
 
-### "Brain in Action" Door Sign
-
-### Step right up to the door of intellect!
+### About the sign
 
 My "Brain in Action" door sign is more than just a 3D-printed piece of plastic; it's a proclamation of mental prowess with a humorous twist.
 
@@ -55,7 +53,7 @@ If the phrase does not quite fit your own door, the underlying Make My Sign tool
 {% include makerworld-profiles.html %}
 
 ## Download
+
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/423848-brain-in-action-door-sign){: .btn .btn--info target="_blank"}
-

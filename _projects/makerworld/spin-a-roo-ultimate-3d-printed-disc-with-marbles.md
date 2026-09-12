@@ -33,11 +33,7 @@ gallery_photos:
 ---
 ## Overview
 
-### Tired of your everyday play pucks?
-
-### Wish you could add a little pizzazz to your floor games?
-
-### Enter the **Spin-a-Roo**!
+### About Spin-a-Roo
 
 This marvelous 3D-printed spinner disc is here to turn your ground-play dreams into a whirlwind of fun.
 
@@ -55,7 +51,7 @@ So rev up that wrist, and let the Spin-a-Roo mania begin!
 
 **Warning:** May cause uncontrollable giggles and a newfound obsession with marble mechanics. Not responsible for any accidental breakdancing caused by the sheer joy of spinning.
 
-### Assembling
+### Assembly
 
 The assembling is easy and it does not require tools:
 
@@ -75,7 +71,7 @@ The assembling is easy and it does not require tools:
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/spin-a-roo-ultimate-3d-printed-disc-with-marbles/inline-4.jpg" alt="Spin-a-Roo: Ultimate 3D-Printed Disc with Marbles" %}
 
-### Enjoy your Spin-a-Roo!
+### Finished assembly
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/spin-a-roo-ultimate-3d-printed-disc-with-marbles/inline-5.jpg" alt="Spin-a-Roo: Ultimate 3D-Printed Disc with Marbles" %}
 
@@ -95,4 +91,3 @@ Boost the project and I will create new amazing models
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/566012-spin-a-roo-ultimate-3d-printed-disc-with-marbles){: .btn .btn--info target="_blank"}
-

@@ -36,9 +36,7 @@ gallery_photos:
 ---
 ## Overview
 
-### **!!! YACC !!!**
-
-### **Y**es, this is **A**nother **C**alibration **C**ube
+### About YACC
 
 You might be thinking, **"Not another calibration cube!"** but hold on, because this one is unlike any other.
 
@@ -48,7 +46,7 @@ Axis labels are passthrough, making it easier than ever to keep track of your pr
 
 Join the revolution. Upgrade to the Ultimate Calibration Cube today.
 
-### A few useful information
+### Specifications
 
 - 4 profiles are available for 4 different common materials: **PLA**, **PETG**, **ABS**, and **ASA**
 - The size of the cube is standard: **20 mm**
@@ -84,7 +82,7 @@ One cube, several checks, and a lot less guesswork afterward.
 {% include makerworld-profiles.html %}
 
 ## Download
+
 The model is free to download and print, licensed under the Creative Commons Attribution-Noncommercial-Share Alike.
 
 [Download on MakerWorld](https://makerworld.com/en/models/417976-yacc-ultimate-calibration-cube){: .btn .btn--info target="_blank"}
-

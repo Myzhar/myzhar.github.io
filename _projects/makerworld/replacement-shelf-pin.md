@@ -33,7 +33,7 @@ gallery_photos:
 ---
 ## Overview
 
-#### 🛑 Stop Your Shelf from Rolling Away 🛠️
+### Replacement shelf pin
 
 Tired of your floating shelf going haywire every time you open the cabinet door? 🚪😵💫
 
@@ -62,7 +62,7 @@ https://cad.onshape.com/documents/91535ca216dc0f7c4fab76ea/w/febcabcde2bc0dc473e
 {% include makerworld-profiles.html %}
 
 ## Download
+
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/1977853-replacement-shelf-pin){: .btn .btn--info target="_blank"}
-

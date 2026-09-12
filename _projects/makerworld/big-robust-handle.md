@@ -45,14 +45,14 @@ Most generic handle STLs you find online are scaled-down decorative shapes, thin
 - 📦 Ideal for enclosures, drawers, covers, and custom tools
 - 🔩 Caps for the M6 screw holes (you can use TPU)
 
-### Printing Tips
+### Print recommendations
 
 - Recommended for **strong materials** like PETG, ABS, or ASA
 - Use **enough perimeters** for better strength
 - Print with good layer adhesion for maximum durability
 - Orient for strength depending on your mounting setup
 
-### Perfect For
+### Applications
 
 - Tool cases
 - Electronics enclosures
@@ -80,4 +80,3 @@ Even with the strongest material choice, I would still treat the disclaimer abov
 The model is free to download and print, licensed under the MakerWorld Exclusive License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/2596883-big-robust-handle){: .btn .btn--info target="_blank"}
-

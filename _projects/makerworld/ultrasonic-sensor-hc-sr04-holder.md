@@ -53,7 +53,7 @@ I printed it using TPU for its flexibility, and I've included a Bambu Lab P1S pr
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/inline-0.jpg" alt="Ultrasonic sensor HC-SR04 holder" %}
 
-### Printing
+### Print setup
 
 This is the position to be used on the printer bed:
 
@@ -84,7 +84,7 @@ A small mount, but the difference between a sensor that reads reliably and one g
 {% include makerworld-profiles.html %}
 
 ## Download
+
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/647454-ultrasonic-sensor-hc-sr04-holder){: .btn .btn--info target="_blank"}
-

@@ -49,23 +49,23 @@ While **PLA** and **PETG** share similar printing temperatures, their bond betwe
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-2.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
 
-### Print parameters to use the PETG as interface support for PLA objects
+### Recommended settings
 
 According to my test here are the best settings when using the **PLA** as the main material and **PETG** as the support interface:
 
-### Support
+#### Support
 
 - **Type**: normal (auto)
 - **Style**: Snug, this allows for a clean final contact surface
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-3.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
 
-### Filament
+#### Filament
 
 - **Support/raft base**: PLA, for fewer filament changes, simply **use the same filament for both the object and the supports**
 - **Support/raft interface**: PETG, this is the most important parameter; it allows you to choose the material of the layers of the interface between the object and the supports {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-4.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
 
-### Advanced
+#### Advanced
 
 - **Support wall loops**: 0, no walls around the supports
 - **Top Z distance**: 0.1 mm, don't overlook this setting! Setting it to 0 will make the nozzle smear the contact layer onto the interface, leading to a rough surface and difficult interface material removal. Instead, use a value like 0.1mm for a smooth contact surface and easy material removal. {% include figure popup=true image_path="/assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/inline-5.jpg" alt="Multi‑Material Interface Calibration & Test Tool" %}
@@ -81,7 +81,7 @@ According to my test here are the best settings when using the **PLA** as the ma
 - **Support/object xy distance**: 0.3 mm, this value allows for a clear gap between the object and the support material
 - **Support/object first layer gap**: 0.3 mm, you can lower this value to 0.1 mm and use the first layer of the supports as a brim if you have first-layer adhesion issues
 
-### Flushing Volumes calibration
+### Flushing volume calibration
 
 It is important to adjust the **Flushing Volumes** to enable a smooth filament switch while minimizing waste and printing time.
 
@@ -99,7 +99,7 @@ I used the project [**AMS Purge Calibration V2**](https://makerworld.com/en/mode
 {% include makerworld-profiles.html %}
 
 ## Download
+
 The model is free to download and print, licensed under the MakerWorld Exclusive License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/464717-multi-material-interface-calibration-test-tool){: .btn .btn--info target="_blank"}
-

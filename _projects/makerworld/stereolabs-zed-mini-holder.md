@@ -33,7 +33,7 @@ gallery_photos:
 ---
 ## Overview
 
-### Summary
+### Design
 
 A simple holder for the STEREOLABS ZED Mini 3D camera:
 [https://www.stereolabs.com/products/zed-2](https://www.stereolabs.com/products/zed-2){: target="_blank"}
@@ -59,4 +59,3 @@ I have used this exact holder on more than one robot build over the years, since
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/44185-stereolabs-zed-mini-holder){: .btn .btn--info target="_blank"}
-

@@ -47,7 +47,7 @@ Mounting the AMS-HT directly on top of the printer is the obvious placement; it 
 
 The idea is the same one used in cable management: a bend radius that is too tight creates stress and friction no matter what is running through it, whether that is a wire or a length of PTFE tubing. By guiding the tube through a wider, gentler curve right where it leaves the AMS-HT, the unbender keeps the tube from kinking, and the extruder motor no longer has to fight the tube's own resistance on top of the filament's.
 
-### 🔧 Assembly steps:
+### Assembly
 
 1️⃣ Remove the PTFE tube from the AMS-HT.
 2️⃣ Insert the tube through the unbender, making sure the longer end faces the AMS-HT side.
@@ -72,7 +72,7 @@ It is a small, unglamorous part, just a curved channel for a tube, but it is a g
 {% include makerworld-profiles.html %}
 
 ## Download
+
 The model is free to download and print, licensed under the MakerWorld Exclusive License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/2592477-ptfe-tube-guide-for-ams-ht){: .btn .btn--info target="_blank"}
-

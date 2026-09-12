@@ -46,7 +46,7 @@ Perfect for applications in DIY projects, electronics, robotics, and mechanical 
 
 The brass inserts guarantee long-lasting durability, allowing repeated assembly and disassembly without wear or stripping of the threads.
 
-### Key Features:
+### Key features
 
 - 3D printed with strong, durable filament (PLA/ABS/PETG).
 - Integrated M3 brass inserts for enhanced thread strength.
@@ -58,13 +58,13 @@ A small, reusable building block worth keeping in the back pocket for the next p
 
 A humble knob, but one that will still be threading smoothly long after a bare plastic one would have stripped.
 
-### Applications:
+### Applications
 
 Use this knob for adjusting tension, attaching parts, or controlling mechanisms in prototypes, machines, or any project where a secure, reliable fastening solution is needed.
 
 I sized this one for a common M3 insert and a compact grip, but the underlying idea, a printed knob body with a heat-set metal thread, scales to whatever bolt size and grip diameter your own project actually needs.
 
-### Design:
+### Design
 
 This model has a total length of 8 mm and a diameter of 7.5 mm and fits M3 heat-set brass inserts. Feel free to customize the model in the public [OnShape](https://cad.onshape.com/documents/6ada61f2f704a8c24fe919be/w/b42ea5fc1db9488f78e30d5e/e/f1be328fe05e62ebfb608dea?renderMode=0&uiState=66f921997f4a70243efcf297){: target="_blank"} project.
 
@@ -77,7 +77,7 @@ This model has a total length of 8 mm and a diameter of 7.5 mm and fits M3 heat-
 {% include makerworld-profiles.html %}
 
 ## Download
+
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/672797-3d-printed-knob-with-m3-brass-inserts){: .btn .btn--info target="_blank"}
-
