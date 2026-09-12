@@ -8,8 +8,8 @@ classes: wide
 toc: false
 breadcrumbs: false
 
-sitemap: true
-noindex: false
+sitemap: false
+noindex: true
 
 header:
   teaser: /assets/images/tutorials/opencv-tutorials-banner.svg

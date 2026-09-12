@@ -8,8 +8,8 @@ classes: wide
 toc: false
 breadcrumbs: false
 
-sitemap: true
-noindex: false
+sitemap: false
+noindex: true
 
 header:
   teaser: /assets/images/tutorials/compute_capability/geforce-rtx-50series-nv-sfg-thumbnail-1920x1080.jpeg

@@ -8,8 +8,8 @@ classes: wide
 toc: false
 breadcrumbs: false
 
-sitemap: true
-noindex: false
+sitemap: false
+noindex: true
 
 header:
   teaser: /assets/images/ros2/ROS2_TM_Color.svg
