@@ -21,4 +21,6 @@ header:
       url: "/posts"
     - label: "🗃️ by Category"
       url: "/categories"
+sitemap: false
+noindex: true
 ---

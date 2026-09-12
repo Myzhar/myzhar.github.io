@@ -19,4 +19,6 @@ header:
       url: "/posts"
     - label: "📑 by Tags"
       url: "/tags"
+sitemap: false
+noindex: true
 ---

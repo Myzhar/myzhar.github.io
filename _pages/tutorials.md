@@ -12,4 +12,6 @@ classes:
 sort_by: index
 sort_order: forward
 filter_to_root: true
+sitemap: false
+noindex: true
 ---
