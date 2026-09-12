@@ -17,6 +17,7 @@ PROJECTS = File.join(ROOT, "_projects", "makerworld")
 DATA_FILE = File.join(ROOT, "_data", "makerworld_profiles.yml")
 API_ROOT = "https://api.bambulab.com/v1/design-service/design"
 PROFILE_SECTION = "## Print profiles\n\n{% include makerworld-profiles.html %}"
+CREATOR_HANDLE = "myzhar"
 
 def fetch_json(url)
   uri = URI(url)
@@ -52,7 +53,12 @@ end
 def material_summary(profile)
   detailed = profile["detail"].to_h.dig("instanceFilaments")
   materials = detailed.nil? || detailed.empty? ? profile["instanceFilaments"] || [] : detailed
-  materials.map { |material| [material["type"], material["usedG"] && "#{material['usedG']} g"].compact.join(" ") }.join(", ")
+  summary = materials.map { |material| [material["type"], material["usedG"] && "#{material['usedG']} g"].compact.join(" ") }.join(", ")
+  return summary unless summary.empty?
+
+  # Older profiles do not expose plate metadata through the public list API,
+  # but their published title still identifies the print material.
+  profile.fetch("title").scan(/ABS-GF|ABS|ASA|PETG|PLA|TPU|PA(?:-CF)?/i).uniq.join(", ").then { |value| value.empty? ? "Not specified" : value }
 end
 
 def positive_value(profile, key)
@@ -61,6 +67,11 @@ def positive_value(profile, key)
 
   value = profile[key]
   value if value.to_i.positive?
+end
+
+def authored_by_myzhar?(profile)
+  creator = profile["creator"] || profile["instanceCreator"] || {}
+  creator["handle"].to_s.casecmp?(CREATOR_HANDLE)
 end
 
 catalogue = {}
@@ -79,16 +90,23 @@ Dir.glob(File.join(PROJECTS, "*.md")).sort.each do |path|
   end
 
   puts "Fetching #{File.basename(path)} (#{model_id})"
-  profiles = all_instances(model_id)
+  design = fetch_json("#{API_ROOT}/#{model_id}")
+  detailed_profiles = design.fetch("instances", []).to_h { |profile| [profile["profileId"], profile] }
+  profiles = all_instances(model_id).select { |profile| authored_by_myzhar?(profile) }
   # Prefixing keys prevents YAML from interpreting numeric model ids as integer
   # keys, which Liquid cannot reliably look up from front matter.
   catalogue["model_#{model_id}"] = profiles.map do |profile|
+    # The model endpoint carries complete plate metrics for profiles where
+    # MakerWorld makes them public. Merge them into the paginated list.
+    profile = profile.merge(detailed_profiles.fetch(profile["profileId"], {}))
+    weight = positive_value(profile, "weight")
+    prediction = positive_value(profile, "prediction")
     {
       "id" => profile.fetch("profileId"),
       "title" => profile.fetch("title"),
       "materials" => material_summary(profile),
-      "weight" => positive_value(profile, "weight"),
-      "print_time" => duration(positive_value(profile, "prediction"))
+      "weight" => weight ? "#{weight} g" : "Not published",
+      "print_time" => prediction ? duration(prediction) : "Not published"
     }
   end
 

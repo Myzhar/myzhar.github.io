@@ -43,9 +43,10 @@ refresh every MakerWorld project page and its generated profile catalogue, run:
 ruby scripts/sync_makerworld_profiles.rb
 ```
 
-The script paginates through every public profile for every model, writes
-`_data/makerworld_profiles.yml`, and gives each project page the shared profile
-table. Run it before publishing when profiles have changed.
+The script paginates through every public profile for every model, retains only
+profiles authored by `Myzhar`, writes `_data/makerworld_profiles.yml`, and gives
+each project page the shared profile table. Run it before publishing when
+profiles have changed.
 
 ### Theme reference
 

@@ -2,432 +2,422 @@
 model_672797:
 - id: 131387845
   title: PETG - 0.2mm layer, 3 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 4 g
+  weight: 4 g
+  print_time: 21 min
 - id: 131388347
   title: PLA - 0.2mm layer, 3 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 4 g
+  weight: 4 g
+  print_time: 19 min
 - id: 131388524
   title: ASA - 0.2mm layer, 3 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ASA 3 g
+  weight: 3 g
+  print_time: 21 min
 - id: 131388636
   title: ABS - 0.2mm layer, 3 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS 3 g
+  weight: 3 g
+  print_time: 21 min
 model_484266:
 - id: 84170660
   title: PLA - 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA-CF 11 g
+  weight: 11 g
+  print_time: 23 min
 - id: 84170973
   title: PLA - 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA-CF 6 g
+  weight: 6 g
+  print_time: 15 min
 model_187139:
 - id: 53396899
   title: 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: Not specified
+  weight: Not published
+  print_time: Not published
 - id: 54799707
   title: ASA - 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ASA 26 g
+  weight: 26 g
+  print_time: 1 h 43 min
 - id: 54799702
   title: ABS - 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS 25 g
+  weight: 25 g
+  print_time: 1 h 44 min
 - id: 164446891
   title: ABS-GF - 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS-GF 29 g
+  weight: 29 g
+  print_time: 1 h 17 min
 model_218597:
 - id: 55080534
   title: 0.2mm layer, 4 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 28 g
+  weight: 28 g
+  print_time: 58 min
 model_231598:
 - id: 56281450
   title: ASA/PETG mixed box
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 19 g, ASA 27 g
+  weight: 46 g
+  print_time: 1 h 33 min
 model_2596883:
 - id: 688130414
   title: 0.2mm layer, 4 walls, 20% gyroid dual lines infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS-GF 99 g, TPU 7 g
+  weight: 106 g
+  print_time: 4 h 20 min
 model_44184:
 - id: 51009407
   title: 0.2mm layer, 3 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 79 g
+  weight: 79 g
+  print_time: 2 h 18 min
 model_423848:
 - id: 67065945
   title: 0.2mm layer, 2 walls, 20% cubic infill, surface ironing
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 29 g
+  weight: 29 g
+  print_time: 1 h 47 min
 model_1845679:
 - id: 426517407
   title: 0.08mm layer, 3 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 2 g, PLA 1 g
+  weight: 3 g
+  print_time: 28 min
 model_178423:
 - id: 48820474
   title: 0.2mm layer, 3 walls, 20% infill, tree support
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 37 g
+  weight: 37 g
+  print_time: 1 h 48 min
 model_206428:
 - id: 53652727
   title: PLA - 0.08mm layer, 2 walls, 20% infill, ironing
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 3 g
+  weight: 3 g
+  print_time: 21 min
 - id: 53652728
   title: ASA - 0.08mm layer, 2 walls, 20% infill, ironing
-  materials: ''
-  weight:
-  print_time: "—"
-- id: 78167960
-  title: PETG - 0.08mm layer, 2 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ASA 3 g
+  weight: 3 g
+  print_time: 23 min
 model_1817784:
 - id: 417443834
   title: ABS with support interface for High Quality
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS
+  weight: Not published
+  print_time: Not published
 - id: 420887642
   title: PLA with Support Interface
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 49 g, PLA-S 3 g
+  weight: 52 g
+  print_time: 1 h 33 min
 - id: 421405829
   title: ABS with Support Interface
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS 39 g, ABS-S 2 g
+  weight: 41 g
+  print_time: 1 h 45 min
 model_156371:
 - id: 52816953
   title: 0.2 mm adaptive layer, 2 walls, gyroid,15% infill, tree supports
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 193 g
+  weight: 193 g
+  print_time: 7 h 56 min
 model_157182:
 - id: 76500763
   title: PETG - 0.2mm layer, 2 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 104 g
+  weight: 104 g
+  print_time: 3 h 19 min
 - id: 76565431
   title: ABS - 0.2mm layer, 2 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS 87 g
+  weight: 87 g
+  print_time: 3 h 12 min
 model_1397208:
 - id: 296313678
   title: PETG & Support Mat - 0.2mm layer, 4 walls, 15% Gyroid infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 188 g, PLA-S 3 g
+  weight: 191 g
+  print_time: 5 h 46 min
 model_195757:
 - id: 52816380
   title: Full set, 0.08mm layer, 2 walls, 100% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 3 g
+  weight: 3 g
+  print_time: 16 min
 - id: 99983451
   title: HIGH-RES PLA - 0.08mm layer, 3 walls, 100% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 3 g
+  weight: 3 g
+  print_time: 13 min
 - id: 133996520
   title: HIGH-RES PETG - 0.08mm adaptive layer, 5 walls, 100% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 3 g
+  weight: 3 g
+  print_time: 14 min
 model_178433:
 - id: 48822556
   title: 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 27 g
+  weight: 27 g
+  print_time: 1 h 21 min
 model_44186:
 - id: 49388249
   title: 0.6mm nozzle, 0.18mm layer, 2 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 14 g
+  weight: 14 g
+  print_time: 26 min
 model_1650193:
 - id: 365322978
   title: 4 colors - 0.2mm layer, 2 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 6 g, PLA 4 g, PLA 4 g, PLA 3 g
+  weight: 17 g
+  print_time: 1 h 0 min
 model_401966:
 - id: 67073633
   title: PLA - 0.2mm layer, 2 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 14 g
+  weight: 14 g
+  print_time: 32 min
 model_44187:
 - id: 51014920
   title: Single - 0.08mm layer, 2 walls, 100% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 1 g
+  weight: 1 g
+  print_time: 10 min
 - id: 51014309
   title: Dual - 0.08mm layer, 2 walls, 100% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 1 g
+  weight: 1 g
+  print_time: 12 min
 model_401969:
 - id: 67073536
   title: PLA - 0.2mm layer, 2 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 13 g
+  weight: 13 g
+  print_time: 30 min
 model_464717:
 - id: 77751553
   title: PLA object with PETG support interface
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 12 g, PETG 2 g
+  weight: 14 g
+  print_time: 35 min
 model_44175: []
 model_469203:
 - id: 79143415
   title: PLA Dual Color - Full Bed - 0.2mm layer, 2 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 29 g, PLA 34 g
+  weight: 63 g
+  print_time: 3 h 18 min
 - id: 79979243
   title: PLA - Dual Color - 0.2mm layer, 2 walls, 15% infill, ironing
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 1 g, PLA 1 g
+  weight: 2 g
+  print_time: 12 min
 model_221460:
 - id: 65835108
   title: PLA-HighQuality-0.08mm layer, 2 walls, 30% gyroid infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA
+  weight: Not published
+  print_time: Not published
 - id: 65835107
   title: Stronger PLA - 0.08mm layer, 2 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 5 g
+  weight: 5 g
+  print_time: 1 h 20 min
 model_157283:
 - id: 44804733
   title: 0.08mm layer, 2 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: Not specified
+  weight: Not published
+  print_time: Not published
 - id: 46459628
   title: 0.1mm layer, 2 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 5 g
+  weight: 5 g
+  print_time: 45 min
 - id: 48558610
   title: 0.6mm nozzle, 0.18mm layer, 1 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 5 g
+  weight: 5 g
+  print_time: 27 min
 model_2768388:
 - id: 751644240
   title: Default - adaptive 0.2mm layer, 2 walls, 10% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS 37 g
+  weight: 37 g
+  print_time: 1 h 29 min
 - id: 753491643
   title: Larger - adaptive 0.2mm layer, 3 walls, 10% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS 70 g
+  weight: 70 g
+  print_time: 1 h 51 min
 model_722078:
 - id: 142345275
   title: 4 colors - 0.2mm layer, 2 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 49 g, PLA 7 g, PLA 7 g, PLA 4 g
+  weight: 67 g
+  print_time: 2 h 59 min
 model_2592477:
 - id: 758443667
   title: 180 degree - 0.2mm layer, 2 walls, 100% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 2 g
+  weight: 2 g
+  print_time: 12 min
 - id: 734623149
   title: 135 degree - 0.2mm layer, 2 walls, 100% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 2 g
+  weight: 2 g
+  print_time: 12 min
 model_195917:
 - id: 52179222
   title: PETG, 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG
+  weight: Not published
+  print_time: Not published
 - id: 52813482
   title: Down, 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: Not specified
+  weight: Not published
+  print_time: Not published
 - id: 52813485
   title: Side, 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: Not specified
+  weight: Not published
+  print_time: Not published
 - id: 187309548
   title: ABS - Down - 0.2mm layer, 4 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS 52 g
+  weight: 52 g
+  print_time: 1 h 46 min
 - id: 187381941
   title: ABS - Side - 0.2mm layer, 4 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS 50 g
+  weight: 50 g
+  print_time: 1 h 45 min
 model_1977853:
 - id: 469910293
   title: 0.2mm layer, 2 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 10 g
+  weight: 10 g
+  print_time: 40 min
 model_167734:
 - id: 55047196
   title: 0.2mm layer, 3 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
-- id: 95522332
-  title: a1mini, 0.2mm layer, 3 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 36 g
+  weight: 36 g
+  print_time: 1 h 33 min
 model_44182:
 - id: 54841743
   title: ABS - 0.08mm layer, 2 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS 20 g
+  weight: 20 g
+  print_time: 1 h 39 min
 model_566012:
 - id: 105731863
   title: 16 mm - PLA+TPU - 0.2mm layer, 4 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 33 g, TPU 6 g
+  weight: 39 g
+  print_time: 1 h 45 min
 - id: 105732776
   title: 12 mm - PLA+TPU - 0.2mm layer, 4 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 30 g, TPU 6 g
+  weight: 36 g
+  print_time: 1 h 39 min
 model_184075:
 - id: 49894605
   title: 0.2mm layer, 2 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 222 g
+  weight: 222 g
+  print_time: 4 h 47 min
 model_44185:
 - id: 238168780
   title: Normal - 0.2mm layer, 3 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 43 g
+  weight: 43 g
+  print_time: 1 h 27 min
 - id: 238169144
   title: Mirror - 0.2mm layer, 3 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 43 g
+  weight: 43 g
+  print_time: 1 h 27 min
 model_198751:
 - id: 119966748
   title: M3 PLA, 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 6 g
+  weight: 6 g
+  print_time: 19 min
 - id: 119964847
   title: M3 PETG, 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 6 g
+  weight: 6 g
+  print_time: 20 min
 - id: 119965431
   title: M3 ASA, 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ASA 5 g
+  weight: 5 g
+  print_time: 54 min
 - id: 119964982
   title: M3 ABS, 0.2mm layer, 3 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS 5 g
+  weight: 5 g
+  print_time: 54 min
 - id: 119966135
   title: M2.5 PLA 0.2mm layer, 3 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 6 g
+  weight: 6 g
+  print_time: 21 min
 - id: 141903454
   title: M2 PETG, 0.2mm layer, 4 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 6 g
+  weight: 6 g
+  print_time: 24 min
 model_647454:
 - id: 125432950
   title: TPU - 0.2mm layer, 2 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: TPU 7 g
+  weight: 7 g
+  print_time: 37 min
 model_401970:
 - id: 67073438
   title: PLA - 0.2mm layer, 2 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 17 g
+  weight: 17 g
+  print_time: 35 min
 model_417976:
 - id: 66767713
   title: PLA - 0.2mm layer, 2 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA 5 g
+  weight: 5 g
+  print_time: 23 min
 - id: 66767710
   title: PETG - 0.2mm layer, 2 walls, 15% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 5 g
+  weight: 5 g
+  print_time: 29 min
 - id: 66767711
   title: ABS - 0.2mm layer, 2 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ABS 4 g
+  weight: 4 g
+  print_time: 20 min
 - id: 66767714
   title: ASA - 0.2mm layer, 2 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: ASA 4 g
+  weight: 4 g
+  print_time: 20 min
 - id: 67427694
   title: PLA-CF - 0.6mm nozzle, 0.3mm layer, 2 walls, 20% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PLA-CF 6 g
+  weight: 6 g
+  print_time: 17 min
 model_44188:
 - id: 51008049
   title: 0.2mm layer, 3 walls, 30% infill
-  materials: ''
-  weight:
-  print_time: "—"
+  materials: PETG 215 g
+  weight: 215 g
+  print_time: 5 h 22 min
