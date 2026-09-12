@@ -19,7 +19,23 @@ sitemap: true
 noindex: false
 ---
 
-A collection of 3D printable designs I publish on [MakerWorld](https://makerworld.com/en/@myzhar/upload){: target="_blank"}: practical fixes around the house, parts for my robotics projects, and printer calibration tools.
+Welcome to my **3D Printing Projects** collection! Every design here is something I modeled and printed myself to solve a real problem I actually had, a broken shelf pin, a lidar mount that didn't exist commercially, a printer that needed dialing in, rather than a generic model made to look good in a render. I publish all of them on [MakerWorld](https://makerworld.com/en/@myzhar/upload){: target="_blank"}, where you'll find the printable files, the print settings I used, and any assembly notes I thought worth writing down.
+
+## What's in this collection
+
+I group what I design into a few natural categories. Household fixes solve the everyday annoyances I run into around the house: a [replacement shelf pin](/projects/makerworld/replacement-shelf-pin/), a [hot/cold indicator for shower knobs](/projects/makerworld/hot-cold-indicator-for-shower-knobs/), an [angular reinforcement for my IKEA BESTÅ cabinet](/projects/makerworld/angular-reinforcement-for-besta-cabinet/), and similar small parts I found cheaper and faster to print than to buy or fix. Robotics and camera hardware parts come straight out of my own robotics work: enclosures and mounts like the [FLIR Lepton3 breakout case](/projects/makerworld/flir-lepton3-breakout-case/), the [Stereolabs ZED Mini holder](/projects/makerworld/stereolabs-zed-mini-holder/), the [ARDUSIMPLE simpleRTK2B Heading box](/projects/makerworld/ardusimple-simplertk2b-heading-box-cover/), and structural pieces I designed for [MyzharBot](/projects/makerworld/myzharbot-v5-tracks/) and my Makeblock mBot. Printer calibration and testing tools, like my [YACC calibration cube](/projects/makerworld/yacc-ultimate-calibration-cube/), the [multi-material interface calibration tool](/projects/makerworld/multi-material-interface-calibration-test-tool/), and the [ABS/ASA stress test](/projects/makerworld/abs-asa-stress-test-and-calibration/), are the tools I built to dial in my own printer and materials before committing to a larger print. The rest are small everyday objects, keychains, signs, holders, I made for fun or for friends.
+
+## Who these designs are for
+
+I make these files for anyone with an FDM printer who would rather download a design I've already tested than start from scratch in CAD. You don't need any design experience to use them; every MakerWorld listing includes the print settings I used and any post-processing notes (inserts, supports, orientation) I found necessary to get a good result. If you want to modify a design, I built several of them in OnShape and say so in the description, so you can open and adapt my source instead of working from the mesh alone.
+
+## Printing notes
+
+I try to call out constraints explicitly whenever they matter, for example, I designed the [radiator hook](/projects/makerworld/radiator-hook/) to never be printed in PLA because of the heat it's exposed to. Whenever a design mates with a specific part, a sensor, a cabinet, a printer's AMS hub, I name the exact hardware I measured it against, since 3D printed fits tend to be unforgiving of dimensional assumptions that don't match your actual part.
+
+## Why I publish these
+
+Most of these designs started as a one-off fix for something in my own home, workshop, or robotics projects, and publishing them costs me little beyond the time I already spent designing and testing the print. If something here saves you a trip to the hardware store or a broken part on your bench, that's exactly why I put it up; feel free to remix any of them for your own use case.
 
 |  | Project | Description |
 | :----: | :------: | :---------- |

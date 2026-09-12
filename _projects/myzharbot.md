@@ -15,7 +15,19 @@ sitemap: true
 noindex: false
 ---
 
-MyzharBot is an open source and open hardware robotic platform born to study sensor fusion algorithms for autonomous navigation. It is my main project since 2012, and it has gone through several iterations and improvements over the years.
+Welcome to **MyzharBot**, my main project since 2012! It's an open source and open hardware robotic platform I started to study sensor fusion algorithms for autonomous navigation, and it's the project I keep coming back to whenever I want to try out a new sensor, a new algorithm, or a new piece of hardware on something real rather than in simulation.
+
+## Why I built it
+
+I didn't set out to build a commercial product; I wanted a physical robot I fully understood, from the mechanics to the firmware to the navigation stack, so I could experiment with sensor fusion without fighting someone else's black-box platform. Every iteration has been driven by a question I wanted to answer myself: how do I combine wheel odometry with an IMU without drifting, how far can a Jetson push real-time AI-driven navigation, how do I make the mechanics robust enough to survive my own testing.
+
+## How the project has evolved
+
+I designed [MyzharBot v1](/projects/myzharbot/myzharbot-v1/) from scratch as a tracked platform, mostly to get the mechanics and low-level control right before touching anything autonomous. With [MyzharBot v2](/projects/myzharbot/myzharbot-v2/) I took my first real steps toward autonomy, improving the hardware and adding early autonomous capabilities. [MyzharBot v3](/projects/myzharbot/myzharbot-v3/) is the version I'm proudest of: powered by an NVIDIA Jetson and advanced AI-driven navigation, it's also the robot that earned me the NVIDIA Jetson™ Champion recognition. MyzharBot v4 is honestly the version I'm least proud of: it suffered from enough mechanical problems that it was almost unusable, and I'm still writing up that story, so its full page is coming later. I'm currently working on MyzharBot v5, so check back for updates as I publish them.
+
+## What you'll find in each version's writeup
+
+For every version I document the mechanical design, the electronics and sensors I chose and why, the software stack running on board, and the specific problems I hit and how I solved them, rather than just showing a finished robot driving around. If you're building your own robotic platform and want to study sensor fusion or autonomous navigation on real hardware, I hope these writeups save you some of the trial and error I went through myself.
 
 |  | Version | Description |
 | :----: | :------: | :---------- |
