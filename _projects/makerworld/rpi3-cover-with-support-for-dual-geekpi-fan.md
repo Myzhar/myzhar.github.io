@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_44182
+makerworld_id: 44182
 title: "Rpi3 cover with support for dual GeekPi fan"
 excerpt: "Cover for Raspberry Pi 3 that fits the GeeekPi dual fan cooler, and provides back supports to add screws to fix it."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/rpi3-cover-with-support-for-dual-geekpi-fan/gallery-4.jpg
     alt: "Rpi3 cover with support for dual GeekPi fan"
 ---
-
 ## Overview
 
 Cover for Raspberry Pi 3 that fits the [GeeekPi dual fan cooler](https://www.amazon.it/GeeekPi-Raspberry-dissipatore-Ventola-Raffreddamento/dp/B07DCP4973){: target="_blank"}, and provides back supports to add screws to fix it.
@@ -51,15 +52,9 @@ The Pi 3 and Pi 4 look similar at a glance but moved several connectors and moun
 
 {% include gallery id="gallery_photos" caption="Rpi3 cover with support for dual GeekPi fan on MakerWorld" %}
 
-## Printing
+## Print profiles
 
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| ABS | 0.08mm layer, 2 walls, 30% infill | ~1.7 h |
-
-A small enclosure, but one that has kept more than one Pi running cool and dust-free inside a robot chassis.
-
-A close-fitting shell around hardware that used to sit exposed on the chassis.
+{% include makerworld-profiles.html %}
 
 ## Download
 

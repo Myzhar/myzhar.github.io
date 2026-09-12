@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_44184
+makerworld_id: 44184
 title: "Box for USB Camera ELP 170 deg FOV"
 excerpt: "Case for the ELP USB HIGH SPEED USB CAMERA WITH 170 DEGREE FISH-EYE LENS (Model ELP-USBFHD01M-L170)"
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/box-for-usb-camera-elp-170-deg-fov/gallery-4.jpg
     alt: "Box for USB Camera ELP 170 deg FOV"
 ---
-
 ## Overview
 
 Case for the **ELP** USB HIGH SPEED USB CAMERA WITH 170 DEGREE FISH-EYE LENS
@@ -56,8 +57,11 @@ A simple enclosure, but the difference between a bare board you are afraid to to
 
 A simple shell, and the difference between a bare board and hardware you trust on a moving robot.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/44184-box-for-usb-camera-elp-170-deg-fov){: .btn .btn--info target="_blank"}

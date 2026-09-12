@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_221460
+makerworld_id: 221460
 title: "Padel racket keychain v2"
 excerpt: "This is an improvement to my first Padel Racket keychain model. Holes are now larger and the racket handle is circular instead of flat."
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/padel-racket-keychain-v2/gallery-4.jpg
     alt: "Padel racket keychain v2"
 ---
-
 ## Overview
 
 This is an improvement to my first [Padel Racket keychain](/projects/makerworld/padel-racket-keychain/) model.
@@ -48,22 +49,9 @@ Holes are now larger and the racket handle is circular instead of flat. It shoul
 
 {% include gallery id="gallery_photos" caption="Padel racket keychain v2 on MakerWorld" %}
 
-## Printing
+## Print profiles
 
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| Stronger PLA | 0.08mm layer, 2 walls, 30% infill | ~1.3 h |
-| PLA | HighQuality-0.08mm layer, 2 walls, 30% gyroid infill | ~1.3 h |
-
-Two print profiles are provided, a stronger PLA setting and a high-quality gyroid-infill PLA setting, both landing around the same print time. I would reach for the stronger profile if the keychain is going straight onto a keyring that lives in a pocket day to day, and the high-quality one if it is more of a display piece or a gift where the finish matters more than outright toughness.
-
-If you already printed the original and it has held up fine, there is no strict need to reprint it, but if the perforations ever gave you trouble or you just want the more comfortable circular handle, this version is a straightforward drop-in replacement on the same keyring.
-
-Small revisions like this rarely make for exciting release notes, but they are usually what separates a print you use once from one you keep reprinting for years.
-
-A second pass that fixed exactly the two things that bothered me about the first one.
-
-If you already have the original printed and it is holding up fine, there is no need to replace it; this version exists for anyone starting fresh or anyone who ran into the exact issues I was trying to fix.
+{% include makerworld-profiles.html %}
 
 ## Download
 

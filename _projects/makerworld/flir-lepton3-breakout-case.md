@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_44186
+makerworld_id: 44186
 title: "Flir Lepton3 Breakout case"
 excerpt: "This case is for the GroupGets FLIR Lepton Breakout Board and has been designed to safely use the FLIR Lepton3 thermal sensor."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/flir-lepton3-breakout-case/gallery-4.jpg
     alt: "Flir Lepton3 Breakout case"
 ---
-
 ## Overview
 
 This case is for the [GroupGets FLIR Lepton Breakout Board](https://groupgets.com/manufacturers/getlab/products/flir-lepton-breakout-board-v1-4){: target="_blank"} and has been designed to safely use the [FLIR Lepton3](https://www.flir.eu/products/lepton/?vertical=microcam&segment=oem){: target="_blank"} thermal sensor.
@@ -60,8 +61,11 @@ A small case that has followed this sensor across several very different project
 
 If you are just getting started with the Lepton3, pairing this case with one of the driver repositories linked above is the fastest way to get from an unopened breakout board to actual thermal images on screen.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/44186-flir-lepton3-breakout-case){: .btn .btn--info target="_blank"}

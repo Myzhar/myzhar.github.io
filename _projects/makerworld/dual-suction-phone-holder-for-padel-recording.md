@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_1817784
+makerworld_id: 1817784
 title: "Dual-Suction Phone Holder for Padel Recording"
 excerpt: "Capture every rally, smash, and epic point with this specially designed 3D printed phone holder for padel courts!"
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/dual-suction-phone-holder-for-padel-recording/gallery-4.jpg
     alt: "Dual-Suction Phone Holder for Padel Recording"
 ---
-
 ## Overview
 
 Capture every rally, smash, and epic point with this specially designed **3D printed phone holder** for padel courts!
@@ -54,8 +55,11 @@ A spring-loaded clamp sounds like the obvious solution on paper, but designing o
 
 {% include gallery id="gallery_photos" caption="Dual-Suction Phone Holder for Padel Recording on MakerWorld" %}
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/1817784-dual-suction-phone-holder-for-padel-recording){: .btn .btn--info target="_blank"}

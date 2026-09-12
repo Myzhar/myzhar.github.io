@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_1977853
+makerworld_id: 1977853
 title: "Replacement Shelf Pin"
 excerpt: "Stop Your Shelf from Rolling Away 🛠️ Tired of your floating shelf going haywire every time you open the cabinet door?"
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/replacement-shelf-pin/gallery-4.jpg
     alt: "Replacement Shelf Pin"
 ---
-
 ## Overview
 
 #### 🛑 Stop Your Shelf from Rolling Away 🛠️
@@ -56,8 +57,11 @@ https://cad.onshape.com/documents/91535ca216dc0f7c4fab76ea/w/febcabcde2bc0dc473e
 
 {% include gallery id="gallery_photos" caption="Replacement Shelf Pin on MakerWorld" %}
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/1977853-replacement-shelf-pin){: .btn .btn--info target="_blank"}

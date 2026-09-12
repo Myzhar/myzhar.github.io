@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_187139
+makerworld_id: 187139
 title: "ABS ASA stress test and calibration"
 excerpt: "This is a stress test that I designed to calibrate the settings of my 3D printer for ASA and ABS materials, but it can also be used for other types of filaments."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/abs-asa-stress-test-and-calibration/gallery-4.jpg
     alt: "ABS ASA stress test and calibration"
 ---
-
 ## Overview
 
 *Update 2024/11/27: Added a new profile for **Bambu Lab ABS-GF**. **Amazing filament!***
@@ -92,13 +93,9 @@ Happy tuning… and do not hesitate to add comments to improve the model.
 
 One print, updated a couple of times as I learned more, and still the first thing I reach for whenever a new spool or a new printer needs dialing in.
 
-## Printing
+## Print profiles
 
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| ABS | 0.2mm layer, 3 walls, 20% infill | ~1.7 h |
-| ASA | 0.2mm layer, 3 walls, 20% infill | ~1.7 h |
-| ABS | GF - 0.2mm layer, 3 walls, 20% infill | ~1.3 h |
+{% include makerworld-profiles.html %}
 
 ## Download
 

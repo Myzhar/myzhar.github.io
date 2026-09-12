@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_178423
+makerworld_id: 178423
 title: "Curved front shovel for Makeblock mBot robot"
 excerpt: "This is a curved front shovel for the Makeblock mBot robot to be used for robot fighting in a sumo arena."
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/curved-front-shovel-for-makeblock-mbot-robot/gallery-4.jpg
     alt: "Curved front shovel for Makeblock mBot robot"
 ---
-
 ## Overview
 
 This is a curved front shovel for the [Makeblock mBot robot](https://www.makeblock.com/products/buy-mbot){: target="_blank"} to be used for robot fighting in a sumo arena.
@@ -54,8 +55,11 @@ A simple upgrade that turns a kit robot into a real sumo contender.
 
 I would lean toward the curved shovel once you have scouted an opponent's front end and it looks low or wedge-shaped, since sliding underneath tends to beat a straight head-on push against that kind of shape.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/178423-curved-front-shovel-for-makeblock-mbot-robot){: .btn .btn--info target="_blank"}

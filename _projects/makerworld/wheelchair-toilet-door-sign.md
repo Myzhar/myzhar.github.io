@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_401970
+makerworld_id: 401970
 title: "Wheelchair toilet - Door Sign"
 excerpt: "Wheelchair toilet door sign - Height: 20 cm - Thickness: 3 mm Use double-sided tape to hang it. - Gentlemen - Ladies"
 author: "Walter Lucetti"
@@ -20,7 +22,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/wheelchair-toilet-door-sign/gallery-1.jpg
     alt: "Wheelchair toilet - Door Sign"
 ---
-
 ## Overview
 
 Wheelchair toilet door sign
@@ -53,8 +54,11 @@ Simple, clear, and done in one short print.
 
 The 20 cm height keeps it easy to read from down a hallway while still being small enough not to look out of place on a standard interior door, which is the balance I aimed for across all three signs in the set rather than sizing them like commercial signage.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Creative Commons Attribution-Noncommercial-Share Alike.
 
 [Download on MakerWorld](https://makerworld.com/en/models/401970-wheelchair-toilet-door-sign){: .btn .btn--info target="_blank"}

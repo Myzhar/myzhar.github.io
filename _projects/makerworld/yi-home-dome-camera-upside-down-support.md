@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_44188
+makerworld_id: 44188
 title: "Yi Home Dome Camera - Upside Down support"
 excerpt: "For better home security, place the Yi Home Dome Camera on the corner of a piece of furniture to have a top view. Design available on OnShape"
 author: "Walter Lucetti"
@@ -23,7 +25,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/yi-home-dome-camera-upside-down-support/gallery-1.jpg
     alt: "Yi Home Dome Camera - Upside Down support"
 ---
-
 ## Overview
 
 For better home security, place the Yi Home Dome Camera on the corner of a piece of furniture to have a top view.
@@ -51,8 +52,11 @@ A simple bracket, and a genuinely better vantage point for very little effort.
 
 Since the camera's own software already lets you flip the video feed to compensate for the inverted mounting, there is nothing extra to configure on the camera itself once it is sitting in the support, it just works the moment it is powered back on.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/44188-yi-home-dome-camera-upside-down-support){: .btn .btn--info target="_blank"}

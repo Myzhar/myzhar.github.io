@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_2592477
+makerworld_id: 2592477
 title: "PTFE Tube Guide for AMS-HT"
 excerpt: "If you’ve placed your AMS-HT on top of your 3D printer, you’ve probably noticed the PTFE tube bending a bit too much, making it harder for the filament to move..."
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/ptfe-tube-guide-for-ams-ht/gallery-4.jpg
     alt: "PTFE Tube Guide for AMS-HT"
 ---
-
 ## Overview
 
 🧩 If you’ve placed your AMS-HT on top of your 3D printer, you’ve probably noticed the PTFE tube bending a bit too much, making it harder for the filament to move smoothly and sometimes causing those annoying “motor effort” warnings.
@@ -66,8 +67,11 @@ It is a small, unglamorous part, just a curved channel for a tube, but it is a g
 
 {% include gallery id="gallery_photos" caption="PTFE Tube Guide for AMS-HT on MakerWorld" %}
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the MakerWorld Exclusive License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/2592477-ptfe-tube-guide-for-ams-ht){: .btn .btn--info target="_blank"}

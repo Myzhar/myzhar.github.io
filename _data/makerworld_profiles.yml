@@ -1,0 +1,433 @@
+---
+model_672797:
+- id: 131387845
+  title: PETG - 0.2mm layer, 3 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 131388347
+  title: PLA - 0.2mm layer, 3 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 131388524
+  title: ASA - 0.2mm layer, 3 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 131388636
+  title: ABS - 0.2mm layer, 3 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_484266:
+- id: 84170660
+  title: PLA - 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 84170973
+  title: PLA - 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_187139:
+- id: 53396899
+  title: 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 54799707
+  title: ASA - 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 54799702
+  title: ABS - 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 164446891
+  title: ABS-GF - 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_218597:
+- id: 55080534
+  title: 0.2mm layer, 4 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_231598:
+- id: 56281450
+  title: ASA/PETG mixed box
+  materials: ''
+  weight:
+  print_time: "—"
+model_2596883:
+- id: 688130414
+  title: 0.2mm layer, 4 walls, 20% gyroid dual lines infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_44184:
+- id: 51009407
+  title: 0.2mm layer, 3 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_423848:
+- id: 67065945
+  title: 0.2mm layer, 2 walls, 20% cubic infill, surface ironing
+  materials: ''
+  weight:
+  print_time: "—"
+model_1845679:
+- id: 426517407
+  title: 0.08mm layer, 3 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_178423:
+- id: 48820474
+  title: 0.2mm layer, 3 walls, 20% infill, tree support
+  materials: ''
+  weight:
+  print_time: "—"
+model_206428:
+- id: 53652727
+  title: PLA - 0.08mm layer, 2 walls, 20% infill, ironing
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 53652728
+  title: ASA - 0.08mm layer, 2 walls, 20% infill, ironing
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 78167960
+  title: PETG - 0.08mm layer, 2 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_1817784:
+- id: 417443834
+  title: ABS with support interface for High Quality
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 420887642
+  title: PLA with Support Interface
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 421405829
+  title: ABS with Support Interface
+  materials: ''
+  weight:
+  print_time: "—"
+model_156371:
+- id: 52816953
+  title: 0.2 mm adaptive layer, 2 walls, gyroid,15% infill, tree supports
+  materials: ''
+  weight:
+  print_time: "—"
+model_157182:
+- id: 76500763
+  title: PETG - 0.2mm layer, 2 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 76565431
+  title: ABS - 0.2mm layer, 2 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_1397208:
+- id: 296313678
+  title: PETG & Support Mat - 0.2mm layer, 4 walls, 15% Gyroid infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_195757:
+- id: 52816380
+  title: Full set, 0.08mm layer, 2 walls, 100% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 99983451
+  title: HIGH-RES PLA - 0.08mm layer, 3 walls, 100% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 133996520
+  title: HIGH-RES PETG - 0.08mm adaptive layer, 5 walls, 100% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_178433:
+- id: 48822556
+  title: 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_44186:
+- id: 49388249
+  title: 0.6mm nozzle, 0.18mm layer, 2 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_1650193:
+- id: 365322978
+  title: 4 colors - 0.2mm layer, 2 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_401966:
+- id: 67073633
+  title: PLA - 0.2mm layer, 2 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_44187:
+- id: 51014920
+  title: Single - 0.08mm layer, 2 walls, 100% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 51014309
+  title: Dual - 0.08mm layer, 2 walls, 100% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_401969:
+- id: 67073536
+  title: PLA - 0.2mm layer, 2 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_464717:
+- id: 77751553
+  title: PLA object with PETG support interface
+  materials: ''
+  weight:
+  print_time: "—"
+model_44175: []
+model_469203:
+- id: 79143415
+  title: PLA Dual Color - Full Bed - 0.2mm layer, 2 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 79979243
+  title: PLA - Dual Color - 0.2mm layer, 2 walls, 15% infill, ironing
+  materials: ''
+  weight:
+  print_time: "—"
+model_221460:
+- id: 65835108
+  title: PLA-HighQuality-0.08mm layer, 2 walls, 30% gyroid infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 65835107
+  title: Stronger PLA - 0.08mm layer, 2 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_157283:
+- id: 44804733
+  title: 0.08mm layer, 2 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 46459628
+  title: 0.1mm layer, 2 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 48558610
+  title: 0.6mm nozzle, 0.18mm layer, 1 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_2768388:
+- id: 751644240
+  title: Default - adaptive 0.2mm layer, 2 walls, 10% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 753491643
+  title: Larger - adaptive 0.2mm layer, 3 walls, 10% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_722078:
+- id: 142345275
+  title: 4 colors - 0.2mm layer, 2 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_2592477:
+- id: 758443667
+  title: 180 degree - 0.2mm layer, 2 walls, 100% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 734623149
+  title: 135 degree - 0.2mm layer, 2 walls, 100% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_195917:
+- id: 52179222
+  title: PETG, 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 52813482
+  title: Down, 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 52813485
+  title: Side, 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 187309548
+  title: ABS - Down - 0.2mm layer, 4 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 187381941
+  title: ABS - Side - 0.2mm layer, 4 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_1977853:
+- id: 469910293
+  title: 0.2mm layer, 2 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_167734:
+- id: 55047196
+  title: 0.2mm layer, 3 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 95522332
+  title: a1mini, 0.2mm layer, 3 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_44182:
+- id: 54841743
+  title: ABS - 0.08mm layer, 2 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_566012:
+- id: 105731863
+  title: 16 mm - PLA+TPU - 0.2mm layer, 4 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 105732776
+  title: 12 mm - PLA+TPU - 0.2mm layer, 4 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_184075:
+- id: 49894605
+  title: 0.2mm layer, 2 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_44185:
+- id: 238168780
+  title: Normal - 0.2mm layer, 3 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 238169144
+  title: Mirror - 0.2mm layer, 3 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_198751:
+- id: 119966748
+  title: M3 PLA, 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 119964847
+  title: M3 PETG, 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 119965431
+  title: M3 ASA, 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 119964982
+  title: M3 ABS, 0.2mm layer, 3 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 119966135
+  title: M2.5 PLA 0.2mm layer, 3 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 141903454
+  title: M2 PETG, 0.2mm layer, 4 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_647454:
+- id: 125432950
+  title: TPU - 0.2mm layer, 2 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_401970:
+- id: 67073438
+  title: PLA - 0.2mm layer, 2 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_417976:
+- id: 66767713
+  title: PLA - 0.2mm layer, 2 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 66767710
+  title: PETG - 0.2mm layer, 2 walls, 15% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 66767711
+  title: ABS - 0.2mm layer, 2 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 66767714
+  title: ASA - 0.2mm layer, 2 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+- id: 67427694
+  title: PLA-CF - 0.6mm nozzle, 0.3mm layer, 2 walls, 20% infill
+  materials: ''
+  weight:
+  print_time: "—"
+model_44188:
+- id: 51008049
+  title: 0.2mm layer, 3 walls, 30% infill
+  materials: ''
+  weight:
+  print_time: "—"

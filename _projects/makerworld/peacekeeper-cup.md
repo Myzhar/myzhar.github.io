@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_2768388
+makerworld_id: 2768388
 title: "The Peacekeeper Cup, Espresso & Tea Spoon Holder"
 excerpt: "A dual-compartment 3D printed spoon holder that keeps espresso spoons and tea spoons from mixing."
 author: "Walter Lucetti"
@@ -42,7 +44,6 @@ gallery_print:
     alt: "The finished print still on the printer bed"
     title: "Fresh off the printer"
 ---
-
 ## Overview
 
 Tired of espresso spoons and tea spoons mixing in the same drawer, I designed this "peacekeeping" coffee cup: a small container with a thin internal wall that keeps the espresso spoons on one side and the tea spoons on the other.
@@ -70,18 +71,9 @@ Small problem, small print, solved for good.
 
 Both sizes share the same divider design, so no matter which one fits your countertop and spoon collection best, the dividing wall works the same way; the larger size just gives more room per side for households that go through more capsules.
 
-## Printing
+## Print profiles
 
-Two print profiles are provided on MakerWorld:
-
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| Default | Adaptive 0.2 mm layer, 2 walls, 10% infill | ~1.5 h |
-| Larger | Adaptive 0.2 mm layer, 3 walls, 10% infill | ~1.9 h |
-
-Each profile prints as a single plate, no supports needed.
-
-{% include gallery id="gallery_print" caption="First layers (left) and the finished print (right)" %}
+{% include makerworld-profiles.html %}
 
 ## Download
 

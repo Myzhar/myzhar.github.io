@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_1650193
+makerworld_id: 1650193
 title: "Hot/Cold indicator for shower knobs"
 excerpt: "Ever stepped into the shower and played a game of “Guess That Temperature”?"
 author: "Walter Lucetti"
@@ -26,7 +28,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/hot-cold-indicator-for-shower-knobs/gallery-3.jpg
     alt: "Hot/Cold indicator for shower knobs"
 ---
-
 ## Overview
 
 **Hot? Cold? Just Right?** 🥶🔥🚿
@@ -50,17 +51,9 @@ It is a small enough print that it costs almost nothing to make one for every ba
 
 {% include gallery id="gallery_photos" caption="Hot/Cold indicator for shower knobs on MakerWorld" %}
 
-## Printing
+## Print profiles
 
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| 4 colors | 0.2mm layer, 2 walls, 15% infill | ~1 h |
-
-A silly problem, admittedly, but a genuinely satisfying one to fix permanently.
-
-Two tiny badges, and no more morning temperature roulette.
-
-I made these with MakerWorld's Make My Sign tool rather than modeling the icons by hand, which made it easy to try a few icon and color combinations before settling on the sun and snowflake pairing. If your knobs use a different color scheme than mine, it is worth regenerating the badges in matching colors rather than sticking with what worked in my bathroom.
+{% include makerworld-profiles.html %}
 
 ## Download
 

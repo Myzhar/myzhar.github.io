@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_195757
+makerworld_id: 195757
 title: "Finger ring stopper"
 excerpt: "Say goodbye to ring anxiety! Tired of your precious rings slipping off after achieving your fitness goals?"
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/finger-ring-stopper/gallery-4.jpg
     alt: "Finger ring stopper"
 ---
-
 ## Overview
 
 **Say goodbye to ring anxiety!**
@@ -51,8 +52,11 @@ A five-minute print that quietly prevents a much worse afternoon spent retracing
 
 A tiny insert, and a lot less anxiety about where a ring ended up.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/195757-finger-ring-stopper){: .btn .btn--info target="_blank"}

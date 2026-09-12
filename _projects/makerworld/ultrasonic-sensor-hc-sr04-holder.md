@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_647454
+makerworld_id: 647454
 title: "Ultrasonic sensor HC-SR04 holder"
 excerpt: "This is a custom-designed case/holder for the popular HC-SR04 ultrasonic sensor, commonly used in robotics and various other projects."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/ultrasonic-sensor-hc-sr04-holder/gallery-4.jpg
     alt: "Ultrasonic sensor HC-SR04 holder"
 ---
-
 ## Overview
 
 This is a custom-designed case/holder for the popular HC-SR04 ultrasonic sensor, commonly used in robotics and various other projects.
@@ -78,8 +79,11 @@ This is what they look like when installed on my robot
 
 A small mount, but the difference between a sensor that reads reliably and one glued on at a guessed angle.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/647454-ultrasonic-sensor-hc-sr04-holder){: .btn .btn--info target="_blank"}

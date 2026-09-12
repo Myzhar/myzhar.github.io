@@ -1,0 +1,11 @@
+{% assign profiles = site.data.makerworld_profiles[page.makerworld_key] %}
+{% if profiles and profiles.size > 0 %}
+The following profiles are currently available on MakerWorld. They are synchronized from its public design API; select a profile to open it on MakerWorld.
+
+| Profile | Materials | Weight | Print time |
+| --- | --- | ---: | ---: |
+{% for profile in profiles %}| [{{ profile.title }}](https://makerworld.com/en/models/{{ page.makerworld_id }}#profileId-{{ profile.id }}){: target="_blank"} | {{ profile.materials | default: "—" }} | {% if profile.weight %}{{ profile.weight }} g{% else %}—{% endif %} | {{ profile.print_time }} |
+{% endfor %}
+{% else %}
+No public print profiles are currently available for this model on MakerWorld.
+{% endif %}

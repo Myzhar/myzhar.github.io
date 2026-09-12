@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_672797
+makerworld_id: 672797
 title: "3D Printed Knob with M3 Brass Inserts"
 excerpt: "This high-quality, 3D-printed knob is designed for durability and versatility."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/3d-printed-knob-with-m3-brass-inserts/gallery-4.jpg
     alt: "3D Printed Knob with M3 Brass Inserts"
 ---
-
 ## Overview
 
 This high-quality, 3D-printed knob is designed for durability and versatility.
@@ -71,8 +72,11 @@ This model has a total length of 8 mm and a diameter of 7.5 mm and fits M3 heat-
 
 {% include gallery id="gallery_photos" caption="3D Printed Knob with M3 Brass Inserts on MakerWorld" %}
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/672797-3d-printed-knob-with-m3-brass-inserts){: .btn .btn--info target="_blank"}

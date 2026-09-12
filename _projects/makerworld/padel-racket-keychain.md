@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_157283
+makerworld_id: 157283
 title: "Padel racket keychain"
 excerpt: "I designed this keychain based on my padel racket. I'm not reporting the brand and model to avoid copyright issues, but it would be clear to all the Padel lovers."
 author: "Walter Lucetti"
@@ -23,7 +25,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/padel-racket-keychain/gallery-2.jpg
     alt: "Padel racket keychain"
 ---
-
 ## Overview
 
 I designed this keychain based on my padel racket. I'm not reporting the brand and model to avoid copyright issues, but it would be clear to all the Padel lovers.
@@ -48,8 +49,11 @@ A small tribute to a sport I never expected to get this attached to.
 
 Leaving the brand and model off the design was a deliberate choice, not an oversight: it keeps the model shareable without stepping on anyone's trademark, while still being immediately recognizable to anyone who has held a padel racket in their hand.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Creative Commons Attribution-Noncommercial.
 
 [Download on MakerWorld](https://makerworld.com/en/models/157283-padel-racket-keychain){: .btn .btn--info target="_blank"}

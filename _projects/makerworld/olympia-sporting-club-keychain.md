@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_469203
+makerworld_id: 469203
 title: "Olympia Sporting Club Keychain"
 excerpt: "This is the keychain with the official logo of the Olympia Sporting Club."
 author: "Walter Lucetti"
@@ -23,7 +25,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/olympia-sporting-club-keychain/gallery-2.jpg
     alt: "Olympia Sporting Club Keychain"
 ---
-
 ## Overview
 
 This is the keychain with the official logo of the [Olympia Sporting Club](https://maps.app.goo.gl/tRdfUgXAtKXFmLod9){: target="_blank"}.
@@ -38,21 +39,9 @@ If you are a member of the club, or just want a matching keychain for your own p
 
 {% include gallery id="gallery_photos" caption="Olympia Sporting Club Keychain on MakerWorld" %}
 
-## Printing
+## Print profiles
 
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| PLA Dual Color | Full Bed - 0.2mm layer, 2 walls, 15% infill | ~3.3 h |
-
-If you belong to a different club, gym, or team and want the same kind of keychain with your own logo, the general approach here transfers directly: trace the artwork into clean, printable geometry, keep strokes thick enough to survive handling, and set it up as a dual-color plate so no post-processing is needed.
-
-It is a small, personal side effect of playing a sport regularly: you end up wanting to carry a piece of the club around with you, and being able to design and print that yourself feels a lot better than buying a generic keychain from the pro shop.
-
-A small, personal print, but one that has genuinely become a conversation starter on the court.
-
-A small logo, printed with the same care I would put into any other project.
-
-Reproducing a real club logo also comes with a bit of extra care I do not need for my own original designs, keeping proportions and colors close to the source so it still reads as the club's actual mark, not a rough approximation of it.
+{% include makerworld-profiles.html %}
 
 ## Download
 

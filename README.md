@@ -33,6 +33,20 @@ rake serve
 
 eq of: `bundle exec jekyll serve --config _config.yml,_config.dev.yml --incremental --livereload`
 
+## Synchronize MakerWorld print profiles
+
+MakerWorld's web pages are protected by Cloudflare, so profile data is fetched
+from its public Bambu Lab design-service API instead of scraping HTML. To
+refresh every MakerWorld project page and its generated profile catalogue, run:
+
+```bash
+ruby scripts/sync_makerworld_profiles.rb
+```
+
+The script paginates through every public profile for every model, writes
+`_data/makerworld_profiles.yml`, and gives each project page the shared profile
+table. Run it before publishing when profiles have changed.
+
 ### Theme reference
 
 * https://mmistakes.github.io/minimal-mistakes/

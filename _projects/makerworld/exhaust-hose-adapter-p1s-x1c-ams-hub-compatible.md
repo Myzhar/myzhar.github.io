@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_1397208
+makerworld_id: 1397208
 title: "Exhaust Hose Adapter P1S/X1C – AMS Hub compatible"
 excerpt: "This is version 2 of my Exhaust Hose Adapter, redesigned to be fully compatible with the Bambu Lab AMS Hub."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/exhaust-hose-adapter-p1s-x1c-ams-hub-compatible/gallery-4.jpg
     alt: "Exhaust Hose Adapter P1S/X1C – AMS Hub compatible"
 ---
-
 ## Overview
 
 This is version 2 of my [**Exhaust Hose Adapter**](/projects/makerworld/exhaust-hose-adapter-for-p1s-x1c-80-mm-90deg/), redesigned to be fully compatible with the [**Bambu Lab AMS Hub**](https://eu.store.bambulab.com/products/ams-hub){: target="_blank"}.
@@ -66,17 +67,9 @@ The original adapter worked well, but it was designed before the AMS Hub existed
 
 The upward-angled outlet in this version also makes the hose itself easier to route once the AMS Hub is in the way, instead of fighting the tubing into an awkward downward bend right behind the printer.
 
-## Printing
+## Print profiles
 
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| Support Mat | 0.2mm layer, 4 walls, 15% Gyroid infill | ~5.8 h |
-
-Revisiting an older design once your own setup outgrows it is, in my experience, always worth the hour it takes in CAD.
-
-A part designed around the hardware I actually run today, not the setup from a couple of years ago.
-
-The ribbed hose connection and screwdriver access hole both came out of hands-on frustration with the first version: fumbling with a hose clamp in a tight gap behind the printer is a lot easier when the fitting itself gives the clamp something to bite into and leaves room to actually turn a screwdriver.
+{% include makerworld-profiles.html %}
 
 ## Download
 

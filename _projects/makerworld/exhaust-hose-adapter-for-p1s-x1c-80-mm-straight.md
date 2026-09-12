@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_157182
+makerworld_id: 157182
 title: "Exhaust hose adapter for P1S/X1C -80 mm- Straight"
 excerpt: "I created this exhaust hose adapter for Bambu Lab P1S to reduce bad smells while printing with ASA and ABS filaments in small rooms."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/exhaust-hose-adapter-for-p1s-x1c-80-mm-straight/gallery-4.jpg
     alt: "Exhaust hose adapter for P1S/X1C -80 mm- Straight"
 ---
-
 ## Overview
 
 I created this exhaust hose adapter for Bambu Lab P1S to reduce bad smells while printing with ASA and ABS filaments in small rooms.
@@ -60,22 +61,9 @@ I recommend using a PVC flexible exhaust tube for 3" (8 cm) tubes fixed with a m
 
 {% include gallery id="gallery_photos" caption="Exhaust hose adapter for P1S/X1C -80 mm- Straight on MakerWorld" %}
 
-## Printing
+## Print profiles
 
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| PETG | 0.2mm layer, 2 walls, 15% infill | ~3.3 h |
-| ABS | 0.2mm layer, 2 walls, 15% infill | ~3.2 h |
-
-The 80 mm diameter matches standard flexible ducting hose sold for exactly this kind of application, so you are not stuck sourcing an odd size or trimming a hose down to fit. If your exhaust routing needs to change direction shortly after leaving the printer rather than running straight, I also published a [90 degree elbow version](/projects/makerworld/exhaust-hose-adapter-for-p1s-x1c-80-mm-90deg/) of this same adapter, which keeps the bend in a rigid printed fitting instead of forcing the flexible hose itself into a tight, airflow-restricting kink.
-
-Venting exhaust from ASA and ABS prints out of the room, rather than just relying on an enclosure's carbon filter, makes a noticeable difference to how a small print room smells after a long print, and this adapter is the piece that turns a printer's stock exhaust port into something you can actually connect a hose to.
-
-A small print, but one that changes how comfortable it is to run ASA or ABS jobs indoors.
-
-A short piece of plastic that keeps a whole room smelling better.
-
-Securing the hose with a proper metal clamp rather than tape or a zip tie is worth the extra minute too, since the joint needs to stay sealed under the light vibration of a printer running for hours at a time, not just hold on the day you install it.
+{% include makerworld-profiles.html %}
 
 ## Download
 

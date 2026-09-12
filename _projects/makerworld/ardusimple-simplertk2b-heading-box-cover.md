@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_231598
+makerworld_id: 231598
 title: "ARDUSIMPLE simpleRTK2B Heading - Box/cover"
 excerpt: "I reworked this GrabCad project to create a custom box for the ARDUSIMPLE simpleRTK2B Heading Starter Kit."
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/ardusimple-simplertk2b-heading-box-cover/gallery-4.jpg
     alt: "ARDUSIMPLE simpleRTK2B Heading - Box/cover"
 ---
-
 ## Overview
 
 I reworked this [GrabCad project](https://grabcad.com/library/ardusimple-simplertk2b-heading-1){: target="_blank"} to create a custom box for the [ARDUSIMPLE simpleRTK2B Heading Starter Kit](https://www.ardusimple.com/product/simplertk2b-heading-basic-starter-kit-ip67/){: target="_blank"}.
@@ -64,8 +65,11 @@ The top cover in transparent PETG lets you monitor the LEDs' blinking to check w
 
 {% include gallery id="gallery_photos" caption="ARDUSIMPLE simpleRTK2B Heading - Box/cover on MakerWorld" %}
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/231598-ardusimple-simplertk2b-heading-box-cover){: .btn .btn--info target="_blank"}

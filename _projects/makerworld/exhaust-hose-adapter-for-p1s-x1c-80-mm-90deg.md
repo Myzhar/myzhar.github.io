@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_156371
+makerworld_id: 156371
 title: "Exhaust Hose Adapter for P1S/X1C - 80 mm - 90°"
 excerpt: "I created this exhaust hose adapter for Bambu Lab P1S to reduce bad smells while printing with ASA and ABS filaments in small rooms."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/exhaust-hose-adapter-for-p1s-x1c-80-mm-90deg/gallery-4.jpg
     alt: "Exhaust Hose Adapter for P1S/X1C - 80 mm - 90°"
 ---
-
 ## Overview
 
 I created this exhaust hose adapter for Bambu Lab P1S to reduce bad smells while printing with ASA and ABS filaments in small rooms.
@@ -68,8 +69,11 @@ A small fitting that solves a routing problem no printer manufacturer thinks to 
 
 A short elbow that keeps a hose from fighting the printer's own layout.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/156371-exhaust-hose-adapter-for-p1s-x1c-80-mm-90deg){: .btn .btn--info target="_blank"}

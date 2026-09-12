@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_195917
+makerworld_id: 195917
 title: "Radiator hook"
 excerpt: "DO NOT PRINT WITH PLA FILAMENT TO AVOID MELTDOWN This hook is designed to hang towels and clothes on horizontal radiators with a 24mm tube diameter to dry and warm up."
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/radiator-hook/gallery-4.jpg
     alt: "Radiator hook"
 ---
-
 ## Overview
 
 ***** DO NOT PRINT WITH PLA FILAMENT TO AVOID MELTDOWN *****
@@ -57,12 +58,9 @@ This is not a theoretical warning; it is the whole reason for the all-caps note 
 
 {% include gallery id="gallery_photos" caption="Radiator hook on MakerWorld" %}
 
-## Printing
+## Print profiles
 
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| ABS | Down - 0.2mm layer, 4 walls, 20% infill | ~1.8 h |
-| ABS | Side - 0.2mm layer, 4 walls, 20% infill | ~1.8 h |
+{% include makerworld-profiles.html %}
 
 ## Download
 

@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_44175
+makerworld_id: 44175
 title: "MyzharBot v5 - tracks"
 excerpt: "MyzharBot v5 is the new version of my robotic project → link Here you can find all the pieces to print the mechanics of the two tracks."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/myzharbot-v5-tracks/gallery-4.jpg
     alt: "MyzharBot v5 - tracks"
 ---
-
 ## Overview
 
 **MyzharBot v5** is the new version of my robotic project → [link](https://linktr.ee/myzhar){: target="_blank"}
@@ -57,8 +58,11 @@ Every hardware generation of MyzharBot has taught me something I carried into th
 
 Robotics hardware is never really finished, just at the current best version of an ongoing process.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Creative Commons Attribution-Noncommercial-Share Alike.
 
 [Download on MakerWorld](https://makerworld.com/en/models/44175-myzharbot-v5-tracks){: .btn .btn--info target="_blank"}

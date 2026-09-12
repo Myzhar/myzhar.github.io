@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_464717
+makerworld_id: 464717
 title: "Multi‑Material Interface Calibration & Test Tool"
 excerpt: "This 3D model helps you dial in your support interface settings."
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/multi-material-interface-calibration-test-tool/gallery-4.jpg
     alt: "Multi‑Material Interface Calibration & Test Tool"
 ---
-
 ## Overview
 
 This 3D model helps you dial in your support interface settings. It allows you to test and refine how easily supports break away, leaving a smooth, clean finish on your final print.
@@ -93,8 +94,11 @@ I used the project [**AMS Purge Calibration V2**](https://makerworld.com/en/mode
 
 {% include gallery id="gallery_photos" caption="Multi‑Material Interface Calibration & Test Tool on MakerWorld" %}
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the MakerWorld Exclusive License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/464717-multi-material-interface-calibration-test-tool){: .btn .btn--info target="_blank"}

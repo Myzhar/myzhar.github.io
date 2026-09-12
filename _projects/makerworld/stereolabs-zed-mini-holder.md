@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_44185
+makerworld_id: 44185
 title: "Stereolabs ZED Mini holder"
 excerpt: "A simple holder for the STEREOLABS ZED Mini 3D camera: https://www.stereolabs.com/products/zed-2"
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/stereolabs-zed-mini-holder/gallery-4.jpg
     alt: "Stereolabs ZED Mini holder"
 ---
-
 ## Overview
 
 ### Summary
@@ -49,12 +50,9 @@ Four M1.7 holes can be used to fix the camera to the holder to give more stabili
 
 I have used this exact holder on more than one robot build over the years, since the ZED Mini keeps coming back as my go-to depth sensor whenever a project needs real stereo vision rather than a single RGB camera. Having a reliable, repeatable mount for it means I do not have to redesign the mechanical interface from scratch every time it moves to a new chassis.
 
-## Printing
+## Print profiles
 
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| Normal | 0.2mm layer, 3 walls, 15% infill | ~1.5 h |
-| Mirror | 0.2mm layer, 3 walls, 15% infill | ~1.5 h |
+{% include makerworld-profiles.html %}
 
 ## Download
 

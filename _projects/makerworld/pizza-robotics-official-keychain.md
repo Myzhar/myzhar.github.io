@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_722078
+makerworld_id: 722078
 title: "Pizza Robotics Official Keychain"
 excerpt: "This is the official Keychain of the Pizza Robotics team. We are robotics enthusiasts who love to create autonomous robots in our free time."
 author: "Walter Lucetti"
@@ -23,7 +25,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/pizza-robotics-official-keychain/gallery-2.jpg
     alt: "Pizza Robotics Official Keychain"
 ---
-
 ## Overview
 
 {% include figure popup=true image_path="/assets/images/projects/makerworld/pizza-robotics-official-keychain/inline-0.jpg" alt="Pizza Robotics Official Keychain" %}
@@ -59,11 +60,9 @@ Team merch does not need to come from an outside printer when you already have t
 
 A small keychain that carries a lot of shared history.
 
-## Printing
+## Print profiles
 
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| 4 colors | 0.2mm layer, 2 walls, 15% infill | ~3 h |
+{% include makerworld-profiles.html %}
 
 ## Download
 

@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_206428
+makerworld_id: 206428
 title: "Dragon keychain or pendant"
 excerpt: "This keychain is a little reminder of a pendant that's always been special to me, so I turned it into something I could carry everywhere!"
 author: "Walter Lucetti"
@@ -26,7 +28,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/dragon-keychain-or-pendant/gallery-3.jpg
     alt: "Dragon keychain or pendant"
 ---
-
 ## Overview
 
 This keychain is a little reminder of a pendant that's always been special to me, so I turned it into something I could carry everywhere!
@@ -49,8 +50,11 @@ A small keepsake, shrunk down but not any less meaningful.
 
 There is no fastener sizing, no clearance to check, no assembly, so if you want a project to try a filament color or a printer setting you have never used before, this is a low-risk one to experiment on.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/206428-dragon-keychain-or-pendant){: .btn .btn--info target="_blank"}

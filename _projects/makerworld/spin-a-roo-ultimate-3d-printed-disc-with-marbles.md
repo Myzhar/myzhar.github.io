@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_566012
+makerworld_id: 566012
 title: "Spin-a-Roo: Ultimate 3D-Printed Disc with Marbles"
 excerpt: "Tired of your everyday play pucks? Wish you could add a little pizzazz to your floor games?"
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/spin-a-roo-ultimate-3d-printed-disc-with-marbles/gallery-4.jpg
     alt: "Spin-a-Roo: Ultimate 3D-Printed Disc with Marbles"
 ---
-
 ## Overview
 
 ### Tired of your everyday play pucks?
@@ -85,12 +86,9 @@ Boost the project and I will create new amazing models
 
 {% include gallery id="gallery_photos" caption="Spin-a-Roo: Ultimate 3D-Printed Disc with Marbles on MakerWorld" %}
 
-## Printing
+## Print profiles
 
-| Profile | Settings | Print time |
-| --- | --- | --- |
-| 16 mm | PLA+TPU - 0.2mm layer, 4 walls, 30% infill | ~1.8 h |
-| 12 mm | PLA+TPU - 0.2mm layer, 4 walls, 30% infill | ~1.7 h |
+{% include makerworld-profiles.html %}
 
 ## Download
 

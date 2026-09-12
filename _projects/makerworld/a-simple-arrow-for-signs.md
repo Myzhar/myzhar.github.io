@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_484266
+makerworld_id: 484266
 title: "A simple arrow for signs"
 excerpt: "This is a simple arrow to be used as a sign on walls and doors. You can modify the 3D model for customizations directly with OnShape."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/a-simple-arrow-for-signs/gallery-4.jpg
     alt: "A simple arrow for signs"
 ---
-
 ## Overview
 
 This is a simple arrow to be used as a sign on walls and doors.
@@ -61,8 +62,11 @@ Simple, reusable, and done in minutes.
 
 I keep coming back to this one specifically because it has no strong opinion about what it is for: print it in whatever color matches the wall it is going on, and it will look at home pointing toward a workshop door just as easily as marking a cable route inside an enclosure.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/484266-a-simple-arrow-for-signs){: .btn .btn--info target="_blank"}

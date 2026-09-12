@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_423848
+makerworld_id: 423848
 title: "Brain in Action - Door Sign"
 excerpt: "\"Brain in Action\" Door Sign: step right up to the door of intellect!"
 author: "Walter Lucetti"
@@ -20,7 +22,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/brain-in-action-door-sign/gallery-1.jpg
     alt: "Brain in Action - Door Sign"
 ---
-
 ## Overview
 
 ### "Brain in Action" Door Sign
@@ -49,8 +50,11 @@ A silly little sign, and I would not have it any other way.
 
 If the phrase does not quite fit your own door, the underlying Make My Sign tool that generated this one works the same way for any short line of text, so swapping in your own line of humor is a matter of minutes, not a redesign.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/423848-brain-in-action-door-sign){: .btn .btn--info target="_blank"}

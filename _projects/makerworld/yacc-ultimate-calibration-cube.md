@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_417976
+makerworld_id: 417976
 title: "YACC - Ultimate Calibration Cube"
 excerpt: "Yes, this is Another Calibration Cube. You might be thinking, \"Not another calibration cube!\" but hold on, because this one is unlike any other."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/yacc-ultimate-calibration-cube/gallery-4.jpg
     alt: "YACC - Ultimate Calibration Cube"
 ---
-
 ## Overview
 
 ### **!!! YACC !!!**
@@ -78,8 +79,11 @@ One small print, several calibration checks at once, and a lot less guessing abo
 
 One cube, several checks, and a lot less guesswork afterward.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Creative Commons Attribution-Noncommercial-Share Alike.
 
 [Download on MakerWorld](https://makerworld.com/en/models/417976-yacc-ultimate-calibration-cube){: .btn .btn--info target="_blank"}

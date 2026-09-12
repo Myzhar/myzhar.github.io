@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_2596883
+makerworld_id: 2596883
 title: "Big Robust Handle"
 excerpt: "Here's a Big Robust Handle, a strong, chunky, and comfortable handle designed for projects that need extra grip, durability, and a solid industrial look."
 author: "Walter Lucetti"
@@ -26,7 +28,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/big-robust-handle/gallery-3.jpg
     alt: "Big Robust Handle"
 ---
-
 ## Overview
 
 Here's a **Big Robust Handle**, a strong, chunky, and comfortable handle designed for projects that need extra grip, durability, and a solid industrial look. 🔩✨
@@ -71,8 +72,11 @@ A grip built to be trusted, not just to look the part.
 
 Even with the strongest material choice, I would still treat the disclaimer above as more than boilerplate: test the handle under a load close to what you actually expect before trusting it somewhere failure would be a real problem.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the MakerWorld Exclusive License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/2596883-big-robust-handle){: .btn .btn--info target="_blank"}

@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_198751
+makerworld_id: 198751
 title: "Test and calibration for brass threaded inserts"
 excerpt: "This handy tool takes the guesswork out of choosing the right hole size for brass threaded inserts."
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/test-and-calibration-for-brass-threaded-inserts/gallery-4.jpg
     alt: "Test and calibration for brass threaded inserts"
 ---
-
 ## Overview
 
 This handy tool takes the guesswork out of choosing the right hole size for brass threaded inserts.
@@ -81,8 +82,11 @@ A five-minute test that saves a lot of ruined prints down the line.
 
 A small test piece that turns a guess into a known-good number.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/198751-test-and-calibration-for-brass-threaded-inserts){: .btn .btn--info target="_blank"}

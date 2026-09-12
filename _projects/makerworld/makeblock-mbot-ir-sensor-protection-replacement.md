@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_44187
+makerworld_id: 44187
 title: "Makeblock mBot - IR sensor protection replacement"
 excerpt: "Replacement part for the Makeblock mBot: Line Follower IR sensor protection against sunlight."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/makeblock-mbot-ir-sensor-protection-replacement/gallery-4.jpg
     alt: "Makeblock mBot - IR sensor protection replacement"
 ---
-
 ## Overview
 
 Replacement part for the [Makeblock mBot](https://www.makeblock.com/pages/mbot-robot-kit){: target="_blank"}: Line Follower IR sensor protection against sunlight.
@@ -62,8 +63,11 @@ Project link:
 
 {% include gallery id="gallery_photos" caption="Makeblock mBot - IR sensor protection replacement on MakerWorld" %}
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/44187-makeblock-mbot-ir-sensor-protection-replacement){: .btn .btn--info target="_blank"}

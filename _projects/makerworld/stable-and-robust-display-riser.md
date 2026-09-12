@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_184075
+makerworld_id: 184075
 title: "Stable and robust display riser"
 excerpt: "This display riser is stable and robust, designed to elevate your monitor to eye level for comfortable viewing."
 author: "Walter Lucetti"
@@ -26,7 +28,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/stable-and-robust-display-riser/gallery-3.jpg
     alt: "Stable and robust display riser"
 ---
-
 ## Overview
 
 This display riser is stable and robust, designed to elevate your monitor to eye level for comfortable viewing.
@@ -49,8 +50,11 @@ A flat piece of plastic, and a noticeably more comfortable afternoon at the desk
 
 If your desk arrangement changes later (a new monitor, a different chair height), the riser is just as easy to reprint at a new height as it was the first time, rather than being a fixed piece of furniture you are stuck with.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/184075-stable-and-robust-display-riser){: .btn .btn--info target="_blank"}

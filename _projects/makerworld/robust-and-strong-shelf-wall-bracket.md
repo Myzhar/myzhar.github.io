@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_167734
+makerworld_id: 167734
 title: "Robust and Strong Shelf Wall Bracket"
 excerpt: "This is a robust shelf bracket designed with OnShape. I recommend printing this part in PETG or ABS to enhance durability."
 author: "Walter Lucetti"
@@ -32,7 +34,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/robust-and-strong-shelf-wall-bracket/gallery-4.jpg
     alt: "Robust and Strong Shelf Wall Bracket"
 ---
-
 ## Overview
 
 This is a robust shelf bracket designed with [OnShape](https://www.onshape.com/){: target="_blank"}.
@@ -60,8 +61,11 @@ A bracket sized for the job it actually has to do, rather than whatever happened
 
 A bracket designed to be trusted, not just to look strong in a render.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/167734-robust-and-strong-shelf-wall-bracket){: .btn .btn--info target="_blank"}

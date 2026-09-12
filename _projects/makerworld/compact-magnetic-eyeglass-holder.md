@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_1845679
+makerworld_id: 1845679
 title: "Compact magnetic eyeglass holder"
 excerpt: "Never lose your glasses again, unless they’re off on vacation without you!"
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/compact-magnetic-eyeglass-holder/gallery-4.jpg
     alt: "Compact magnetic eyeglass holder"
 ---
-
 ## Overview
 
 Never lose your glasses again, unless they’re off on vacation without you! 🤓✨
@@ -56,8 +57,11 @@ A tiny magnetic mount, and one less thing to lose track of every morning.
 
 The three 6x3 mm magnets are sized to be strong enough to hold the weight of a pair of glasses reliably, without being so strong that removing them becomes a two-handed effort every time. If you print it for a heavier pair of glasses, or for something bulkier like sunglasses with a thick frame, it is worth sizing up the magnets slightly rather than assuming the same three will hold any weight.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the MakerWorld Exclusive License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/1845679-compact-magnetic-eyeglass-holder){: .btn .btn--info target="_blank"}

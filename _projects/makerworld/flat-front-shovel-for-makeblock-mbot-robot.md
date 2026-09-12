@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_178433
+makerworld_id: 178433
 title: "Flat front shovel for Makeblock mBot robot"
 excerpt: "This is a flat front shovel for the Makerbot mBot robot to be used for robot fighting in a sumo arena."
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/flat-front-shovel-for-makeblock-mbot-robot/gallery-4.jpg
     alt: "Flat front shovel for Makeblock mBot robot"
 ---
-
 ## Overview
 
 This is a flat front shovel for the [Makerbot mBot robot](https://www.makeblock.com/products/buy-mbot){: target="_blank"} to be used for robot fighting in a sumo arena.
@@ -54,8 +55,11 @@ A simple upgrade that turns a kit robot into a real sumo contender.
 
 I would generally reach for the flat shovel first against an opponent I have not fought before, since a wide, direct pushing surface is the more forgiving choice when you do not yet know how the other robot's front end is shaped.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/178433-flat-front-shovel-for-makeblock-mbot-robot){: .btn .btn--info target="_blank"}

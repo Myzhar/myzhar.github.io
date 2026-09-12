@@ -1,4 +1,6 @@
 ---
+makerworld_key: model_218597
+makerworld_id: 218597
 title: "Angular reinforcement for BESTÅ cabinet"
 excerpt: "I have an IKEA BESTÅ cabinet in my living room."
 author: "Walter Lucetti"
@@ -29,7 +31,6 @@ gallery_photos:
     image_path: /assets/images/projects/makerworld/angular-reinforcement-for-besta-cabinet/gallery-4.jpg
     alt: "Angular reinforcement for BESTÅ cabinet"
 ---
-
 ## Overview
 
 I have an IKEA [BESTÅ](https://www.ikea.com/it/it/cat/besta-combinazioni-pre-progettate-700277/){: target="_blank"} cabinet in my living room. The purpose of the cabinet is to hide all the cables of the TV, decoders, and game consoles, and to store network switches and routers. However, the only issue is that the rear panel of the cabinet must be removed, and as a result, the structure becomes unstable and bends immediately.
@@ -54,8 +55,11 @@ A small angle bracket standing in for the structural panel I removed.
 
 Since it mounts independently to the wall and to the cabinet's side panels, it does not rely on the cabinet's own screws or joinery at all, which means it works even on units that have already been assembled and loaded for a while, not just on a cabinet being built fresh.
 
-## Download
+## Print profiles
 
+{% include makerworld-profiles.html %}
+
+## Download
 The model is free to download and print, licensed under the Standard Digital File License.
 
 [Download on MakerWorld](https://makerworld.com/en/models/218597-angular-reinforcement-for-besta-cabinet){: .btn .btn--info target="_blank"}
