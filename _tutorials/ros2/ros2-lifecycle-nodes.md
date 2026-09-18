@@ -18,6 +18,20 @@ header:
       target: _blank
 layout: single
 classes: single
+
+gallery_rqt_lifecycle_manager:
+  - url: /assets/images/ros2/rqt_lifecycle_mgr_ldlidar.jpg
+    image_path: /assets/images/ros2/rqt_lifecycle_mgr_ldlidar.jpg
+    alt: "rqt_lifecycle_manager showing ldlidar_node, Active"
+    title: "ldlidar_node, Active"
+  - url: /assets/images/ros2/rqt_lifecycle_mgr_slam_toolbox.jpg
+    image_path: /assets/images/ros2/rqt_lifecycle_mgr_slam_toolbox.jpg
+    alt: "rqt_lifecycle_manager showing slam_toolbox, Active"
+    title: "slam_toolbox, Active"
+  - url: /assets/images/ros2/rqt_lifecycle_mgr_yalio.jpg
+    image_path: /assets/images/ros2/rqt_lifecycle_mgr_yalio.jpg
+    alt: "rqt_lifecycle_manager showing yalio, Active"
+    title: "yalio, Active"
 ---
 
 ## Introduction
@@ -290,6 +304,52 @@ ros2 topic echo /my_node/transition_event
 ```
 
 This echoes every `TransitionEvent` message, so you can see exactly when the node changes state and whether transitions succeed or fail. Very handy for debugging.
+
+## Managing Lifecycle Nodes with the GUI: `rqt_lifecycle_manager`
+
+The CLI is fine for poking at a single node, but it does not scale once your robot has several lifecycle nodes running at once. Typing `ros2 lifecycle get` and `ros2 lifecycle set` for each one, then re-checking with `list` to see what is valid next, gets old fast. This is where a GUI helps: [`rqt_lifecycle_manager`](https://github.com/ajtudela/rqt_lifecycle_manager){:target="_blank"}, an `rqt` plugin by [ajtudela](https://github.com/ajtudela){:target="_blank"}, gives you exactly that.
+
+The plugin auto-discovers every lifecycle node on the ROS graph, by looking for nodes exposing a `~/get_state` service, lists them in a panel, and shows the current state of the selected node with color coding. For the selected node, it exposes buttons for every transition that is valid from its current state, `configure`, `activate`, `deactivate`, `cleanup`, `shutdown`, and clicking one triggers that transition immediately; only the transitions actually valid from the current state are shown, so you cannot request an illegal one by mistake. All service calls are asynchronous, so the interface stays responsive even if a node is slow to respond.
+
+### Installing it
+
+A binary package is available for recent distros:
+
+```bash
+sudo apt install ros-${ROS_DISTRO}-rqt-lifecycle-manager
+```
+
+If it is not available for your distro yet, build it from source:
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/ajtudela/rqt_lifecycle_manager.git
+cd ~/ros2_ws
+rosdep install -i --from-path src --rosdistro ${ROS_DISTRO} -y
+colcon build --symlink-install --packages-select rqt_lifecycle_manager
+source install/local_setup.bash
+```
+
+### Launching it
+
+You can either open plain `rqt` and pick the plugin from the menu, or run it as a standalone window.
+
+```bash
+# Option 1: through the rqt plugin menu
+rqt
+# then: Plugins -> Lifecycle -> Lifecycle Manager
+
+# Option 2: standalone window
+ros2 run rqt_lifecycle_manager rqt_lifecycle_manager
+```
+
+### Seeing it in action
+
+To see it manage more than one node at once, I brought up three lifecycle nodes together: my own [LD Lidar ROS 2 Driver](/projects/ros2/ldrobot-lidar-ros2/){:target="_blank"} (`ldlidar_node`), my own [YALIO](/projects/ros2/yalio/){:target="_blank"} lidar-odometry component (`yalio`), built as a `nav2_util::LifecycleNode`, and [SLAM Toolbox](https://github.com/SteveMacenski/slam_toolbox){:target="_blank"} (`slam_toolbox`), the well known mapping and localization package by [Steve Macenski](https://github.com/SteveMacenski){:target="_blank"}, the father of [Nav2](https://docs.nav2.org/rolling/).
+
+{% include gallery id="gallery_rqt_lifecycle_manager" caption="The rqt_lifecycle_manager plugin managing ldlidar_node, slam_toolbox, and yalio, all Active with deactivate/shutdown transitions available." %}
+
+Selecting each node in the left panel updates the state indicator and the transition buttons on the right; there is no need to remember service names or type them into a terminal. For a handful of nodes on a single robot, this is a much faster feedback loop than the CLI, and it is a good complement to the Nav2 Lifecycle Manager described below, which handles the bring-up/tear-down policy automatically, while `rqt_lifecycle_manager` gives you visibility and manual control when you need it.
 
 ## A Real-World Example: [LD Lidar ROS 2 Driver](/projects/ros2/ldrobot-lidar-ros2/){:target="_blank"}
 
