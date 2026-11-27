@@ -1,17 +1,70 @@
 <!-- start custom head snippets -->
 
-<!-- Coockie KiProtect / Klaro -->
-<script defer src="https://api.kiprotect.com/v1/privacy-managers/b5fd1fcfcf3323c6537a72e06707373d/klaro.js">
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYMBS7K65Z"></script>
+<!-- Google Consent Mode v2 defaults + Google tag + Google Tag Manager bootstrap -->
+<!-- Must run BEFORE gtag.js, gtm.js, AdSense and Klaro, so that no hit is sent without a consent state -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
+  // 1. Consent defaults: everything denied until the visitor chooses in Klaro.
+  //    wait_for_update gives Klaro (deferred) time to restore a previous "accept"
+  //    before the first hits are sent.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 1000
+  });
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+
+  // 2. Google tag (GA4)
+  gtag('js', new Date());
   gtag('config', 'G-PYMBS7K65Z');
+
+  // 3. Google Tag Manager start event
+  dataLayer.push({'gtm.start': new Date().getTime(), 'event': 'gtm.js'});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYMBS7K65Z"></script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WPN5V2NZ"></script>
+
+<!-- Cookie KiProtect / Klaro -->
+<script defer src="https://api.kiprotect.com/v1/privacy-managers/b5fd1fcfcf3323c6537a72e06707373d/klaro.js"></script>
+
+<!-- Sync Klaro choices with Google Consent Mode, on every page load and on every change -->
+<script>
+  (function () {
+    var GA_SERVICE  = "google-analytics";          // Klaro service name for GA4
+    var ADS_SERVICE = "google-marketing-platform"; // Klaro service name for ads / AdSense
+    var hooked = false;
+
+    function state(manager, service) {
+      return (manager && manager.confirmed && manager.consents[service]) ? 'granted' : 'denied';
+    }
+
+    function apply(manager) {
+      var ads = state(manager, ADS_SERVICE);
+      gtag('consent', 'update', {
+        'analytics_storage': state(manager, GA_SERVICE),
+        'ad_storage': ads,
+        'ad_user_data': ads,
+        'ad_personalization': ads
+      });
+    }
+
+    function hook() {
+      if (hooked || !window.klaro || typeof window.klaro.getManager !== "function") return;
+      hooked = true;
+      var manager = window.klaro.getManager();
+      apply(manager);
+      manager.watch({ update: function () { apply(manager); } });
+    }
+
+    hook();
+    document.addEventListener("DOMContentLoaded", hook);
+    window.addEventListener("load", hook);
+  })();
 </script>
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
@@ -33,7 +86,7 @@
 <!-- LCP preload: hero background image used on splash/home pages -->
 {% if page.header.overlay_image %}<link rel="preload" as="image" href="{{ page.header.overlay_image | relative_url }}" fetchpriority="high">{% endif %}
 
-<!-- Adsense -->
+<!-- Adsense (reads the Consent Mode state set above) -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4858725679126097" crossorigin="anonymous"></script>
 
 <!-- Adsense Meta -->
